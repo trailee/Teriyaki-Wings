@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://1yc0u2ua8p3o"]
+[gd_scene load_steps=9 format=3 uid="uid://1yc0u2ua8p3o"]
 
 [ext_resource type="Texture2D" uid="uid://c4kmngqg0smxt" path="res://Ghost.jpg" id="1_5yleq"]
 [ext_resource type="Script" uid="uid://ynllpb8s4s15" path="res://menu.gd" id="1_ylpcl"]
 [ext_resource type="FontFile" uid="uid://bum5mrln6qt3y" path="res://Deadtoast Demo.ttf" id="2_ylpcl"]
+[ext_resource type="AudioStream" uid="uid://bnnqw5l6r2aqk" path="res://Music_Teriyaki-Wings/Main_Menu_BGM copy.wav" id="4_cx167"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cx167"]
 texture = ExtResource("1_5yleq")
@@ -111,3 +112,7 @@ theme_override_font_sizes/font_size = 100
 text = "Mission: Survive"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Main Menu BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_cx167")
+autoplay = true
