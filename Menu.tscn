@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://ctbflhh2v14da"]
 
 [ext_resource type="Texture2D" uid="uid://c4kmngqg0smxt" path="res://Ghost.jpg" id="1_5yleq"]
-[ext_resource type="Script" path="res://menu.gd" id="1_ylpcl"]
+[ext_resource type="Script" uid="uid://ynllpb8s4s15" path="res://menu.gd" id="1_ylpcl"]
 [ext_resource type="FontFile" uid="uid://bum5mrln6qt3y" path="res://Deadtoast Demo.ttf" id="2_ylpcl"]
 [ext_resource type="AudioStream" uid="uid://cfs8nv12beqcp" path="res://Music_Teriyaki-Wings/Main_Menu_BGM copy.wav" id="4_cx167"]
 
