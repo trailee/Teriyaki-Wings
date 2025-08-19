@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://ctbflhh2v14da"]
+[gd_scene load_steps=11 format=3 uid="uid://ctbflhh2v14da"]
 
 [ext_resource type="Texture2D" uid="uid://c4kmngqg0smxt" path="res://Ghost.jpg" id="1_5yleq"]
 [ext_resource type="Script" uid="uid://ynllpb8s4s15" path="res://menu.gd" id="1_ylpcl"]
 [ext_resource type="FontFile" uid="uid://bum5mrln6qt3y" path="res://Deadtoast Demo.ttf" id="2_ylpcl"]
 [ext_resource type="AudioStream" uid="uid://c6wgf1ow5hejy" path="res://Music_Teriyaki-Wings/Remade_MainMenuBGM.wav" id="4_cx167"]
 [ext_resource type="AudioStream" uid="uid://vsls1fjsl6xo" path="res://Sound Effects/Button_Press.wav" id="5_dolsu"]
+[ext_resource type="AudioStream" uid="uid://df5mxhvilisc2" path="res://Sound Effects/Hover_Over_Button.wav" id="6_n4eug"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cx167"]
 texture = ExtResource("1_5yleq")
@@ -124,5 +125,11 @@ stream = ExtResource("5_dolsu")
 volume_db = 9.905
 bus = &"SFX"
 
+[node name="Hover_Button" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_n4eug")
+volume_db = 8.004
+
+[connection signal="mouse_entered" from="VBoxContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/OptionButton" to="." method="_on_option_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/OptionButton" to="." method="_on_option_button_pressed"]

@@ -17,3 +17,11 @@ func _on_start_button_pressed() -> void:
 
 func _on_option_button_pressed() -> void:
 	$Button_Pressed_Sound.play()
+
+
+func _on_start_button_mouse_entered() -> void:
+	$Hover_Button.play()
+	
+
+func _on_option_button_mouse_entered() -> void:
+	$Hover_Button.play()
