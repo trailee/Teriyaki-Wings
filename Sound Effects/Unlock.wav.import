@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c3mf8uwro38op"
+path="res://.godot/imported/Unlock.wav-cd5e6e43396e41e8adbf066906d78bbf.sample"
+
+[deps]
+
+source_file="res://Sound Effects/Unlock.wav"
+dest_files=["res://.godot/imported/Unlock.wav-cd5e6e43396e41e8adbf066906d78bbf.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
