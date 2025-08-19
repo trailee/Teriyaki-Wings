@@ -1,10 +1,11 @@
-[gd_scene load_steps=21 format=4 uid="uid://cjdiy3w635q6e"]
+[gd_scene load_steps=23 format=4 uid="uid://bmito4qec4eg2"]
 
 [ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="1_lt7tf"]
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="2_vpq6y"]
 [ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="3_7hcan"]
+[ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="4_7tqk6"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vpq6y"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7hcan"]
 texture = ExtResource("1_lt7tf")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -40,7 +41,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_7hcan"]
 tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_vpq6y")
+sources/0 = SubResource("TileSetAtlasSource_7hcan")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7tqk6"]
 texture = ExtResource("2_vpq6y")
@@ -625,7 +626,7 @@ texture = ExtResource("2_vpq6y")
 [sub_resource type="TileSet" id="TileSet_tb5ku"]
 sources/2 = SubResource("TileSetAtlasSource_7tqk6")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7hcan"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tgv5j"]
 texture = ExtResource("2_vpq6y")
 0:0/0 = 0
 1:0/0 = 0
@@ -1206,9 +1207,9 @@ texture = ExtResource("2_vpq6y")
 25:35/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_7tqk6"]
-sources/1 = SubResource("TileSetAtlasSource_7hcan")
+sources/1 = SubResource("TileSetAtlasSource_tgv5j")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tgv5j"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tb5ku"]
 texture = ExtResource("3_7hcan")
 0:0/0 = 0
 1:0/0 = 0
@@ -1824,7 +1825,7 @@ texture = ExtResource("3_7hcan")
 31:27/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_gldua"]
-sources/4 = SubResource("TileSetAtlasSource_tgv5j")
+sources/4 = SubResource("TileSetAtlasSource_tb5ku")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7hcan"]
 atlas = ExtResource("2_vpq6y")
@@ -1865,6 +1866,9 @@ size = Vector2(92, 45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tgv5j"]
 size = Vector2(61, 51.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gldua"]
+size = Vector2(21.9398, 10.092)
 
 [node name="Treehouse Room 2" type="Node2D"]
 
@@ -1941,3 +1945,15 @@ shape = SubResource("RectangleShape2D_7tqk6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Block player/Middle stuff"]
 position = Vector2(-29, -22)
 shape = SubResource("RectangleShape2D_tgv5j")
+
+[node name="Exit" type="Area2D" parent="."]
+
+[node name="Shadow" type="Sprite2D" parent="Exit"]
+position = Vector2(-192, 50)
+scale = Vector2(0.10833, 0.297075)
+texture = ExtResource("4_7tqk6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit/Shadow"]
+position = Vector2(-304.625, 13.4646)
+scale = Vector2(58.2171, -32.6876)
+shape = SubResource("RectangleShape2D_gldua")
