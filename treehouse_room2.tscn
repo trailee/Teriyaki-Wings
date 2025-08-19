@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=4 uid="uid://d3xnx7e6fywo7"]
 
 [ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="1_lt7tf"]
-[ext_resource type="Texture2D" uid="uid://cpaw4fbx3if7y" path="res://Assets/post apoc shelter furniture set updated.png" id="2_vpq6y"]
+[ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="2_vpq6y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7hcan"]
 radius = 32.0
@@ -529,7 +529,7 @@ shape = SubResource("CircleShape2D_7hcan")
 tile_set = SubResource("TileSet_7hcan")
 format = 2
 
-[node name="Layer0" type="TileMapLayer" parent="TileMap"]
+[node name="Layer1" type="TileMapLayer" parent="TileMap"]
 z_as_relative = false
 use_parent_material = true
 tile_map_data = PackedByteArray("AAD/////AAABAAEAAAD//wAAAAABAAIAAAAAAAAAAAABAAIAAAAAAP//AAABAAEAAAD+////AAABAAEAAAD+/wAAAAABAAIAAAD+/wEAAAABAAIAAAD//wEAAAABAAIAAAAAAAEAAAABAAIAAAABAAEAAAABAAIAAAABAAAAAAABAAIAAAABAP//AAABAAEAAAABAP7/AAABAAEAAAAAAP7/AAABAAEAAAD///7/AAABAAEAAAD+//7/AAABAAEAAAD9////AAABAAEAAAD9/wAAAAABAAIAAAD9/wEAAAABAAIAAAD9/wIAAAABAAIAAAD+/wIAAAABAAIAAAD//wIAAAABAAIAAAAAAAIAAAABAAIAAAABAAIAAAABAAIAAAACAAIAAAABAAIAAAACAAEAAAABAAIAAAACAAAAAAABAAIAAAACAP//AAABAAEAAAACAP7/AAABAAEAAAAAAP3/AAABAAEAAAABAP3/AAABAAEAAAACAP3/AAABAAEAAAD8/wEAAAABAAIAAAD8/wIAAAABAAIAAAD7/wIAAAABAAIAAAD7/wEAAAABAAIAAAADAAAAAAABAAIAAAADAAEAAAABAAIAAAADAAIAAAABAAIAAAAEAAIAAAABAAIAAAAEAAEAAAABAAIAAAAEAAAAAAABAAIAAAADAP//AAABAAEAAAAEAP//AAABAAEAAAAEAP7/AAABAAEAAAAEAP3/AAABAAEAAAADAP3/AAABAAEAAAADAP7/AAABAAEAAAD9//3/AAABAAEAAAD+//3/AAABAAEAAAD///3/AAABAAEAAAD8/wAAAAABAAIAAAD8////AAABAAEAAAD7////AAABAAEAAAD8//7/AAABAAEAAAD9//7/AAABAAEAAAD8//3/AAABAAEAAAD7//3/AAABAAEAAAD7//7/AAABAAEAAAD7/wAAAAABAAIAAAA=")
@@ -539,7 +539,7 @@ tile_set = SubResource("TileSet_7hcan")
 tile_map_data = PackedByteArray("AAD8////AQANAAcAAAD7////AQAMAAcAAAD7//7/AQAMAAYAAAD8//7/AQANAAYAAAA=")
 tile_set = SubResource("TileSet_7tqk6")
 
-[node name="Layer1" type="TileMapLayer" parent="TileMap"]
+[node name="Layer3" type="TileMapLayer" parent="TileMap"]
 use_parent_material = true
 tile_map_data = PackedByteArray("AAD8/wAAAAANAAUAAAD7/wAAAAAMAAUAAAD7////AAAMAAQAAAD8////AAANAAQAAAA=")
 tile_set = SubResource("TileSet_tgv5j")
