@@ -13,11 +13,11 @@ func _process(delta: float) -> void:
 
 func _on_start_button_pressed() -> void:
 	$Button_Pressed_Sound.play()
-
+	get_tree().change_scene_to_file("res://backstorynarration.tscn")
 
 func _on_option_button_pressed() -> void:
 	$Button_Pressed_Sound.play()
-
+	
 
 func _on_start_button_mouse_entered() -> void:
 	$Hover_Button.play()
