@@ -2371,6 +2371,7 @@ tile_map_data = PackedByteArray("AAAIAPr/AAAAAB8AAAAIAPv/AAAWABEAAAAIAPz/AAAWABI
 tile_set = SubResource("TileSet_chs52")
 
 [node name="Vignette" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0.596078)
 position = Vector2(-6, -29)
 scale = Vector2(0.17, 0.17)
