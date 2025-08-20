@@ -2370,7 +2370,7 @@ radius = 32.0
 size = Vector2(17, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpq6y"]
-size = Vector2(86, 71)
+size = Vector2(135, 71)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7tqk6"]
 size = Vector2(56, 52.5)
@@ -2426,7 +2426,7 @@ tile_map_data = PackedByteArray("AAAFAAUAAgAIAAUAAAAFAAYAAgAIAAYAAAAFAAcAAgAIAAc
 tile_set = SubResource("TileSet_tb5ku")
 
 [node name="Furniture 1" type="TileMapLayer" parent="Background"]
-tile_map_data = PackedByteArray("AAACAAAAAQAGAB4AAAACAAEAAQAGAB8AAAAFAAAAAQAIAAQAAGAGAAAAAQAEAB4AAAAGAAEAAQAEAB8AAAACAP//AQAGAB0AAAADAAAAAQAHAB4AAAADAAEAAQAHAB8AAAAHAP//AQAFAB0AAAAHAAAAAQAFAB4AAAAHAAEAAQAFAB8AAAAFAAUAAQASABwAAAAFAAYAAQASAB0AAAAGAAUAAQATABwAAAAGAAYAAQATAB0AAAD2////AQAZAAkAAAD2/wAAAQAZAAoAAAD2/wEAAQAZAAsAAAD3////AQAaAAkAAAD3/wAAAQAaAAoAAAD3/wEAAQAaAAsAAAD4////AQAYAA0AAAD4/wAAAQAYAA4AAAD4/wEAAQAYAA8AAAD5////AQAZAA0AAAD5/wAAAQAZAA4AAAD5/wEAAQAZAA8AAAD6////AQAaAA0AAAD6/wAAAQAaAA4AAAD6/wEAAQAaAA8AAAD7/wAAAQAQAAAAAAD7/wEAAQAQAAEAAAD8/wAAAQARAAAAAAD8/wEAAQARAAEAAAD9/wAAAQAEAAMAAAD1////AQAYAAkAAAD1/wAAAQAYAAoAAAD1/wEAAQAYAAsAAAD2//7/AQAZAAgAAAD5//7/AQAZAAwAAAD9////AQAEAAIAAADy////AQAYAAkAAADy/wAAAQAYAAoAAADy/wEAAQAYAAsAAADz//7/AQAZAAgAAADz////AQAZAAkAAADz/wAAAQAZAAoAAADz/wEAAQAZAAsAAAD0////AQAaAAkAAAD0/wAAAQAaAAoAAAD0/wEAAQAaAAsAAAA=")
+tile_map_data = PackedByteArray("AAACAAAAAQAGAB4AAAACAAEAAQAGAB8AAAAGAAAAAQAEAB4AAAAGAAEAAQAEAB8AAAACAP//AQAGAB0AAAADAAAAAQAHAB4AAAADAAEAAQAHAB8AAAAHAP//AQAFAB0AAAAHAAAAAQAFAB4AAAAHAAEAAQAFAB8AAAAFAAUAAQASABwAAAAFAAYAAQASAB0AAAAGAAUAAQATABwAAAAGAAYAAQATAB0AAAD2////AQAZAAkAAAD2/wAAAQAZAAoAAAD2/wEAAQAZAAsAAAD3////AQAaAAkAAAD3/wAAAQAaAAoAAAD3/wEAAQAaAAsAAAD4////AQAYAA0AAAD4/wAAAQAYAA4AAAD4/wEAAQAYAA8AAAD5////AQAZAA0AAAD5/wAAAQAZAA4AAAD5/wEAAQAZAA8AAAD6////AQAaAA0AAAD6/wAAAQAaAA4AAAD6/wEAAQAaAA8AAAD7/wAAAQAQAAAAAAD7/wEAAQAQAAEAAAD8/wAAAQARAAAAAAD8/wEAAQARAAEAAAD9/wAAAQAEAAMAAAD1////AQAYAAkAAAD1/wAAAQAYAAoAAAD1/wEAAQAYAAsAAAD2//7/AQAZAAgAAAD5//7/AQAZAAwAAAD9////AQAEAAIAAADy////AQAYAAkAAADy/wAAAQAYAAoAAADy/wEAAQAYAAsAAADz//7/AQAZAAgAAADz////AQAZAAkAAADz/wAAAQAZAAoAAADz/wEAAQAZAAsAAAD0////AQAaAAkAAAD0/wAAAQAaAAoAAAD0/wEAAQAaAAsAAAA=")
 tile_set = SubResource("TileSet_7tqk6")
 
 [node name="Carpet" type="TileMapLayer" parent="Background"]
@@ -2457,9 +2457,15 @@ region_rect = Rect2(288, 224, 64, 32)
 position = Vector2(97.5, 72.5)
 shape = SubResource("RectangleShape2D_7rhy4")
 
-[node name="Bed" type="Area2D" parent="."]
+[node name="Eat Table" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed"]
+[node name="First Aid Kit" type="Sprite2D" parent="Eat Table"]
+position = Vector2(82, -27)
+texture = ExtResource("2_vpq6y")
+region_enabled = true
+region_rect = Rect2(128, 64, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Eat Table"]
 position = Vector2(81.5, -19.5)
 shape = SubResource("RectangleShape2D_eabxg")
 
@@ -2503,12 +2509,12 @@ shape = SubResource("RectangleShape2D_7hcan")
 position = Vector2(2, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Block player/Shelves"]
-position = Vector2(-129, -3)
+position = Vector2(-153.5, -3)
 shape = SubResource("RectangleShape2D_vpq6y")
 
-[node name="Table and Bed" type="Area2D" parent="Block player"]
+[node name="Bed" type="Area2D" parent="Block player"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Block player/Table and Bed"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block player/Bed"]
 position = Vector2(146, 70.25)
 shape = SubResource("RectangleShape2D_7tqk6")
 
