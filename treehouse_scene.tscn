@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://bmito4qec4eg2"]
+[gd_scene load_steps=28 format=4 uid="uid://bmito4qec4eg2"]
 
 [ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="1_lt7tf"]
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="2_vpq6y"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="4_7tqk6"]
 [ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="4_tgv5j"]
 [ext_resource type="AudioStream" uid="uid://ca3tlw532xys5" path="res://Music_Teriyaki-Wings/Treehouse_BGM copy.wav" id="6_tb5ku"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tb5ku"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7hcan"]
 texture = ExtResource("1_lt7tf")
@@ -2374,6 +2376,29 @@ size = Vector2(61, 51.5)
 size = Vector2(21.9398, 10.092)
 
 [node name="Treehouse Room 2" type="Node2D"]
+
+[node name="World Boundary" type="StaticBody2D" parent="."]
+position = Vector2(1, 97)
+scale = Vector2(2.84, 1)
+
+[node name="Bottom Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(0, -5)
+shape = SubResource("WorldBoundaryShape2D_tb5ku")
+
+[node name="Top Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(-1.05634, -191)
+rotation = 3.12936
+shape = SubResource("WorldBoundaryShape2D_tb5ku")
+
+[node name="Left Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(-66.1971, -118)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_tb5ku")
+
+[node name="Right Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(65.845, -101)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_tb5ku")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3.5, 3.5)
