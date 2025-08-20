@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cytcttl7qlxb8"
-path="res://.godot/imported/Ghost.jpg-fba1dcb081500a5f5d4d0643e3b5537e.ctex"
+uid="uid://bkj16alrk7pl6"
+path="res://.godot/imported/TX Props with Shadow.png-936b4e9ba799412d01501103469daaec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ghost.jpg"
-dest_files=["res://.godot/imported/Ghost.jpg-fba1dcb081500a5f5d4d0643e3b5537e.ctex"]
+source_file="res://Backgrounds/Ruin Tilesets/Extra/TX Props with Shadow.png"
+dest_files=["res://.godot/imported/TX Props with Shadow.png-936b4e9ba799412d01501103469daaec.ctex"]
 
 [params]
 

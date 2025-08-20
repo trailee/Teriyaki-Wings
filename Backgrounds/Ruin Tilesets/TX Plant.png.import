@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cytcttl7qlxb8"
-path="res://.godot/imported/Ghost.jpg-fba1dcb081500a5f5d4d0643e3b5537e.ctex"
+uid="uid://cqdfm14nvo1w"
+path="res://.godot/imported/TX Plant.png-8157cfd750881a4de6314fa4e87401c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ghost.jpg"
-dest_files=["res://.godot/imported/Ghost.jpg-fba1dcb081500a5f5d4d0643e3b5537e.ctex"]
+source_file="res://Backgrounds/Ruin Tilesets/TX Plant.png"
+dest_files=["res://.godot/imported/TX Plant.png-8157cfd750881a4de6314fa4e87401c5.ctex"]
 
 [params]
 

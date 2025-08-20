@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://chw5eejtlkafc"]
+[gd_scene load_steps=28 format=4 uid="uid://bmito4qec4eg2"]
 
 [ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="1_lt7tf"]
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="2_vpq6y"]
@@ -2401,7 +2401,7 @@ rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_tb5ku")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(6, 6)
+zoom = Vector2(3.5, 3.5)
 limit_left = -190
 limit_top = -100
 limit_right = 190

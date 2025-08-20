@@ -1,9 +1,7 @@
-[gd_scene load_steps=13 format=4 uid="uid://crd51rhgitwsj"]
+[gd_scene load_steps=11 format=4 uid="uid://7wclvg7a5abm"]
 
 [ext_resource type="Texture2D" uid="uid://bwff5o35rx8pe" path="res://Backgrounds/Forest_tiles.png" id="1_lifw2"]
 [ext_resource type="Texture2D" uid="uid://dlu11ba07x610" path="res://Assets/Forest_assets.png" id="2_stcry"]
-[ext_resource type="AudioStream" uid="uid://cjhqvfcufe8xm" path="res://Music_Teriyaki-Wings/Forest_BGM copy.wav" id="3_mvm06"]
-[ext_resource type="AudioStream" uid="uid://daaypih34uft2" path="res://Music_Teriyaki-Wings/Forest_Fight_BGM copy.wav" id="4_vmuxp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_stcry"]
 texture = ExtResource("1_lifw2")
@@ -201,7 +199,7 @@ shape = SubResource("WorldBoundaryShape2D_mvm06")
 [node name="Camera (put under player)" type="Camera2D" parent="."]
 position = Vector2(103, -20)
 scale = Vector2(63.3581, 40.8094)
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(1.5, 1.5)
 limit_left = -735
 limit_top = -410
 limit_right = 410
@@ -720,11 +718,3 @@ scale = Vector2(0.458964, 0.527106)
 texture = ExtResource("2_stcry")
 region_enabled = true
 region_rect = Rect2(160, 32, 192, 208)
-
-[node name="Forest Music" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(86, -287)
-stream = ExtResource("3_mvm06")
-autoplay = true
-
-[node name="Fight Forest Music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_vmuxp")

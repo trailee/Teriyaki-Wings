@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cytcttl7qlxb8"
-path="res://.godot/imported/Ghost.jpg-fba1dcb081500a5f5d4d0643e3b5537e.ctex"
+uid="uid://cs6g5utsdfp1t"
+path="res://.godot/imported/TX Plant with Shadow.png-180cfebded5953e4de65d723af97e535.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ghost.jpg"
-dest_files=["res://.godot/imported/Ghost.jpg-fba1dcb081500a5f5d4d0643e3b5537e.ctex"]
+source_file="res://Backgrounds/Ruin Tilesets/Extra/TX Plant with Shadow.png"
+dest_files=["res://.godot/imported/TX Plant with Shadow.png-180cfebded5953e4de65d723af97e535.ctex"]
 
 [params]
 
