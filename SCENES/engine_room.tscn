@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=4 uid="uid://daj821jj1n6h2"]
+[gd_scene load_steps=68 format=4 uid="uid://daj821jj1n6h2"]
 
 [ext_resource type="Texture2D" uid="uid://d24s1jahnpule" path="res://Assets/walls_floor.png" id="1_imaqe"]
 [ext_resource type="Texture2D" uid="uid://ysh8c2r2eok5" path="res://Assets/interiors_demo.png" id="2_jf718"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://7byx5ieepuwi" path="res://Assets/objects/3.png" id="15_u0vgu"]
 [ext_resource type="Texture2D" uid="uid://cdo2wjw1itbca" path="res://Assets/objects/blade.png" id="19_1fgu5"]
 [ext_resource type="Texture2D" uid="uid://bxqiov7u5w8t7" path="res://Assets/objects/post-it-pink.png" id="20_1fgu5"]
+[ext_resource type="AudioStream" uid="uid://c6wgf1ow5hejy" path="res://Music_Teriyaki-Wings/Remade_MainMenuBGM.wav" id="21_4770r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y8o61"]
 texture = ExtResource("1_imaqe")
@@ -2161,3 +2162,7 @@ shape = SubResource("RectangleShape2D_ihoaf")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
 position = Vector2(-377.981, -120.791)
 shape = SubResource("RectangleShape2D_xlefg")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_4770r")
+autoplay = true
