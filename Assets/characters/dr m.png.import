@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fka4cryd8xgy"
-path="res://.godot/imported/zade.png-44479005edc663bd6c3b99375fab175e.ctex"
+uid="uid://bq7fls4qulf2u"
+path="res://.godot/imported/dr m.png-4a0d4c0740a64d584330948626350c24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/characters/zade.png"
-dest_files=["res://.godot/imported/zade.png-44479005edc663bd6c3b99375fab175e.ctex"]
+source_file="res://Assets/characters/dr m.png"
+dest_files=["res://.godot/imported/dr m.png-4a0d4c0740a64d584330948626350c24.ctex"]
 
 [params]
 

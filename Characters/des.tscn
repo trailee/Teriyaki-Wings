@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://dcrdgwaymh60e"]
+
+[ext_resource type="Texture2D" uid="uid://tacc4n7x1gsj" path="res://Assets/characters/Des idle (6).png" id="1_20tp4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djifa"]
+atlas = ExtResource("1_20tp4")
+region = Rect2(0, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glwsr"]
+atlas = ExtResource("1_20tp4")
+region = Rect2(540, 900, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdjjj"]
+atlas = ExtResource("1_20tp4")
+region = Rect2(0, 900, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rw4fr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djifa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glwsr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdjjj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_20tp4"]
+radius = 8.60233
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_djifa"]
+size = Vector2(21, 14.5)
+
+[node name="Des" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-264, -65)
+scale = Vector2(0.0388889, 0.0311111)
+sprite_frames = SubResource("SpriteFrames_rw4fr")
+autoplay = "default"
+frame_progress = 0.807244
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-264, -70)
+shape = SubResource("CircleShape2D_20tp4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-263, -57)
+shape = SubResource("RectangleShape2D_djifa")
