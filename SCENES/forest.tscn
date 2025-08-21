@@ -1,7 +1,9 @@
-[gd_scene load_steps=11 format=4 uid="uid://7wclvg7a5abm"]
+[gd_scene load_steps=17 format=4 uid="uid://bnljw0tnfql3l"]
 
 [ext_resource type="Texture2D" uid="uid://bwff5o35rx8pe" path="res://Backgrounds/Forest_tiles.png" id="1_lifw2"]
 [ext_resource type="Texture2D" uid="uid://dlu11ba07x610" path="res://Assets/Forest_assets.png" id="2_stcry"]
+[ext_resource type="AudioStream" uid="uid://cjhqvfcufe8xm" path="res://Music_Teriyaki-Wings/Forest_BGM copy.wav" id="3_mvm06"]
+[ext_resource type="AudioStream" uid="uid://daaypih34uft2" path="res://Music_Teriyaki-Wings/Forest_Fight_BGM copy.wav" id="4_vmuxp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_stcry"]
 texture = ExtResource("1_lifw2")
@@ -162,6 +164,56 @@ size = Vector2(101, 40)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uq144"]
 
+[sub_resource type="Animation" id="Animation_gldua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tb5ku"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hsxm7"]
+_data = {
+&"RESET": SubResource("Animation_gldua"),
+&"new_animation": SubResource("Animation_tb5ku")
+}
+
+[sub_resource type="GDScript" id="GDScript_mvm06"]
+script/source = "extends AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [node name="Forest" type="Node2D"]
 
 [node name="Background" type="TileMapLayer" parent="."]
@@ -196,14 +248,14 @@ rotation = -1.5708
 scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_mvm06")
 
-[node name="Camera (put under player)" type="Camera2D" parent="."]
-position = Vector2(103, -20)
+[node name="Camera (on player)" type="Camera2D" parent="."]
+position = Vector2(36.0001, -18)
 scale = Vector2(63.3581, 40.8094)
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(2, 2)
 limit_left = -735
 limit_top = -410
-limit_right = 410
-limit_bottom = 710
+limit_right = 700
+limit_bottom = 410
 
 [node name="Logs" type="StaticBody2D" parent="."]
 
@@ -718,3 +770,18 @@ scale = Vector2(0.458964, 0.527106)
 texture = ExtResource("2_stcry")
 region_enabled = true
 region_rect = Rect2(160, 32, 192, 208)
+
+[node name="Forest BGM" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(86, -287)
+stream = ExtResource("3_mvm06")
+autoplay = true
+
+[node name="Fight Forest BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_vmuxp")
+
+[node name="transition" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hsxm7")
+}
+autoplay = "new_animation"
+script = SubResource("GDScript_mvm06")

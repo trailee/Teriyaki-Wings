@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://bmito4qec4eg2"]
+[gd_scene load_steps=39 format=4 uid="uid://dcaklbmsk1od8"]
 
 [ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="1_lt7tf"]
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="2_vpq6y"]
@@ -6,9 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="4_7tqk6"]
 [ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="4_tgv5j"]
 [ext_resource type="AudioStream" uid="uid://ca3tlw532xys5" path="res://Music_Teriyaki-Wings/Treehouse_BGM copy.wav" id="6_tb5ku"]
-[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="8_wcsbt"]
-[ext_resource type="Script" uid="uid://d3hsqcykbvn6q" path="res://SCENES/area_2d.gd" id="9_6geum"]
-[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters tscn/Ophelia.tscn" id="9_67341"]
+[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="7_gldua"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tb5ku"]
 
@@ -23,12 +21,14 @@ texture_region_size = Vector2i(32, 32)
 5:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
+1:1/0/modulate = Color(0.739562, 0.771156, 0.380419, 1)
 2:1/0 = 0
 3:1/0 = 0
 4:1/0 = 0
 5:1/0 = 0
 0:2/0 = 0
 1:2/0 = 0
+1:2/0/modulate = Color(0.849088, 0.724595, 0.390917, 1)
 2:2/0 = 0
 3:2/0 = 0
 4:2/0 = 0
@@ -676,8 +676,6 @@ texture = ExtResource("2_vpq6y")
 9:7/0 = 0
 18:7/0 = 0
 19:7/0 = 0
-20:7/0 = 0
-23:7/0 = 0
 24:7/0 = 0
 25:7/0 = 0
 26:7/0 = 0
@@ -685,10 +683,6 @@ texture = ExtResource("2_vpq6y")
 13:8/0 = 0
 18:8/0 = 0
 19:8/0 = 0
-20:8/0 = 0
-21:8/0 = 0
-22:8/0 = 0
-23:8/0 = 0
 25:8/0 = 0
 0:9/0 = 0
 4:9/0 = 0
@@ -701,10 +695,6 @@ texture = ExtResource("2_vpq6y")
 17:9/0 = 0
 18:9/0 = 0
 19:9/0 = 0
-20:9/0 = 0
-21:9/0 = 0
-22:9/0 = 0
-23:9/0 = 0
 24:9/0 = 0
 25:9/0 = 0
 26:9/0 = 0
@@ -722,10 +712,6 @@ texture = ExtResource("2_vpq6y")
 17:10/0 = 0
 18:10/0 = 0
 19:10/0 = 0
-20:10/0 = 0
-21:10/0 = 0
-22:10/0 = 0
-23:10/0 = 0
 24:10/0 = 0
 25:10/0 = 0
 26:10/0 = 0
@@ -743,10 +729,6 @@ texture = ExtResource("2_vpq6y")
 17:11/0 = 0
 18:11/0 = 0
 19:11/0 = 0
-20:11/0 = 0
-21:11/0 = 0
-22:11/0 = 0
-23:11/0 = 0
 24:11/0 = 0
 25:11/0 = 0
 26:11/0 = 0
@@ -1130,6 +1112,9 @@ texture = ExtResource("2_vpq6y")
 23:35/0 = 0
 24:35/0 = 0
 25:35/0 = 0
+20:7/size_in_atlas = Vector2i(4, 5)
+20:7/0 = 0
+20:7/0/y_sort_origin = 10
 
 [sub_resource type="TileSet" id="TileSet_tb5ku"]
 sources/2 = SubResource("TileSetAtlasSource_7tqk6")
@@ -2335,9 +2320,6 @@ texture = ExtResource("3_7hcan")
 [sub_resource type="TileSet" id="TileSet_gldua"]
 sources/4 = SubResource("TileSetAtlasSource_tb5ku")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_67341"]
-radius = 40.6079
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_7hcan"]
 atlas = ExtResource("2_vpq6y")
 region = Rect2(320, 480, 32, 32)
@@ -2363,33 +2345,103 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb5ku"]
 size = Vector2(40.75, 26.75)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eabxg"]
+size = Vector2(31, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rhy4"]
+size = Vector2(37.5, 38.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7hcan"]
 size = Vector2(17, 32)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ol6g"]
+size = Vector2(32.736, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1tuf"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpq6y"]
-size = Vector2(86, 71)
+size = Vector2(135, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pksk"]
+size = Vector2(20.9104, 34.685)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7tqk6"]
-size = Vector2(92, 45)
+size = Vector2(66.5668, 56.0336)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tgv5j"]
-size = Vector2(61, 51.5)
+size = Vector2(69.5, 51.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1207l"]
+size = Vector2(17.5199, 18.143)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13xdw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gldua"]
 size = Vector2(21.9398, 10.092)
 
+[sub_resource type="Animation" id="Animation_gldua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tb5ku"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hsxm7"]
+_data = {
+&"RESET": SubResource("Animation_gldua"),
+&"new_animation": SubResource("Animation_tb5ku")
+}
+
+[sub_resource type="GDScript" id="GDScript_tb5ku"]
+script/source = "extends AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [node name="Treehouse Room 2" type="Node2D"]
+y_sort_enabled = true
 
 [node name="World Boundary" type="StaticBody2D" parent="."]
 position = Vector2(1, 97)
 scale = Vector2(2.84, 1)
 
 [node name="Bottom Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(0, -5)
+position = Vector2(-0.352113, 24)
 shape = SubResource("WorldBoundaryShape2D_tb5ku")
 
 [node name="Top Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-1.05634, -191)
+position = Vector2(0.352112, -134)
 rotation = 3.12936
 shape = SubResource("WorldBoundaryShape2D_tb5ku")
 
@@ -2403,115 +2455,207 @@ position = Vector2(65.845, -101)
 rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_tb5ku")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5.2, 5.5)
+[node name="Background" type="TileMapLayer" parent="."]
+z_as_relative = false
+use_parent_material = true
+position = Vector2(2, -33)
+tile_map_data = PackedByteArray("AAD/////AAABAAEAAAD//wAAAAABAAIAAAAAAAAAAAABAAIAAAAAAP//AAABAAEAAAD+////AAABAAEAAAD+/wAAAAABAAIAAAD+/wEAAAABAAIAAAD//wEAAAABAAIAAAAAAAEAAAABAAIAAAABAAEAAAABAAIAAAABAAAAAAABAAIAAAABAP//AAABAAEAAAABAP7/AAABAAEAAAAAAP7/AAABAAEAAAD///7/AAABAAEAAAD+//7/AAABAAEAAAD9////AAABAAEAAAD9/wAAAAABAAIAAAD9/wEAAAABAAIAAAD9/wIAAAABAAIAAAD+/wIAAAABAAIAAAD//wIAAAABAAIAAAAAAAIAAAABAAIAAAABAAIAAAABAAIAAAACAAIAAAABAAIAAAACAAEAAAABAAIAAAACAAAAAAABAAIAAAACAP//AAABAAEAAAACAP7/AAABAAEAAAD8/wEAAAABAAIAAAD8/wIAAAABAAIAAAD7/wIAAAABAAIAAAD7/wEAAAABAAIAAAADAAAAAAABAAIAAAADAAEAAAABAAIAAAADAAIAAAABAAIAAAAEAAIAAAABAAIAAAAEAAEAAAABAAIAAAAEAAAAAAABAAIAAAADAP//AAABAAEAAAAEAP//AAABAAEAAAAEAP7/AAABAAEAAAADAP7/AAABAAEAAAD8/wAAAAABAAIAAAD8////AAABAAEAAAD7////AAABAAEAAAD8//7/AAABAAEAAAD9//7/AAABAAEAAAD7//7/AAABAAEAAAD7/wAAAAABAAIAAAD7/wMAAAABAAIAAAD8/wMAAAABAAIAAAD9/wMAAAABAAIAAAD+/wMAAAABAAIAAAD//wMAAAABAAIAAAAAAAMAAAABAAIAAAABAAMAAAABAAIAAAACAAMAAAABAAIAAAAEAAMAAAABAAIAAAADAAMAAAABAAIAAAD6//7/AAABAAEAAAD6////AAABAAEAAAD6/wAAAAABAAIAAAD6/wEAAAABAAIAAAD6/wIAAAABAAIAAAD6/wMAAAABAAIAAAAFAP7/AAABAAEAAAAFAP//AAABAAEAAAAFAAAAAAABAAIAAAAFAAEAAAABAAIAAAAFAAIAAAABAAIAAAAFAAMAAAABAAIAAAAGAP//AAABAAEAAAAGAP7/AAABAAEAAAD5////AAABAAEAAAD5//7/AAABAAEAAAAHAP//AAABAAEAAAAHAP7/AAABAAEAAAD4////AAABAAEAAAD4//7/AAABAAEAAAAIAP//AAABAAEAAAAIAP7/AAABAAEAAAAIAP3/AAABAAEAAAAHAP3/AAABAAEAAAAGAP3/AAABAAEAAAAFAP3/AAABAAEAAAAEAP3/AAABAAEAAAADAP3/AAABAAEAAAACAP3/AAABAAEAAAABAP3/AAABAAEAAAAAAP3/AAABAAEAAAD///3/AAABAAEAAAD+//3/AAABAAEAAAD9//3/AAABAAEAAAD8//3/AAABAAEAAAD7//3/AAABAAEAAAD6//3/AAABAAEAAAD5//3/AAABAAEAAAD4//3/AAABAAEAAAD6/wQAAAABAAIAAAD7/wQAAAABAAIAAAD8/wQAAAABAAIAAAD9/wQAAAABAAIAAAD+/wQAAAABAAIAAAD//wQAAAABAAIAAAAAAAQAAAABAAIAAAABAAQAAAABAAIAAAACAAQAAAABAAIAAAADAAQAAAABAAIAAAAEAAQAAAABAAIAAAAFAAQAAAABAAIAAAAGAAAAAAABAAIAAAAHAAAAAAABAAIAAAAIAAAAAAABAAIAAAAIAAEAAAABAAIAAAAIAAIAAAABAAIAAAAIAAMAAAABAAIAAAAIAAQAAAABAAIAAAAHAAQAAAABAAIAAAAGAAQAAAABAAIAAAAGAAMAAAABAAIAAAAGAAIAAAABAAIAAAAGAAEAAAABAAIAAAAHAAEAAAABAAIAAAAHAAIAAAABAAIAAAAHAAMAAAABAAIAAAD5/wQAAAABAAIAAAD4/wQAAAABAAIAAAD4/wMAAAABAAIAAAD4/wIAAAABAAIAAAD4/wEAAAABAAIAAAD4/wAAAAABAAIAAAD5/wAAAAABAAIAAAD5/wEAAAABAAIAAAD5/wIAAAABAAIAAAD5/wMAAAABAAIAAAA=")
+tile_set = SubResource("TileSet_7hcan")
+
+[node name="Broken Doors" type="TileMapLayer" parent="Background"]
+tile_map_data = PackedByteArray("AAD///3/AAASAAEAAAD///7/AAASAAIAAAD/////AAASAAMAAAAAAP3/AAATAAEAAAAAAP7/AAATAAIAAAAAAP//AAATAAMAAAD4//3/AAATAAEAAAD4//7/AAATAAIAAAD4////AAATAAMAAAD3//3/AAASAAEAAAD3//7/AAASAAIAAAD3////AAASAAMAAAA=")
+tile_set = SubResource("TileSet_eabxg")
+
+[node name="Flour Bags" type="TileMapLayer" parent="Background"]
+tile_map_data = PackedByteArray("AAD1////AAAIAAwAAAD2////AAAJAAwAAAD2/wAAAAAJAA0AAAD3////AAAKAAwAAAD3/wAAAAAKAA0AAAD4////AAALAAwAAAD4/wAAAAALAA0AAAD5////AAAMAAwAAAD5/wAAAAAMAA0AAAA=")
+tile_set = SubResource("TileSet_eabxg")
+
+[node name="Furniture 2" type="TileMapLayer" parent="Background"]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAFAAUAAgAIAAUAAAAFAAYAAgAIAAYAAAAFAAcAAgAIAAcAAAAGAAUAAgAJAAUAAAAGAAYAAgAJAAYAAAAGAAcAAgAJAAcAAAAEAP//AgAIABUAAAAEAAAAAgAIABYAAAAEAAEAAgAIABcAAAAFAP//AgAJABUAAAAFAAAAAgAJABYAAAAFAAEAAgAJABcAAAD2//7/AgAZAA0AAAD2////AgAZAA4AAAD2/wAAAgAZAA8AAAD3//7/AgAaAA0AAAD3////AgAaAA4AAAD3/wAAAgAaAA8AAAD4//7/AgAYAAkAAAD4////AgAYAAoAAAD4/wAAAgAYAAsAAAD5//7/AgAZAAkAAAD5////AgAZAAoAAAD5/wAAAgAZAAsAAAD6//7/AgAaAAkAAAD6////AgAaAAoAAAD6/wAAAgAaAAsAAAD7////AgAaAB4AAAD7/wAAAgAaAB8AAAD8////AgAbAB4AAAD8/wAAAgAbAB8AAAD1//7/AgAYAA0AAAD1////AgAYAA4AAAD1/wAAAgAYAA8AAAD2//3/AgAZAAwAAAD5//3/AgAZAAgAAADy//7/AgAYAAkAAADy////AgAYAAoAAADy/wAAAgAYAAsAAADz//3/AgAZAAgAAADz//7/AgAZAAkAAADz////AgAZAAoAAADz/wAAAgAZAAsAAAD0//7/AgAaAAkAAAD0////AgAaAAoAAAD0/wAAAgAaAAsAAAAJAAUAAgAUAAcAAAA=")
+tile_set = SubResource("TileSet_tb5ku")
+
+[node name="Furniture 1" type="TileMapLayer" parent="Background"]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAACAAAAAQAGAB4AAAACAAEAAQAGAB8AAAAGAAAAAQAEAB4AAAAGAAEAAQAEAB8AAAACAP//AQAGAB0AAAADAAAAAQAHAB4AAAADAAEAAQAHAB8AAAAHAP//AQAFAB0AAAAHAAAAAQAFAB4AAAAHAAEAAQAFAB8AAAAFAAUAAQASABwAAAAFAAYAAQASAB0AAAAGAAUAAQATABwAAAAGAAYAAQATAB0AAAD2////AQAZAAkAAAD2/wAAAQAZAAoAAAD2/wEAAQAZAAsAAAD3////AQAaAAkAAAD3/wAAAQAaAAoAAAD3/wEAAQAaAAsAAAD4////AQAYAA0AAAD4/wAAAQAYAA4AAAD4/wEAAQAYAA8AAAD5////AQAZAA0AAAD5/wAAAQAZAA4AAAD5/wEAAQAZAA8AAAD6////AQAaAA0AAAD6/wAAAQAaAA4AAAD6/wEAAQAaAA8AAAD7/wAAAQAQAAAAAAD7/wEAAQAQAAEAAAD8/wAAAQARAAAAAAD8/wEAAQARAAEAAAD9/wAAAQAEAAMAAAD1////AQAYAAkAAAD1/wAAAQAYAAoAAAD1/wEAAQAYAAsAAAD2//7/AQAZAAgAAAD5//7/AQAZAAwAAAD9////AQAEAAIAAADy////AQAYAAkAAADy/wAAAQAYAAoAAADy/wEAAQAYAAsAAADz//7/AQAZAAgAAADz////AQAZAAkAAADz/wAAAQAZAAoAAADz/wEAAQAZAAsAAAD0////AQAaAAkAAAD0/wAAAQAaAAoAAAD0/wEAAQAaAAsAAAA=")
+tile_set = SubResource("TileSet_7tqk6")
+
+[node name="Carpet" type="TileMapLayer" parent="Background"]
+position = Vector2(-10, 17)
+tile_map_data = PackedByteArray("AAD2/wMABAAcAAEAAAD2/wQABAAcAAIAAAD2/wUABAAcAAMAAAD2/wYABAAcAAQAAAD3/wMABAAcAAEAAAD3/wQABAAcAAIAAAD3/wUABAAcAAMAAAD3/wYABAAcAAQAAAD4/wMABAAcAAEAAAD4/wQABAAcAAIAAAD4/wUABAAcAAMAAAD4/wYABAAcAAQAAAD5/wMABAAdAAEAAAD5/wQABAAdAAIAAAD5/wUABAAdAAMAAAD5/wYABAAdAAQAAAD6/wMABAAcAAEAAAD6/wQABAAcAAIAAAD6/wUABAAcAAMAAAD6/wYABAAcAAQAAAD7/wMABAAdAAEAAAD7/wQABAAdAAIAAAD7/wUABAAdAAMAAAD7/wYABAAdAAQAAAD8/wMABAAcAAEAAAD8/wQABAAcAAIAAAD8/wUABAAcAAMAAAD8/wYABAAcAAQAAAD9/wMABAAdAAEAAAD9/wQABAAdAAIAAAD9/wUABAAdAAMAAAD9/wYABAAdAAQAAAD+/wMABAAcAAEAAAD+/wQABAAcAAIAAAD+/wUABAAcAAMAAAD+/wYABAAcAAQAAAD//wMABAAcAAEAAAD//wQABAAcAAIAAAD//wUABAAcAAMAAAD//wYABAAcAAQAAAAAAAMABAAdAAEAAAAAAAQABAAdAAIAAAAAAAUABAAdAAMAAAAAAAYABAAdAAQAAAD+/wIABAAcAAAAAAD//wIABAAdAAAAAAD8/wIABAAcAAAAAAD9/wIABAAdAAAAAAD6/wIABAAcAAAAAAD7/wIABAAdAAAAAAD4/wIABAAdAAAAAAD5/wIABAAdAAAAAAD3/wIABAAcAAAAAAD2/wIABAAcAAAAAAAAAAIABAAcAAAAAAABAAIABAAeAAAAAAD1/wIABAAcAAAAAAABAAMABAAeAAEAAAABAAQABAAeAAIAAAABAAUABAAeAAMAAAABAAYABAAeAAQAAAABAAcABAAeAAUAAAD//wcABAAcAAUAAAAAAAcABAAdAAUAAAD9/wcABAAcAAUAAAD+/wcABAAdAAUAAAD7/wcABAAcAAUAAAD8/wcABAAdAAUAAAD5/wcABAAcAAUAAAD6/wcABAAdAAUAAAD3/wcABAAcAAUAAAD4/wcABAAdAAUAAAD1/wcABAAcAAUAAAD2/wcABAAdAAUAAAD1/wQABAAcAAIAAAD1/wUABAAcAAIAAAD1/wYABAAcAAIAAAD1/wMABAAcAAIAAAD0/wMABAAcAAIAAAD0/wQABAAcAAIAAAD0/wUABAAcAAIAAAD0/wYABAAcAAIAAAD0/wcABAAcAAUAAAD0/wIABAAcAAAAAAA=")
+tile_set = SubResource("TileSet_gldua")
+
+[node name="Calendar" type="Sprite2D" parent="Background"]
+position = Vector2(81, -35)
+texture = ExtResource("2_vpq6y")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="Chest" type="Area2D" parent="Background"]
+position = Vector2(4, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background/Chest"]
+position = Vector2(151, -8)
+sprite_frames = SubResource("SpriteFrames_tgv5j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Chest"]
+position = Vector2(151, -2)
+shape = SubResource("RectangleShape2D_tb5ku")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/Chest"]
+
+[node name="Eat Table" type="Area2D" parent="Background"]
+position = Vector2(-2, 33)
+
+[node name="First Aid Kit" type="Sprite2D" parent="Background/Eat Table"]
+position = Vector2(82, -27)
+texture = ExtResource("2_vpq6y")
+region_enabled = true
+region_rect = Rect2(128, 64, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Eat Table"]
+position = Vector2(81.5, -19.5)
+shape = SubResource("RectangleShape2D_eabxg")
+
+[node name="InteriorTilesLite" type="Sprite2D" parent="Background"]
+visible = false
+position = Vector2(160, -35)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_7hcan")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(288, 224, 64, 32)
+
+[node name="Desdemona2D" parent="Background" instance=ExtResource("7_gldua")]
+position = Vector2(28, 10)
+
+[node name="Box on Table2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box on Table2"]
+position = Vector2(100, 70)
+shape = SubResource("RectangleShape2D_7rhy4")
+
+[node name="Box on Table" type="Area2D" parent="Box on Table2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box on Table2/Box on Table"]
+position = Vector2(98, 70)
+scale = Vector2(1.36628, 1.36696)
+shape = SubResource("RectangleShape2D_7rhy4")
+
+[node name="Dinner Table" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dinner Table"]
+position = Vector2(81.5, -19.5)
+shape = SubResource("RectangleShape2D_eabxg")
+
+[node name="Chest" type="StaticBody2D" parent="."]
+position = Vector2(6, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest"]
+position = Vector2(151, -2)
+shape = SubResource("RectangleShape2D_tb5ku")
+
+[node name="Chairs" type="StaticBody2D" parent="."]
+position = Vector2(17, 5)
+
+[node name="Chairs" type="Area2D" parent="Chairs"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chairs/Chairs"]
+position = Vector2(34, -23)
+shape = SubResource("RectangleShape2D_7hcan")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Chairs/Chairs"]
+position = Vector2(98, -25)
+shape = SubResource("RectangleShape2D_7hcan")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chairs"]
+position = Vector2(42, -20)
+scale = Vector2(0.967629, 1.23962)
+shape = SubResource("RectangleShape2D_5ol6g")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Chairs"]
+position = Vector2(91.8381, -20)
+scale = Vector2(0.967629, 1.23962)
+shape = SubResource("RectangleShape2D_5ol6g")
+
+[node name="Shelves" type="StaticBody2D" parent="."]
+position = Vector2(3, -29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shelves"]
+position = Vector2(-149, -4)
+scale = Vector2(6.29266, 3.11761)
+shape = SubResource("RectangleShape2D_e1tuf")
+
+[node name="Shelves" type="Area2D" parent="Shelves"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shelves/Shelves"]
+position = Vector2(-153.5, -3)
+shape = SubResource("RectangleShape2D_vpq6y")
+
+[node name="Bed" type="StaticBody2D" parent="."]
+position = Vector2(9, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed"]
+position = Vector2(145.252, 51)
+scale = Vector2(2.74968, 1.9605)
+shape = SubResource("RectangleShape2D_7pksk")
+
+[node name="Bed" type="Area2D" parent="Bed"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed/Bed"]
+position = Vector2(147, 56)
+scale = Vector2(1.06309, 1.58642)
+shape = SubResource("RectangleShape2D_7tqk6")
+
+[node name="Middle Items" type="StaticBody2D" parent="."]
+position = Vector2(1, 4)
+
+[node name="Middle stuff" type="Area2D" parent="Middle Items"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Middle Items/Middle stuff"]
+position = Vector2(-54, -26)
+shape = SubResource("RectangleShape2D_tgv5j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Middle Items"]
+position = Vector2(-63, -25)
+scale = Vector2(1.33233, 2.41733)
+shape = SubResource("RectangleShape2D_1207l")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Middle Items"]
+position = Vector2(-39, -36)
+scale = Vector2(1.12674, 1.42634)
+shape = SubResource("RectangleShape2D_13xdw")
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(-11, -3)
+
+[node name="Shadow" type="Sprite2D" parent="Exit"]
+modulate = Color(1, 1, 1, 0.541176)
+position = Vector2(-171.781, 66.0782)
+scale = Vector2(0.10833, 0.297075)
+texture = ExtResource("4_7tqk6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+position = Vector2(-204.781, 70.0782)
+scale = Vector2(6.30666, -9.71067)
+shape = SubResource("RectangleShape2D_gldua")
+
+[node name="Camera2D (not on player)" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
 limit_left = -190
 limit_top = -100
 limit_right = 190
 limit_bottom = 100
 
-[node name="Background" type="TileMapLayer" parent="."]
-z_as_relative = false
-use_parent_material = true
-position = Vector2(2, -33)
-tile_map_data = PackedByteArray("AAD/////AAABAAEAAAD//wAAAAABAAIAAAAAAAAAAAABAAIAAAAAAP//AAABAAEAAAD+////AAABAAEAAAD+/wAAAAABAAIAAAD+/wEAAAABAAIAAAD//wEAAAABAAIAAAAAAAEAAAABAAIAAAABAAEAAAABAAIAAAABAAAAAAABAAIAAAABAP//AAABAAEAAAABAP7/AAABAAEAAAAAAP7/AAABAAEAAAD///7/AAABAAEAAAD+//7/AAABAAEAAAD9////AAABAAEAAAD9/wAAAAABAAIAAAD9/wEAAAABAAIAAAD9/wIAAAABAAIAAAD+/wIAAAABAAIAAAD//wIAAAABAAIAAAAAAAIAAAABAAIAAAABAAIAAAABAAIAAAACAAIAAAABAAIAAAACAAEAAAABAAIAAAACAAAAAAABAAIAAAACAP//AAABAAEAAAACAP7/AAABAAEAAAD8/wEAAAABAAIAAAD8/wIAAAABAAIAAAD7/wIAAAABAAIAAAD7/wEAAAABAAIAAAADAAAAAAABAAIAAAADAAEAAAABAAIAAAADAAIAAAABAAIAAAAEAAIAAAABAAIAAAAEAAEAAAABAAIAAAAEAAAAAAABAAIAAAADAP//AAABAAEAAAAEAP//AAABAAEAAAAEAP7/AAABAAEAAAADAP7/AAABAAEAAAD8/wAAAAABAAIAAAD8////AAABAAEAAAD7////AAABAAEAAAD8//7/AAABAAEAAAD9//7/AAABAAEAAAD7//7/AAABAAEAAAD7/wAAAAABAAIAAAD7/wMAAAABAAIAAAD8/wMAAAABAAIAAAD9/wMAAAABAAIAAAD+/wMAAAABAAIAAAD//wMAAAABAAIAAAAAAAMAAAABAAIAAAABAAMAAAABAAIAAAACAAMAAAABAAIAAAAEAAMAAAABAAIAAAADAAMAAAABAAIAAAD6//7/AAABAAEAAAD6////AAABAAEAAAD6/wAAAAABAAIAAAD6/wEAAAABAAIAAAD6/wIAAAABAAIAAAD6/wMAAAABAAIAAAAFAP7/AAABAAEAAAAFAP//AAABAAEAAAAFAAAAAAABAAIAAAAFAAEAAAABAAIAAAAFAAIAAAABAAIAAAAFAAMAAAABAAIAAAA=")
-tile_set = SubResource("TileSet_7hcan")
-
-[node name="Broken Doors" type="TileMapLayer" parent="Background"]
-tile_map_data = PackedByteArray("AAD///3/AAASAAEAAAD///7/AAASAAIAAAD/////AAASAAMAAAAAAP3/AAATAAEAAAAAAP7/AAATAAIAAAAAAP//AAATAAMAAAD4//3/AAASAAEAAAD4//7/AAASAAIAAAD4////AAASAAMAAAD5//3/AAATAAEAAAD5//7/AAATAAIAAAD5////AAATAAMAAAA=")
-tile_set = SubResource("TileSet_eabxg")
-
-[node name="Broken Doors2" type="TileMapLayer" parent="Background"]
-tile_map_data = PackedByteArray("AAD2////AAAIAAwAAAD2/wAAAAAIAA0AAAD3////AAAJAAwAAAD3/wAAAAAJAA0AAAD4////AAAKAAwAAAD4/wAAAAAKAA0AAAD5////AAALAAwAAAD5/wAAAAALAA0AAAD6////AAAMAAwAAAD6/wAAAAAMAA0AAAD7////AAANAAwAAAD7/wAAAAANAA0AAAA=")
-tile_set = SubResource("TileSet_eabxg")
-
-[node name="Furniture 2" type="TileMapLayer" parent="Background"]
-tile_map_data = PackedByteArray("AAD2//7/AgAYAA0AAAD2////AgAYAA4AAAD2/wAAAgAYAA8AAAD3//3/AgAZAAwAAAD3//7/AgAZAA0AAAD3////AgAZAA4AAAD3/wAAAgAZAA8AAAD4//7/AgAaAA0AAAD4////AgAaAA4AAAD4/wAAAgAaAA8AAAD5//7/AgAYAAkAAAD5////AgAYAAoAAAD5/wAAAgAYAAsAAAD6//3/AgAZAAgAAAD6//7/AgAZAAkAAAD6////AgAZAAoAAAD6/wAAAgAZAAsAAAD7//7/AgAaAAkAAAD7////AgAaAAoAAAD7/wAAAgAaAAsAAAD8////AgAaAB4AAAD8/wAAAgAaAB8AAAD9////AgAbAB4AAAD9/wAAAgAbAB8AAAAGAAIAAgAUAAcAAAAGAAMAAgAUAAgAAAAGAAQAAgAUAAkAAAAGAAUAAgAUAAoAAAAGAAYAAgAUAAsAAAAHAAMAAgAVAAgAAAAHAAQAAgAVAAkAAAAHAAUAAgAVAAoAAAAHAAYAAgAVAAsAAAAIAAMAAgAWAAgAAAAIAAQAAgAWAAkAAAAIAAUAAgAWAAoAAAAIAAYAAgAWAAsAAAAJAAIAAgAXAAcAAAAJAAMAAgAXAAgAAAAJAAQAAgAXAAkAAAAJAAUAAgAXAAoAAAAJAAYAAgAXAAsAAAAEAAQAAgAIAAUAAAAEAAUAAgAIAAYAAAAEAAYAAgAIAAcAAAAFAAQAAgAJAAUAAAAFAAUAAgAJAAYAAAAFAAYAAgAJAAcAAAADAP//AgAIABUAAAADAAAAAgAIABYAAAADAAEAAgAIABcAAAAEAP//AgAJABUAAAAEAAAAAgAJABYAAAAEAAEAAgAJABcAAAA=")
-tile_set = SubResource("TileSet_tb5ku")
-
-[node name="Furniture 1" type="TileMapLayer" parent="Background"]
-tile_map_data = PackedByteArray("AAD2////AQAYAAkAAAD2/wAAAQAYAAoAAAD2/wEAAQAYAAsAAAD3//7/AQAZAAgAAAD3////AQAZAAkAAAD3/wAAAQAZAAoAAAD3/wEAAQAZAAsAAAD4////AQAaAAkAAAD4/wAAAQAaAAoAAAD4/wEAAQAaAAsAAAD5////AQAYAA0AAAD5/wAAAQAYAA4AAAD5/wEAAQAYAA8AAAD6//7/AQAZAAwAAAD6////AQAZAA0AAAD6/wAAAQAZAA4AAAD6/wEAAQAZAA8AAAD7////AQAaAA0AAAD7/wAAAQAaAA4AAAD7/wEAAQAaAA8AAAABAP//AQAGAB0AAAABAAAAAQAGAB4AAAABAAEAAQAGAB8AAAACAAAAAQAHAB4AAAACAAEAAQAHAB8AAAAFAAAAAQAEAB4AAAAFAAEAAQAEAB8AAAAGAP//AQAFAB0AAAAGAAAAAQAFAB4AAAAGAAEAAQAFAB8AAAD8/wAAAQAQAAAAAAD8/wEAAQAQAAEAAAD9/wAAAQARAAAAAAD9/wEAAQARAAEAAAAEAAQAAQASABwAAAAEAAUAAQASAB0AAAAFAAQAAQATABwAAAAFAAUAAQATAB0AAAAEAAAAAQAIAAQAAGD+////AQAEAAIAAAD+/wAAAQAEAAMAAAA=")
-tile_set = SubResource("TileSet_7tqk6")
-
-[node name="Carpet" type="TileMapLayer" parent="Background"]
-tile_map_data = PackedByteArray("AAD2/wMABAAcAAEAAAD2/wQABAAcAAIAAAD2/wUABAAcAAMAAAD2/wYABAAcAAQAAAD3/wMABAAcAAEAAAD3/wQABAAcAAIAAAD3/wUABAAcAAMAAAD3/wYABAAcAAQAAAD4/wMABAAcAAEAAAD4/wQABAAcAAIAAAD4/wUABAAcAAMAAAD4/wYABAAcAAQAAAD5/wMABAAdAAEAAAD5/wQABAAdAAIAAAD5/wUABAAdAAMAAAD5/wYABAAdAAQAAAD6/wMABAAcAAEAAAD6/wQABAAcAAIAAAD6/wUABAAcAAMAAAD6/wYABAAcAAQAAAD7/wMABAAdAAEAAAD7/wQABAAdAAIAAAD7/wUABAAdAAMAAAD7/wYABAAdAAQAAAD8/wMABAAcAAEAAAD8/wQABAAcAAIAAAD8/wUABAAcAAMAAAD8/wYABAAcAAQAAAD9/wMABAAdAAEAAAD9/wQABAAdAAIAAAD9/wUABAAdAAMAAAD9/wYABAAdAAQAAAD+/wMABAAcAAEAAAD+/wQABAAcAAIAAAD+/wUABAAcAAMAAAD+/wYABAAcAAQAAAD//wMABAAcAAEAAAD//wQABAAcAAIAAAD//wUABAAcAAMAAAD//wYABAAcAAQAAAAAAAMABAAdAAEAAAAAAAQABAAdAAIAAAAAAAUABAAdAAMAAAAAAAYABAAdAAQAAAD+/wIABAAcAAAAAAD//wIABAAdAAAAAAD8/wIABAAcAAAAAAD9/wIABAAdAAAAAAD6/wIABAAcAAAAAAD7/wIABAAdAAAAAAD4/wIABAAdAAAAAAD5/wIABAAdAAAAAAD3/wIABAAcAAAAAAD2/wIABAAcAAAAAAAAAAIABAAcAAAAAAABAAIABAAeAAAAAAD1/wIABAAbAAAAAAABAAMABAAeAAEAAAABAAQABAAeAAIAAAABAAUABAAeAAMAAAABAAYABAAeAAQAAAABAAcABAAeAAUAAAD//wcABAAcAAUAAAAAAAcABAAdAAUAAAD9/wcABAAcAAUAAAD+/wcABAAdAAUAAAD7/wcABAAcAAUAAAD8/wcABAAdAAUAAAD5/wcABAAcAAUAAAD6/wcABAAdAAUAAAD3/wcABAAcAAUAAAD4/wcABAAdAAUAAAD1/wcABAAbAAUAAAD2/wcABAAdAAUAAAD1/wMABAAbAAEAAAD1/wQABAAbAAIAAAD1/wUABAAbAAMAAAD1/wYABAAbAAQAAAA=")
-tile_set = SubResource("TileSet_gldua")
-
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("9_6geum")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-165, 45)
-shape = SubResource("CircleShape2D_67341")
-
-[node name="Spawn" type="Marker2D" parent="Area2D"]
-
-[node name="Chest" type="Area2D" parent="."]
-position = Vector2(6, -31)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Chest"]
-position = Vector2(129, 3)
-sprite_frames = SubResource("SpriteFrames_tgv5j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest"]
-position = Vector2(129, 9)
-shape = SubResource("RectangleShape2D_tb5ku")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Chest"]
-
-[node name="Block player" type="Node" parent="."]
-
-[node name="Chair and Table" type="Area2D" parent="Block player"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Block player/Chair and Table"]
-position = Vector2(34, -23)
-shape = SubResource("RectangleShape2D_7hcan")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Block player/Chair and Table"]
-position = Vector2(98, -25)
-shape = SubResource("RectangleShape2D_7hcan")
-
-[node name="Shelves" type="Area2D" parent="Block player"]
-position = Vector2(2, -33)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Block player/Shelves"]
-position = Vector2(-111, -3.5)
-shape = SubResource("RectangleShape2D_vpq6y")
-
-[node name="Table and Bed" type="Area2D" parent="Block player"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Block player/Table and Bed"]
-position = Vector2(112, 57.5)
-shape = SubResource("RectangleShape2D_7tqk6")
-
-[node name="Middle stuff" type="Area2D" parent="Block player"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Block player/Middle stuff"]
-position = Vector2(-35, -27)
-shape = SubResource("RectangleShape2D_tgv5j")
-
-[node name="Exit" type="Area2D" parent="."]
-
-[node name="Shadow" type="Sprite2D" parent="Exit"]
-position = Vector2(-208.609, 56)
-scale = Vector2(0.102513, 0.297075)
-texture = ExtResource("4_7tqk6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
-position = Vector2(-214, 49)
-scale = Vector2(6.30666, -9.71067)
-shape = SubResource("RectangleShape2D_gldua")
-
-[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+[node name="Treehouse BGM" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1, 0)
 stream = ExtResource("6_tb5ku")
 autoplay = true
 bus = &"BGM"
 
-[node name="DesdemonaIdle" parent="." instance=ExtResource("8_wcsbt")]
-position = Vector2(-106, 379)
-
-[node name="Ophelia2D" parent="." instance=ExtResource("9_67341")]
-position = Vector2(-61, 391)
-
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[node name="transition" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hsxm7")
+}
+autoplay = "new_animation"
+script = SubResource("GDScript_tb5ku")
