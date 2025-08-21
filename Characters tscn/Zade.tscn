@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxsu3b7eyj45l"]
+
+[ext_resource type="Texture2D" uid="uid://kpjku3pxyfjn" path="res://Assets/characters/zade.png" id="1_rfdil"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cemb2"]
+atlas = ExtResource("1_rfdil")
+region = Rect2(0, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjd5g"]
+atlas = ExtResource("1_rfdil")
+region = Rect2(540, 0, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2hjet"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cemb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjd5g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6oxxe"]
+radius = 235.791
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g558l"]
+size = Vector2(489.811, 500.265)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-249, -417.5)
+scale = Vector2(0.0777778, 0.0722222)
+sprite_frames = SubResource("SpriteFrames_2hjet")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
+position = Vector2(12.8572, -256.154)
+shape = SubResource("CircleShape2D_6oxxe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/CollisionShape2D"]
+position = Vector2(12.8572, 456.021)
+shape = SubResource("RectangleShape2D_g558l")

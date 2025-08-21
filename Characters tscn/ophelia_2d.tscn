@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://c7ijfc7chh45k"]
 
-[ext_resource type="Script" uid="uid://piphmpyc4wne" path="res://ophelia_2d.gd" id="1_s7c8k"]
+[ext_resource type="Script" uid="uid://piphmpyc4wne" path="res://Characters tscn/ophelia_2d.gd" id="1_s7c8k"]
 [ext_resource type="Texture2D" uid="uid://du6exsp28uj6s" path="res://Assets/characters/ophelia.png" id="1_umh45"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s7c8k"]
