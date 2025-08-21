@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://ccc7rppo28dry"]
+[gd_scene load_steps=18 format=4 uid="uid://ccc7rppo28dry"]
 
 [ext_resource type="Texture2D" uid="uid://bwff5o35rx8pe" path="res://Backgrounds/Forest_tiles.png" id="1_wkhga"]
 [ext_resource type="Texture2D" uid="uid://icdgcyw4dadi" path="res://Backgrounds/Cute_Fantasy_Free/Outdoor decoration/Bridge_Wood.png" id="2_smcbj"]
@@ -197,6 +197,56 @@ size = Vector2(101, 40)
 [sub_resource type="CircleShape2D" id="CircleShape2D_gf2am"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3lj7u"]
+
+[sub_resource type="Animation" id="Animation_gldua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tb5ku"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hsxm7"]
+_data = {
+&"RESET": SubResource("Animation_gldua"),
+&"new_animation": SubResource("Animation_tb5ku")
+}
+
+[sub_resource type="GDScript" id="GDScript_unqw3"]
+script/source = "extends AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="Harbour" type="Node2D"]
 
@@ -498,3 +548,10 @@ region_enabled = true
 region_rect = Rect2(64, 544, 48, 64)
 
 [node name="Harbour_BGM" type="AudioStreamPlayer2D" parent="."]
+
+[node name="transition" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hsxm7")
+}
+autoplay = "new_animation"
+script = SubResource("GDScript_unqw3")
