@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://yecn4bt81m0g"]
+[gd_scene load_steps=10 format=3 uid="uid://yecn4bt81m0g"]
 
 [ext_resource type="Script" uid="uid://dy4leih3mv52k" path="res://backstorylabel.gd" id="1_usaqd"]
 [ext_resource type="AudioStream" uid="uid://cubklabmivevb" path="res://Sound Effects/Rain_Soundtrack.wav" id="2_17urp"]
+[ext_resource type="AudioStream" uid="uid://vsls1fjsl6xo" path="res://Sound Effects/Button_Press.wav" id="2_jiwv5"]
 
 [sub_resource type="Animation" id="Animation_jiwv5"]
 resource_name = "Breath"
@@ -133,6 +134,11 @@ libraries = {
 &"": SubResource("AnimationLibrary_hsxm7")
 }
 autoplay = "new_anim_story"
+
+[node name="Button_Pressed_Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_jiwv5")
+volume_db = 9.905
+bus = &"SFX"
 
 [node name="Rain_BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_17urp")

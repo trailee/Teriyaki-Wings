@@ -249,13 +249,13 @@ scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_mvm06")
 
 [node name="Camera (on player)" type="Camera2D" parent="."]
-position = Vector2(103, -20)
+position = Vector2(36.0001, -18)
 scale = Vector2(63.3581, 40.8094)
 zoom = Vector2(2, 2)
 limit_left = -735
 limit_top = -410
-limit_right = 410
-limit_bottom = 710
+limit_right = 700
+limit_bottom = 410
 
 [node name="Logs" type="StaticBody2D" parent="."]
 
