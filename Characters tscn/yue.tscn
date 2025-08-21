@@ -72,6 +72,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xoc2s"]
 
 [node name="Yue_2D" type="CharacterBody2D"]
+scale = Vector2(0.055, 0.055)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7i17q")

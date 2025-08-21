@@ -65,6 +65,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7lnpa"]
 
 [node name="Ophelia2D" type="CharacterBody2D"]
+scale = Vector2(0.055, 0.055)
 script = SubResource("GDScript_coig2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

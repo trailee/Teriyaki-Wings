@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://chw5eejtlkafc"]
+[gd_scene load_steps=39 format=4 uid="uid://chw5eejtlkafc"]
 
 [ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="1_lt7tf"]
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="2_vpq6y"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="4_7tqk6"]
 [ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="4_tgv5j"]
 [ext_resource type="AudioStream" uid="uid://ca3tlw532xys5" path="res://Music_Teriyaki-Wings/Treehouse_BGM copy.wav" id="6_tb5ku"]
+[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="7_gldua"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tb5ku"]
 
@@ -2335,10 +2336,13 @@ texture = ExtResource("3_7hcan")
 sources/4 = SubResource("TileSetAtlasSource_tb5ku")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7rhy4"]
-size = Vector2(37, 51)
+size = Vector2(34, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eabxg"]
 size = Vector2(31, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tb5ku"]
+size = Vector2(40.75, 26.75)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7hcan"]
 atlas = ExtResource("2_vpq6y")
@@ -2362,23 +2366,29 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tb5ku"]
-size = Vector2(40.75, 26.75)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_7hcan"]
-radius = 32.0
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7hcan"]
 size = Vector2(17, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ol6g"]
+size = Vector2(32.736, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1tuf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpq6y"]
 size = Vector2(135, 71)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pksk"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7tqk6"]
-size = Vector2(56, 52.5)
+size = Vector2(56, 45.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tgv5j"]
 size = Vector2(69.5, 51.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1207l"]
+size = Vector2(17.5199, 18.143)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13xdw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gldua"]
 size = Vector2(21.9398, 10.092)
@@ -2434,17 +2444,19 @@ func _process(delta: float) -> void:
 "
 
 [node name="Treehouse Room 2" type="Node2D"]
+y_sort_enabled = true
+position = Vector2(-1, -4)
 
 [node name="World Boundary" type="StaticBody2D" parent="."]
 position = Vector2(1, 97)
 scale = Vector2(2.84, 1)
 
 [node name="Bottom Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(0, -5)
+position = Vector2(-0.352113, 24)
 shape = SubResource("WorldBoundaryShape2D_tb5ku")
 
 [node name="Top Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-1.05634, -191)
+position = Vector2(0.352112, -134)
 rotation = 3.12936
 shape = SubResource("WorldBoundaryShape2D_tb5ku")
 
@@ -2503,78 +2515,129 @@ flip_h = true
 region_enabled = true
 region_rect = Rect2(288, 224, 64, 32)
 
-[node name="Box on Table" type="Area2D" parent="."]
+[node name="Desdemona2D" parent="Background" instance=ExtResource("7_gldua")]
+y_sort_enabled = true
+position = Vector2(28, 10)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Box on Table"]
+[node name="Box on Table2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box on Table2"]
+position = Vector2(100, 78)
+shape = SubResource("RectangleShape2D_7rhy4")
+
+[node name="Box on Table" type="Area2D" parent="Box on Table2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box on Table2/Box on Table"]
 position = Vector2(97.5, 72.5)
 shape = SubResource("RectangleShape2D_7rhy4")
 
-[node name="Eat Table" type="Area2D" parent="."]
+[node name="Dinner Table" type="StaticBody2D" parent="."]
 
-[node name="First Aid Kit" type="Sprite2D" parent="Eat Table"]
+[node name="Eat Table" type="Area2D" parent="Dinner Table"]
+
+[node name="First Aid Kit" type="Sprite2D" parent="Dinner Table/Eat Table"]
 position = Vector2(82, -27)
 texture = ExtResource("2_vpq6y")
 region_enabled = true
 region_rect = Rect2(128, 64, 16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Eat Table"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dinner Table/Eat Table"]
 position = Vector2(81.5, -19.5)
 shape = SubResource("RectangleShape2D_eabxg")
 
-[node name="Chest" type="Area2D" parent="."]
-position = Vector2(6, -31)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dinner Table"]
+position = Vector2(81.5, -19.5)
+shape = SubResource("RectangleShape2D_eabxg")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Chest"]
-position = Vector2(151, -8)
-sprite_frames = SubResource("SpriteFrames_tgv5j")
+[node name="Chest" type="StaticBody2D" parent="."]
+position = Vector2(6, -31)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chest"]
 position = Vector2(151, -2)
 shape = SubResource("RectangleShape2D_tb5ku")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Chest"]
+[node name="Chest" type="Area2D" parent="Chest"]
 
-[node name="Player" type="CharacterBody2D" parent="."]
-visible = false
-position = Vector2(2, -33)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Chest/Chest"]
+position = Vector2(151, -8)
+sprite_frames = SubResource("SpriteFrames_tgv5j")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest/Chest"]
+position = Vector2(151, -2)
+shape = SubResource("RectangleShape2D_tb5ku")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-z_index = 1
-shape = SubResource("CircleShape2D_7hcan")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Chest/Chest"]
 
-[node name="Block player" type="Node" parent="."]
+[node name="Chairs" type="StaticBody2D" parent="."]
+position = Vector2(17, 5)
 
-[node name="Chairs" type="Area2D" parent="Block player"]
-position = Vector2(16, 1)
+[node name="Chairs" type="Area2D" parent="Chairs"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Block player/Chairs"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chairs/Chairs"]
 position = Vector2(34, -23)
 shape = SubResource("RectangleShape2D_7hcan")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Block player/Chairs"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Chairs/Chairs"]
 position = Vector2(98, -25)
 shape = SubResource("RectangleShape2D_7hcan")
 
-[node name="Shelves" type="Area2D" parent="Block player"]
-position = Vector2(2, -33)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chairs"]
+position = Vector2(42, -20)
+scale = Vector2(0.967629, 1.23962)
+shape = SubResource("RectangleShape2D_5ol6g")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Block player/Shelves"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Chairs"]
+position = Vector2(91.8381, -20)
+scale = Vector2(0.967629, 1.23962)
+shape = SubResource("RectangleShape2D_5ol6g")
+
+[node name="Shelves" type="StaticBody2D" parent="."]
+position = Vector2(3, -29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shelves"]
+position = Vector2(-149, -4)
+scale = Vector2(6.29266, 3.11761)
+shape = SubResource("RectangleShape2D_e1tuf")
+
+[node name="Shelves" type="Area2D" parent="Shelves"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shelves/Shelves"]
 position = Vector2(-153.5, -3)
 shape = SubResource("RectangleShape2D_vpq6y")
 
-[node name="Bed" type="Area2D" parent="Block player"]
+[node name="Bed" type="StaticBody2D" parent="."]
+position = Vector2(1, 4)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Block player/Bed"]
-position = Vector2(146, 70.25)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed"]
+position = Vector2(144, 73)
+scale = Vector2(2.74968, 1.9605)
+shape = SubResource("RectangleShape2D_7pksk")
+
+[node name="Bed" type="Area2D" parent="Bed"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed/Bed"]
+position = Vector2(144, 53)
+scale = Vector2(1.06309, 1.58642)
 shape = SubResource("RectangleShape2D_7tqk6")
 
-[node name="Middle stuff" type="Area2D" parent="Block player"]
+[node name="Middle Items" type="StaticBody2D" parent="."]
+position = Vector2(1, 4)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Block player/Middle stuff"]
+[node name="Middle stuff" type="Area2D" parent="Middle Items"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Middle Items/Middle stuff"]
 position = Vector2(-54, -26)
 shape = SubResource("RectangleShape2D_tgv5j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Middle Items"]
+position = Vector2(-63, -25)
+scale = Vector2(1.33233, 2.41733)
+shape = SubResource("RectangleShape2D_1207l")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Middle Items"]
+position = Vector2(-39, -36)
+scale = Vector2(1.12674, 1.42634)
+shape = SubResource("RectangleShape2D_13xdw")
 
 [node name="Exit" type="Area2D" parent="."]
 position = Vector2(-11, -3)

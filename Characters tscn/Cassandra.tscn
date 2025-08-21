@@ -51,6 +51,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d81if"]
 
 [node name="Cassandra2D" type="CharacterBody2D"]
+scale = Vector2(0.055, 0.055)
 
 [node name="Animations" type="AnimatedSprite2D" parent="."]
 position = Vector2(-183, 357)

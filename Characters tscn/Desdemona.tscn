@@ -1,20 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://dn6qfnhxw17xl"]
 
+[ext_resource type="Script" uid="uid://cfnhuo5cduxfw" path="res://Characters tscn/desdemona.gd" id="1_7sixq"]
 [ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="1_ebfod"]
-
-[sub_resource type="GDScript" id="GDScript_7sixq"]
-script/source = "extends CharacterBody2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pwyyf"]
 atlas = ExtResource("1_ebfod")
@@ -171,9 +158,11 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l3hyd"]
+size = Vector2(11.4116, 4.4479)
 
 [node name="Desdemona2D" type="CharacterBody2D"]
-script = SubResource("GDScript_7sixq")
+scale = Vector2(0.055, 0.055)
+script = ExtResource("1_7sixq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_k8gdy")
@@ -181,6 +170,6 @@ animation = &"Des_Idle"
 autoplay = "Des_Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4, 35)
+position = Vector2(7.62939e-06, 363.636)
 scale = Vector2(28.5941, -42.8175)
 shape = SubResource("RectangleShape2D_l3hyd")

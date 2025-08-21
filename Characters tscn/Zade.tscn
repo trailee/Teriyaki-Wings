@@ -27,6 +27,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x44v5"]
 
 [node name="Zane_2D" type="CharacterBody2D"]
+scale = Vector2(0.055, 0.055)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1frd0")
