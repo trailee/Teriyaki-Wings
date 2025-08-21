@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://bmito4qec4eg2"]
+[gd_scene load_steps=31 format=4 uid="uid://bmito4qec4eg2"]
 
 [ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="1_lt7tf"]
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="2_vpq6y"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="4_7tqk6"]
 [ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="4_tgv5j"]
 [ext_resource type="AudioStream" uid="uid://ca3tlw532xys5" path="res://Music_Teriyaki-Wings/Treehouse_BGM copy.wav" id="6_tb5ku"]
+[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/DesdemonaIdle.tscn" id="8_wcsbt"]
+[ext_resource type="Script" uid="uid://iq31go7x4jgt" path="res://SCENES/area_2d.gd" id="9_6geum"]
+[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://ophelia_2d.tscn" id="9_67341"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tb5ku"]
 
@@ -2332,6 +2335,9 @@ texture = ExtResource("3_7hcan")
 [sub_resource type="TileSet" id="TileSet_gldua"]
 sources/4 = SubResource("TileSetAtlasSource_tb5ku")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_67341"]
+radius = 40.6079
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_7hcan"]
 atlas = ExtResource("2_vpq6y")
 region = Rect2(320, 480, 32, 32)
@@ -2356,9 +2362,6 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb5ku"]
 size = Vector2(40.75, 26.75)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_7hcan"]
-radius = 32.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7hcan"]
 size = Vector2(17, 32)
@@ -2401,7 +2404,7 @@ rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_tb5ku")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3.5, 3.5)
+zoom = Vector2(5.2, 5.5)
 limit_left = -190
 limit_top = -100
 limit_right = 190
@@ -2434,6 +2437,15 @@ tile_set = SubResource("TileSet_7tqk6")
 tile_map_data = PackedByteArray("AAD2/wMABAAcAAEAAAD2/wQABAAcAAIAAAD2/wUABAAcAAMAAAD2/wYABAAcAAQAAAD3/wMABAAcAAEAAAD3/wQABAAcAAIAAAD3/wUABAAcAAMAAAD3/wYABAAcAAQAAAD4/wMABAAcAAEAAAD4/wQABAAcAAIAAAD4/wUABAAcAAMAAAD4/wYABAAcAAQAAAD5/wMABAAdAAEAAAD5/wQABAAdAAIAAAD5/wUABAAdAAMAAAD5/wYABAAdAAQAAAD6/wMABAAcAAEAAAD6/wQABAAcAAIAAAD6/wUABAAcAAMAAAD6/wYABAAcAAQAAAD7/wMABAAdAAEAAAD7/wQABAAdAAIAAAD7/wUABAAdAAMAAAD7/wYABAAdAAQAAAD8/wMABAAcAAEAAAD8/wQABAAcAAIAAAD8/wUABAAcAAMAAAD8/wYABAAcAAQAAAD9/wMABAAdAAEAAAD9/wQABAAdAAIAAAD9/wUABAAdAAMAAAD9/wYABAAdAAQAAAD+/wMABAAcAAEAAAD+/wQABAAcAAIAAAD+/wUABAAcAAMAAAD+/wYABAAcAAQAAAD//wMABAAcAAEAAAD//wQABAAcAAIAAAD//wUABAAcAAMAAAD//wYABAAcAAQAAAAAAAMABAAdAAEAAAAAAAQABAAdAAIAAAAAAAUABAAdAAMAAAAAAAYABAAdAAQAAAD+/wIABAAcAAAAAAD//wIABAAdAAAAAAD8/wIABAAcAAAAAAD9/wIABAAdAAAAAAD6/wIABAAcAAAAAAD7/wIABAAdAAAAAAD4/wIABAAdAAAAAAD5/wIABAAdAAAAAAD3/wIABAAcAAAAAAD2/wIABAAcAAAAAAAAAAIABAAcAAAAAAABAAIABAAeAAAAAAD1/wIABAAbAAAAAAABAAMABAAeAAEAAAABAAQABAAeAAIAAAABAAUABAAeAAMAAAABAAYABAAeAAQAAAABAAcABAAeAAUAAAD//wcABAAcAAUAAAAAAAcABAAdAAUAAAD9/wcABAAcAAUAAAD+/wcABAAdAAUAAAD7/wcABAAcAAUAAAD8/wcABAAdAAUAAAD5/wcABAAcAAUAAAD6/wcABAAdAAUAAAD3/wcABAAcAAUAAAD4/wcABAAdAAUAAAD1/wcABAAbAAUAAAD2/wcABAAdAAUAAAD1/wMABAAbAAEAAAD1/wQABAAbAAIAAAD1/wUABAAbAAMAAAD1/wYABAAbAAQAAAA=")
 tile_set = SubResource("TileSet_gldua")
 
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("9_6geum")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-165, 45)
+shape = SubResource("CircleShape2D_67341")
+
+[node name="Spawn" type="Marker2D" parent="Area2D"]
+
 [node name="Chest" type="Area2D" parent="."]
 position = Vector2(6, -31)
 
@@ -2446,16 +2458,6 @@ position = Vector2(129, 9)
 shape = SubResource("RectangleShape2D_tb5ku")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Chest"]
-
-[node name="Player" type="CharacterBody2D" parent="."]
-visible = false
-position = Vector2(2, -33)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-z_index = 1
-shape = SubResource("CircleShape2D_7hcan")
 
 [node name="Block player" type="Node" parent="."]
 
@@ -2485,18 +2487,18 @@ shape = SubResource("RectangleShape2D_7tqk6")
 [node name="Middle stuff" type="Area2D" parent="Block player"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Block player/Middle stuff"]
-position = Vector2(-29, -22)
+position = Vector2(-35, -27)
 shape = SubResource("RectangleShape2D_tgv5j")
 
 [node name="Exit" type="Area2D" parent="."]
 
 [node name="Shadow" type="Sprite2D" parent="Exit"]
-position = Vector2(-192, 50)
-scale = Vector2(0.10833, 0.297075)
+position = Vector2(-208.609, 56)
+scale = Vector2(0.102513, 0.297075)
 texture = ExtResource("4_7tqk6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
-position = Vector2(-225, 54)
+position = Vector2(-214, 49)
 scale = Vector2(6.30666, -9.71067)
 shape = SubResource("RectangleShape2D_gldua")
 
@@ -2504,3 +2506,12 @@ shape = SubResource("RectangleShape2D_gldua")
 stream = ExtResource("6_tb5ku")
 autoplay = true
 bus = &"BGM"
+
+[node name="DesdemonaIdle" parent="." instance=ExtResource("8_wcsbt")]
+position = Vector2(-106, 379)
+
+[node name="Ophelia2D" parent="." instance=ExtResource("9_67341")]
+position = Vector2(-61, 391)
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

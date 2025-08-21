@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://c7ijfc7chh45k"]
+
+[ext_resource type="Script" uid="uid://piphmpyc4wne" path="res://ophelia_2d.gd" id="1_s7c8k"]
+[ext_resource type="Texture2D" uid="uid://du6exsp28uj6s" path="res://Assets/characters/ophelia.png" id="1_umh45"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7c8k"]
+atlas = ExtResource("1_umh45")
+region = Rect2(0, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8uqf"]
+atlas = ExtResource("1_umh45")
+region = Rect2(540, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6crx4"]
+atlas = ExtResource("1_umh45")
+region = Rect2(0, 900, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fdt3o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7c8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8uqf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6crx4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h3xco"]
+radius = 12.2066
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wix5r"]
+size = Vector2(27, 19.25)
+
+[node name="Ophelia2D" type="CharacterBody2D"]
+script = ExtResource("1_s7c8k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(90, -345.75)
+scale = Vector2(0.0518519, 0.0438889)
+sprite_frames = SubResource("SpriteFrames_fdt3o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(91, -354)
+shape = SubResource("CircleShape2D_h3xco")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D"]
+position = Vector2(-0.5, 19)
+shape = SubResource("RectangleShape2D_wix5r")

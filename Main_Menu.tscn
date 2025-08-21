@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://du70advpt5djf"]
+[gd_scene load_steps=98 format=3 uid="uid://gywejgpa1qim"]
 
 [ext_resource type="Script" uid="uid://c2jjwjyvarali" path="res://menu.gd" id="1_h7302"]
 [ext_resource type="Texture2D" uid="uid://bskf01sb4isus" path="res://Backgrounds/Ruins_BG.png" id="2_qu2sj"]
@@ -817,6 +817,7 @@ animation = &"Parrot"
 autoplay = "Parrot"
 
 [node name="Credit" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Name4"]
+layout_mode = 0
 offset_left = -4.00604
 offset_top = 65.8633
 offset_right = 251.994
@@ -830,6 +831,7 @@ horizontal_alignment = 1
 
 [node name="To Pg2" type="Button" parent="Credits UI/Credits UI/Pg1"]
 modulate = Color(1, 1, 1, 0.741176)
+layout_mode = 0
 offset_left = 1385.18
 offset_top = 738.464
 offset_right = 1460.18
@@ -874,7 +876,7 @@ offset_bottom = 791.0
 theme_override_font_sizes/font_size = 15
 text = "We, the Teriyaki Wings Team, would like to present our heartfelt gratitude towards everyone who volunteered, organized, sponsored, participated and spent their precious time in making this game jam a success. This was a first for all of us, and we would like to thank everyone for allowing us such an amazing opportunity –  one where we got to meet new people, have lots of fun, all while learning cool stuff in between! We actually learnt a lot :) We can now do the kind of stuff that we once deemed ‘Impossible’ or ‘Magic”.  Don’t get us wrong, the actual coding part was pretty stressful – but hey! We’re here now and we made it. Surely, this memory will remain in our minds as one that time can’t erase, and with every next dive we take in this realm of logic and codes, we will be grateful to where it all started. Thank you, Girls Got Game.
 
-Love, Teriyaki Wings"
+Love, Teriyaki Wings Team"
 autowrap_mode = 3
 
 [node name="GGG_Icon" type="Sprite2D" parent="Credits UI/Credits UI/Pg2/Credits Info Text"]
@@ -889,6 +891,7 @@ texture = ExtResource("16_3pot0")
 
 [node name="To Pg1" type="Button" parent="Credits UI/Credits UI/Pg2"]
 modulate = Color(1, 1, 1, 0.741176)
+layout_mode = 0
 offset_left = 457.0
 offset_top = 743.0
 offset_right = 532.0
@@ -942,6 +945,7 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="Close_Credits" type="Button" parent="Credits UI/Credits UI"]
+layout_mode = 0
 offset_left = 1408.0
 offset_top = 288.001
 offset_right = 1463.0
