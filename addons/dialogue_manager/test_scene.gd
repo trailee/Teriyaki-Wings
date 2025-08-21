@@ -1,5 +1,7 @@
 class_name BaseDialogueTestScene extends Node2D
 
+signal dialogue_ended  
+
 
 const DialogueSettings = preload("./settings.gd")
 const DialogueResource = preload("./dialogue_resource.gd")
@@ -16,9 +18,11 @@ func _ready():
 		window.position = Vector2(DisplayServer.screen_get_position(screen_index)) + (DisplayServer.screen_get_size(screen_index) - window.size) * 0.5
 		window.mode = Window.MODE_WINDOWED
 
-	# Normally you can just call DialogueManager directly but doing so before the plugin has been
-	# enabled in settings will throw a compiler error here so I'm using `get_singleton` instead.
-	var dialogue_manager = Engine.get_singleton("DialogueManager")
+	var dialogue_manager := get_node("/root/DialogueManager") as Object
+	if dialogue_manager == null:
+		push_error("DialogueManager is not loaded. Is the plugin enabled?")
+	return
+
 	dialogue_manager.dialogue_ended.connect(_on_dialogue_ended)
 	dialogue_manager.show_dialogue_balloon(resource, title if not title.is_empty() else resource.first_title)
 
