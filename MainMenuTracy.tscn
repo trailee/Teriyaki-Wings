@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=3 uid="uid://du70advpt5djf"]
+[gd_scene load_steps=98 format=3 uid="uid://du70advpt5djf"]
 
 [ext_resource type="Script" uid="uid://c2jjwjyvarali" path="res://menu.gd" id="1_h7302"]
 [ext_resource type="Texture2D" uid="uid://bskf01sb4isus" path="res://Backgrounds/Ruins_BG.png" id="2_qu2sj"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://vsls1fjsl6xo" path="res://Sound Effects/Button_Press.wav" id="5_3pot0"]
 [ext_resource type="AudioStream" uid="uid://df5mxhvilisc2" path="res://Sound Effects/Hover_Over_Button.wav" id="6_qkau1"]
 [ext_resource type="Texture2D" uid="uid://bujhr4bfxk7qi" path="res://Backgrounds/black bg.jpg" id="7_8ygd5"]
+[ext_resource type="AudioStream" uid="uid://2chi867867v0" path="res://Sound Effects/Swipe_SFX.mp3" id="7_qkau1"]
 [ext_resource type="Texture2D" uid="uid://dcfn3rtcpw1p" path="res://UI Main Menu/MainMenu_UI_BG.png" id="8_nvds7"]
 [ext_resource type="FontFile" uid="uid://l8v3nhp1pg2f" path="res://Fonts/Butler_Medium.otf" id="9_177c6"]
 [ext_resource type="Texture2D" uid="uid://k4iuam1056bm" path="res://Assets/Animal Rep (Creds)/Crow_AnimationSheet.png" id="10_wshhj"]
@@ -14,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://chc511j2eauh6" path="res://Assets/Animal Rep (Creds)/Fox_AnimationSheet.png" id="12_5hqir"]
 [ext_resource type="FontFile" uid="uid://de1qkqpihc3pw" path="res://Fonts/Butler_Regular.otf" id="13_5ja6u"]
 [ext_resource type="Texture2D" uid="uid://bfjb1j2f10ycl" path="res://Assets/Animal Rep (Creds)/Parrot_AnimationSheet.png" id="13_qu2sj"]
+[ext_resource type="FontFile" uid="uid://fdrfo3ujhi3n" path="res://Fonts/ZTOtez-Regular.ttf" id="14_3pot0"]
+[ext_resource type="Texture2D" uid="uid://b6nl3nnbm6t8q" path="res://Assets/GGG pics/GGG.png" id="15_yyrxs"]
+[ext_resource type="Texture2D" uid="uid://dpnouq1e16ukx" path="res://Assets/GGG pics/gggtext.png" id="16_3pot0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cx167"]
 texture = ExtResource("2_qu2sj")
@@ -654,27 +658,28 @@ bus = &"SFX"
 stream = ExtResource("6_qkau1")
 volume_db = 0.101
 
+[node name="Swipe_Page" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_qkau1")
+volume_db = 0.101
+
 [node name="Credits UI" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 
 [node name="Credits UI" type="Control" parent="Credits UI"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.998424, 1.00208)
-metadata/_edit_use_anchors_ = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Translucent Black BG" type="Sprite2D" parent="Credits UI/Credits UI"]
 modulate = Color(1, 1, 1, 0.105882)
-position = Vector2(969.528, 534.89)
+position = Vector2(968, 536.003)
+scale = Vector2(0.998424, 1.00208)
 texture = ExtResource("7_8ygd5")
 
 [node name="CREDIT Background" type="Sprite2D" parent="Credits UI/Credits UI"]
-position = Vector2(-616.972, 636.678)
-scale = Vector2(0.644081, 0.461779)
+position = Vector2(-616, 638.002)
+scale = Vector2(0.643066, 0.462739)
 offset = Vector2(1492, -1358.7)
 
 [node name="BG Sprite" type="Sprite2D" parent="Credits UI/Credits UI/CREDIT Background"]
@@ -682,10 +687,19 @@ position = Vector2(2475.06, -196.791)
 scale = Vector2(7.49976, 9.49401)
 texture = ExtResource("8_nvds7")
 
-[node name="Credits Info Text" type="Node2D" parent="Credits UI/Credits UI"]
+[node name="Pg1" type="Control" parent="Credits UI/Credits UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.998424, 1.00208)
+
+[node name="Credits Info Text" type="Node2D" parent="Credits UI/Credits UI/Pg1"]
 position = Vector2(-1594.51, 790.359)
 
-[node name="Tracy Chiem" type="Label" parent="Credits UI/Credits UI/Credits Info Text"]
+[node name="Tracy Chiem" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text"]
 offset_left = 2315.65
 offset_top = -367.238
 offset_right = 2565.65
@@ -696,7 +710,7 @@ text = "Tracy Chiem"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Crow Icon" type="AnimatedSprite2D" parent="Credits UI/Credits UI/Credits Info Text/Tracy Chiem"]
+[node name="Crow Icon" type="AnimatedSprite2D" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Tracy Chiem"]
 position = Vector2(128.202, -31.9337)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_i28r4")
@@ -704,12 +718,12 @@ animation = &"Crow"
 autoplay = "Crow"
 frame_progress = 0.0781179
 
-[node name="Credit" type="Label" parent="Credits UI/Credits UI/Credits Info Text/Tracy Chiem"]
+[node name="Credit" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Tracy Chiem"]
 layout_mode = 0
-offset_left = -4.00605
-offset_top = 58.8778
+offset_left = -4.00604
+offset_top = 73.8467
 offset_right = 251.994
-offset_bottom = 273.878
+offset_bottom = 288.847
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
 text = "Project Manager
@@ -719,7 +733,7 @@ Game/Level Designer
 Music Composer"
 horizontal_alignment = 1
 
-[node name="Joanna Li" type="Label" parent="Credits UI/Credits UI/Credits Info Text"]
+[node name="Joanna Li" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text"]
 offset_left = 2075.27
 offset_top = -367.238
 offset_right = 2325.27
@@ -730,19 +744,19 @@ text = "Joanna Li"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Cat Icon" type="AnimatedSprite2D" parent="Credits UI/Credits UI/Credits Info Text/Joanna Li"]
+[node name="Cat Icon" type="AnimatedSprite2D" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Joanna Li"]
 position = Vector2(128.202, -31.9337)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_ofows")
 animation = &"Cat"
 autoplay = "Cat"
 
-[node name="Credit" type="Label" parent="Credits UI/Credits UI/Credits Info Text/Joanna Li"]
+[node name="Credit" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Joanna Li"]
 layout_mode = 0
 offset_left = -4.00605
-offset_top = 58.8778
+offset_top = 73.8467
 offset_right = 251.994
-offset_bottom = 273.878
+offset_bottom = 288.847
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
 text = "Storyline Writer
@@ -750,7 +764,7 @@ Scene Designer
 Scene Coder"
 horizontal_alignment = 1
 
-[node name="Name3" type="Label" parent="Credits UI/Credits UI/Credits Info Text"]
+[node name="Name3" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text"]
 offset_left = 2556.03
 offset_top = -367.238
 offset_right = 2806.03
@@ -761,19 +775,19 @@ text = "Zarin Isba"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Fox Icon" type="AnimatedSprite2D" parent="Credits UI/Credits UI/Credits Info Text/Name3"]
+[node name="Fox Icon" type="AnimatedSprite2D" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Name3"]
 position = Vector2(128.202, -31.9337)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_tdulj")
 autoplay = "default"
 frame_progress = 0.311784
 
-[node name="Credit" type="Label" parent="Credits UI/Credits UI/Credits Info Text/Name3"]
+[node name="Credit" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Name3"]
 layout_mode = 0
-offset_left = -4.00605
-offset_top = 58.8778
+offset_left = -4.00604
+offset_top = 73.8467
 offset_right = 251.994
-offset_bottom = 273.878
+offset_bottom = 288.847
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
 text = "Bard of Hope
@@ -783,27 +797,120 @@ Co-programmer
 Co-writer "
 horizontal_alignment = 1
 
-[node name="Name4" type="Label" parent="Credits UI/Credits UI/Credits Info Text"]
-offset_left = 2796.41
-offset_top = -367.238
-offset_right = 3046.41
-offset_bottom = -317.238
+[node name="Name4" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text"]
+offset_left = 2791.4
+offset_top = -353.267
+offset_right = 3041.4
+offset_bottom = -298.267
 theme_override_fonts/font = ExtResource("9_177c6")
 theme_override_font_sizes/font_size = 25
-text = "Name Name"
+text = "Ashila Atha Makkah Ardiyansyah"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="Parrot Icon" type="AnimatedSprite2D" parent="Credits UI/Credits UI/Credits Info Text/Name4"]
-position = Vector2(128.196, -31.9346)
+[node name="Parrot Icon" type="AnimatedSprite2D" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Name4"]
+position = Vector2(128.196, -42.9141)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_d367a")
 animation = &"Parrot"
 autoplay = "Parrot"
 
+[node name="Credit" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Name4"]
+offset_left = -4.00604
+offset_top = 65.8633
+offset_right = 251.994
+offset_bottom = 280.863
+theme_override_constants/line_spacing = 10
+theme_override_font_sizes/font_size = 20
+text = "Lead Animator
+Character Designer
+"
+horizontal_alignment = 1
+
+[node name="To Pg2" type="Button" parent="Credits UI/Credits UI/Pg1"]
+modulate = Color(1, 1, 1, 0.741176)
+offset_left = 1385.18
+offset_top = 738.464
+offset_right = 1460.18
+offset_bottom = 778.464
+scale = Vector2(1.25, 1.25)
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.656162, 0, 0.096573, 1)
+theme_override_colors/font_color = Color(0.829026, 0.263799, 0.238968, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_3pot0")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5yleq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5yleq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lthh4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lthh4")
+text = "Next"
+icon_alignment = 1
+
+[node name="Pg2" type="Control" parent="Credits UI/Credits UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Credits Info Text" type="Node2D" parent="Credits UI/Credits UI/Pg2"]
+
+[node name="Special Thanks" type="Label" parent="Credits UI/Credits UI/Pg2/Credits Info Text"]
+offset_left = 817.0
+offset_top = 351.0
+offset_right = 1151.0
+offset_bottom = 412.0
+theme_override_fonts/font = ExtResource("14_3pot0")
+theme_override_font_sizes/font_size = 50
+text = "Special Thanks"
+
+[node name="Written Thanks" type="Label" parent="Credits UI/Credits UI/Pg2/Credits Info Text"]
+offset_left = 853.0
+offset_top = 419.0
+offset_right = 1428.0
+offset_bottom = 791.0
+theme_override_font_sizes/font_size = 15
+text = "We, the Teriyaki Wings Team, would like to present our heartfelt gratitude towards everyone who volunteered, organized, sponsored, participated and spent their precious time in making this game jam a success. This was a first for all of us, and we would like to thank everyone for allowing us such an amazing opportunity –  one where we got to meet new people, have lots of fun, all while learning cool stuff in between! We actually learnt a lot :) We can now do the kind of stuff that we once deemed ‘Impossible’ or ‘Magic”.  Don’t get us wrong, the actual coding part was pretty stressful – but hey! We’re here now and we made it. Surely, this memory will remain in our minds as one that time can’t erase, and with every next dive we take in this realm of logic and codes, we will be grateful to where it all started. Thank you, Girls Got Game.
+
+Love, Teriyaki Wings"
+autowrap_mode = 3
+
+[node name="GGG_Icon" type="Sprite2D" parent="Credits UI/Credits UI/Pg2/Credits Info Text"]
+position = Vector2(663, 610)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_yyrxs")
+
+[node name="GGG_Arc" type="Sprite2D" parent="Credits UI/Credits UI/Pg2/Credits Info Text"]
+position = Vector2(666, 491)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("16_3pot0")
+
+[node name="To Pg1" type="Button" parent="Credits UI/Credits UI/Pg2"]
+modulate = Color(1, 1, 1, 0.741176)
+offset_left = 457.0
+offset_top = 743.0
+offset_right = 532.0
+offset_bottom = 783.0
+scale = Vector2(1.25, 1.25)
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.656162, 0, 0.096573, 1)
+theme_override_colors/font_color = Color(0.829026, 0.263799, 0.238968, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_3pot0")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5yleq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5yleq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lthh4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lthh4")
+text = "Back"
+icon_alignment = 1
+
 [node name="CREDIT Title" type="Sprite2D" parent="Credits UI/Credits UI"]
-position = Vector2(37.0584, 55.884)
-scale = Vector2(0.987699, 0.970507)
+position = Vector2(37, 56.0002)
+scale = Vector2(0.986142, 0.972526)
 
 [node name="Banner" type="Sprite2D" parent="Credits UI/Credits UI/CREDIT Title"]
 position = Vector2(-2227, -1306)
@@ -835,11 +942,10 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="Close_Credits" type="Button" parent="Credits UI/Credits UI"]
-layout_mode = 0
-offset_left = 1410.22
-offset_top = 287.403
-offset_right = 1465.22
-offset_bottom = 338.403
+offset_left = 1408.0
+offset_top = 288.001
+offset_right = 1463.0
+offset_bottom = 339.001
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0.656162, 0, 0.096573, 1)
 theme_override_colors/font_color = Color(0.829026, 0.263799, 0.238968, 1)
@@ -858,4 +964,6 @@ icon_alignment = 1
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/OptionButton" to="." method="_on_option_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/OptionButton" to="." method="_on_option_button_pressed"]
+[connection signal="pressed" from="Credits UI/Credits UI/Pg1/To Pg2" to="." method="_on_to_pg_2_pressed"]
+[connection signal="pressed" from="Credits UI/Credits UI/Pg2/To Pg1" to="." method="_on_to_pg_1_pressed"]
 [connection signal="pressed" from="Credits UI/Credits UI/Close_Credits" to="." method="_on_close_credits_pressed"]
