@@ -2335,6 +2335,9 @@ texture = ExtResource("3_7hcan")
 [sub_resource type="TileSet" id="TileSet_gldua"]
 sources/4 = SubResource("TileSetAtlasSource_tb5ku")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_67341"]
+radius = 40.6079
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_7hcan"]
 atlas = ExtResource("2_vpq6y")
 region = Rect2(320, 480, 32, 32)
@@ -2379,9 +2382,6 @@ size = Vector2(61, 51.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gldua"]
 size = Vector2(21.9398, 10.092)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_67341"]
-radius = 34.4093
 
 [node name="Treehouse Room 2" type="Node2D"]
 
@@ -2441,6 +2441,13 @@ tile_set = SubResource("TileSet_7tqk6")
 [node name="Carpet" type="TileMapLayer" parent="Background"]
 tile_map_data = PackedByteArray("AAD2/wMABAAcAAEAAAD2/wQABAAcAAIAAAD2/wUABAAcAAMAAAD2/wYABAAcAAQAAAD3/wMABAAcAAEAAAD3/wQABAAcAAIAAAD3/wUABAAcAAMAAAD3/wYABAAcAAQAAAD4/wMABAAcAAEAAAD4/wQABAAcAAIAAAD4/wUABAAcAAMAAAD4/wYABAAcAAQAAAD5/wMABAAdAAEAAAD5/wQABAAdAAIAAAD5/wUABAAdAAMAAAD5/wYABAAdAAQAAAD6/wMABAAcAAEAAAD6/wQABAAcAAIAAAD6/wUABAAcAAMAAAD6/wYABAAcAAQAAAD7/wMABAAdAAEAAAD7/wQABAAdAAIAAAD7/wUABAAdAAMAAAD7/wYABAAdAAQAAAD8/wMABAAcAAEAAAD8/wQABAAcAAIAAAD8/wUABAAcAAMAAAD8/wYABAAcAAQAAAD9/wMABAAdAAEAAAD9/wQABAAdAAIAAAD9/wUABAAdAAMAAAD9/wYABAAdAAQAAAD+/wMABAAcAAEAAAD+/wQABAAcAAIAAAD+/wUABAAcAAMAAAD+/wYABAAcAAQAAAD//wMABAAcAAEAAAD//wQABAAcAAIAAAD//wUABAAcAAMAAAD//wYABAAcAAQAAAAAAAMABAAdAAEAAAAAAAQABAAdAAIAAAAAAAUABAAdAAMAAAAAAAYABAAdAAQAAAD+/wIABAAcAAAAAAD//wIABAAdAAAAAAD8/wIABAAcAAAAAAD9/wIABAAdAAAAAAD6/wIABAAcAAAAAAD7/wIABAAdAAAAAAD4/wIABAAdAAAAAAD5/wIABAAdAAAAAAD3/wIABAAcAAAAAAD2/wIABAAcAAAAAAAAAAIABAAcAAAAAAABAAIABAAeAAAAAAD1/wIABAAbAAAAAAABAAMABAAeAAEAAAABAAQABAAeAAIAAAABAAUABAAeAAMAAAABAAYABAAeAAQAAAABAAcABAAeAAUAAAD//wcABAAcAAUAAAAAAAcABAAdAAUAAAD9/wcABAAcAAUAAAD+/wcABAAdAAUAAAD7/wcABAAcAAUAAAD8/wcABAAdAAUAAAD5/wcABAAcAAUAAAD6/wcABAAdAAUAAAD3/wcABAAcAAUAAAD4/wcABAAdAAUAAAD1/wcABAAbAAUAAAD2/wcABAAdAAUAAAD1/wMABAAbAAEAAAD1/wQABAAbAAIAAAD1/wUABAAbAAMAAAD1/wYABAAbAAQAAAA=")
 tile_set = SubResource("TileSet_gldua")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("9_6geum")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-165, 45)
+shape = SubResource("CircleShape2D_67341")
 
 [node name="Chest" type="Area2D" parent="."]
 position = Vector2(6, -31)
@@ -2507,12 +2514,12 @@ position = Vector2(186, -367)
 [node name="Exit" type="Area2D" parent="."]
 
 [node name="Shadow" type="Sprite2D" parent="Exit"]
-position = Vector2(-192, 50)
-scale = Vector2(0.10833, 0.297075)
+position = Vector2(-208.609, 56)
+scale = Vector2(0.102513, 0.297075)
 texture = ExtResource("4_7tqk6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
-position = Vector2(-225, 54)
+position = Vector2(-214, 49)
 scale = Vector2(6.30666, -9.71067)
 shape = SubResource("RectangleShape2D_gldua")
 
@@ -2520,13 +2527,6 @@ shape = SubResource("RectangleShape2D_gldua")
 stream = ExtResource("6_tb5ku")
 autoplay = true
 bus = &"BGM"
-
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("9_6geum")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-175, 49)
-shape = SubResource("CircleShape2D_67341")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
