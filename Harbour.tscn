@@ -290,7 +290,7 @@ tile_set = SubResource("TileSet_on1pv")
 tile_map_data = PackedByteArray("AADi//X/AAACAAIAAADi//b/AAACAAMAAADi//T/AAACAAAAAADi//P/AAACAAAAAADi//L/AAACAAEAAADh//X/AAABAAAAAADh//T/AAABAAAAAADh//P/AAABAAAAAADg//T/AAABAAIAAADg//P/AAABAAIAAADg//X/AAABAAIAAADf//P/AAABAAAAAADf//T/AAABAAAAAADf//X/AAABAAAAAADe//X/AAAAAAIAAADe//b/AAAAAAMAAADe//T/AAAAAAAAAADe//P/AAAAAAAAAADe//L/AAAAAAEAAAA=")
 tile_set = SubResource("TileSet_mdvx4")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D (on player)" type="Camera2D" parent="."]
 position = Vector2(-2091, -707)
 zoom = Vector2(2, 2)
 limit_left = -540

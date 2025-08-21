@@ -248,7 +248,7 @@ rotation = -1.5708
 scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_mvm06")
 
-[node name="Camera (put under player)" type="Camera2D" parent="."]
+[node name="Camera (on player)" type="Camera2D" parent="."]
 position = Vector2(103, -20)
 scale = Vector2(63.3581, 40.8094)
 zoom = Vector2(2, 2)
@@ -771,12 +771,12 @@ texture = ExtResource("2_stcry")
 region_enabled = true
 region_rect = Rect2(160, 32, 192, 208)
 
-[node name="Forest Music" type="AudioStreamPlayer2D" parent="."]
+[node name="Forest BGM" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(86, -287)
 stream = ExtResource("3_mvm06")
 autoplay = true
 
-[node name="Fight Forest Music" type="AudioStreamPlayer2D" parent="."]
+[node name="Fight Forest BGM" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_vmuxp")
 
 [node name="transition" type="AnimationPlayer" parent="."]
