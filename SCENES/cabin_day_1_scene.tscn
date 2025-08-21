@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://bmlndj3v5e38j"]
+[gd_scene load_steps=28 format=4 uid="uid://bmlndj3v5e38j"]
 
 [ext_resource type="Texture2D" uid="uid://bmh2ujcp37hr2" path="res://Backgrounds/TopDownHouse_FurnitureState1.png" id="2_03ltp"]
 [ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="2_f1naw"]
@@ -1238,6 +1238,12 @@ sources/0 = SubResource("TileSetAtlasSource_ih4sl")
 normal = Vector2(0.00439887, -0.99999)
 distance = 92.0048
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbk4g"]
+size = Vector2(36, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1lpvh"]
+size = Vector2(168, 55)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_cbk4g"]
 radius = 23.7065
 
@@ -1302,6 +1308,14 @@ position = Vector2(257.746, -79)
 rotation = -1.5708
 scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_f1naw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(135, 178)
+shape = SubResource("RectangleShape2D_cbk4g")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(1000, 157.5)
+shape = SubResource("RectangleShape2D_1lpvh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(328, 177)
