@@ -676,8 +676,6 @@ texture = ExtResource("2_vpq6y")
 9:7/0 = 0
 18:7/0 = 0
 19:7/0 = 0
-20:7/0 = 0
-23:7/0 = 0
 24:7/0 = 0
 25:7/0 = 0
 26:7/0 = 0
@@ -685,10 +683,6 @@ texture = ExtResource("2_vpq6y")
 13:8/0 = 0
 18:8/0 = 0
 19:8/0 = 0
-20:8/0 = 0
-21:8/0 = 0
-22:8/0 = 0
-23:8/0 = 0
 25:8/0 = 0
 0:9/0 = 0
 4:9/0 = 0
@@ -701,10 +695,6 @@ texture = ExtResource("2_vpq6y")
 17:9/0 = 0
 18:9/0 = 0
 19:9/0 = 0
-20:9/0 = 0
-21:9/0 = 0
-22:9/0 = 0
-23:9/0 = 0
 24:9/0 = 0
 25:9/0 = 0
 26:9/0 = 0
@@ -722,10 +712,6 @@ texture = ExtResource("2_vpq6y")
 17:10/0 = 0
 18:10/0 = 0
 19:10/0 = 0
-20:10/0 = 0
-21:10/0 = 0
-22:10/0 = 0
-23:10/0 = 0
 24:10/0 = 0
 25:10/0 = 0
 26:10/0 = 0
@@ -743,10 +729,6 @@ texture = ExtResource("2_vpq6y")
 17:11/0 = 0
 18:11/0 = 0
 19:11/0 = 0
-20:11/0 = 0
-21:11/0 = 0
-22:11/0 = 0
-23:11/0 = 0
 24:11/0 = 0
 25:11/0 = 0
 26:11/0 = 0
@@ -1130,6 +1112,9 @@ texture = ExtResource("2_vpq6y")
 23:35/0 = 0
 24:35/0 = 0
 25:35/0 = 0
+20:7/size_in_atlas = Vector2i(4, 5)
+20:7/0 = 0
+20:7/0/y_sort_origin = 10
 
 [sub_resource type="TileSet" id="TileSet_tb5ku"]
 sources/2 = SubResource("TileSetAtlasSource_7tqk6")
@@ -2335,15 +2320,6 @@ texture = ExtResource("3_7hcan")
 [sub_resource type="TileSet" id="TileSet_gldua"]
 sources/4 = SubResource("TileSetAtlasSource_tb5ku")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rhy4"]
-size = Vector2(34, 40)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eabxg"]
-size = Vector2(31, 39)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tb5ku"]
-size = Vector2(40.75, 26.75)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_7hcan"]
 atlas = ExtResource("2_vpq6y")
 region = Rect2(320, 480, 32, 32)
@@ -2366,6 +2342,15 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tb5ku"]
+size = Vector2(40.75, 26.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eabxg"]
+size = Vector2(31, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rhy4"]
+size = Vector2(37.5, 38.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7hcan"]
 size = Vector2(17, 32)
 
@@ -2378,9 +2363,10 @@ size = Vector2(32.736, 20)
 size = Vector2(135, 71)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7pksk"]
+size = Vector2(20.9104, 34.685)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7tqk6"]
-size = Vector2(56, 45.25)
+size = Vector2(66.5668, 56.0336)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tgv5j"]
 size = Vector2(69.5, 51.5)
@@ -2445,7 +2431,6 @@ func _process(delta: float) -> void:
 
 [node name="Treehouse Room 2" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(-1, -4)
 
 [node name="World Boundary" type="StaticBody2D" parent="."]
 position = Vector2(1, 97)
@@ -2486,10 +2471,12 @@ tile_map_data = PackedByteArray("AAD1////AAAIAAwAAAD2////AAAJAAwAAAD2/wAAAAAJAA0
 tile_set = SubResource("TileSet_eabxg")
 
 [node name="Furniture 2" type="TileMapLayer" parent="Background"]
-tile_map_data = PackedByteArray("AAAFAAUAAgAIAAUAAAAFAAYAAgAIAAYAAAAFAAcAAgAIAAcAAAAGAAUAAgAJAAUAAAAGAAYAAgAJAAYAAAAGAAcAAgAJAAcAAAAHAAMAAgAUAAcAAAAHAAQAAgAUAAgAAAAHAAUAAgAUAAkAAAAHAAYAAgAUAAoAAAAHAAcAAgAUAAsAAAAIAAQAAgAVAAgAAAAIAAUAAgAVAAkAAAAIAAYAAgAVAAoAAAAIAAcAAgAVAAsAAAAJAAQAAgAWAAgAAAAJAAUAAgAWAAkAAAAJAAYAAgAWAAoAAAAJAAcAAgAWAAsAAAAKAAMAAgAXAAcAAAAKAAQAAgAXAAgAAAAKAAUAAgAXAAkAAAAKAAYAAgAXAAoAAAAKAAcAAgAXAAsAAAAEAP//AgAIABUAAAAEAAAAAgAIABYAAAAEAAEAAgAIABcAAAAFAP//AgAJABUAAAAFAAAAAgAJABYAAAAFAAEAAgAJABcAAAD2//7/AgAZAA0AAAD2////AgAZAA4AAAD2/wAAAgAZAA8AAAD3//7/AgAaAA0AAAD3////AgAaAA4AAAD3/wAAAgAaAA8AAAD4//7/AgAYAAkAAAD4////AgAYAAoAAAD4/wAAAgAYAAsAAAD5//7/AgAZAAkAAAD5////AgAZAAoAAAD5/wAAAgAZAAsAAAD6//7/AgAaAAkAAAD6////AgAaAAoAAAD6/wAAAgAaAAsAAAD7////AgAaAB4AAAD7/wAAAgAaAB8AAAD8////AgAbAB4AAAD8/wAAAgAbAB8AAAD1//7/AgAYAA0AAAD1////AgAYAA4AAAD1/wAAAgAYAA8AAAD2//3/AgAZAAwAAAD5//3/AgAZAAgAAADy//7/AgAYAAkAAADy////AgAYAAoAAADy/wAAAgAYAAsAAADz//3/AgAZAAgAAADz//7/AgAZAAkAAADz////AgAZAAoAAADz/wAAAgAZAAsAAAD0//7/AgAaAAkAAAD0////AgAaAAoAAAD0/wAAAgAaAAsAAAA=")
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAFAAUAAgAIAAUAAAAFAAYAAgAIAAYAAAAFAAcAAgAIAAcAAAAGAAUAAgAJAAUAAAAGAAYAAgAJAAYAAAAGAAcAAgAJAAcAAAAEAP//AgAIABUAAAAEAAAAAgAIABYAAAAEAAEAAgAIABcAAAAFAP//AgAJABUAAAAFAAAAAgAJABYAAAAFAAEAAgAJABcAAAD2//7/AgAZAA0AAAD2////AgAZAA4AAAD2/wAAAgAZAA8AAAD3//7/AgAaAA0AAAD3////AgAaAA4AAAD3/wAAAgAaAA8AAAD4//7/AgAYAAkAAAD4////AgAYAAoAAAD4/wAAAgAYAAsAAAD5//7/AgAZAAkAAAD5////AgAZAAoAAAD5/wAAAgAZAAsAAAD6//7/AgAaAAkAAAD6////AgAaAAoAAAD6/wAAAgAaAAsAAAD7////AgAaAB4AAAD7/wAAAgAaAB8AAAD8////AgAbAB4AAAD8/wAAAgAbAB8AAAD1//7/AgAYAA0AAAD1////AgAYAA4AAAD1/wAAAgAYAA8AAAD2//3/AgAZAAwAAAD5//3/AgAZAAgAAADy//7/AgAYAAkAAADy////AgAYAAoAAADy/wAAAgAYAAsAAADz//3/AgAZAAgAAADz//7/AgAZAAkAAADz////AgAZAAoAAADz/wAAAgAZAAsAAAD0//7/AgAaAAkAAAD0////AgAaAAoAAAD0/wAAAgAaAAsAAAAJAAUAAgAUAAcAAAA=")
 tile_set = SubResource("TileSet_tb5ku")
 
 [node name="Furniture 1" type="TileMapLayer" parent="Background"]
+y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAAAAQAGAB4AAAACAAEAAQAGAB8AAAAGAAAAAQAEAB4AAAAGAAEAAQAEAB8AAAACAP//AQAGAB0AAAADAAAAAQAHAB4AAAADAAEAAQAHAB8AAAAHAP//AQAFAB0AAAAHAAAAAQAFAB4AAAAHAAEAAQAFAB8AAAAFAAUAAQASABwAAAAFAAYAAQASAB0AAAAGAAUAAQATABwAAAAGAAYAAQATAB0AAAD2////AQAZAAkAAAD2/wAAAQAZAAoAAAD2/wEAAQAZAAsAAAD3////AQAaAAkAAAD3/wAAAQAaAAoAAAD3/wEAAQAaAAsAAAD4////AQAYAA0AAAD4/wAAAQAYAA4AAAD4/wEAAQAYAA8AAAD5////AQAZAA0AAAD5/wAAAQAZAA4AAAD5/wEAAQAZAA8AAAD6////AQAaAA0AAAD6/wAAAQAaAA4AAAD6/wEAAQAaAA8AAAD7/wAAAQAQAAAAAAD7/wEAAQAQAAEAAAD8/wAAAQARAAAAAAD8/wEAAQARAAEAAAD9/wAAAQAEAAMAAAD1////AQAYAAkAAAD1/wAAAQAYAAoAAAD1/wEAAQAYAAsAAAD2//7/AQAZAAgAAAD5//7/AQAZAAwAAAD9////AQAEAAIAAADy////AQAYAAkAAADy/wAAAQAYAAoAAADy/wEAAQAYAAsAAADz//7/AQAZAAgAAADz////AQAZAAkAAADz/wAAAQAZAAoAAADz/wEAAQAZAAsAAAD0////AQAaAAkAAAD0/wAAAQAaAAoAAAD0/wEAAQAaAAsAAAA=")
 tile_set = SubResource("TileSet_7tqk6")
 
@@ -2498,13 +2485,37 @@ position = Vector2(-10, 17)
 tile_map_data = PackedByteArray("AAD2/wMABAAcAAEAAAD2/wQABAAcAAIAAAD2/wUABAAcAAMAAAD2/wYABAAcAAQAAAD3/wMABAAcAAEAAAD3/wQABAAcAAIAAAD3/wUABAAcAAMAAAD3/wYABAAcAAQAAAD4/wMABAAcAAEAAAD4/wQABAAcAAIAAAD4/wUABAAcAAMAAAD4/wYABAAcAAQAAAD5/wMABAAdAAEAAAD5/wQABAAdAAIAAAD5/wUABAAdAAMAAAD5/wYABAAdAAQAAAD6/wMABAAcAAEAAAD6/wQABAAcAAIAAAD6/wUABAAcAAMAAAD6/wYABAAcAAQAAAD7/wMABAAdAAEAAAD7/wQABAAdAAIAAAD7/wUABAAdAAMAAAD7/wYABAAdAAQAAAD8/wMABAAcAAEAAAD8/wQABAAcAAIAAAD8/wUABAAcAAMAAAD8/wYABAAcAAQAAAD9/wMABAAdAAEAAAD9/wQABAAdAAIAAAD9/wUABAAdAAMAAAD9/wYABAAdAAQAAAD+/wMABAAcAAEAAAD+/wQABAAcAAIAAAD+/wUABAAcAAMAAAD+/wYABAAcAAQAAAD//wMABAAcAAEAAAD//wQABAAcAAIAAAD//wUABAAcAAMAAAD//wYABAAcAAQAAAAAAAMABAAdAAEAAAAAAAQABAAdAAIAAAAAAAUABAAdAAMAAAAAAAYABAAdAAQAAAD+/wIABAAcAAAAAAD//wIABAAdAAAAAAD8/wIABAAcAAAAAAD9/wIABAAdAAAAAAD6/wIABAAcAAAAAAD7/wIABAAdAAAAAAD4/wIABAAdAAAAAAD5/wIABAAdAAAAAAD3/wIABAAcAAAAAAD2/wIABAAcAAAAAAAAAAIABAAcAAAAAAABAAIABAAeAAAAAAD1/wIABAAcAAAAAAABAAMABAAeAAEAAAABAAQABAAeAAIAAAABAAUABAAeAAMAAAABAAYABAAeAAQAAAABAAcABAAeAAUAAAD//wcABAAcAAUAAAAAAAcABAAdAAUAAAD9/wcABAAcAAUAAAD+/wcABAAdAAUAAAD7/wcABAAcAAUAAAD8/wcABAAdAAUAAAD5/wcABAAcAAUAAAD6/wcABAAdAAUAAAD3/wcABAAcAAUAAAD4/wcABAAdAAUAAAD1/wcABAAcAAUAAAD2/wcABAAdAAUAAAD1/wQABAAcAAIAAAD1/wUABAAcAAIAAAD1/wYABAAcAAIAAAD1/wMABAAcAAIAAAD0/wMABAAcAAIAAAD0/wQABAAcAAIAAAD0/wUABAAcAAIAAAD0/wYABAAcAAIAAAD0/wcABAAcAAUAAAD0/wIABAAcAAAAAAA=")
 tile_set = SubResource("TileSet_gldua")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="Background"]
-
 [node name="Calendar" type="Sprite2D" parent="Background"]
 position = Vector2(81, -35)
 texture = ExtResource("2_vpq6y")
 region_enabled = true
 region_rect = Rect2(64, 0, 32, 32)
+
+[node name="Chest" type="Area2D" parent="Background"]
+position = Vector2(4, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background/Chest"]
+position = Vector2(151, -8)
+sprite_frames = SubResource("SpriteFrames_tgv5j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Chest"]
+position = Vector2(151, -2)
+shape = SubResource("RectangleShape2D_tb5ku")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/Chest"]
+
+[node name="Eat Table" type="Area2D" parent="Background"]
+position = Vector2(-2, 33)
+
+[node name="First Aid Kit" type="Sprite2D" parent="Background/Eat Table"]
+position = Vector2(82, -27)
+texture = ExtResource("2_vpq6y")
+region_enabled = true
+region_rect = Rect2(128, 64, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Eat Table"]
+position = Vector2(81.5, -19.5)
+shape = SubResource("RectangleShape2D_eabxg")
 
 [node name="InteriorTilesLite" type="Sprite2D" parent="Background"]
 visible = false
@@ -2516,34 +2527,22 @@ region_enabled = true
 region_rect = Rect2(288, 224, 64, 32)
 
 [node name="Desdemona2D" parent="Background" instance=ExtResource("7_gldua")]
-y_sort_enabled = true
 position = Vector2(28, 10)
 
 [node name="Box on Table2" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box on Table2"]
-position = Vector2(100, 78)
+position = Vector2(100, 70)
 shape = SubResource("RectangleShape2D_7rhy4")
 
 [node name="Box on Table" type="Area2D" parent="Box on Table2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box on Table2/Box on Table"]
-position = Vector2(97.5, 72.5)
+position = Vector2(98, 70)
+scale = Vector2(1.36628, 1.36696)
 shape = SubResource("RectangleShape2D_7rhy4")
 
 [node name="Dinner Table" type="StaticBody2D" parent="."]
-
-[node name="Eat Table" type="Area2D" parent="Dinner Table"]
-
-[node name="First Aid Kit" type="Sprite2D" parent="Dinner Table/Eat Table"]
-position = Vector2(82, -27)
-texture = ExtResource("2_vpq6y")
-region_enabled = true
-region_rect = Rect2(128, 64, 16, 16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dinner Table/Eat Table"]
-position = Vector2(81.5, -19.5)
-shape = SubResource("RectangleShape2D_eabxg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dinner Table"]
 position = Vector2(81.5, -19.5)
@@ -2555,18 +2554,6 @@ position = Vector2(6, -31)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chest"]
 position = Vector2(151, -2)
 shape = SubResource("RectangleShape2D_tb5ku")
-
-[node name="Chest" type="Area2D" parent="Chest"]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Chest/Chest"]
-position = Vector2(151, -8)
-sprite_frames = SubResource("SpriteFrames_tgv5j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest/Chest"]
-position = Vector2(151, -2)
-shape = SubResource("RectangleShape2D_tb5ku")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Chest/Chest"]
 
 [node name="Chairs" type="StaticBody2D" parent="."]
 position = Vector2(17, 5)
@@ -2606,17 +2593,17 @@ position = Vector2(-153.5, -3)
 shape = SubResource("RectangleShape2D_vpq6y")
 
 [node name="Bed" type="StaticBody2D" parent="."]
-position = Vector2(1, 4)
+position = Vector2(9, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bed"]
-position = Vector2(144, 73)
+position = Vector2(145.252, 51)
 scale = Vector2(2.74968, 1.9605)
 shape = SubResource("RectangleShape2D_7pksk")
 
 [node name="Bed" type="Area2D" parent="Bed"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bed/Bed"]
-position = Vector2(144, 53)
+position = Vector2(147, 56)
 scale = Vector2(1.06309, 1.58642)
 shape = SubResource("RectangleShape2D_7tqk6")
 
