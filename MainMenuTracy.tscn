@@ -738,6 +738,7 @@ animation = &"Cat"
 autoplay = "Cat"
 
 [node name="Credit" type="Label" parent="Credits UI/Credits UI/Credits Info Text/Joanna Li"]
+layout_mode = 0
 offset_left = -4.00605
 offset_top = 58.8778
 offset_right = 251.994
@@ -768,6 +769,7 @@ autoplay = "default"
 frame_progress = 0.311784
 
 [node name="Credit" type="Label" parent="Credits UI/Credits UI/Credits Info Text/Name3"]
+layout_mode = 0
 offset_left = -4.00605
 offset_top = 58.8778
 offset_right = 251.994
