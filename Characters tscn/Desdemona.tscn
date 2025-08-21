@@ -161,6 +161,8 @@ animations = [{
 size = Vector2(11.4116, 4.4479)
 
 [node name="Desdemona2D" type="CharacterBody2D"]
+y_sort_enabled = true
+position = Vector2(0, -25)
 scale = Vector2(0.055, 0.055)
 script = ExtResource("1_7sixq")
 
