@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bpuxop7yuewwq"
-path="res://.godot/imported/Deadtoast Demo.ttf-69896d9fd6db51da7492deeabcb17db6.fontdata"
+path="res://.godot/imported/Deadtoast Demo.ttf-a3313fce5e0f882e7de5fed0af0dd830.fontdata"
 
 [deps]
 
-source_file="res://Deadtoast Demo.ttf"
-dest_files=["res://.godot/imported/Deadtoast Demo.ttf-69896d9fd6db51da7492deeabcb17db6.fontdata"]
+source_file="res://Fonts/Deadtoast Demo.ttf"
+dest_files=["res://.godot/imported/Deadtoast Demo.ttf-a3313fce5e0f882e7de5fed0af0dd830.fontdata"]
 
 [params]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2jjwjyvarali" path="res://menu.gd" id="1_h7302"]
 [ext_resource type="Texture2D" uid="uid://bskf01sb4isus" path="res://Backgrounds/Ruins_BG.png" id="2_qu2sj"]
-[ext_resource type="FontFile" uid="uid://bpuxop7yuewwq" path="res://Deadtoast Demo.ttf" id="3_1ta3y"]
+[ext_resource type="FontFile" uid="uid://bpuxop7yuewwq" path="res://Fonts/Deadtoast Demo.ttf" id="3_1ta3y"]
 [ext_resource type="AudioStream" uid="uid://dodb2qrgun7g" path="res://Music_Teriyaki-Wings/VIP.MainMenu_BGM.wav" id="4_qu2sj"]
 [ext_resource type="AudioStream" uid="uid://vsls1fjsl6xo" path="res://Sound Effects/Button_Press.wav" id="5_3pot0"]
 [ext_resource type="AudioStream" uid="uid://df5mxhvilisc2" path="res://Sound Effects/Hover_Over_Button.wav" id="6_qkau1"]
