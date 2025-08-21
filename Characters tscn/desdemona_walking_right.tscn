@@ -1,13 +1,13 @@
 [gd_scene load_steps=7 format=3 uid="uid://dnouhmv5a0g2b"]
 
-[ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="1_a0qkv"]
+[ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="1_mxmju"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kksmv"]
-atlas = ExtResource("1_a0qkv")
+atlas = ExtResource("1_mxmju")
 region = Rect2(0, 2700, 540, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vnxs2"]
-atlas = ExtResource("1_a0qkv")
+atlas = ExtResource("1_mxmju")
 region = Rect2(540, 2700, 540, 900)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s2vim"]
