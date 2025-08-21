@@ -2449,6 +2449,8 @@ script = ExtResource("9_6geum")
 position = Vector2(-165, 45)
 shape = SubResource("CircleShape2D_67341")
 
+[node name="Spawn" type="Marker2D" parent="Area2D"]
+
 [node name="Chest" type="Area2D" parent="."]
 position = Vector2(6, -31)
 

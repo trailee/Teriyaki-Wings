@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://6j6c5uewe0e1"]
+
+[ext_resource type="Texture2D" uid="uid://bsi2u4g8k0gcx" path="res://Assets/characters/cassandra.png" id="1_kni3d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqc6x"]
+atlas = ExtResource("1_kni3d")
+region = Rect2(0, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vp8rb"]
+atlas = ExtResource("1_kni3d")
+region = Rect2(540, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mi5is"]
+atlas = ExtResource("1_kni3d")
+region = Rect2(0, 900, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ydiq0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqc6x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp8rb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mi5is")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o16vc"]
+radius = 63.1506
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qdy2"]
+size = Vector2(148, 92.5)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-188.5, 341.5)
+scale = Vector2(0.301852, 0.241111)
+sprite_frames = SubResource("SpriteFrames_ydiq0")
+autoplay = "default"
+frame = 2
+frame_progress = 0.168893
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-191, 298)
+shape = SubResource("CircleShape2D_o16vc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D"]
+position = Vector2(3, 104.75)
+shape = SubResource("RectangleShape2D_0qdy2")
