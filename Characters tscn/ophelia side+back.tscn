@@ -1,0 +1,110 @@
+[gd_scene load_steps=14 format=3 uid="uid://ceoikrk48ujmq"]
+
+[ext_resource type="Texture2D" uid="uid://du6exsp28uj6s" path="res://Assets/characters/ophelia.png" id="1_yfgd4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tim23"]
+atlas = ExtResource("1_yfgd4")
+region = Rect2(540, 900, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xcidq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tim23")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wyvc7"]
+radius = 208.15
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ulggu"]
+size = Vector2(509.091, 474.251)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cm61d"]
+atlas = ExtResource("1_yfgd4")
+region = Rect2(1080, 900, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bltus"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cm61d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rt4jt"]
+radius = 208.15
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0otg"]
+size = Vector2(509.091, 474.251)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atbhi"]
+atlas = ExtResource("1_yfgd4")
+region = Rect2(1620, 900, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6ykv1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atbhi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4heq4"]
+radius = 208.15
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocu2p"]
+size = Vector2(509.091, 474.251)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(92, -345.125)
+scale = Vector2(0.06875, 0.0463889)
+sprite_frames = SubResource("SpriteFrames_xcidq")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
+position = Vector2(-3.8147e-05, -212.874)
+shape = SubResource("CircleShape2D_wyvc7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/CollisionShape2D"]
+position = Vector2(0, 431.138)
+shape = SubResource("RectangleShape2D_ulggu")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(174, -344)
+scale = Vector2(0.06875, 0.0463889)
+sprite_frames = SubResource("SpriteFrames_bltus")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D2"]
+position = Vector2(-3.8147e-05, -212.874)
+shape = SubResource("CircleShape2D_rt4jt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D2/CollisionShape2D"]
+position = Vector2(-14.5455, 385.329)
+shape = SubResource("RectangleShape2D_e0otg")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(295, -347)
+scale = Vector2(0.06875, 0.0463889)
+sprite_frames = SubResource("SpriteFrames_6ykv1")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3"]
+position = Vector2(-3.8147e-05, -212.874)
+shape = SubResource("CircleShape2D_4heq4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3/CollisionShape2D"]
+position = Vector2(0, 450)
+shape = SubResource("RectangleShape2D_ocu2p")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsjshst4m374g"]
+[gd_scene load_steps=9 format=3 uid="uid://dsjshst4m374g"]
 
 [ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="1_bd102"]
 
@@ -10,6 +10,14 @@ region = Rect2(0, 3600, 540, 900)
 atlas = ExtResource("1_bd102")
 region = Rect2(540, 3600, 540, 900)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bd102"]
+atlas = ExtResource("1_bd102")
+region = Rect2(0, 3600, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxjgo"]
+atlas = ExtResource("1_bd102")
+region = Rect2(1620, 3600, 540, 900)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_gxjgo"]
 animations = [{
 "frames": [{
@@ -18,10 +26,16 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0qoo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bd102")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxjgo")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mm6yu"]
@@ -37,7 +51,7 @@ position = Vector2(92.25, -348.25)
 scale = Vector2(0.0509259, 0.0483333)
 sprite_frames = SubResource("SpriteFrames_gxjgo")
 autoplay = "default"
-frame_progress = 0.574795
+frame_progress = 0.579654
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(93, -355)
