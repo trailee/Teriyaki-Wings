@@ -18,6 +18,9 @@
 [ext_resource type="FontFile" uid="uid://fdrfo3ujhi3n" path="res://Fonts/ZTOtez-Regular.ttf" id="14_3pot0"]
 [ext_resource type="Texture2D" uid="uid://b6nl3nnbm6t8q" path="res://Assets/GGG pics/GGG.png" id="15_yyrxs"]
 [ext_resource type="Texture2D" uid="uid://dpnouq1e16ukx" path="res://Assets/GGG pics/gggtext.png" id="16_3pot0"]
+[ext_resource type="Texture2D" uid="uid://bnnu1p21s7vkk" path="res://UI Main Menu/Large tiles/Thin outline/tile_0043.png" id="18_0l6kj"]
+[ext_resource type="Texture2D" uid="uid://bg6rau0cjp2jp" path="res://UI Main Menu/Large tiles/Thin outline/tile_0045.png" id="19_ooaj7"]
+[ext_resource type="Texture2D" uid="uid://cuyp88brduyre" path="res://UI Main Menu/Large tiles/Thin outline/tile_0044.png" id="20_oudji"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cx167"]
 texture = ExtResource("2_qu2sj")
@@ -551,12 +554,6 @@ animations = [{
 "speed": 3.0
 }]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5p1lm"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1igrg"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v0s1l"]
-
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -920,22 +917,22 @@ scale = Vector2(5, 5)
 
 [node name="P1" type="Sprite2D" parent="Credits UI/Credits UI/CREDIT Title/Banner"]
 position = Vector2(602, 306)
-texture = SubResource("CompressedTexture2D_5p1lm")
+texture = ExtResource("18_0l6kj")
 
 [node name="P2" type="Sprite2D" parent="Credits UI/Credits UI/CREDIT Title/Banner"]
 position = Vector2(666, 306)
-texture = SubResource("CompressedTexture2D_1igrg")
+texture = ExtResource("19_ooaj7")
 
 [node name="P3" type="Sprite2D" parent="Credits UI/Credits UI/CREDIT Title/Banner"]
 position = Vector2(634, 305)
 scale = Vector2(1.16, 1)
-texture = SubResource("CompressedTexture2D_v0s1l")
+texture = ExtResource("20_oudji")
 
 [node name="Credits" type="Label" parent="Credits UI/Credits UI/CREDIT Title"]
 offset_left = 743.0
-offset_top = 165.0
+offset_top = 159.859
 offset_right = 1142.0
-offset_bottom = 302.0
+offset_bottom = 296.859
 theme_override_colors/font_color = Color(0.992157, 0.905882, 0.788235, 1)
 theme_override_font_sizes/font_size = 50
 text = "Credits"
