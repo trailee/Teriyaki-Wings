@@ -552,13 +552,10 @@ animations = [{
 }]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5p1lm"]
-load_path = "res://.godot/imported/tile_0043.png-e7cf54cc6ebbb8c0ba0c650ca41875cb.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1igrg"]
-load_path = "res://.godot/imported/tile_0045.png-b084935f949e80f18175908166a29e5a.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v0s1l"]
-load_path = "res://.godot/imported/tile_0044.png-99f8d48cc7cbac8c322ce844390393ef.ctex"
 
 [node name="Menu" type="Control"]
 layout_mode = 3
