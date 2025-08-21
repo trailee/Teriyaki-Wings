@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GGG"
-run/main_scene="uid://bmito4qec4eg2"
+run/main_scene="uid://cjpypl5wt425g"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
