@@ -1,0 +1,186 @@
+[gd_scene load_steps=23 format=3 uid="uid://dn6qfnhxw17xl"]
+
+[ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="1_ebfod"]
+
+[sub_resource type="GDScript" id="GDScript_7sixq"]
+script/source = "extends CharacterBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwyyf"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(0, 900, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwmi8"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(1080, 900, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibcvk"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(0, 4500, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arfd8"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(540, 4500, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2iuli"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(1080, 4500, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4eq57"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(1620, 4500, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74vnm"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(0, 3600, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qj6ti"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(540, 3600, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lttf0"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(1080, 3600, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ts1gp"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(1620, 3600, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_488mk"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(0, 1800, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7c7xf"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(540, 1800, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5m1r"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(1080, 1800, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0snb"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(1620, 1800, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75klr"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(0, 2700, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vldit"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(540, 2700, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qoq6"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(1080, 2700, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayqsp"]
+atlas = ExtResource("1_ebfod")
+region = Rect2(1620, 2700, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k8gdy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwyyf")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_vwmi8")
+}],
+"loop": true,
+"name": &"Des_Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_ibcvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arfd8")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_2iuli")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4eq57")
+}],
+"loop": true,
+"name": &"Des_WalkBack",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_74vnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qj6ti")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_lttf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ts1gp")
+}],
+"loop": true,
+"name": &"Des_WalkFront",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_488mk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7c7xf")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_p5m1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0snb")
+}],
+"loop": true,
+"name": &"Des_WalkLeft",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_75klr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vldit")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_1qoq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayqsp")
+}],
+"loop": true,
+"name": &"Des_WalkRight",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3hyd"]
+
+[node name="Desdemona2D" type="CharacterBody2D"]
+script = SubResource("GDScript_7sixq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_k8gdy")
+animation = &"Des_Idle"
+autoplay = "Des_Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 35)
+scale = Vector2(28.5941, -42.8175)
+shape = SubResource("RectangleShape2D_l3hyd")

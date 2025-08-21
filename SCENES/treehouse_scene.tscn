@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="4_7tqk6"]
 [ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="4_tgv5j"]
 [ext_resource type="AudioStream" uid="uid://ca3tlw532xys5" path="res://Music_Teriyaki-Wings/Treehouse_BGM copy.wav" id="6_tb5ku"]
-[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/DesdemonaIdle.tscn" id="8_wcsbt"]
-[ext_resource type="Script" uid="uid://iq31go7x4jgt" path="res://SCENES/area_2d.gd" id="9_6geum"]
-[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters tscn/ophelia_2d.tscn" id="9_67341"]
+[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="8_wcsbt"]
+[ext_resource type="Script" uid="uid://d3hsqcykbvn6q" path="res://SCENES/area_2d.gd" id="9_6geum"]
+[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters tscn/Ophelia.tscn" id="9_67341"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tb5ku"]
 
