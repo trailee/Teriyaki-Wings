@@ -295,12 +295,12 @@ tile_map_data = PackedByteArray("AADi//X/AAACAAIAAADi//b/AAACAAMAAADi//T/AAACAAA
 tile_set = SubResource("TileSet_mdvx4")
 
 [node name="Camera2D (on player)" type="Camera2D" parent="."]
-position = Vector2(-2091, -707)
+position = Vector2(485, -22)
 zoom = Vector2(2, 2)
-limit_left = -540
-limit_top = 475
-limit_right = 475
-limit_bottom = 1000
+limit_left = -575
+limit_top = -475
+limit_right = 1000
+limit_bottom = 475
 
 [node name="Logs" type="Area2D" parent="."]
 
