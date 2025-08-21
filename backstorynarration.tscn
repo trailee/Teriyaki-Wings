@@ -1,14 +1,55 @@
-[gd_scene load_steps=5 format=3 uid="uid://yecn4bt81m0g"]
+[gd_scene load_steps=9 format=3 uid="uid://yecn4bt81m0g"]
 
 [ext_resource type="Script" uid="uid://dy4leih3mv52k" path="res://backstorylabel.gd" id="1_usaqd"]
 [ext_resource type="AudioStream" uid="uid://cubklabmivevb" path="res://Sound Effects/Rain_Soundtrack.wav" id="2_17urp"]
+
+[sub_resource type="Animation" id="Animation_jiwv5"]
+resource_name = "Breath"
+
+[sub_resource type="Animation" id="Animation_hsxm7"]
+resource_name = "CTC_Breath"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_l0ixe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.45098)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qg3ox"]
+_data = {
+&"Breath": SubResource("Animation_jiwv5"),
+&"CTC_Breath": SubResource("Animation_hsxm7"),
+&"RESET": SubResource("Animation_l0ixe")
+}
 
 [sub_resource type="Animation" id="Animation_17urp"]
 resource_name = "new_anim_story"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect/Label:self_modulate:a")
+tracks/0/path = NodePath("ColorRect/Story:self_modulate:a")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -40,20 +81,28 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="Story" type="Label" parent="ColorRect"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 241.0
+offset_top = 123.0
+offset_right = 241.0
+offset_bottom = 123.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.75, 0.75)
 theme_override_font_sizes/font_size = 100
 text = "Hello, everyone."
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 script = ExtResource("1_usaqd")
 
-[node name="Label2" type="Label" parent="ColorRect"]
+[node name="CTC" type="Label" parent="ColorRect"]
+modulate = Color(1, 1, 1, 0.45098)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -72,7 +121,14 @@ text = "Click to Continue"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="CTC_Anim" type="AnimationPlayer" parent="ColorRect"]
+root_node = NodePath("../CTC")
+libraries = {
+&"": SubResource("AnimationLibrary_qg3ox")
+}
+autoplay = "CTC_Breath"
+
+[node name="Fade-in" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_hsxm7")
 }
@@ -80,3 +136,4 @@ autoplay = "new_anim_story"
 
 [node name="Rain_BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_17urp")
+autoplay = true

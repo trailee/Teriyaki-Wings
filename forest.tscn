@@ -715,7 +715,7 @@ scale = Vector2(1.51498, 1.36182)
 shape = SubResource("CircleShape2D_uq144")
 
 [node name="A4" type="Sprite2D" parent="Tree1"]
-position = Vector2(-71.5984, 50.6022)
+position = Vector2(-136.312, 32.1535)
 scale = Vector2(0.458964, 0.527106)
 texture = ExtResource("2_stcry")
 region_enabled = true

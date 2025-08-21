@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="1_rjssj"]
 [ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="2_f1naw"]
-[ext_resource type="AudioStream" uid="uid://ca3tlw532xys5" path="res://Music_Teriyaki-Wings/Treehouse_BGM copy.wav" id="3_03ltp"]
+[ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="3_03ltp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1naw"]
 texture = ExtResource("1_rjssj")
