@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dcrdgwaymh60e"]
+[gd_scene load_steps=9 format=3 uid="uid://dcrdgwaymh60e"]
 
 [ext_resource type="Texture2D" uid="uid://tacc4n7x1gsj" path="res://Assets/characters/Des idle (6).png" id="1_20tp4"]
+[ext_resource type="Script" uid="uid://b87ri6x0g0fg3" path="res://Characters/des.gd" id="1_djifa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_djifa"]
 atlas = ExtResource("1_20tp4")
@@ -38,13 +39,14 @@ radius = 8.60233
 size = Vector2(21, 14.5)
 
 [node name="Des" type="CharacterBody2D"]
+script = ExtResource("1_djifa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-264, -65)
 scale = Vector2(0.0388889, 0.0311111)
 sprite_frames = SubResource("SpriteFrames_rw4fr")
 autoplay = "default"
-frame_progress = 0.807244
+frame_progress = 0.113367
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-264, -70)
