@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://dn6qfnhxw17xl"]
+
+[ext_resource type="Script" uid="uid://c8b1bdyhl6evc" path="res://Characters tscn/desdemona_idle.gd" id="1_pwyyf"]
+[ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="1_ysev6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_juk5e"]
+atlas = ExtResource("1_ysev6")
+region = Rect2(0, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njs7n"]
+atlas = ExtResource("1_ysev6")
+region = Rect2(0, 900, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rnit"]
+atlas = ExtResource("1_ysev6")
+region = Rect2(540, 900, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ywjxp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_juk5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njs7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rnit")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3yj6n"]
+radius = 12.2066
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_juk5e"]
+size = Vector2(30, 19.25)
+
+[node name="DesdemonaIdle" type="CharacterBody2D"]
+script = ExtResource("1_pwyyf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(90.5, -347.5)
+scale = Vector2(0.0685186, 0.0500002)
+sprite_frames = SubResource("SpriteFrames_ywjxp")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(91, -354)
+shape = SubResource("CircleShape2D_3yj6n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D"]
+position = Vector2(1, 19)
+shape = SubResource("RectangleShape2D_juk5e")

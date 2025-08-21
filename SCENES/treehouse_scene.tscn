@@ -1,14 +1,14 @@
-[gd_scene load_steps=33 format=4 uid="uid://bmito4qec4eg2"]
+[gd_scene load_steps=31 format=4 uid="uid://bmito4qec4eg2"]
 
 [ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="1_lt7tf"]
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="2_vpq6y"]
 [ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="3_7hcan"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="4_7tqk6"]
 [ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="4_tgv5j"]
-[ext_resource type="PackedScene" uid="uid://dcrdgwaymh60e" path="res://Characters/des.tscn" id="5_mngbh"]
 [ext_resource type="AudioStream" uid="uid://ca3tlw532xys5" path="res://Music_Teriyaki-Wings/Treehouse_BGM copy.wav" id="6_tb5ku"]
-[ext_resource type="PackedScene" uid="uid://bqm3ffc0u701i" path="res://Characters/ophelia.tscn" id="6_wcsbt"]
-[ext_resource type="Script" uid="uid://bkkwoa1tb7stw" path="res://SCENES/area_2d.gd" id="9_6geum"]
+[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/DesdemonaIdle.tscn" id="8_wcsbt"]
+[ext_resource type="Script" uid="uid://iq31go7x4jgt" path="res://SCENES/area_2d.gd" id="9_6geum"]
+[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://ophelia_2d.tscn" id="9_67341"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tb5ku"]
 
@@ -2363,11 +2363,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb5ku"]
 size = Vector2(40.75, 26.75)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_wcsbt"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_7hcan"]
-radius = 32.0
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7hcan"]
 size = Vector2(17, 32)
 
@@ -2464,17 +2459,6 @@ shape = SubResource("RectangleShape2D_tb5ku")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Chest"]
 
-[node name="Player" type="CharacterBody2D" parent="."]
-visible = false
-position = Vector2(2, -33)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-sprite_frames = SubResource("SpriteFrames_wcsbt")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-z_index = 1
-shape = SubResource("CircleShape2D_7hcan")
-
 [node name="Block player" type="Node" parent="."]
 
 [node name="Chair and Table" type="Area2D" parent="Block player"]
@@ -2506,13 +2490,6 @@ shape = SubResource("RectangleShape2D_7tqk6")
 position = Vector2(-35, -27)
 shape = SubResource("RectangleShape2D_tgv5j")
 
-[node name="Des" parent="." instance=ExtResource("5_mngbh")]
-visibility_layer = 4
-position = Vector2(252, 85)
-
-[node name="Ophelia" parent="." instance=ExtResource("6_wcsbt")]
-position = Vector2(186, -367)
-
 [node name="Exit" type="Area2D" parent="."]
 
 [node name="Shadow" type="Sprite2D" parent="Exit"]
@@ -2529,6 +2506,12 @@ shape = SubResource("RectangleShape2D_gldua")
 stream = ExtResource("6_tb5ku")
 autoplay = true
 bus = &"BGM"
+
+[node name="DesdemonaIdle" parent="." instance=ExtResource("8_wcsbt")]
+position = Vector2(-106, 379)
+
+[node name="Ophelia2D" parent="." instance=ExtResource("9_67341")]
+position = Vector2(-61, 391)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
