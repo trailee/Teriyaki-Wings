@@ -34,6 +34,7 @@ func _input(event):
 	if event is InputEventMouseButton and event.pressed:
 		msgindex += 1
 		if msgindex < msg.size():
+			$"../../Button_Pressed_Sound".play()
 			text = msg[msgindex]
 		else:
 			get_tree().change_scene_to_file("res://treehouse_scene.tscn")
