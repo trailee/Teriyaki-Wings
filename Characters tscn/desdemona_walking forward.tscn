@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://dsjshst4m374g"]
+
+[ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="1_bd102"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnbgb"]
+atlas = ExtResource("1_bd102")
+region = Rect2(0, 3600, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qoo1"]
+atlas = ExtResource("1_bd102")
+region = Rect2(540, 3600, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gxjgo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnbgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qoo1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mm6yu"]
+radius = 12.2066
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsppk"]
+size = Vector2(26, 19.25)
+
+[node name="Desdemona walking forward" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(92.25, -348.25)
+scale = Vector2(0.0509259, 0.0483333)
+sprite_frames = SubResource("SpriteFrames_gxjgo")
+autoplay = "default"
+frame_progress = 0.574795
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(93, -355)
+shape = SubResource("CircleShape2D_mm6yu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D"]
+position = Vector2(-1, 19)
+shape = SubResource("RectangleShape2D_tsppk")

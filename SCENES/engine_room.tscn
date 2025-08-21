@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://daj821jj1n6h2"]
+[gd_scene load_steps=67 format=4 uid="uid://daj821jj1n6h2"]
 
 [ext_resource type="Texture2D" uid="uid://d24s1jahnpule" path="res://Assets/walls_floor.png" id="1_imaqe"]
 [ext_resource type="Texture2D" uid="uid://ysh8c2r2eok5" path="res://Assets/interiors_demo.png" id="2_jf718"]
@@ -1989,6 +1989,18 @@ sources/0 = SubResource("TileSetAtlasSource_mxasd")
 normal = Vector2(0.0226491, 0.999743)
 distance = -280.649
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fgu5"]
+size = Vector2(379.289, 96.9404)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4770r"]
+size = Vector2(417.64, 53.0519)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihoaf"]
+size = Vector2(299.507, 59.9547)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xlefg"]
+size = Vector2(499.615, 44.966)
+
 [node name="Engine Room" type="Node2D"]
 position = Vector2(0, -128)
 scale = Vector2(0.764589, 1.13419)
@@ -2133,3 +2145,19 @@ position = Vector2(57.5657, -32.6224)
 rotation = -1.5708
 scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_1fgu5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(389.752, 38.7942)
+shape = SubResource("RectangleShape2D_1fgu5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(377.981, -125.275)
+shape = SubResource("RectangleShape2D_4770r")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-484.574, 39.6759)
+shape = SubResource("RectangleShape2D_ihoaf")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-377.981, -120.791)
+shape = SubResource("RectangleShape2D_xlefg")
