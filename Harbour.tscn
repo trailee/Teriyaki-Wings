@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://by8wm6tn2wo74"]
+[gd_scene load_steps=14 format=4 uid="uid://ccc7rppo28dry"]
 
 [ext_resource type="Texture2D" uid="uid://bwff5o35rx8pe" path="res://Backgrounds/Forest_tiles.png" id="1_wkhga"]
 [ext_resource type="Texture2D" uid="uid://icdgcyw4dadi" path="res://Backgrounds/Cute_Fantasy_Free/Outdoor decoration/Bridge_Wood.png" id="2_smcbj"]
@@ -241,7 +241,7 @@ tile_map_data = PackedByteArray("AADi//X/AAACAAIAAADi//b/AAACAAMAAADi//T/AAACAAA
 tile_set = SubResource("TileSet_mdvx4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(482, 8)
+position = Vector2(-2091, -707)
 zoom = Vector2(2, 2)
 limit_left = -540
 limit_top = 475
@@ -496,3 +496,5 @@ position = Vector2(952, -273)
 texture = ExtResource("2_unqw3")
 region_enabled = true
 region_rect = Rect2(64, 544, 48, 64)
+
+[node name="Harbour_BGM" type="AudioStreamPlayer2D" parent="."]

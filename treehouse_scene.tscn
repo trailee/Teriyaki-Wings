@@ -2597,7 +2597,7 @@ limit_top = -100
 limit_right = 190
 limit_bottom = 100
 
-[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+[node name="Treehouse_BGM" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_tb5ku")
 autoplay = true
 bus = &"BGM"

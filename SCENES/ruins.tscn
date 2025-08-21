@@ -2472,6 +2472,7 @@ position = Vector2(-225, -82)
 scale = Vector2(2.42993, 2.25505)
 shape = SubResource("CircleShape2D_nbquo")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Ruins_BGM" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_81nij")
 autoplay = true
+bus = &"BGM"
