@@ -2,55 +2,64 @@
 
 [ext_resource type="Texture2D" uid="uid://c0xltjspdx5nq" path="res://Assets/characters/cassandra.png" id="1_kni3d"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dqc6x"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_su21v"]
+atlas = ExtResource("1_kni3d")
+region = Rect2(1080, 900, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jxfq"]
 atlas = ExtResource("1_kni3d")
 region = Rect2(0, 0, 540, 900)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vp8rb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwkhn"]
 atlas = ExtResource("1_kni3d")
-region = Rect2(540, 0, 540, 900)
+region = Rect2(1080, 0, 540, 900)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mi5is"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqdba"]
 atlas = ExtResource("1_kni3d")
-region = Rect2(0, 900, 540, 900)
+region = Rect2(540, 900, 540, 900)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ydiq0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dqc6x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vp8rb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mi5is")
+"texture": SubResource("AtlasTexture_su21v")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Back_View",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jxfq")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_nwkhn")
+}],
+"loop": true,
+"name": &"Front_Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqdba")
+}],
+"loop": true,
+"name": &"Side_View",
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_o16vc"]
-radius = 63.1506
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d81if"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qdy2"]
-size = Vector2(148, 92.5)
+[node name="Cassandra" type="CharacterBody2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-188.5, 341.5)
+[node name="Animations" type="AnimatedSprite2D" parent="."]
+position = Vector2(-183, 357)
 scale = Vector2(0.301852, 0.241111)
 sprite_frames = SubResource("SpriteFrames_ydiq0")
-autoplay = "default"
-frame = 2
-frame_progress = 0.168893
+animation = &"Side_View"
+autoplay = "Front_Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-191, 298)
-shape = SubResource("CircleShape2D_o16vc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D"]
-position = Vector2(3, 104.75)
-shape = SubResource("RectangleShape2D_0qdy2")
+position = Vector2(-189, 352)
+scale = Vector2(7.78282, 10.6156)
+shape = SubResource("RectangleShape2D_d81if")
