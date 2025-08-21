@@ -25,18 +25,18 @@ animations = [{
 "texture": SubResource("AtlasTexture_su21v")
 }],
 "loop": true,
-"name": &"Back_View",
+"name": &"Cas_BackView",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2jxfq")
 }, {
-"duration": 3.0,
+"duration": 2.0,
 "texture": SubResource("AtlasTexture_nwkhn")
 }],
 "loop": true,
-"name": &"Front_Idle",
+"name": &"Cas_Idle",
 "speed": 3.0
 }, {
 "frames": [{
@@ -44,22 +44,22 @@ animations = [{
 "texture": SubResource("AtlasTexture_aqdba")
 }],
 "loop": true,
-"name": &"Side_View",
+"name": &"Cas_SideView",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d81if"]
 
-[node name="Cassandra" type="CharacterBody2D"]
+[node name="Cassandra2D" type="CharacterBody2D"]
 
 [node name="Animations" type="AnimatedSprite2D" parent="."]
 position = Vector2(-183, 357)
-scale = Vector2(0.301852, 0.241111)
 sprite_frames = SubResource("SpriteFrames_ydiq0")
-animation = &"Side_View"
-autoplay = "Front_Idle"
+animation = &"Cas_Idle"
+autoplay = "Cas_Idle"
+frame_progress = 0.631628
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-189, 352)
-scale = Vector2(7.78282, 10.6156)
+position = Vector2(-185, 386)
+scale = Vector2(29.8064, 44.9727)
 shape = SubResource("RectangleShape2D_d81if")
