@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://c11qhue56kog3"]
-
-[node name="Engine Room" type="Node2D"]
-scale = Vector2(0.764589, 1.13419)
-
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
