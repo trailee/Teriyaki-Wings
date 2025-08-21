@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://du70advpt5djf"]
+[gd_scene load_steps=94 format=3 uid="uid://du70advpt5djf"]
 
 [ext_resource type="Script" uid="uid://c2jjwjyvarali" path="res://menu.gd" id="1_h7302"]
 [ext_resource type="Texture2D" uid="uid://bskf01sb4isus" path="res://Backgrounds/Ruins_BG.png" id="2_qu2sj"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ewx01jfpy8b3" path="res://Assets/Animal Rep (Creds)/Cat_AnimationSheet.png" id="11_2j67y"]
 [ext_resource type="Texture2D" uid="uid://chc511j2eauh6" path="res://Assets/Animal Rep (Creds)/Fox_AnimationSheet.png" id="12_5hqir"]
 [ext_resource type="FontFile" uid="uid://de1qkqpihc3pw" path="res://Fonts/Butler_Regular.otf" id="13_5ja6u"]
+[ext_resource type="Texture2D" uid="uid://bfjb1j2f10ycl" path="res://Assets/Animal Rep (Creds)/Parrot_AnimationSheet.png" id="13_qu2sj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cx167"]
 texture = ExtResource("2_qu2sj")
@@ -289,7 +290,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Cat",
-"speed": 2.0
+"speed": 3.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mnukg"]
@@ -416,6 +417,133 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ta3y"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(0, 0, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyrxs"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(383, 0, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pot0"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(766, 0, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkau1"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(1149, 0, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ygd5"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(1532, 0, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvds7"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(0, 372, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_177c6"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(383, 372, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wshhj"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(766, 372, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2j67y"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(1149, 372, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hqir"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(1532, 372, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ja6u"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(0, 744, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsla5"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(383, 744, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7p64"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(766, 744, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fibsg"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(1149, 744, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mp4ur"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(1532, 744, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hqni"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(0, 1116, 383, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rn2sw"]
+atlas = ExtResource("13_qu2sj")
+region = Rect2(383, 1116, 383, 372)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d367a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ta3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyrxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pot0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkau1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ygd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvds7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_177c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wshhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2j67y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hqir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ja6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsla5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7p64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fibsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mp4ur")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hqni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rn2sw")
+}],
+"loop": true,
+"name": &"Parrot",
 "speed": 3.0
 }]
 
@@ -591,23 +719,35 @@ Game/Level Designer
 Music Composer"
 horizontal_alignment = 1
 
-[node name="Name2" type="Label" parent="Credits UI/Credits UI/Credits Info Text"]
+[node name="Joanna Li" type="Label" parent="Credits UI/Credits UI/Credits Info Text"]
 offset_left = 2075.27
 offset_top = -367.238
 offset_right = 2325.27
 offset_bottom = -317.238
 theme_override_fonts/font = ExtResource("9_177c6")
 theme_override_font_sizes/font_size = 25
-text = "Name Name"
+text = "Joanna Li"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Cat Icon" type="AnimatedSprite2D" parent="Credits UI/Credits UI/Credits Info Text/Name2"]
+[node name="Cat Icon" type="AnimatedSprite2D" parent="Credits UI/Credits UI/Credits Info Text/Joanna Li"]
 position = Vector2(128.202, -31.9337)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_ofows")
 animation = &"Cat"
 autoplay = "Cat"
+
+[node name="Credit" type="Label" parent="Credits UI/Credits UI/Credits Info Text/Joanna Li"]
+offset_left = -4.00605
+offset_top = 58.8778
+offset_right = 251.994
+offset_bottom = 273.878
+theme_override_constants/line_spacing = 10
+theme_override_font_sizes/font_size = 20
+text = "Storyline Writer
+Scene Designer
+Scene Coder"
+horizontal_alignment = 1
 
 [node name="Name3" type="Label" parent="Credits UI/Credits UI/Credits Info Text"]
 offset_left = 2556.03
@@ -616,7 +756,7 @@ offset_right = 2806.03
 offset_bottom = -317.238
 theme_override_fonts/font = ExtResource("9_177c6")
 theme_override_font_sizes/font_size = 25
-text = "Name Name"
+text = "Zarin Isba"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -626,6 +766,20 @@ scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_tdulj")
 autoplay = "default"
 frame_progress = 0.311784
+
+[node name="Credit" type="Label" parent="Credits UI/Credits UI/Credits Info Text/Name3"]
+offset_left = -4.00605
+offset_top = 58.8778
+offset_right = 251.994
+offset_bottom = 273.878
+theme_override_constants/line_spacing = 10
+theme_override_font_sizes/font_size = 20
+text = "Bard of Hope
+Lead Ideator
+Main Editor
+Co-programmer
+Co-writer "
+horizontal_alignment = 1
 
 [node name="Name4" type="Label" parent="Credits UI/Credits UI/Credits Info Text"]
 offset_left = 2796.41
@@ -637,6 +791,13 @@ theme_override_font_sizes/font_size = 25
 text = "Name Name"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Parrot Icon" type="AnimatedSprite2D" parent="Credits UI/Credits UI/Credits Info Text/Name4"]
+position = Vector2(128.196, -31.9346)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_d367a")
+animation = &"Parrot"
+autoplay = "Parrot"
 
 [node name="CREDIT Title" type="Sprite2D" parent="Credits UI/Credits UI"]
 position = Vector2(37.0584, 55.884)
