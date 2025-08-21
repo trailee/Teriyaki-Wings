@@ -2,15 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-path="res://.godot/imported/Des idle (6).png-64a53b631f86e2ef59d67eebdc28d93d.ctex"
+uid="uid://ysh8c2r2eok5"
+path="res://.godot/imported/interiors_demo.png-9012d779a5c9ab140f2adfe4691186ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/characters/Des idle (6).png"
-dest_files=["res://.godot/imported/Des idle (6).png-64a53b631f86e2ef59d67eebdc28d93d.ctex"]
+source_file="res://Assets/interiors_demo.png"
+dest_files=["res://.godot/imported/interiors_demo.png-9012d779a5c9ab140f2adfe4691186ee.ctex"]
 
 [params]
 
