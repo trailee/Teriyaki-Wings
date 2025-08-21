@@ -817,6 +817,7 @@ animation = &"Parrot"
 autoplay = "Parrot"
 
 [node name="Credit" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Name4"]
+layout_mode = 0
 offset_left = -4.00604
 offset_top = 65.8633
 offset_right = 251.994
@@ -830,6 +831,7 @@ horizontal_alignment = 1
 
 [node name="To Pg2" type="Button" parent="Credits UI/Credits UI/Pg1"]
 modulate = Color(1, 1, 1, 0.741176)
+layout_mode = 0
 offset_left = 1385.18
 offset_top = 738.464
 offset_right = 1460.18
@@ -889,6 +891,7 @@ texture = ExtResource("16_3pot0")
 
 [node name="To Pg1" type="Button" parent="Credits UI/Credits UI/Pg2"]
 modulate = Color(1, 1, 1, 0.741176)
+layout_mode = 0
 offset_left = 457.0
 offset_top = 743.0
 offset_right = 532.0
@@ -942,6 +945,7 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="Close_Credits" type="Button" parent="Credits UI/Credits UI"]
+layout_mode = 0
 offset_left = 1408.0
 offset_top = 288.001
 offset_right = 1463.0
