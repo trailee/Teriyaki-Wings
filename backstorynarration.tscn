@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://yecn4bt81m0g"]
 
-[ext_resource type="Script" path="res://backstorylabel.gd" id="1_usaqd"]
+[ext_resource type="Script" uid="uid://dy4leih3mv52k" path="res://backstorylabel.gd" id="1_usaqd"]
 [ext_resource type="AudioStream" uid="uid://cubklabmivevb" path="res://Sound Effects/Rain_Soundtrack.wav" id="2_17urp"]
 
 [sub_resource type="Animation" id="Animation_jiwv5"]
