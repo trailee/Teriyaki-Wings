@@ -2395,7 +2395,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0, 0, 1)]
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_tb5ku"]
@@ -2434,7 +2434,6 @@ func _process(delta: float) -> void:
 "
 
 [node name="Treehouse Room 2" type="Node2D"]
-modulate = Color(0, 0, 0, 1)
 
 [node name="World Boundary" type="StaticBody2D" parent="."]
 position = Vector2(1, 97)
