@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b06250hs54stx"
+path="res://.godot/imported/exit_treehouse.dialogue-0fa3105ba043c0d3d43cf847a4acf674.tres"
+
+[deps]
+
+source_file="res://Dialogue/exit_treehouse.dialogue"
+dest_files=["res://.godot/imported/exit_treehouse.dialogue-0fa3105ba043c0d3d43cf847a4acf674.tres"]
+
+[params]
+
+defaults=true

@@ -1,11 +1,11 @@
 ~ start
 
-if State.middle_pressed == true:
+if State.middle_pressed == true
 	Des: Just a whole bunch of fuel and junk for vehicles already rusted away.
 else
-	Des: I don’t think I’ll need gasoline on the trip. (play rummage sound)
-	Des: [speed=.5] … [speed=1] Oh smokes, a flashlight! Neat, I should bring this with me.
-	Des: [wave]Obtained FLASHLIGHT.
 	set State.middle_pressed = true
+	Des: I don’t think I’ll need gasoline on the trip.
+	Des: [speed=.5] … [speed=1]Oh smokes, a flashlight! Neat, I should bring this with me.
+	Des: [wave]Obtained FLASHLIGHT.
 
 => END

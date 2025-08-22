@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 func _on_start_button_pressed() -> void:
 	$Button_Pressed_Sound.play()
 	await $Button_Pressed_Sound.finished
-	get_tree().change_scene_to_file("res://backstorynarration.tscn")
+	get_tree().change_scene_to_file("res://SCENES/backstorynarration.tscn")
 
 
 func _on_option_button_pressed() -> void:
