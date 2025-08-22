@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://bqi7voy4yrqu0"]
+[gd_scene load_steps=8 format=4 uid="uid://bqi7voy4yrqu0"]
 
 [ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="1_jnsla"]
 [ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="2_eu8xs"]
+[ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="3_38c5i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w8kwg"]
 texture = ExtResource("1_jnsla")
@@ -688,3 +689,7 @@ zoom = Vector2(4.8, 7.41)
 position = Vector2(-17746, 12787)
 tile_map_data = PackedByteArray("AAADAP3/AAATAAUAAAADAP7/AAATAAYAAAADAP//AAATAAcAAAD5//3/AAASAAUAAAD5//7/AAASAAYAAAD5////AAASAAcAAAD6//3/AAATAAUAAAD6//7/AAATAAYAAAD6////AAATAAcAAAACAP3/AAASAAUAAAACAP7/AAASAAYAAAACAP//AAASAAcAAAA=")
 tile_set = SubResource("TileSet_gnevq")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_38c5i")
+autoplay = true
