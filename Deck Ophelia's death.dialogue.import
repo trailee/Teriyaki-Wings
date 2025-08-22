@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dr7r2awapah67"
+path="res://.godot/imported/Deck Ophelia's death.dialogue-b42518b7eeb3c52aeca7273c600708b9.tres"
+
+[deps]
+
+source_file="res://Deck Ophelia's death.dialogue"
+dest_files=["res://.godot/imported/Deck Ophelia's death.dialogue-b42518b7eeb3c52aeca7273c600708b9.tres"]
+
+[params]
+
+defaults=true
