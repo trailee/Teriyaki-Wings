@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="2_67341"]
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="3_c0xwy"]
 [ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="4_e7wne"]
-[ext_resource type="PackedScene" path="res://Characters tscn/Desdemona_Normal.tscn" id="6_gvu4s"]
-[ext_resource type="PackedScene" uid="uid://l1d3w1s7m83y" path="res://SCENES/firstactionable.tscn" id="6_pmw23"]
+[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="6_gvu4s"]
+[ext_resource type="PackedScene" path="res://SCENES/firstactionable.tscn" id="6_pmw23"]
 [ext_resource type="Resource" uid="uid://ut1y87k3fl50" path="res://Dialogue/box on table.dialogue" id="7_67341"]
 [ext_resource type="Resource" uid="uid://darbgpi0ei8ll" path="res://Dialogue/shelves.dialogue" id="7_b4ry0"]
 [ext_resource type="Resource" uid="uid://bxrnmsv47j0o8" path="res://Dialogue/first aid kit.dialogue" id="8_pmw23"]
@@ -2555,10 +2555,6 @@ shape = SubResource("RectangleShape2D_7rhy4")
 
 [node name="Dinner Table" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dinner Table"]
-position = Vector2(81.5, -19.5)
-shape = SubResource("RectangleShape2D_eabxg")
-
 [node name="Actionable" parent="Dinner Table" instance=ExtResource("6_pmw23")]
 position = Vector2(16, 32)
 scale = Vector2(0.837964, 0.520561)
@@ -2568,6 +2564,10 @@ dialogue_resource = ExtResource("8_pmw23")
 position = Vector2(78.7623, -99.8922)
 scale = Vector2(2.07447, 2.80341)
 shape = SubResource("RectangleShape2D_0wvm6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dinner Table"]
+position = Vector2(81.5, -19.5)
+shape = SubResource("RectangleShape2D_eabxg")
 
 [node name="Chest" type="StaticBody2D" parent="."]
 position = Vector2(6, -31)
@@ -2638,16 +2638,6 @@ shape = SubResource("RectangleShape2D_0wvm6")
 [node name="Middle Items" type="StaticBody2D" parent="."]
 position = Vector2(1, 4)
 
-[node name="Actionable" parent="Middle Items" instance=ExtResource("6_pmw23")]
-position = Vector2(16, 32)
-scale = Vector2(0.837964, 0.520561)
-dialogue_resource = ExtResource("12_gvu4s")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Middle Items/Actionable"]
-position = Vector2(-79.9557, -111.418)
-scale = Vector2(3.47934, 5.52064)
-shape = SubResource("RectangleShape2D_0wvm6")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Middle Items"]
 position = Vector2(-63, -25)
 scale = Vector2(1.33233, 2.41733)
@@ -2657,6 +2647,16 @@ shape = SubResource("RectangleShape2D_1207l")
 position = Vector2(-39, -36)
 scale = Vector2(1.12674, 1.42634)
 shape = SubResource("RectangleShape2D_13xdw")
+
+[node name="Actionable" parent="Middle Items" instance=ExtResource("6_pmw23")]
+position = Vector2(16, 32)
+scale = Vector2(0.837964, 0.520561)
+dialogue_resource = ExtResource("12_gvu4s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Middle Items/Actionable"]
+position = Vector2(-79.9557, -111.418)
+scale = Vector2(2.8233, 4.19168)
+shape = SubResource("RectangleShape2D_0wvm6")
 
 [node name="Broken Door" type="StaticBody2D" parent="."]
 

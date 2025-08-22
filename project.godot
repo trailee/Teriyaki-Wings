@@ -20,7 +20,7 @@ config/icon="res://icon.svg"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 State="*res://Dialogue/state.gd"
 player="*res://Characters tscn/Desdemona.tscn"
-SceneManager="*res://scenemanager.gd"
+SceneManager="res://scenemanager.gd"
 ZorenDeadCount="*res://zoren_dead_count.gd"
 
 [dialogue_manager]
