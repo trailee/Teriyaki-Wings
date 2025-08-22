@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=4 uid="uid://daj821jj1n6h2"]
+[gd_scene load_steps=70 format=4 uid="uid://daj821jj1n6h2"]
 
 [ext_resource type="Texture2D" uid="uid://d24s1jahnpule" path="res://Assets/walls_floor.png" id="1_imaqe"]
 [ext_resource type="Texture2D" uid="uid://ysh8c2r2eok5" path="res://Assets/interiors_demo.png" id="2_jf718"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cdo2wjw1itbca" path="res://Assets/objects/blade.png" id="19_1fgu5"]
 [ext_resource type="Texture2D" uid="uid://bxqiov7u5w8t7" path="res://Assets/objects/post-it-pink.png" id="20_1fgu5"]
 [ext_resource type="AudioStream" uid="uid://c6wgf1ow5hejy" path="res://Music_Teriyaki-Wings/Remade_MainMenuBGM.wav" id="21_4770r"]
+[ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="22_ihoaf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y8o61"]
 texture = ExtResource("1_imaqe")
@@ -2002,6 +2003,9 @@ size = Vector2(299.507, 59.9547)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xlefg"]
 size = Vector2(499.615, 44.966)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qrp36"]
+size = Vector2(224, 45)
+
 [node name="Engine Room" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -2172,3 +2176,10 @@ shape = SubResource("RectangleShape2D_ihoaf")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-377.981, -120.791)
 shape = SubResource("RectangleShape2D_xlefg")
+
+[node name="Area2D2" parent="." instance=ExtResource("22_ihoaf")]
+position = Vector2(-15, -127)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(24, -26)
+shape = SubResource("RectangleShape2D_qrp36")
