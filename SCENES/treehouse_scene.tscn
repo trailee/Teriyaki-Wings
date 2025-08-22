@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://chw5eejtlkafc"]
+[gd_scene load_steps=47 format=4 uid="uid://dcaklbmsk1od8"]
 
 [ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="1_6geum"]
 [ext_resource type="Script" uid="uid://djcnbha04v5pf" path="res://SCENES/treehouse_scene.gd" id="1_b4ry0"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="3_c0xwy"]
 [ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="4_e7wne"]
 [ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="5_7kv74"]
-[ext_resource type="PackedScene" path="res://SCENES/firstactionable.tscn" id="6_pmw23"]
+[ext_resource type="PackedScene" uid="uid://l1d3w1s7m83y" path="res://SCENES/firstactionable.tscn" id="6_pmw23"]
 [ext_resource type="Resource" uid="uid://ut1y87k3fl50" path="res://Dialogue/box on table.dialogue" id="7_67341"]
 [ext_resource type="Resource" uid="uid://darbgpi0ei8ll" path="res://Dialogue/shelves.dialogue" id="7_b4ry0"]
 [ext_resource type="Resource" uid="uid://bxrnmsv47j0o8" path="res://Dialogue/first aid kit.dialogue" id="8_pmw23"]
@@ -15,7 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://ca3tlw532xys5" path="res://Music_Teriyaki-Wings/Treehouse_BGM copy.wav" id="9_gvu4s"]
 [ext_resource type="Resource" uid="uid://biod8ci54djgd" path="res://Dialogue/bed.dialogue" id="11_qbsuj"]
 [ext_resource type="Resource" uid="uid://cmhgooyrdtsxr" path="res://Dialogue/middle items.dialogue" id="12_gvu4s"]
-[ext_resource type="Resource" uid="uid://dogmxvio13y3p" path="res://Dialogue/broken door.dialogue" id="14_gvu4s"]
+[ext_resource type="Resource" uid="uid://bjc3a4ymdqca8" path="res://Dialogue/untitled.dialogue" id="14_gvu4s"]
 [ext_resource type="Resource" uid="uid://b06250hs54stx" path="res://Dialogue/exit_treehouse.dialogue" id="14_qbsuj"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tb5ku"]

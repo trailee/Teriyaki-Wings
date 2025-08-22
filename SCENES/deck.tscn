@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bqof2u1lv3cwx" path="res://Backgrounds/Cute_Fantasy_Free/Tiles/Water_Tile.png" id="1_pwsj6"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="2_kq4e5"]
-[ext_resource type="PackedScene" uid="uid://k1d7v020ylaa" path="res://scenetrigger.tscn" id="3_kq4e5"]
+[ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="3_kq4e5"]
 [ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="3_t1wuy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f0yuw"]
@@ -178,16 +178,18 @@ position = Vector2(433, 435)
 scale = Vector2(0.3, 0.3)
 collision_layer = 129
 
-[node name="scenetrigger" parent="." instance=ExtResource("3_kq4e5")]
-position = Vector2(721, 567)
+[node name="nscenetrigger" parent="." instance=ExtResource("3_kq4e5")]
+position = Vector2(800, 525)
+collision_layer = 0
+collision_mask = 128
 connected_scene = "hallway_scene"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="scenetrigger"]
-position = Vector2(148, -349.125)
-shape = SubResource("RectangleShape2D_rqxj1")
-
-[node name="Sprite2D" type="Sprite2D" parent="scenetrigger"]
+[node name="Sprite2D" type="Sprite2D" parent="nscenetrigger"]
 modulate = Color(1, 1, 1, 0.411765)
-position = Vector2(382, -21)
+position = Vector2(129, 38)
 scale = Vector2(1, 1.93926)
 texture = ExtResource("2_kq4e5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nscenetrigger"]
+position = Vector2(261, -22)
+shape = SubResource("RectangleShape2D_rqxj1")
