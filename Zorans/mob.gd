@@ -11,6 +11,7 @@ func _physics_process(_delta: float) -> void:
 
 func take_damage():
 	health -=1
+	$AnimationPlayer.play("Zoren_Hurt")
 	if health ==0:
 		queue_free()
 		const ZORAN_DEATH = preload("res://Zorans/zoran_death.tscn")

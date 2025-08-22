@@ -132,5 +132,5 @@ script = ExtResource("1_hjfgh")
 position = Vector2(3, -6)
 scale = Vector2(0.97637, 1.07906)
 sprite_frames = SubResource("SpriteFrames_v13fq")
-animation = &"back_walk"
+animation = &"front_walk"
 autoplay = "front_walk"
