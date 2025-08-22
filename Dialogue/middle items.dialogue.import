@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cmhgooyrdtsxr"
+path="res://.godot/imported/middle items.dialogue-693bd3c9f360e64a7f3ed2c6b9cd704a.tres"
+
+[deps]
+
+source_file="res://Dialogue/middle items.dialogue"
+dest_files=["res://.godot/imported/middle items.dialogue-693bd3c9f360e64a7f3ed2c6b9cd704a.tres"]
+
+[params]
+
+defaults=true

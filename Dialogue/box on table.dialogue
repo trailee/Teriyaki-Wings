@@ -1,0 +1,12 @@
+~ start
+
+if State.box_pressed == true
+	Des: There are some cute plushies in here. I'd take them with me [wait=1]but...
+	Des: I'd rather shield their eyes from whatever's going on outside.
+else
+	Des: Yikes, there’s so much junk in here.
+	Des: Oh!! [wait=0.5] I might need this.
+	[wave]Obtained MAP.
+	set State.box_pressed = true
+
+=> END

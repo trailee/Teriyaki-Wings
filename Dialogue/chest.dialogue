@@ -1,0 +1,11 @@
+~ start
+
+if State.chest_pressed == true
+	Des: It's empty. [wait=1]I think this gun should be enough. 
+else
+	Des: Oo la-la. Definitely going to need this for out there.
+	Des: I shouldn’t be too [wait=1]rusty.
+	[wave]Obtained GUN.
+	set State.chest_pressed = true
+
+=> END

@@ -1,0 +1,12 @@
+~ start
+
+if State.shelves_pressed == true:
+	Des: Just a bunch of food that would probably kill me if I ate it. 
+	Des: [speed=.5]Maybe when I’m desperate enough I’ll [wait=1][speed=0.25]fetch a bite.
+else
+	Des: [speed=0.5]Let’s see… Anything useful here? [wait=1]
+	Des: Oh hey, a bottle of water! ...[wait=1] Now I don't have to shower in my own piss.
+	[wave]Obtained CLEAN BOTTLE OF WATER.
+	set State.shelves_pressed = true
+	
+=> END
