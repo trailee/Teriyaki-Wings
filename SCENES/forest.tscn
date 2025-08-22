@@ -237,9 +237,9 @@ func _process(delta: float) -> void:
 
 [sub_resource type="Curve2D" id="Curve2D_tdx4f"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 290, -318, 0, 0, 0, 0, 297, 262, 0, 0, 0, 0, -740, 262, 0, 0, 0, 0, 3, -323, 0, 0, 0, 0, -1, 247, 0, 0, 0, 0, -178, 247, 0, 0, 0, 0, -198, -325, 0, 0, 0, 0, -385, -319, 0, 0, 0, 0, -374, 248, 0, 0, 0, 0, -516, 252, 0, 0, 0, 0, -528, -312, 0, 0, 0, 0, -656, -320, 0, 0, 0, 0, -663, 252, 0, 0, 0, 0, 152, -320, 0, 0, 0, 0, 150, 245)
+"points": PackedVector2Array(0, 0, 0, 0, 290, -318, 0, 0, 0, 0, 300, 179, 0, 0, 0, 0, 297, 262, 0, 0, 0, 0, -740, 262, 0, 0, 0, 0, 3, -323, 0, 0, 0, 0, -1, 247, 0, 0, 0, 0, -178, 247, 0, 0, 0, 0, -198, -325, 0, 0, 0, 0, -385, -319, 0, 0, 0, 0, -374, 248, 0, 0, 0, 0, -516, 252, 0, 0, 0, 0, -528, -312, 0, 0, 0, 0, -656, -320, 0, 0, 0, 0, -663, 252, 0, 0, 0, 0, 152, -320, 0, 0, 0, 0, 150, 245)
 }
-point_count = 15
+point_count = 16
 
 [node name="Forest" type="Node2D"]
 script = ExtResource("1_lu80k")
@@ -810,13 +810,13 @@ position = Vector2(294, 197)
 position = Vector2(-88, -103)
 
 [node name="MOB3" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
-position = Vector2(95, -254)
+position = Vector2(116, -142)
 
 [node name="MOB4" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
-position = Vector2(-308, 209)
+position = Vector2(-102, 35)
 
 [node name="MOB5" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
-position = Vector2(-592, 24)
+position = Vector2(-479, 28)
 
 [node name="World Boundary" type="StaticBody2D" parent="."]
 position = Vector2(1, 97)
@@ -860,12 +860,14 @@ stream = ExtResource("3_mvm06")
 autoplay = true
 
 [node name="Fight Forest BGM" type="AudioStreamPlayer2D" parent="Audio"]
+position = Vector2(-3, 5)
 stream = ExtResource("4_vmuxp")
 
 [node name="Path2D" type="Path2D" parent="."]
+position = Vector2(23, -63)
 curve = SubResource("Curve2D_tdx4f")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 unique_name_in_owner = true
 position = Vector2(290, -318)
-rotation = 1.55873
+rotation = 1.55068
