@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bqof2u1lv3cwx" path="res://Backgrounds/Cute_Fantasy_Free/Tiles/Water_Tile.png" id="1_pwsj6"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="2_kq4e5"]
+[ext_resource type="PackedScene" uid="uid://k1d7v020ylaa" path="res://scenetrigger.tscn" id="3_kq4e5"]
 [ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="3_t1wuy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f0yuw"]
@@ -30,39 +31,15 @@ sources/0 = SubResource("TileSetAtlasSource_f0yuw")
 bg_color = Color(1, 0.962122, 0.955517, 1)
 corner_radius_top_left = 2000
 
-[sub_resource type="GDScript" id="GDScript_pwsj6"]
-script/source = "extends Area2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
-func _on_body_entered(body: ) -> void:
-	get_tree().change_scene_to_file(\"res://SCENES/hallway_scene.tscn\")
-	
-	
-"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqxj1"]
-size = Vector2(572, 871.5)
-
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mbalj"]
 normal = Vector2(0.00116981, 0.999999)
 distance = -389.004
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqxj1"]
+size = Vector2(572, 1423.75)
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(960, 340)
-
-[node name="Desdemona2D" parent="." instance=ExtResource("3_t1wuy")]
-position = Vector2(568, 333)
-scale = Vector2(0.5, 0.5)
 
 [node name="water" type="TileMapLayer" parent="."]
 position = Vector2(-165, -20)
@@ -178,20 +155,6 @@ offset_right = 1133.0
 offset_bottom = 1072.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_mbalj")
 
-[node name="Exit" type="Area2D" parent="."]
-position = Vector2(-964, -344)
-script = SubResource("GDScript_pwsj6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
-position = Vector2(1989, 792)
-shape = SubResource("RectangleShape2D_rqxj1")
-
-[node name="Sprite2D" type="Sprite2D" parent="Exit/CollisionShape2D"]
-modulate = Color(1, 1, 1, 0.411765)
-position = Vector2(109, 85.875)
-scale = Vector2(1, 1.93926)
-texture = ExtResource("2_kq4e5")
-
 [node name="World Boundary" type="StaticBody2D" parent="."]
 position = Vector2(37, 28)
 scale = Vector2(2.84, 1)
@@ -209,3 +172,22 @@ shape = SubResource("WorldBoundaryShape2D_mbalj")
 position = Vector2(65.845, -101)
 rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_mbalj")
+
+[node name="Desdemona2D" parent="." instance=ExtResource("3_t1wuy")]
+position = Vector2(433, 435)
+scale = Vector2(0.3, 0.3)
+collision_layer = 129
+
+[node name="scenetrigger" parent="." instance=ExtResource("3_kq4e5")]
+position = Vector2(721, 567)
+connected_scene = "hallway_scene"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scenetrigger"]
+position = Vector2(148, -349.125)
+shape = SubResource("RectangleShape2D_rqxj1")
+
+[node name="Sprite2D" type="Sprite2D" parent="scenetrigger"]
+modulate = Color(1, 1, 1, 0.411765)
+position = Vector2(382, -21)
+scale = Vector2(1, 1.93926)
+texture = ExtResource("2_kq4e5")
