@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cpy2gextxxm1c"
+path="res://.godot/imported/Harbor Dialogue.dialogue-60229e3a70ea035edc80ae6474da12c0.tres"
+
+[deps]
+
+source_file="res://Harbor Dialogue.dialogue"
+dest_files=["res://.godot/imported/Harbor Dialogue.dialogue-60229e3a70ea035edc80ae6474da12c0.tres"]
+
+[params]
+
+defaults=true

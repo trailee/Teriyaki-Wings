@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://b6houqocenltn"]
+[gd_scene load_steps=45 format=4 uid="uid://b6houqocenltn"]
 
 [ext_resource type="Texture2D" uid="uid://2no8aarhmwhm" path="res://Backgrounds/Ruin Tilesets/TX Tileset Grass.png" id="1_n8iuo"]
 [ext_resource type="Texture2D" uid="uid://c2yo2ay6u8pvp" path="res://Backgrounds/Ruin Tilesets/TX Tileset Wall.png" id="2_o5r0g"]
@@ -6,6 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://cqdfm14nvo1w" path="res://Backgrounds/Ruin Tilesets/TX Plant.png" id="4_eexrm"]
 [ext_resource type="Texture2D" uid="uid://caq41jd8860u6" path="res://Backgrounds/Ruin Tilesets/TX Props.png" id="5_mlecl"]
 [ext_resource type="AudioStream" uid="uid://durot3wiktxle" path="res://Music_Teriyaki-Wings/Ruins_BGM copy.wav" id="6_81nij"]
+[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="6_be64e"]
+[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters tscn/Cassandra.tscn" id="7_pseft"]
+[ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters tscn/yue.tscn" id="8_nbquo"]
+[ext_resource type="PackedScene" uid="uid://cxsu3b7eyj45l" path="res://Characters tscn/Zade.tscn" id="9_evh76"]
+[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters tscn/Ophelia.tscn" id="10_2td7q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eexrm"]
 texture = ExtResource("1_n8iuo")
@@ -2419,6 +2424,20 @@ position = Vector2(-151, 1)
 tile_map_data = PackedByteArray("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")
 tile_set = SubResource("TileSet_chs52")
 
+[node name="Desdemona2D" parent="." instance=ExtResource("6_be64e")]
+position = Vector2(-24.9301, 28.1363)
+
+[node name="Cassandra2D" parent="." instance=ExtResource("7_pseft")]
+position = Vector2(-52, -10)
+
+[node name="Yue_2D" parent="." instance=ExtResource("8_nbquo")]
+position = Vector2(50, 20)
+
+[node name="Zane_2D" parent="." instance=ExtResource("9_evh76")]
+
+[node name="Ophelia2D" parent="." instance=ExtResource("10_2td7q")]
+position = Vector2(11, 24)
+
 [node name="Camera2D (not on player)" type="Camera2D" parent="."]
 position = Vector2(-6, -31)
 zoom = Vector2(3, 3)
@@ -2447,6 +2466,7 @@ rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_lapbk")
 
 [node name="Solid Structures" type="StaticBody2D" parent="."]
+position = Vector2(-2, 5)
 
 [node name="Building Wall" type="CollisionShape2D" parent="Solid Structures"]
 position = Vector2(-0.25, -166)
@@ -2523,6 +2543,7 @@ scale = Vector2(2.42993, 2.25505)
 shape = SubResource("CircleShape2D_nbquo")
 
 [node name="Ruins BGM" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(48, -6)
 stream = ExtResource("6_81nij")
 autoplay = true
 bus = &"BGM"

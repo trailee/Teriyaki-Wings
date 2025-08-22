@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://bqi7voy4yrqu0"]
+[gd_scene load_steps=16 format=4 uid="uid://bqi7voy4yrqu0"]
 
 [ext_resource type="Script" uid="uid://dq0xgylpo6pes" path="res://SCENES/hallway_scene.gd" id="1_gnevq"]
 [ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="1_jnsla"]
 [ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="2_eu8xs"]
 [ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="3_38c5i"]
+[ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="5_0cbbs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w8kwg"]
 texture = ExtResource("1_jnsla")
@@ -676,6 +677,26 @@ texture = ExtResource("2_eu8xs")
 [sub_resource type="TileSet" id="TileSet_gnevq"]
 sources/0 = SubResource("TileSetAtlasSource_38c5i")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gac7c"]
+size = Vector2(23, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fuo34"]
+size = Vector2(20, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2l4f"]
+size = Vector2(23, 39)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rntdp"]
+radius = 33.6155
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fuo34"]
+normal = Vector2(0.00116981, 0.999999)
+distance = -605.979
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r2l4f"]
+normal = Vector2(0.0226491, 0.999743)
+distance = -280.649
+
 [node name="Hallway scene" type="Node2D"]
 script = ExtResource("1_gnevq")
 
@@ -695,3 +716,55 @@ tile_set = SubResource("TileSet_gnevq")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_38c5i")
 autoplay = true
+
+[node name="Cabin" parent="." instance=ExtResource("5_0cbbs")]
+position = Vector2(-17565, 12802)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cabin"]
+position = Vector2(1.5, 9)
+shape = SubResource("RectangleShape2D_gac7c")
+
+[node name="Engine Room" parent="." instance=ExtResource("5_0cbbs")]
+position = Vector2(-17702, 12773)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Engine Room"]
+position = Vector2(4, -9)
+shape = SubResource("RectangleShape2D_fuo34")
+
+[node name="Captain\'s Ofiice" parent="." instance=ExtResource("5_0cbbs")]
+position = Vector2(-17847, 12770)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Captain\'s Ofiice"]
+position = Vector2(5.5, -6.5)
+shape = SubResource("RectangleShape2D_r2l4f")
+
+[node name="Deck" parent="." instance=ExtResource("5_0cbbs")]
+position = Vector2(-17949, 12802)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deck"]
+position = Vector2(-1, 4)
+shape = SubResource("CircleShape2D_rntdp")
+
+[node name="World Boundary" type="StaticBody2D" parent="."]
+position = Vector2(-17714, 12782)
+scale = Vector2(2.84, 1)
+
+[node name="Bottom Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(-7.74647, 687)
+shape = SubResource("WorldBoundaryShape2D_fuo34")
+
+[node name="Top Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(-15.1409, -671)
+rotation = 3.12936
+shape = SubResource("WorldBoundaryShape2D_fuo34")
+
+[node name="Right Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(520.775, 13)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_fuo34")
+
+[node name="Left Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(-222.535, 26)
+rotation = 1.5708
+scale = Vector2(3.01408, 1)
+shape = SubResource("WorldBoundaryShape2D_r2l4f")

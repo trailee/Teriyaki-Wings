@@ -158,7 +158,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l3hyd"]
-size = Vector2(11.4116, 4.4479)
+size = Vector2(17.1682, 8.59348)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7sixq"]
 
@@ -318,7 +318,7 @@ animation = &"Des_Idle"
 autoplay = "Des_Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(7.62939e-06, 363.636)
+position = Vector2(-9.09091, 252.388)
 scale = Vector2(28.5941, -42.8175)
 shape = SubResource("RectangleShape2D_l3hyd")
 
@@ -329,7 +329,7 @@ collision_layer = 0
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
-position = Vector2(0, 509.091)
+position = Vector2(0, -127.273)
 scale = Vector2(22.3034, -24.0226)
 shape = SubResource("CircleShape2D_7sixq")
 

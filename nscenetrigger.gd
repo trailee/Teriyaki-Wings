@@ -1,4 +1,5 @@
-class_name SNceneTrigger extends Area2D
+
+class_name NSceneTrigger extends Area2D
 
 @export var connected_scene: String
 
