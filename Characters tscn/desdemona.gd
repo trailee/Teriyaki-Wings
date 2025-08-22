@@ -6,7 +6,6 @@ signal health_depleted
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var actionable_finder: Area2D = $Direction/ActionableFinder
 
-var health = 100.0
 var SPEED = 75.0
 
 func _unhandled_input(_event: InputEvent) -> void:
