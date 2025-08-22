@@ -22,7 +22,7 @@ State="*res://Dialogue/state.gd"
 
 [dialogue_manager]
 
-runtime/balloon_path="res://Dialogue/balloon.tscn"
+runtime/balloon_path="res://Assets/balloon.tscn"
 
 [display]
 
