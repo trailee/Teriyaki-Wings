@@ -2682,3 +2682,5 @@ libraries = {
 }
 autoplay = "new_animation"
 script = SubResource("GDScript_tb5ku")
+
+[connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]
