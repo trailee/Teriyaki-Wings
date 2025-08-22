@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="3_c0xwy"]
 [ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="4_e7wne"]
 [ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="5_7kv74"]
-[ext_resource type="PackedScene" path="res://SCENES/firstactionable.tscn" id="6_pmw23"]
+[ext_resource type="PackedScene" uid="uid://l1d3w1s7m83y" path="res://SCENES/firstactionable.tscn" id="6_pmw23"]
 [ext_resource type="Resource" uid="uid://ut1y87k3fl50" path="res://Dialogue/box on table.dialogue" id="7_67341"]
 [ext_resource type="Resource" uid="uid://darbgpi0ei8ll" path="res://Dialogue/shelves.dialogue" id="7_b4ry0"]
 [ext_resource type="Resource" uid="uid://bxrnmsv47j0o8" path="res://Dialogue/first aid kit.dialogue" id="8_pmw23"]
