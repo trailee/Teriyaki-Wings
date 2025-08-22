@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://bmlndj3v5e38j"]
+[gd_scene load_steps=30 format=4 uid="uid://bmlndj3v5e38j"]
 
 [ext_resource type="Texture2D" uid="uid://bmh2ujcp37hr2" path="res://Backgrounds/TopDownHouse_FurnitureState1.png" id="2_03ltp"]
 [ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="2_f1naw"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://d2avd6wb4gm5v" path="res://images/FreePixelSurvivalItemsPack.png" id="3_en6fd"]
 [ext_resource type="Texture2D" uid="uid://d35iynot1wsmv" path="res://Backgrounds/Cute_Fantasy_Free/Animals/PigIdle.png" id="4_cbk4g"]
 [ext_resource type="Texture2D" uid="uid://de6n3ussjqrv6" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Cow/Cow.png" id="6_cbk4g"]
+[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="7_ih4sl"]
+[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters tscn/Cassandra.tscn" id="8_wwftm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1naw"]
 texture = ExtResource("2_f1naw")
@@ -1308,7 +1310,14 @@ rotation = -1.5708
 scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_f1naw")
 
+[node name="Desdemona2D" parent="." instance=ExtResource("7_ih4sl")]
+position = Vector2(506, 329)
+
+[node name="Cassandra2D" parent="." instance=ExtResource("8_wwftm")]
+position = Vector2(542, 322)
+
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 4)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(135, 178)
