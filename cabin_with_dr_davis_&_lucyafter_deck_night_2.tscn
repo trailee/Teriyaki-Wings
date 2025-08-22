@@ -1365,11 +1365,11 @@ scale = Vector2(0.0407408, 0.0338889)
 sprite_frames = SubResource("SpriteFrames_3jklk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lucy"]
-position = Vector2(608, 439.5)
+position = Vector2(606, 437)
 shape = SubResource("RectangleShape2D_pb8od")
 
 [node name="Dr_Davis" parent="." instance=ExtResource("10_yfd83")]
-position = Vector2(665, 861)
+position = Vector2(658, 1027)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-9, 3)
