@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://xrnnhth6hwgl"
+path="res://.godot/imported/Deck after Captain's office Night 2.dialogue-b1517edb3b80eb50aef8d4d6c3673966.tres"
+
+[deps]
+
+source_file="res://Deck after Captain's office Night 2.dialogue"
+dest_files=["res://.godot/imported/Deck after Captain's office Night 2.dialogue-b1517edb3b80eb50aef8d4d6c3673966.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dan26ld2bxs2p"
+path="res://.godot/imported/Captain's office scene after deaths.dialogue-6212b3fdb2f5d5c46fc94d1ad97b70de.tres"
+
+[deps]
+
+source_file="res://Captain's office scene after deaths.dialogue"
+dest_files=["res://.godot/imported/Captain's office scene after deaths.dialogue-6212b3fdb2f5d5c46fc94d1ad97b70de.tres"]
+
+[params]
+
+defaults=true

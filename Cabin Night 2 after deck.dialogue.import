@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dbvh3fef5jhms"
+path="res://.godot/imported/Cabin Night 2 after deck.dialogue-a7fa3499cb3165e6a19b2cd6945ac2d2.tres"
+
+[deps]
+
+source_file="res://Cabin Night 2 after deck.dialogue"
+dest_files=["res://.godot/imported/Cabin Night 2 after deck.dialogue-a7fa3499cb3165e6a19b2cd6945ac2d2.tres"]
+
+[params]
+
+defaults=true
