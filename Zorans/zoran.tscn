@@ -130,6 +130,7 @@ script = ExtResource("1_hjfgh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Anchor"]
 position = Vector2(3, -6)
+scale = Vector2(0.97637, 1.07906)
 sprite_frames = SubResource("SpriteFrames_v13fq")
 animation = &"back_walk"
 autoplay = "front_walk"

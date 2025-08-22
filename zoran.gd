@@ -11,3 +11,6 @@ func walk_right():
 
 func walk_back():
 	$Anchor/AnimatedSprite2D.play("back_walk")
+
+func dead():
+	$Anchor/AnimatedSprite2D.play("zoran_dead")

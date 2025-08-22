@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=4 uid="uid://7wclvg7a5abm"]
+[gd_scene load_steps=27 format=4 uid="uid://7wclvg7a5abm"]
 
 [ext_resource type="Texture2D" uid="uid://bwff5o35rx8pe" path="res://Backgrounds/Forest_tiles.png" id="1_lifw2"]
+[ext_resource type="Script" uid="uid://bnq0c7d7dedor" path="res://SCENES/forest.gd" id="1_lu80k"]
 [ext_resource type="Texture2D" uid="uid://dlu11ba07x610" path="res://Assets/Forest_assets.png" id="2_stcry"]
 [ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="3_ldum4"]
 [ext_resource type="AudioStream" uid="uid://cjhqvfcufe8xm" path="res://Music_Teriyaki-Wings/Forest_BGM copy.wav" id="3_mvm06"]
@@ -234,7 +235,14 @@ func _process(delta: float) -> void:
 	pass
 "
 
+[sub_resource type="Curve2D" id="Curve2D_tdx4f"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 290, -318, 0, 0, 0, 0, 297, 262, 0, 0, 0, 0, -740, 262, 0, 0, 0, 0, 3, -323, 0, 0, 0, 0, -1, 247, 0, 0, 0, 0, -178, 247, 0, 0, 0, 0, -198, -325, 0, 0, 0, 0, -385, -319, 0, 0, 0, 0, -374, 248, 0, 0, 0, 0, -516, 252, 0, 0, 0, 0, -528, -312, 0, 0, 0, 0, -656, -320, 0, 0, 0, 0, -663, 252, 0, 0, 0, 0, 152, -320, 0, 0, 0, 0, 150, 245)
+}
+point_count = 15
+
 [node name="Forest" type="Node2D"]
+script = ExtResource("1_lu80k")
 
 [node name="Background" type="TileMapLayer" parent="."]
 position = Vector2(0, 8)
@@ -461,12 +469,12 @@ region_rect = Rect2(0, 256, 128, 64)
 y_sort_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="y-sorting objects/Bush1"]
-position = Vector2(-395, -99)
+position = Vector2(-365, -38)
 scale = Vector2(2.20481, 1.93414)
 shape = SubResource("CircleShape2D_vmuxp")
 
 [node name="C1" type="Sprite2D" parent="y-sorting objects/Bush1"]
-position = Vector2(-398, -109)
+position = Vector2(-368, -48)
 texture = ExtResource("2_stcry")
 region_enabled = true
 region_rect = Rect2(0, 480, 64, 64)
@@ -784,10 +792,10 @@ region_enabled = true
 region_rect = Rect2(160, 32, 192, 208)
 
 [node name="Desdemona2D" parent="y-sorting objects" instance=ExtResource("3_ldum4")]
-position = Vector2(540, 6)
+position = Vector2(529, -7)
 
 [node name="Camera (on player)" type="Camera2D" parent="y-sorting objects/Desdemona2D"]
-position = Vector2(36.3638, -36.3638)
+position = Vector2(236.363, 200)
 scale = Vector2(1151.97, 741.989)
 zoom = Vector2(2.5, 2.5)
 limit_left = -735
@@ -796,7 +804,19 @@ limit_right = 700
 limit_bottom = 410
 
 [node name="MOB" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
-position = Vector2(354, -6)
+position = Vector2(294, 197)
+
+[node name="MOB2" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
+position = Vector2(-88, -103)
+
+[node name="MOB3" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
+position = Vector2(95, -254)
+
+[node name="MOB4" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
+position = Vector2(-308, 209)
+
+[node name="MOB5" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
+position = Vector2(-592, 24)
 
 [node name="World Boundary" type="StaticBody2D" parent="."]
 position = Vector2(1, 97)
@@ -841,3 +861,11 @@ autoplay = true
 
 [node name="Fight Forest BGM" type="AudioStreamPlayer2D" parent="Audio"]
 stream = ExtResource("4_vmuxp")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_tdx4f")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+unique_name_in_owner = true
+position = Vector2(290, -318)
+rotation = 1.55873
