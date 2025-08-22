@@ -2,6 +2,7 @@
 
 if State.middle_pressed == true
 	Des: Just a whole bunch of fuel and junk for vehicles already rusted away.
+	=> END!
 else
 	set State.middle_pressed = true
 	Des: I don’t think I’ll need gasoline on the trip.
