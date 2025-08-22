@@ -6,7 +6,7 @@ if State.box_pressed == true
 else
 	set State.box_pressed = true
 	Des: Yikes, there’s so much junk in here.
-	Des: Oh!! [wait=0.5] I might need this.
+	Des: Oh!! [wait=0.5]I might need this.
 	[wave]Obtained MAP.
 
 => END
