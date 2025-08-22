@@ -1,17 +1,24 @@
-[gd_scene load_steps=39 format=4 uid="uid://dcaklbmsk1od8"]
+[gd_scene load_steps=43 format=4 uid="uid://chw5eejtlkafc"]
 
-[ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="1_lt7tf"]
-[ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="2_vpq6y"]
-[ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="3_7hcan"]
-[ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="4_7tqk6"]
-[ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="4_tgv5j"]
-[ext_resource type="AudioStream" uid="uid://ca3tlw532xys5" path="res://Music_Teriyaki-Wings/Treehouse_BGM copy.wav" id="6_tb5ku"]
-[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="7_gldua"]
+[ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="1_6geum"]
+[ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="2_67341"]
+[ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="3_c0xwy"]
+[ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="4_e7wne"]
+[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="5_7kv74"]
+[ext_resource type="PackedScene" uid="uid://l1d3w1s7m83y" path="res://SCENES/firstactionable.tscn" id="6_pmw23"]
+[ext_resource type="Resource" uid="uid://ut1y87k3fl50" path="res://Dialogue/box on table.dialogue" id="7_67341"]
+[ext_resource type="Resource" uid="uid://darbgpi0ei8ll" path="res://Dialogue/shelves.dialogue" id="7_b4ry0"]
+[ext_resource type="Resource" uid="uid://bxrnmsv47j0o8" path="res://Dialogue/first aid kit.dialogue" id="8_pmw23"]
+[ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="8_qbsuj"]
+[ext_resource type="Resource" uid="uid://c7j3pk4v4bqq0" path="res://Dialogue/chest.dialogue" id="9_b4ry0"]
+[ext_resource type="AudioStream" uid="uid://ca3tlw532xys5" path="res://Music_Teriyaki-Wings/Treehouse_BGM copy.wav" id="9_gvu4s"]
+[ext_resource type="Resource" uid="uid://biod8ci54djgd" path="res://Dialogue/bed.dialogue" id="11_qbsuj"]
+[ext_resource type="Resource" uid="uid://cmhgooyrdtsxr" path="res://Dialogue/middle items.dialogue" id="12_gvu4s"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tb5ku"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7hcan"]
-texture = ExtResource("1_lt7tf")
+texture = ExtResource("1_6geum")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -51,7 +58,7 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_7hcan")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gldua"]
-texture = ExtResource("4_tgv5j")
+texture = ExtResource("2_67341")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -552,7 +559,7 @@ texture = ExtResource("4_tgv5j")
 sources/0 = SubResource("TileSetAtlasSource_gldua")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7tqk6"]
-texture = ExtResource("2_vpq6y")
+texture = ExtResource("3_c0xwy")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1120,7 +1127,7 @@ texture = ExtResource("2_vpq6y")
 sources/2 = SubResource("TileSetAtlasSource_7tqk6")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tgv5j"]
-texture = ExtResource("2_vpq6y")
+texture = ExtResource("3_c0xwy")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1703,7 +1710,7 @@ texture = ExtResource("2_vpq6y")
 sources/1 = SubResource("TileSetAtlasSource_tgv5j")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tb5ku"]
-texture = ExtResource("3_7hcan")
+texture = ExtResource("4_e7wne")
 0:0/0 = 0
 1:0/0 = 0
 6:0/0 = 0
@@ -2321,11 +2328,11 @@ texture = ExtResource("3_7hcan")
 sources/4 = SubResource("TileSetAtlasSource_tb5ku")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7hcan"]
-atlas = ExtResource("2_vpq6y")
+atlas = ExtResource("3_c0xwy")
 region = Rect2(320, 480, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7tqk6"]
-atlas = ExtResource("2_vpq6y")
+atlas = ExtResource("3_c0xwy")
 region = Rect2(288, 480, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tgv5j"]
@@ -2348,28 +2355,18 @@ size = Vector2(40.75, 26.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eabxg"]
 size = Vector2(31, 39)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wvm6"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7rhy4"]
 size = Vector2(37.5, 38.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hcan"]
-size = Vector2(17, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ol6g"]
 size = Vector2(32.736, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e1tuf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpq6y"]
-size = Vector2(135, 71)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7pksk"]
 size = Vector2(20.9104, 34.685)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7tqk6"]
-size = Vector2(66.5668, 56.0336)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgv5j"]
-size = Vector2(69.5, 51.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1207l"]
 size = Vector2(17.5199, 18.143)
@@ -2487,7 +2484,7 @@ tile_set = SubResource("TileSet_gldua")
 
 [node name="Calendar" type="Sprite2D" parent="Background"]
 position = Vector2(81, -35)
-texture = ExtResource("2_vpq6y")
+texture = ExtResource("3_c0xwy")
 region_enabled = true
 region_rect = Rect2(64, 0, 32, 32)
 
@@ -2509,7 +2506,7 @@ position = Vector2(-2, 33)
 
 [node name="First Aid Kit" type="Sprite2D" parent="Background/Eat Table"]
 position = Vector2(82, -27)
-texture = ExtResource("2_vpq6y")
+texture = ExtResource("3_c0xwy")
 region_enabled = true
 region_rect = Rect2(128, 64, 16, 16)
 
@@ -2521,25 +2518,28 @@ shape = SubResource("RectangleShape2D_eabxg")
 visible = false
 position = Vector2(160, -35)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("3_7hcan")
+texture = ExtResource("4_e7wne")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(288, 224, 64, 32)
 
-[node name="Desdemona2D" parent="Background" instance=ExtResource("7_gldua")]
+[node name="Desdemona2D" parent="Background" instance=ExtResource("5_7kv74")]
 position = Vector2(28, 10)
 
 [node name="Box on Table2" type="StaticBody2D" parent="."]
 
+[node name="Actionable" parent="Box on Table2" instance=ExtResource("6_pmw23")]
+position = Vector2(16, 32)
+scale = Vector2(0.837964, 0.520561)
+dialogue_resource = ExtResource("7_67341")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box on Table2/Actionable"]
+position = Vector2(97.8562, 69.1561)
+scale = Vector2(2.07447, 2.80341)
+shape = SubResource("RectangleShape2D_0wvm6")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box on Table2"]
-position = Vector2(100, 70)
-shape = SubResource("RectangleShape2D_7rhy4")
-
-[node name="Box on Table" type="Area2D" parent="Box on Table2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Box on Table2/Box on Table"]
-position = Vector2(98, 70)
-scale = Vector2(1.36628, 1.36696)
+position = Vector2(98, 71)
 shape = SubResource("RectangleShape2D_7rhy4")
 
 [node name="Dinner Table" type="StaticBody2D" parent="."]
@@ -2548,6 +2548,16 @@ shape = SubResource("RectangleShape2D_7rhy4")
 position = Vector2(81.5, -19.5)
 shape = SubResource("RectangleShape2D_eabxg")
 
+[node name="Actionable" parent="Dinner Table" instance=ExtResource("6_pmw23")]
+position = Vector2(16, 32)
+scale = Vector2(0.837964, 0.520561)
+dialogue_resource = ExtResource("8_pmw23")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dinner Table/Actionable"]
+position = Vector2(78.7623, -99.8922)
+scale = Vector2(2.07447, 2.80341)
+shape = SubResource("RectangleShape2D_0wvm6")
+
 [node name="Chest" type="StaticBody2D" parent="."]
 position = Vector2(6, -31)
 
@@ -2555,18 +2565,18 @@ position = Vector2(6, -31)
 position = Vector2(151, -2)
 shape = SubResource("RectangleShape2D_tb5ku")
 
+[node name="Actionable" parent="Chest" instance=ExtResource("6_pmw23")]
+position = Vector2(16, 32)
+scale = Vector2(0.837964, 0.520561)
+dialogue_resource = ExtResource("9_b4ry0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest/Actionable"]
+position = Vector2(161.105, -63.3931)
+scale = Vector2(2.22442, 1.79441)
+shape = SubResource("RectangleShape2D_0wvm6")
+
 [node name="Chairs" type="StaticBody2D" parent="."]
 position = Vector2(17, 5)
-
-[node name="Chairs" type="Area2D" parent="Chairs"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chairs/Chairs"]
-position = Vector2(34, -23)
-shape = SubResource("RectangleShape2D_7hcan")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Chairs/Chairs"]
-position = Vector2(98, -25)
-shape = SubResource("RectangleShape2D_7hcan")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chairs"]
 position = Vector2(42, -20)
@@ -2586,11 +2596,15 @@ position = Vector2(-149, -4)
 scale = Vector2(6.29266, 3.11761)
 shape = SubResource("RectangleShape2D_e1tuf")
 
-[node name="Shelves" type="Area2D" parent="Shelves"]
+[node name="Actionable" parent="Shelves" instance=ExtResource("6_pmw23")]
+position = Vector2(16, 32)
+scale = Vector2(0.837964, 0.520561)
+dialogue_resource = ExtResource("7_b4ry0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Shelves/Shelves"]
-position = Vector2(-153.5, -3)
-shape = SubResource("RectangleShape2D_vpq6y")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shelves/Actionable"]
+position = Vector2(-204.066, -69.1561)
+scale = Vector2(8.06391, 5.84892)
+shape = SubResource("RectangleShape2D_0wvm6")
 
 [node name="Bed" type="StaticBody2D" parent="."]
 position = Vector2(9, 4)
@@ -2600,21 +2614,18 @@ position = Vector2(145.252, 51)
 scale = Vector2(2.74968, 1.9605)
 shape = SubResource("RectangleShape2D_7pksk")
 
-[node name="Bed" type="Area2D" parent="Bed"]
+[node name="Actionable" parent="Bed" instance=ExtResource("6_pmw23")]
+position = Vector2(16, 32)
+scale = Vector2(0.837964, 0.520561)
+dialogue_resource = ExtResource("11_qbsuj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed/Bed"]
-position = Vector2(147, 56)
-scale = Vector2(1.06309, 1.58642)
-shape = SubResource("RectangleShape2D_7tqk6")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed/Actionable"]
+position = Vector2(153.944, 36.4991)
+scale = Vector2(3.4246, 7.16585)
+shape = SubResource("RectangleShape2D_0wvm6")
 
 [node name="Middle Items" type="StaticBody2D" parent="."]
 position = Vector2(1, 4)
-
-[node name="Middle stuff" type="Area2D" parent="Middle Items"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Middle Items/Middle stuff"]
-position = Vector2(-54, -26)
-shape = SubResource("RectangleShape2D_tgv5j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Middle Items"]
 position = Vector2(-63, -25)
@@ -2626,6 +2637,16 @@ position = Vector2(-39, -36)
 scale = Vector2(1.12674, 1.42634)
 shape = SubResource("RectangleShape2D_13xdw")
 
+[node name="Actionable" parent="Middle Items" instance=ExtResource("6_pmw23")]
+position = Vector2(16, 32)
+scale = Vector2(0.837964, 0.520561)
+dialogue_resource = ExtResource("12_gvu4s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Middle Items/Actionable"]
+position = Vector2(-79.9557, -111.418)
+scale = Vector2(3.47934, 5.52064)
+shape = SubResource("RectangleShape2D_0wvm6")
+
 [node name="Exit" type="Area2D" parent="."]
 position = Vector2(-11, -3)
 
@@ -2633,7 +2654,7 @@ position = Vector2(-11, -3)
 modulate = Color(1, 1, 1, 0.541176)
 position = Vector2(-171.781, 66.0782)
 scale = Vector2(0.10833, 0.297075)
-texture = ExtResource("4_7tqk6")
+texture = ExtResource("8_qbsuj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
 position = Vector2(-204.781, 70.0782)
@@ -2649,7 +2670,7 @@ limit_bottom = 100
 
 [node name="Treehouse BGM" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(1, 0)
-stream = ExtResource("6_tb5ku")
+stream = ExtResource("9_gvu4s")
 autoplay = true
 bus = &"BGM"
 
