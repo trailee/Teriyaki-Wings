@@ -4,7 +4,7 @@ class_name Player extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var actionable_finder: Area2D = $Direction/ActionableFinder
 
-const SPEED = 75.0
+var SPEED = 75.0
 
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_pressed("ui_accept"):

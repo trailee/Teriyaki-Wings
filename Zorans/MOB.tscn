@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpfcy7gqpdb7a"]
+
+[ext_resource type="PackedScene" uid="uid://b22yvrskpl033" path="res://Zorans/zoran.tscn" id="1_747hh"]
+[ext_resource type="Script" uid="uid://dlv7m6no50tlg" path="res://Zorans/mob.gd" id="1_rkhwi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkhwi"]
+
+[node name="MOB" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_rkhwi")
+
+[node name="Zoran" parent="." instance=ExtResource("1_747hh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+scale = Vector2(2.56949, 4.37599)
+shape = SubResource("RectangleShape2D_rkhwi")
