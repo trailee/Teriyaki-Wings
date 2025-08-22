@@ -2530,7 +2530,7 @@ region_enabled = true
 region_rect = Rect2(288, 224, 64, 32)
 
 [node name="Desdemona2D" parent="Background" instance=ExtResource("5_7kv74")]
-position = Vector2(0, 41)
+position = Vector2(28, 10)
 
 [node name="Box on Table2" type="StaticBody2D" parent="."]
 
