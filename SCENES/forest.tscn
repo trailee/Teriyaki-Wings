@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://7wclvg7a5abm"]
+[gd_scene load_steps=31 format=4 uid="uid://7wclvg7a5abm"]
 
 [ext_resource type="Texture2D" uid="uid://bwff5o35rx8pe" path="res://Backgrounds/Forest_tiles.png" id="1_lifw2"]
 [ext_resource type="Script" uid="uid://bnq0c7d7dedor" path="res://SCENES/forest.gd" id="1_lu80k"]
@@ -7,6 +7,9 @@
 [ext_resource type="AudioStream" uid="uid://cjhqvfcufe8xm" path="res://Music_Teriyaki-Wings/Forest_BGM copy.wav" id="3_mvm06"]
 [ext_resource type="AudioStream" uid="uid://daaypih34uft2" path="res://Music_Teriyaki-Wings/Forest_Fight_BGM copy.wav" id="4_vmuxp"]
 [ext_resource type="PackedScene" uid="uid://cpfcy7gqpdb7a" path="res://Zorans/MOB.tscn" id="6_t35nj"]
+[ext_resource type="PackedScene" path="res://SCENES/firstactionable.tscn" id="8_1fgce"]
+[ext_resource type="Resource" uid="uid://bnkyvf4jg2yvb" path="res://Dialogue/Forest_Exit.dialogue" id="9_1fgce"]
+[ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="10_xkdr2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_stcry"]
 texture = ExtResource("1_lifw2")
@@ -240,6 +243,9 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 290, -318, 0, 0, 0, 0, 300, 179, 0, 0, 0, 0, 297, 262, 0, 0, 0, 0, -740, 262, 0, 0, 0, 0, 3, -323, 0, 0, 0, 0, -1, 247, 0, 0, 0, 0, -178, 247, 0, 0, 0, 0, -198, -325, 0, 0, 0, 0, -385, -319, 0, 0, 0, 0, -374, 248, 0, 0, 0, 0, -516, 252, 0, 0, 0, 0, -528, -312, 0, 0, 0, 0, -656, -320, 0, 0, 0, 0, -663, 252, 0, 0, 0, 0, 152, -320, 0, 0, 0, 0, 150, 245)
 }
 point_count = 16
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g158i"]
+size = Vector2(21.9398, 10.092)
 
 [node name="Forest" type="Node2D"]
 script = ExtResource("1_lu80k")
@@ -804,19 +810,19 @@ limit_right = 700
 limit_bottom = 410
 
 [node name="MOB" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
-position = Vector2(294, 197)
+position = Vector2(187, -182)
 
 [node name="MOB2" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
-position = Vector2(-88, -103)
+position = Vector2(50, 142)
 
 [node name="MOB3" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
-position = Vector2(116, -142)
+position = Vector2(579, -276)
 
 [node name="MOB4" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
-position = Vector2(-102, 35)
+position = Vector2(-435, 230)
 
 [node name="MOB5" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
-position = Vector2(-479, 28)
+position = Vector2(-198, -257)
 
 [node name="World Boundary" type="StaticBody2D" parent="."]
 position = Vector2(1, 97)
@@ -871,3 +877,36 @@ curve = SubResource("Curve2D_tdx4f")
 unique_name_in_owner = true
 position = Vector2(290, -318)
 rotation = 1.55068
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(-396, -236)
+scale = Vector2(2, 2)
+
+[node name="Actionable" parent="Exit" instance=ExtResource("8_1fgce")]
+position = Vector2(16, 32)
+scale = Vector2(0.837964, 0.520561)
+dialogue_resource = ExtResource("9_1fgce")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit/Actionable"]
+position = Vector2(-224.353, 72.9982)
+scale = Vector2(4.0007, -18.3013)
+shape = SubResource("RectangleShape2D_g158i")
+
+[node name="Shadow" type="Sprite2D" parent="Exit"]
+modulate = Color(1, 1, 1, 0.541176)
+position = Vector2(-171.781, 66.0782)
+scale = Vector2(0.10833, 0.297075)
+texture = ExtResource("10_xkdr2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+position = Vector2(-204.781, 70.0782)
+scale = Vector2(6.30666, -9.71067)
+shape = SubResource("RectangleShape2D_g158i")
+
+[node name="Leave Area" type="Label" parent="Exit"]
+offset_left = -131.0
+offset_top = 28.0
+offset_right = -53.0
+offset_bottom = 51.0
+scale = Vector2(0.5, 0.5)
+text = "EXIT AREA"

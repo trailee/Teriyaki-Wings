@@ -9,7 +9,7 @@ signal health_depleted
 var SPEED = 75.0
 
 func _unhandled_input(_event: InputEvent) -> void:
-	if Input.is_action_pressed("ui_accept"):
+	if Input.is_action_just_released("ui_accept"):
 		var actionables = actionable_finder.get_overlapping_areas()
 		if actionables.size() > 0:
 			actionables[0].action()
