@@ -1,7 +1,5 @@
-class_name scenemanager extends Node
-
-var player: Player
-
+extends Node
+var player : Player
 var scene_dir_path = "res://scenes/"
 
 func change_scene(from, to_scene_name: String) ->void:

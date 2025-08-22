@@ -11830,7 +11830,6 @@ collision_layer = 129
 position = Vector2(800, 525)
 collision_layer = 0
 collision_mask = 128
-connected_scene = "hallway_scene"
 
 [node name="Sprite2D" type="Sprite2D" parent="nscenetrigger"]
 modulate = Color(1, 1, 1, 0.411765)

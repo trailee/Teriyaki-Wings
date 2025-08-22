@@ -1,11 +1,10 @@
-[gd_scene load_steps=17 format=4 uid="uid://bqi7voy4yrqu0"]
+[gd_scene load_steps=16 format=4 uid="uid://bqi7voy4yrqu0"]
 
 [ext_resource type="Script" uid="uid://dq0xgylpo6pes" path="res://SCENES/hallway_scene.gd" id="1_gnevq"]
 [ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="1_jnsla"]
 [ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="2_eu8xs"]
 [ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="3_38c5i"]
 [ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="5_0cbbs"]
-[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="6_gac7c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w8kwg"]
 texture = ExtResource("1_jnsla")
@@ -720,7 +719,6 @@ autoplay = true
 
 [node name="Cabin" parent="." instance=ExtResource("5_0cbbs")]
 position = Vector2(-17565, 12802)
-connected_scene = "cabin"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cabin"]
 position = Vector2(1.5, 9)
@@ -746,9 +744,6 @@ position = Vector2(-17949, 12802)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Deck"]
 position = Vector2(-1, 4)
 shape = SubResource("CircleShape2D_rntdp")
-
-[node name="Desdemona2D" parent="." instance=ExtResource("6_gac7c")]
-position = Vector2(-17614, 12789)
 
 [node name="World Boundary" type="StaticBody2D" parent="."]
 position = Vector2(-17714, 12782)
