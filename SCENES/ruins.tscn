@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://b6houqocenltn"]
+[gd_scene load_steps=45 format=4 uid="uid://b6houqocenltn"]
 
 [ext_resource type="Texture2D" uid="uid://2no8aarhmwhm" path="res://Backgrounds/Ruin Tilesets/TX Tileset Grass.png" id="1_no63g"]
 [ext_resource type="Texture2D" uid="uid://c2yo2ay6u8pvp" path="res://Backgrounds/Ruin Tilesets/TX Tileset Wall.png" id="2_wi7vb"]
@@ -6,11 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://cqdfm14nvo1w" path="res://Backgrounds/Ruin Tilesets/TX Plant.png" id="4_d0oyv"]
 [ext_resource type="Texture2D" uid="uid://caq41jd8860u6" path="res://Backgrounds/Ruin Tilesets/TX Props.png" id="5_6cwyp"]
 [ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Desdemona_TREEHOUSE_.tscn" id="6_vwbwo"]
+[ext_resource type="Resource" uid="uid://b7gglio4yftk0" path="res://Ruin Everyone .dialogue" id="7_2td7q"]
 [ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="7_x5ip6"]
 [ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters/yue.tscn" id="8_3w2gd"]
 [ext_resource type="PackedScene" uid="uid://cxsu3b7eyj45l" path="res://Characters/Zade.tscn" id="9_7kuf4"]
 [ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="10_chgke"]
 [ext_resource type="AudioStream" uid="uid://durot3wiktxle" path="res://Music_Teriyaki-Wings/Ruins_BGM copy.wav" id="11_flv6l"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="12_evh76"]
+[ext_resource type="Resource" uid="uid://b06250hs54stx" path="res://Dialogue/exit_treehouse.dialogue" id="13_2td7q"]
+[ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="14_5ldcl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eexrm"]
 texture = ExtResource("1_no63g")
@@ -2359,6 +2363,9 @@ func _process(delta: float) -> void:
 	pass
 "
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmfdv"]
+size = Vector2(21.9398, 7.98503)
+
 [node name="ruins" type="Node2D"]
 
 [node name="Background" type="TileMapLayer" parent="."]
@@ -2418,23 +2425,31 @@ tile_set = SubResource("TileSet_chs52")
 [node name="y-sorting" type="Node2D" parent="."]
 y_sort_enabled = true
 
+[node name="Actionable" parent="y-sorting" instance=ExtResource("12_evh76")]
+position = Vector2(-24, 4)
+dialogue_resource = ExtResource("7_2td7q")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="y-sorting/Actionable"]
+polygon = PackedVector2Array(72, -6, 61, -30, 44, -37, 13, -42, -10, -44, -23, -42, -39, -29, -56, -21, -53, 0, -57, 13, -57, 28, -42, 33, -31, 29, -23, 23, -12, 20, 7, 19, 18, 20, 35, 21, 42, 27, 46, 30, 51, 32, 66, 29, 68, 24)
+
 [node name="Cassandra2D" parent="y-sorting" instance=ExtResource("7_x5ip6")]
 y_sort_enabled = true
-position = Vector2(-63, -16)
+position = Vector2(-57, -16)
 
 [node name="Yue_2D" parent="y-sorting" instance=ExtResource("8_3w2gd")]
 y_sort_enabled = true
-position = Vector2(50, 20)
+position = Vector2(27, 5)
 
 [node name="Zane_2D" parent="y-sorting" instance=ExtResource("9_7kuf4")]
 y_sort_enabled = true
+position = Vector2(-1, -7)
 
 [node name="Ophelia2D" parent="y-sorting" instance=ExtResource("10_chgke")]
 y_sort_enabled = true
-position = Vector2(11, 24)
+position = Vector2(-39, -10)
 
 [node name="Desdemona2D" parent="y-sorting" instance=ExtResource("6_vwbwo")]
-position = Vector2(-40, 8)
+position = Vector2(290, -5)
 
 [node name="Camera2D (not on player)" type="Camera2D" parent="."]
 position = Vector2(-6, -31)
@@ -2550,3 +2565,35 @@ libraries = {
 }
 autoplay = "new_animation"
 script = SubResource("GDScript_81nij")
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(-134, -55)
+
+[node name="Actionable" parent="Exit" instance=ExtResource("12_evh76")]
+position = Vector2(16, 32)
+scale = Vector2(0.837964, 0.520561)
+dialogue_resource = ExtResource("13_2td7q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit/Actionable"]
+position = Vector2(-225.547, 72.9982)
+scale = Vector2(4.0007, -18.3013)
+shape = SubResource("RectangleShape2D_pmfdv")
+
+[node name="Shadow" type="Sprite2D" parent="Exit"]
+modulate = Color(1, 1, 1, 0.541176)
+position = Vector2(-171.781, 66.0782)
+scale = Vector2(0.10833, 0.297075)
+texture = ExtResource("14_5ldcl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+position = Vector2(-204.781, 70.0782)
+scale = Vector2(6.30666, -9.71067)
+shape = SubResource("RectangleShape2D_pmfdv")
+
+[node name="Leave Area" type="Label" parent="Exit"]
+offset_left = -131.0
+offset_top = 28.0
+offset_right = -53.0
+offset_bottom = 51.0
+scale = Vector2(0.5, 0.5)
+text = "EXIT AREA"
