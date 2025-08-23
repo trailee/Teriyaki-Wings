@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://dn6qfnhxw17xl"]
 
-[ext_resource type="Script" uid="uid://cfnhuo5cduxfw" path="res://Characters tscn/desdemona.gd" id="1_7sixq"]
+[ext_resource type="Script" uid="uid://cfnhuo5cduxfw" path="res://Characters/desdemona.gd" id="1_7sixq"]
 [ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="1_ebfod"]
 [ext_resource type="PackedScene" uid="uid://dwq5citd6dl3b" path="res://SCENES/gun.tscn" id="3_mnrkx"]
 

@@ -1,8 +1,8 @@
 extends Node2D
-@onready var desdemona_2d: CharacterBody2D = $Background/Desdemona2D
 
 @onready var main_exit: Area2D = $Exit
 @onready var leave_area: Label = $"Exit/Leave Area"
+@onready var player: Player = $Background/Desdemona2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,10 +11,10 @@ func _ready() -> void:
 	DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/instructions.dialogue"), "start")
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
-func _on_exit_body_entered(body: CharacterBody2D) -> void:
+func _on_exit_body_entered(_body: PhysicsBody2D) -> void:
 	$"Exit/Leave Area".show()
 
-func _on_exit_body_exited(body: CharacterBody2D) -> void:
+func _on_exit_body_exited(_body: PhysicsBody2D) -> void:
 	$"Exit/Leave Area".hide()
 
 func _on_dialogue_ended(_resource: DialogueResource) -> void:

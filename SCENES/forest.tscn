@@ -1,13 +1,13 @@
 [gd_scene load_steps=31 format=4 uid="uid://bnljw0tnfql3l"]
 
 [ext_resource type="Texture2D" uid="uid://bwff5o35rx8pe" path="res://Backgrounds/Forest_tiles.png" id="1_lifw2"]
-[ext_resource type="Script" path="res://SCENES/forest.gd" id="1_lu80k"]
+[ext_resource type="Script" uid="uid://bnq0c7d7dedor" path="res://SCENES/forest.gd" id="1_lu80k"]
 [ext_resource type="Texture2D" uid="uid://dlu11ba07x610" path="res://Assets/Forest_assets.png" id="2_stcry"]
-[ext_resource type="PackedScene" path="res://Characters tscn/Desdemona.tscn" id="3_ldum4"]
+[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters/Desdemona.tscn" id="3_ldum4"]
 [ext_resource type="AudioStream" uid="uid://cjhqvfcufe8xm" path="res://Music_Teriyaki-Wings/Forest_BGM copy.wav" id="3_mvm06"]
 [ext_resource type="AudioStream" uid="uid://daaypih34uft2" path="res://Music_Teriyaki-Wings/Forest_Fight_BGM copy.wav" id="4_vmuxp"]
 [ext_resource type="PackedScene" uid="uid://cpfcy7gqpdb7a" path="res://Zorans/MOB.tscn" id="6_t35nj"]
-[ext_resource type="PackedScene" path="res://SCENES/firstactionable.tscn" id="8_1fgce"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="8_1fgce"]
 [ext_resource type="Resource" uid="uid://bnkyvf4jg2yvb" path="res://Dialogue/Forest_Exit.dialogue" id="9_1fgce"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="10_xkdr2"]
 

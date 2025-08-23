@@ -1,12 +1,12 @@
-[gd_scene load_steps=47 format=4 uid="uid://bf1qk0s3n3pgb"]
+[gd_scene load_steps=47 format=4 uid="uid://brfpsns5bw1yg"]
 
 [ext_resource type="Script" uid="uid://djcnbha04v5pf" path="res://SCENES/treehouse_scene.gd" id="1_0803f"]
 [ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="2_2fb3w"]
 [ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="3_xrpfj"]
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="4_65wd0"]
 [ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="5_qa7w0"]
-[ext_resource type="PackedScene" uid="uid://yog2w8gq8ar3" path="res://Characters tscn/Desdemona_TREEHOUSE_.tscn" id="6_0803f"]
-[ext_resource type="PackedScene" path="res://SCENES/firstactionable.tscn" id="7_gvvhe"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Desdemona_TREEHOUSE_.tscn" id="6_0803f"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="7_gvvhe"]
 [ext_resource type="Resource" uid="uid://ut1y87k3fl50" path="res://Dialogue/box on table.dialogue" id="8_tr8gb"]
 [ext_resource type="Resource" uid="uid://bxrnmsv47j0o8" path="res://Dialogue/first aid kit.dialogue" id="9_bhe5d"]
 [ext_resource type="Resource" uid="uid://c7j3pk4v4bqq0" path="res://Dialogue/chest.dialogue" id="10_hctnd"]
@@ -2427,7 +2427,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 "
 
@@ -2530,7 +2530,7 @@ region_enabled = true
 region_rect = Rect2(288, 224, 64, 32)
 
 [node name="Desdemona2D" parent="Background" instance=ExtResource("6_0803f")]
-position = Vector2(-1, 49)
+position = Vector2(3, 39)
 
 [node name="Box on Table2" type="StaticBody2D" parent="."]
 

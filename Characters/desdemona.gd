@@ -1,7 +1,5 @@
 class_name Player extends CharacterBody2D
 
-signal health_depleted
-
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var actionable_finder: Area2D = $Direction/ActionableFinder
@@ -15,7 +13,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 			actionables[0].action()
 		return
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 	velocity = direction * SPEED
 	move_and_slide()
