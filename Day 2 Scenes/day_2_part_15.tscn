@@ -1,17 +1,17 @@
 [gd_scene load_steps=30 format=4 uid="uid://c13n28ilsqtyb"]
 
-[ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="1_rwm3b"]
-[ext_resource type="Texture2D" uid="uid://bmh2ujcp37hr2" path="res://Backgrounds/TopDownHouse_FurnitureState1.png" id="2_2wkp2"]
-[ext_resource type="Texture2D" uid="uid://isx4afigpbvu" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Chicken.png" id="3_ip0ss"]
-[ext_resource type="Texture2D" uid="uid://d35iynot1wsmv" path="res://Backgrounds/Cute_Fantasy_Free/Animals/PigIdle.png" id="4_btn27"]
-[ext_resource type="Texture2D" uid="uid://d2avd6wb4gm5v" path="res://images/FreePixelSurvivalItemsPack.png" id="5_0jt4w"]
-[ext_resource type="Texture2D" uid="uid://de6n3ussjqrv6" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Cow/Cow.png" id="6_yd5rx"]
-[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="7_hyjjc"]
-[ext_resource type="PackedScene" uid="uid://glih7hfhavxh" path="res://Characters tscn/Dr.Davis.tscn" id="8_1kud6"]
-[ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="9_qqubb"]
+[ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="1_jbrsq"]
+[ext_resource type="Texture2D" uid="uid://bmh2ujcp37hr2" path="res://Backgrounds/TopDownHouse_FurnitureState1.png" id="2_t28se"]
+[ext_resource type="Texture2D" uid="uid://isx4afigpbvu" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Chicken.png" id="3_h5nep"]
+[ext_resource type="Texture2D" uid="uid://d35iynot1wsmv" path="res://Backgrounds/Cute_Fantasy_Free/Animals/PigIdle.png" id="4_fu3or"]
+[ext_resource type="Texture2D" uid="uid://d2avd6wb4gm5v" path="res://images/FreePixelSurvivalItemsPack.png" id="5_yc5ux"]
+[ext_resource type="Texture2D" uid="uid://de6n3ussjqrv6" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Cow/Cow.png" id="6_sqmq0"]
+[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="7_0nss5"]
+[ext_resource type="PackedScene" uid="uid://glih7hfhavxh" path="res://Characters tscn/Dr.Davis.tscn" id="8_bolia"]
+[ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="9_8pch8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1naw"]
-texture = ExtResource("1_rwm3b")
+texture = ExtResource("1_jbrsq")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -181,7 +181,7 @@ texture = ExtResource("1_rwm3b")
 sources/0 = SubResource("TileSetAtlasSource_f1naw")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_en6fd"]
-texture = ExtResource("2_2wkp2")
+texture = ExtResource("2_t28se")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -420,7 +420,7 @@ texture = ExtResource("2_2wkp2")
 sources/0 = SubResource("TileSetAtlasSource_en6fd")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_03ltp"]
-texture = ExtResource("1_rwm3b")
+texture = ExtResource("1_jbrsq")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -590,7 +590,7 @@ texture = ExtResource("1_rwm3b")
 sources/0 = SubResource("TileSetAtlasSource_03ltp")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6tg0a"]
-texture = ExtResource("1_rwm3b")
+texture = ExtResource("1_jbrsq")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -760,7 +760,7 @@ texture = ExtResource("1_rwm3b")
 sources/0 = SubResource("TileSetAtlasSource_6tg0a")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1lpvh"]
-texture = ExtResource("3_ip0ss")
+texture = ExtResource("3_h5nep")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -776,7 +776,7 @@ texture = ExtResource("3_ip0ss")
 sources/0 = SubResource("TileSetAtlasSource_1lpvh")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwftm"]
-texture = ExtResource("4_btn27")
+texture = ExtResource("4_fu3or")
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
@@ -810,7 +810,7 @@ texture = ExtResource("4_btn27")
 sources/0 = SubResource("TileSetAtlasSource_wwftm")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u55xe"]
-texture = ExtResource("5_0jt4w")
+texture = ExtResource("5_yc5ux")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1215,7 +1215,7 @@ texture = ExtResource("5_0jt4w")
 sources/0 = SubResource("TileSetAtlasSource_u55xe")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ih4sl"]
-texture = ExtResource("6_yd5rx")
+texture = ExtResource("6_sqmq0")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1310,10 +1310,10 @@ rotation = -1.5708
 scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_f1naw")
 
-[node name="Desdemona2D" parent="." instance=ExtResource("7_hyjjc")]
+[node name="Desdemona2D" parent="." instance=ExtResource("7_0nss5")]
 position = Vector2(553, 590)
 
-[node name="Dr_Davis" parent="." instance=ExtResource("8_1kud6")]
+[node name="Dr_Davis" parent="." instance=ExtResource("8_bolia")]
 position = Vector2(465, 821)
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -1333,7 +1333,7 @@ shape = SubResource("CircleShape2D_cbk4g")
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-13, 2)
-stream = ExtResource("9_qqubb")
+stream = ExtResource("9_8pch8")
 autoplay = true
 bus = &"BGM"
 
