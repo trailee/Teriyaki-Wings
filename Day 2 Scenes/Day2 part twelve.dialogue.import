@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://frycnmv62fib"
+path="res://.godot/imported/Day2 part twelve.dialogue-f283efc32a73ea06b52e545ce39ec22a.tres"
+
+[deps]
+
+source_file="res://Day 2 Scenes/Day2 part twelve.dialogue"
+dest_files=["res://.godot/imported/Day2 part twelve.dialogue-f283efc32a73ea06b52e545ce39ec22a.tres"]
+
+[params]
+
+defaults=true

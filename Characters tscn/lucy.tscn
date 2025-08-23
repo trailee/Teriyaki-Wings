@@ -39,16 +39,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u62il"]
-size = Vector2(45, 66)
+size = Vector2(40, 45)
 
 [node name="Lucy" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(125.75, -303.5)
-scale = Vector2(0.10463, 0.0788889)
+position = Vector2(112.25, -316.5)
+scale = Vector2(0.0546298, 0.05)
 sprite_frames = SubResource("SpriteFrames_up8nn")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(127.5, -300)
+position = Vector2(115, -314.5)
 shape = SubResource("RectangleShape2D_u62il")
