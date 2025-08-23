@@ -19,6 +19,9 @@ config/icon="res://icon.svg"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 State="*res://Dialogue/state.gd"
+player="*res://Characters tscn/Des_TREEHOUSE.tscn"
+SceneManager="*res://scenemanager.gd"
+ZorenDeadCount="*res://zoren_dead_count.gd"
 
 [dialogue_manager]
 
@@ -73,8 +76,9 @@ ui_down={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://newinstall.dialogue", "res://Dialogue/shelves.dialogue", "res://Dialogue/box on table.dialogue", "res://Dialogue/bed.dialogue", "res://Dialogue/first aid kit.dialogue", "res://Dialogue/chest.dialogue", "res://Dialogue/middle items.dialogue", "res://Dialogue/instructions.dialogue", "res://Dialogue/exit_treehouse.dialogue", "res://Dialogue/broken door.dialogue", "res://Dialogue/untitled.dialogue")
+locale/translations_pot_files=PackedStringArray("res://newinstall.dialogue", "res://Dialogue/shelves.dialogue", "res://Dialogue/box on table.dialogue", "res://Dialogue/bed.dialogue", "res://Dialogue/first aid kit.dialogue", "res://Dialogue/chest.dialogue", "res://Dialogue/middle items.dialogue", "res://Dialogue/instructions.dialogue", "res://Dialogue/exit_treehouse.dialogue", "res://Dialogue/broken door.dialogue", "res://Dialogue/untitled.dialogue", "res://Dialogue/Forest_Exit.dialogue", "res://Dialogue/Forest.dialogue", "res://talking with her friend night one deck.dialogue", "res://talking to cassandra & Ophelia untitled.dialogue", "res://Ruin Everyone .dialogue", "res://Medusa Death Scene.dialogue", "res://Harbor Dialogue.dialogue", "res://Everyone in treehouse.dialogue", "res://Engine Room night one.dialogue", "res://Deck Ophelia\'s death.dialogue", "res://Deck Day 2 morning.dialogue", "res://Cabin Yue\'s death.dialogue", "res://Cabin day one part one dialogue.dialogue", "res://cabin day 2 morning.dialogue", "res://after shot scene Night One.dialogue")
 
 [layer_names]
 
 2d_physics/layer_5="Actionables"
+2d_physics/layer_8="scenetrigger"

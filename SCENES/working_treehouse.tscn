@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="3_xrpfj"]
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="4_65wd0"]
 [ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="5_qa7w0"]
-[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="6_2djfn"]
+[ext_resource type="PackedScene" uid="uid://ddn2m2lvwqx6m" path="res://Characters tscn/Desdemona_TREEHOUSE.tscn" id="6_0803f"]
 [ext_resource type="PackedScene" path="res://SCENES/firstactionable.tscn" id="7_gvvhe"]
 [ext_resource type="Resource" uid="uid://ut1y87k3fl50" path="res://Dialogue/box on table.dialogue" id="8_tr8gb"]
 [ext_resource type="Resource" uid="uid://bxrnmsv47j0o8" path="res://Dialogue/first aid kit.dialogue" id="9_bhe5d"]
@@ -2529,8 +2529,8 @@ flip_h = true
 region_enabled = true
 region_rect = Rect2(288, 224, 64, 32)
 
-[node name="Desdemona2D" parent="Background" instance=ExtResource("6_2djfn")]
-position = Vector2(28, 10)
+[node name="Desdemona2D2" parent="Background" instance=ExtResource("6_0803f")]
+position = Vector2(0, 54)
 
 [node name="Box on Table2" type="StaticBody2D" parent="."]
 
