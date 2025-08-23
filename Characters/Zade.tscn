@@ -25,6 +25,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x44v5"]
+size = Vector2(11.218, 10)
 
 [node name="Zane_2D" type="CharacterBody2D"]
 scale = Vector2(0.055, 0.055)
@@ -35,6 +36,6 @@ animation = &"Zade_Idle"
 autoplay = "Zade_Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(21, 0)
+position = Vector2(18.1818, 236.364)
 scale = Vector2(29.4671, 46.5796)
 shape = SubResource("RectangleShape2D_x44v5")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbvs3y1678mk2"]
+[gd_scene load_steps=8 format=3 uid="uid://cbvs3y1678mk2"]
 
 [ext_resource type="Texture2D" uid="uid://j0sbauhr3p80" path="res://Assets/characters/dr m.png" id="1_br5vp"]
 
@@ -39,25 +39,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bitlx"]
-size = Vector2(6749.09, 11015.6)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_sqv0t"]
-radius = 4342.43
+size = Vector2(6749.09, 12422.4)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-297.141, -325)
-scale = Vector2(1.04497, 0.902222)
+scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_ptegi")
 autoplay = "default"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-267, -188.5)
-scale = Vector2(0.06875, 0.0463889)
+position = Vector2(1, 12.7793)
+scale = Vector2(0.00274406, -0.00173545)
 shape = SubResource("RectangleShape2D_bitlx")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-276, -574)
-scale = Vector2(0.06875, 0.0463889)
-shape = SubResource("CircleShape2D_sqv0t")

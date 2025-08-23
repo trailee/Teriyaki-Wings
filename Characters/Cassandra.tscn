@@ -49,6 +49,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d81if"]
+size = Vector2(20, 8.47584)
 
 [node name="Cassandra2D" type="CharacterBody2D"]
 scale = Vector2(0.055, 0.055)
@@ -61,6 +62,6 @@ autoplay = "Cas_Idle"
 frame_progress = 0.631628
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-185, 386)
+position = Vector2(-185, 645.136)
 scale = Vector2(29.8064, 44.9727)
 shape = SubResource("RectangleShape2D_d81if")

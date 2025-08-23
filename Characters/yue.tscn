@@ -70,7 +70,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xoc2s"]
-size = Vector2(21.4841, 22.4076)
+size = Vector2(11.1687, 10.0571)
 
 [node name="Yue_2D" type="CharacterBody2D"]
 scale = Vector2(0.055, 0.055)
@@ -82,6 +82,6 @@ animation = &"Yue_Idle"
 autoplay = "Yue_Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(72.7273, -54.5454)
+position = Vector2(54.5455, 221.023)
 scale = Vector2(29.3028, 47.5692)
 shape = SubResource("RectangleShape2D_xoc2s")

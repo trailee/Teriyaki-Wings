@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://glih7hfhavxh"]
+[gd_scene load_steps=8 format=3 uid="uid://glih7hfhavxh"]
 
 [ext_resource type="Texture2D" uid="uid://b7tul5ipepy8m" path="res://Assets/characters/dr davis.png" id="1_rc71s"]
 
@@ -38,26 +38,19 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fp64"]
-size = Vector2(581.818, 1002.39)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_dt64y"]
-radius = 350.495
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfiu1"]
+size = Vector2(13.3404, 767.734)
 
 [node name="Dr_Davis" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-103.32, -437.359)
-scale = Vector2(0.0900752, 0.0585764)
+position = Vector2(-0.5, -0.5)
+scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_kxkrl")
 autoplay = "default"
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-101, -432)
-scale = Vector2(0.06875, 0.0463889)
-shape = SubResource("RectangleShape2D_1fp64")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-102, -455)
-scale = Vector2(0.06875, 0.0463889)
-shape = SubResource("CircleShape2D_dt64y")
+position = Vector2(0.500001, 11.4837)
+rotation = -3.14159
+scale = Vector2(1.44051, -0.0325209)
+shape = SubResource("RectangleShape2D_lfiu1")

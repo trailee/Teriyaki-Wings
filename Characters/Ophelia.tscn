@@ -63,6 +63,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7lnpa"]
+size = Vector2(16.2917, 9.60985)
 
 [node name="Ophelia2D" type="CharacterBody2D"]
 scale = Vector2(0.055, 0.055)
@@ -74,6 +75,6 @@ animation = &"Ophelia_Idle"
 autoplay = "Ophelia_Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(10, 10)
+position = Vector2(18.1818, 259.514)
 scale = Vector2(27.5977, 46.442)
 shape = SubResource("RectangleShape2D_7lnpa")

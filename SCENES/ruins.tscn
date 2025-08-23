@@ -1,19 +1,19 @@
 [gd_scene load_steps=45 format=4 uid="uid://b6houqocenltn"]
 
-[ext_resource type="Texture2D" uid="uid://2no8aarhmwhm" path="res://Backgrounds/Ruin Tilesets/TX Tileset Grass.png" id="1_n8iuo"]
-[ext_resource type="Texture2D" uid="uid://c2yo2ay6u8pvp" path="res://Backgrounds/Ruin Tilesets/TX Tileset Wall.png" id="2_o5r0g"]
-[ext_resource type="Texture2D" uid="uid://b5ewfrcn7rxcy" path="res://Backgrounds/Ruin Tilesets/TX Tileset Stone Ground.png" id="3_o5r0g"]
-[ext_resource type="Texture2D" uid="uid://cqdfm14nvo1w" path="res://Backgrounds/Ruin Tilesets/TX Plant.png" id="4_eexrm"]
-[ext_resource type="Texture2D" uid="uid://caq41jd8860u6" path="res://Backgrounds/Ruin Tilesets/TX Props.png" id="5_mlecl"]
-[ext_resource type="AudioStream" uid="uid://durot3wiktxle" path="res://Music_Teriyaki-Wings/Ruins_BGM copy.wav" id="6_81nij"]
-[ext_resource type="PackedScene" path="res://Characters tscn/Desdemona_Normal.tscn" id="6_be64e"]
-[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters tscn/Cassandra.tscn" id="7_pseft"]
-[ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters tscn/yue.tscn" id="8_nbquo"]
-[ext_resource type="PackedScene" uid="uid://cxsu3b7eyj45l" path="res://Characters tscn/Zade.tscn" id="9_evh76"]
-[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters tscn/Ophelia.tscn" id="10_2td7q"]
+[ext_resource type="Texture2D" uid="uid://2no8aarhmwhm" path="res://Backgrounds/Ruin Tilesets/TX Tileset Grass.png" id="1_no63g"]
+[ext_resource type="Texture2D" uid="uid://c2yo2ay6u8pvp" path="res://Backgrounds/Ruin Tilesets/TX Tileset Wall.png" id="2_wi7vb"]
+[ext_resource type="Texture2D" uid="uid://b5ewfrcn7rxcy" path="res://Backgrounds/Ruin Tilesets/TX Tileset Stone Ground.png" id="3_55pld"]
+[ext_resource type="Texture2D" uid="uid://cqdfm14nvo1w" path="res://Backgrounds/Ruin Tilesets/TX Plant.png" id="4_d0oyv"]
+[ext_resource type="Texture2D" uid="uid://caq41jd8860u6" path="res://Backgrounds/Ruin Tilesets/TX Props.png" id="5_6cwyp"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Desdemona_TREEHOUSE_.tscn" id="6_vwbwo"]
+[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="7_x5ip6"]
+[ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters/yue.tscn" id="8_3w2gd"]
+[ext_resource type="PackedScene" uid="uid://cxsu3b7eyj45l" path="res://Characters/Zade.tscn" id="9_7kuf4"]
+[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="10_chgke"]
+[ext_resource type="AudioStream" uid="uid://durot3wiktxle" path="res://Music_Teriyaki-Wings/Ruins_BGM copy.wav" id="11_flv6l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eexrm"]
-texture = ExtResource("1_n8iuo")
+texture = ExtResource("1_no63g")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -275,7 +275,7 @@ texture = ExtResource("1_n8iuo")
 sources/0 = SubResource("TileSetAtlasSource_eexrm")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mlecl"]
-texture = ExtResource("2_o5r0g")
+texture = ExtResource("2_wi7vb")
 2:2/0 = 0
 3:2/0 = 0
 4:2/0 = 0
@@ -473,7 +473,7 @@ texture = ExtResource("2_o5r0g")
 sources/1 = SubResource("TileSetAtlasSource_mlecl")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n8iuo"]
-texture = ExtResource("2_o5r0g")
+texture = ExtResource("2_wi7vb")
 2:2/0 = 0
 3:2/0 = 0
 4:2/0 = 0
@@ -671,7 +671,7 @@ texture = ExtResource("2_o5r0g")
 sources/0 = SubResource("TileSetAtlasSource_n8iuo")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aacsh"]
-texture = ExtResource("3_o5r0g")
+texture = ExtResource("3_55pld")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -877,7 +877,7 @@ texture = ExtResource("3_o5r0g")
 sources/0 = SubResource("TileSetAtlasSource_aacsh")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_81nij"]
-texture = ExtResource("3_o5r0g")
+texture = ExtResource("3_55pld")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1084,7 +1084,7 @@ tile_size = Vector2i(4, 4)
 sources/0 = SubResource("TileSetAtlasSource_81nij")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pseft"]
-texture = ExtResource("2_o5r0g")
+texture = ExtResource("2_wi7vb")
 2:2/0 = 0
 3:2/0 = 0
 4:2/0 = 0
@@ -1282,7 +1282,7 @@ texture = ExtResource("2_o5r0g")
 sources/0 = SubResource("TileSetAtlasSource_pseft")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_chs52"]
-texture = ExtResource("3_o5r0g")
+texture = ExtResource("3_55pld")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1485,7 +1485,7 @@ texture = ExtResource("3_o5r0g")
 15:15/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_be64e"]
-texture = ExtResource("2_o5r0g")
+texture = ExtResource("2_wi7vb")
 2:2/0 = 0
 3:2/0 = 0
 4:2/0 = 0
@@ -1684,7 +1684,7 @@ sources/0 = SubResource("TileSetAtlasSource_chs52")
 sources/1 = SubResource("TileSetAtlasSource_be64e")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lapbk"]
-texture = ExtResource("4_eexrm")
+texture = ExtResource("4_d0oyv")
 4:0/0 = 0
 5:0/0 = 0
 3:1/0 = 0
@@ -1935,7 +1935,7 @@ texture = ExtResource("4_eexrm")
 sources/0 = SubResource("TileSetAtlasSource_lapbk")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vtkpe"]
-texture = ExtResource("5_mlecl")
+texture = ExtResource("5_6cwyp")
 14:0/0 = 0
 15:0/0 = 0
 24:0/0 = 0
@@ -2424,18 +2424,18 @@ position = Vector2(-151, 1)
 tile_map_data = PackedByteArray("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")
 tile_set = SubResource("TileSet_chs52")
 
-[node name="Desdemona2D" parent="." instance=ExtResource("6_be64e")]
-position = Vector2(-24.9301, 28.1363)
+[node name="Desdemona2D" parent="." instance=ExtResource("6_vwbwo")]
+position = Vector2(-28, 8)
 
-[node name="Cassandra2D" parent="." instance=ExtResource("7_pseft")]
+[node name="Cassandra2D" parent="." instance=ExtResource("7_x5ip6")]
 position = Vector2(-52, -10)
 
-[node name="Yue_2D" parent="." instance=ExtResource("8_nbquo")]
+[node name="Yue_2D" parent="." instance=ExtResource("8_3w2gd")]
 position = Vector2(50, 20)
 
-[node name="Zane_2D" parent="." instance=ExtResource("9_evh76")]
+[node name="Zane_2D" parent="." instance=ExtResource("9_7kuf4")]
 
-[node name="Ophelia2D" parent="." instance=ExtResource("10_2td7q")]
+[node name="Ophelia2D" parent="." instance=ExtResource("10_chgke")]
 position = Vector2(11, 24)
 
 [node name="Camera2D (not on player)" type="Camera2D" parent="."]
@@ -2544,7 +2544,7 @@ shape = SubResource("CircleShape2D_nbquo")
 
 [node name="Ruins BGM" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(48, -6)
-stream = ExtResource("6_81nij")
+stream = ExtResource("11_flv6l")
 autoplay = true
 bus = &"BGM"
 
