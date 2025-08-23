@@ -1,4 +1,4 @@
-~ start
+~ start 
 
 if State.box_pressed == true
 	Des: There are some cute plushies in here. I'd take them with me [wait=1]but...

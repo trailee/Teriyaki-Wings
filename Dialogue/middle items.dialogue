@@ -1,4 +1,4 @@
-~ start
+~ start 
 
 if State.middle_pressed == true
 	Des: Just a whole bunch of fuel and junk for vehicles already rusted away.

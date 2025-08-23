@@ -1,4 +1,4 @@
-~ start
+~ start 
 
 if State.shelves_pressed == true:
 	Des: A shelf stacked with of canned food that would probably kill me on the spot. 

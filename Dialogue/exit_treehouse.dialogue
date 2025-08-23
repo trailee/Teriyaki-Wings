@@ -1,4 +1,4 @@
-~ start
+~ start 
 
 if State.box_pressed and State.chest_pressed and State.first_aid_pressed and State.middle_pressed and State.shelves_pressed == true:
 	set State.treehouse_exit = true
