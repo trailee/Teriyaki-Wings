@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://dpucmqka77gl5"]
+[gd_scene load_steps=47 format=4 uid="uid://dj1y0pwq87h3c"]
 
 [ext_resource type="Script" uid="uid://djcnbha04v5pf" path="res://SCENES/treehouse_scene.gd" id="1_0803f"]
 [ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="2_2fb3w"]
