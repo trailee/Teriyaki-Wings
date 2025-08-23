@@ -37,4 +37,4 @@ func _input(event):
 			$"../../Button_Pressed_Sound".play()
 			text = msg[msgindex]
 		else:
-			get_tree().change_scene_to_file("res://SCENES/treehouse_scene.tscn")
+			get_tree().change_scene_to_file("res://SCENES/working_treehouse.tscn")

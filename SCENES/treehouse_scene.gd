@@ -19,4 +19,4 @@ func _on_exit_body_exited(body: CharacterBody2D) -> void:
 
 func _on_dialogue_ended(_resource: DialogueResource) -> void:
 	if State.treehouse_exit == true:
-		get_tree().change_scene_to_file("res://SCENES/forest.tscn")
+		get_tree().change_scene_to_file("res://SCENES/WORKING_FOREST.tscn")
