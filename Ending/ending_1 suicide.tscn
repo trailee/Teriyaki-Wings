@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://dksojgy01ik7r"]
 
 [ext_resource type="Texture2D" uid="uid://ckjb7fdld8ihs" path="res://images/circus.jpg" id="1_1bopk"]
-[ext_resource type="PackedScene" uid="uid://bc81wf34wdty8" path="res://dr_paris.tscn" id="2_51ly4"]
+[ext_resource type="PackedScene" uid="uid://bc81wf34wdty8" path="res://Characters tscn/dr_paris.tscn" id="2_51ly4"]
 [ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="3_1bopk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7lit"]

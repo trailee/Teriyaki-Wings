@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="6_vgc5x"]
 [ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters tscn/Cassandra.tscn" id="7_g2q32"]
 [ext_resource type="Texture2D" uid="uid://cmnu7ofwf2f3k" path="res://Assets/characters/zon.png" id="8_5h4u5"]
-[ext_resource type="PackedScene" uid="uid://cedthxbbbbv8k" path="res://CaptainHelena.tscn" id="9_irlbd"]
+[ext_resource type="PackedScene" uid="uid://cedthxbbbbv8k" path="res://Characters tscn/CaptainHelena.tscn" id="9_irlbd"]
 [ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="10_kxwah"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2jo61"]

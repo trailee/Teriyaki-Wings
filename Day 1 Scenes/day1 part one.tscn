@@ -1,20 +1,20 @@
 [gd_scene load_steps=39 format=4 uid="uid://psfcyjhx8nan"]
 
-[ext_resource type="Script" uid="uid://djcnbha04v5pf" path="res://SCENES/treehouse_scene.gd" id="1_ext8e"]
-[ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="2_5gjjx"]
-[ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="3_tnmn1"]
-[ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="4_ffcls"]
-[ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="5_610mb"]
-[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="6_vqidc"]
-[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters tscn/Cassandra.tscn" id="7_5gjjx"]
-[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters tscn/Ophelia.tscn" id="7_tnmn1"]
-[ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="16_axkwt"]
-[ext_resource type="AudioStream" uid="uid://ca3tlw532xys5" path="res://Music_Teriyaki-Wings/Treehouse_BGM copy.wav" id="17_n1btd"]
+[ext_resource type="Script" uid="uid://djcnbha04v5pf" path="res://SCENES/treehouse_scene.gd" id="1_6wkmq"]
+[ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="2_cpk20"]
+[ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="3_7htue"]
+[ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="4_lbi2j"]
+[ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="5_5wle6"]
+[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="6_xc5xm"]
+[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters tscn/Ophelia.tscn" id="7_wtl1g"]
+[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters tscn/Cassandra.tscn" id="8_qoite"]
+[ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="9_lvonj"]
+[ext_resource type="AudioStream" uid="uid://ca3tlw532xys5" path="res://Music_Teriyaki-Wings/Treehouse_BGM copy.wav" id="10_likmx"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tb5ku"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7hcan"]
-texture = ExtResource("2_5gjjx")
+texture = ExtResource("2_cpk20")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -54,7 +54,7 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_7hcan")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gldua"]
-texture = ExtResource("3_tnmn1")
+texture = ExtResource("3_7htue")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -555,7 +555,7 @@ texture = ExtResource("3_tnmn1")
 sources/0 = SubResource("TileSetAtlasSource_gldua")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7tqk6"]
-texture = ExtResource("4_ffcls")
+texture = ExtResource("4_lbi2j")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1123,7 +1123,7 @@ texture = ExtResource("4_ffcls")
 sources/2 = SubResource("TileSetAtlasSource_7tqk6")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tgv5j"]
-texture = ExtResource("4_ffcls")
+texture = ExtResource("4_lbi2j")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1706,7 +1706,7 @@ texture = ExtResource("4_ffcls")
 sources/1 = SubResource("TileSetAtlasSource_tgv5j")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tb5ku"]
-texture = ExtResource("5_610mb")
+texture = ExtResource("5_5wle6")
 0:0/0 = 0
 1:0/0 = 0
 6:0/0 = 0
@@ -2324,11 +2324,11 @@ texture = ExtResource("5_610mb")
 sources/4 = SubResource("TileSetAtlasSource_tb5ku")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7hcan"]
-atlas = ExtResource("4_ffcls")
+atlas = ExtResource("4_lbi2j")
 region = Rect2(320, 480, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7tqk6"]
-atlas = ExtResource("4_ffcls")
+atlas = ExtResource("4_lbi2j")
 region = Rect2(288, 480, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tgv5j"]
@@ -2424,7 +2424,7 @@ func _process(delta: float) -> void:
 
 [node name="Treehouse Room with Ophelia+ Ophelia talking" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_ext8e")
+script = ExtResource("1_6wkmq")
 
 [node name="World Boundary" type="StaticBody2D" parent="."]
 position = Vector2(1, 97)
@@ -2486,7 +2486,7 @@ tile_set = SubResource("TileSet_gldua")
 
 [node name="Calendar" type="Sprite2D" parent="Background"]
 position = Vector2(81, -35)
-texture = ExtResource("4_ffcls")
+texture = ExtResource("4_lbi2j")
 region_enabled = true
 region_rect = Rect2(64, 0, 32, 32)
 
@@ -2508,7 +2508,7 @@ position = Vector2(-2, 33)
 
 [node name="First Aid Kit" type="Sprite2D" parent="Background/Eat Table"]
 position = Vector2(82, -27)
-texture = ExtResource("4_ffcls")
+texture = ExtResource("4_lbi2j")
 region_enabled = true
 region_rect = Rect2(128, 64, 16, 16)
 
@@ -2520,18 +2520,18 @@ shape = SubResource("RectangleShape2D_eabxg")
 visible = false
 position = Vector2(160, -35)
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("5_610mb")
+texture = ExtResource("5_5wle6")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(288, 224, 64, 32)
 
-[node name="Desdemona2D" parent="." instance=ExtResource("6_vqidc")]
+[node name="Desdemona2D" parent="." instance=ExtResource("6_xc5xm")]
 position = Vector2(3, 4)
 
-[node name="Ophelia2D" parent="." instance=ExtResource("7_tnmn1")]
+[node name="Ophelia2D" parent="." instance=ExtResource("7_wtl1g")]
 position = Vector2(34, 10)
 
-[node name="Cassandra2D" parent="." instance=ExtResource("7_5gjjx")]
+[node name="Cassandra2D" parent="." instance=ExtResource("8_qoite")]
 position = Vector2(-39, -12)
 
 [node name="Box on Table2" type="StaticBody2D" parent="."]
@@ -2609,7 +2609,7 @@ position = Vector2(-11, -3)
 modulate = Color(1, 1, 1, 0.541176)
 position = Vector2(-171.781, 66.0782)
 scale = Vector2(0.10833, 0.297075)
-texture = ExtResource("16_axkwt")
+texture = ExtResource("9_lvonj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
 position = Vector2(-204.781, 70.0782)
@@ -2633,7 +2633,7 @@ limit_bottom = 100
 
 [node name="Treehouse BGM" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(1, 0)
-stream = ExtResource("17_n1btd")
+stream = ExtResource("10_likmx")
 autoplay = true
 bus = &"BGM"
 
