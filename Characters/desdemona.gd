@@ -9,7 +9,9 @@ var SPEED = 75.0
 func _ready():
 	SceneManager.connect("spawn_player", self._on_spawn_player)
 
-func _on_spawn_player(direction: String):
+func _on_spawn_player(spawn_position: Vector2, direction: String):
+	global_position= spawn_position
+	
 	match direction:
 		"up":
 			$AnimatedSprite2D.play("Des_Idle")
