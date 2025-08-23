@@ -6,6 +6,6 @@ class_name NSceneTrigger extends Area2D
 @export var spawn_direction: String
 @onready var spawn_marker = $Spawn
 
-func _on_nscenetrigger_body_entered(body):
+func _on_body_entered(body):
 	if body is Player:
 		SceneManager.go_to_level(connected_scene, connected_exit)

@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=4 uid="uid://c4yps8tj1qqqx"]
+[gd_scene load_steps=15 format=4 uid="uid://c4yps8tj1qqqx"]
 
 [ext_resource type="Script" uid="uid://bs65si5oiybom" path="res://SCENES/deck.gd" id="1_2hxdk"]
 [ext_resource type="Texture2D" uid="uid://k1pbkg3j3pc3" path="res://images/4.png" id="1_kq4e5"]
-[ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="2_kq4e5"]
 [ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Desdemona_TREEHOUSE_.tscn" id="3_2hxdk"]
 [ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="3_kq4e5"]
 [ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="6_2hxdk"]
@@ -11692,9 +11691,6 @@ distance = -389.004
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o8geg"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqxj1"]
-size = Vector2(572, 1423.75)
-
 [node name="deck" type="Node2D"]
 script = ExtResource("1_2hxdk")
 
@@ -11848,37 +11844,32 @@ scale = Vector2(0.352113, 1)
 polygon = PackedVector2Array(-257, 255, -293, 259, -317, 267, -363, 287, -391, 313, -421, 361, -467, 324, -392, 217, -311, 212, -254, 246)
 
 [node name="Desdemona2D" parent="." instance=ExtResource("3_2hxdk")]
-position = Vector2(280, 64)
+position = Vector2(143, 57)
 scale = Vector2(0.125, 0.125)
 
 [node name="Exit_E" parent="." instance=ExtResource("3_kq4e5")]
-position = Vector2(950, 315)
+position = Vector2(297, 105)
 collision_layer = 0
 collision_mask = 128
-connected_scene = "hallway_scene"
 connected_exit = "D"
 spawn_direction = "up"
 
-[node name="Sprite2D" type="Sprite2D" parent="Exit_E"]
-modulate = Color(1, 1, 1, 0.411765)
-position = Vector2(129, 38)
-scale = Vector2(1, 1.93926)
-texture = ExtResource("2_kq4e5")
+[node name="CollisionShape2D" parent="Exit_E" index="1"]
+position = Vector2(155, 76)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit_E"]
-position = Vector2(261, -22)
-shape = SubResource("RectangleShape2D_rqxj1")
-
-[node name="Ophelia2D" parent="Exit_E" instance=ExtResource("6_2hxdk")]
-position = Vector2(614, -301)
-scale = Vector2(0.15, 0.15)
-
-[node name="Zon" parent="Exit_E" instance=ExtResource("7_o8geg")]
-position = Vector2(706, -300)
-scale = Vector2(0.15, 0.15)
+[node name="Sprite2D" parent="Exit_E/CollisionShape2D" index="0"]
+position = Vector2(341, -51)
 
 [node name="Cassandra2D" parent="." instance=ExtResource("8_2yyno")]
 position = Vector2(1785, -47)
+scale = Vector2(0.15, 0.15)
+
+[node name="Ophelia2D" parent="." instance=ExtResource("6_2hxdk")]
+position = Vector2(1542, 1)
+scale = Vector2(0.15, 0.15)
+
+[node name="Zon" parent="." instance=ExtResource("7_o8geg")]
+position = Vector2(1003, -195)
 scale = Vector2(0.15, 0.15)
 
 [node name="Yue_2D" parent="." instance=ExtResource("9_07gmr")]

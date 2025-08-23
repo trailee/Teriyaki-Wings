@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://bqi7voy4yrqu0"]
+[gd_scene load_steps=15 format=4 uid="uid://bqi7voy4yrqu0"]
 
 [ext_resource type="Script" uid="uid://dq0xgylpo6pes" path="res://SCENES/hallway_scene.gd" id="1_gnevq"]
 [ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="1_jnsla"]
@@ -686,9 +686,6 @@ size = Vector2(20, 38)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2l4f"]
 size = Vector2(23, 39)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_rntdp"]
-radius = 33.6155
-
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fuo34"]
 normal = Vector2(0.00116981, 0.999999)
 distance = -605.979
@@ -720,33 +717,23 @@ autoplay = true
 [node name="Cabin" parent="." instance=ExtResource("5_0cbbs")]
 position = Vector2(-17565, 12802)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cabin"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cabin"]
 position = Vector2(1.5, 9)
 shape = SubResource("RectangleShape2D_gac7c")
 
 [node name="Engine Room" parent="." instance=ExtResource("5_0cbbs")]
 position = Vector2(-17702, 12773)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Engine Room"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Engine Room"]
 position = Vector2(4, -9)
 shape = SubResource("RectangleShape2D_fuo34")
 
 [node name="Captain\'s Ofiice" parent="." instance=ExtResource("5_0cbbs")]
 position = Vector2(-17847, 12770)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Captain\'s Ofiice"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Captain\'s Ofiice"]
 position = Vector2(5.5, -6.5)
 shape = SubResource("RectangleShape2D_r2l4f")
-
-[node name="Deck_D" parent="." instance=ExtResource("5_0cbbs")]
-position = Vector2(-17949, 12802)
-connected_scene = "deck"
-connected_exit = "E"
-spawn_direction = "up"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Deck_D"]
-position = Vector2(-1, 4)
-shape = SubResource("CircleShape2D_rntdp")
 
 [node name="World Boundary" type="StaticBody2D" parent="."]
 position = Vector2(-17714, 12782)
@@ -771,5 +758,3 @@ position = Vector2(-222.535, 26)
 rotation = 1.5708
 scale = Vector2(3.01408, 1)
 shape = SubResource("WorldBoundaryShape2D_r2l4f")
-
-[editable path="Deck_D"]
