@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://jita46h6rd58"
+path="res://.godot/imported/talking to cassandra & Ophelia untitled.dialogue-15f8e094464feaca0ed68a559b96d9eb.tres"
+
+[deps]
+
+source_file="res://talking to cassandra & Ophelia untitled.dialogue"
+dest_files=["res://.godot/imported/talking to cassandra & Ophelia untitled.dialogue-15f8e094464feaca0ed68a559b96d9eb.tres"]
+
+[params]
+
+defaults=true

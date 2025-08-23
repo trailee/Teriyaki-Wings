@@ -1,18 +1,18 @@
-[gd_scene load_steps=31 format=4 uid="uid://bnljw0tnfql3l"]
+[gd_scene load_steps=31 format=4 uid="uid://dkg2hgd4pw3o3"]
 
-[ext_resource type="Texture2D" uid="uid://bwff5o35rx8pe" path="res://Backgrounds/Forest_tiles.png" id="1_lifw2"]
-[ext_resource type="Script" uid="uid://bnq0c7d7dedor" path="res://SCENES/forest.gd" id="1_lu80k"]
-[ext_resource type="Texture2D" uid="uid://dlu11ba07x610" path="res://Assets/Forest_assets.png" id="2_stcry"]
-[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters/Desdemona.tscn" id="3_ldum4"]
-[ext_resource type="AudioStream" uid="uid://cjhqvfcufe8xm" path="res://Music_Teriyaki-Wings/Forest_BGM copy.wav" id="3_mvm06"]
-[ext_resource type="AudioStream" uid="uid://daaypih34uft2" path="res://Music_Teriyaki-Wings/Forest_Fight_BGM copy.wav" id="4_vmuxp"]
-[ext_resource type="PackedScene" uid="uid://cpfcy7gqpdb7a" path="res://Zorans/MOB.tscn" id="6_t35nj"]
-[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="8_1fgce"]
-[ext_resource type="Resource" uid="uid://bnkyvf4jg2yvb" path="res://Dialogue/Forest_Exit.dialogue" id="9_1fgce"]
-[ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="10_xkdr2"]
+[ext_resource type="Script" uid="uid://bnq0c7d7dedor" path="res://SCENES/forest.gd" id="1_713mg"]
+[ext_resource type="Texture2D" uid="uid://bwff5o35rx8pe" path="res://Backgrounds/Forest_tiles.png" id="2_o0l0u"]
+[ext_resource type="Texture2D" uid="uid://dlu11ba07x610" path="res://Assets/Forest_assets.png" id="3_7inj0"]
+[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters/Desdemona.tscn" id="4_8d680"]
+[ext_resource type="PackedScene" uid="uid://cpfcy7gqpdb7a" path="res://Zorans/MOB.tscn" id="5_l7tmc"]
+[ext_resource type="AudioStream" uid="uid://cjhqvfcufe8xm" path="res://Music_Teriyaki-Wings/Forest_BGM copy.wav" id="6_aminy"]
+[ext_resource type="AudioStream" uid="uid://daaypih34uft2" path="res://Music_Teriyaki-Wings/Forest_Fight_BGM copy.wav" id="7_0x35c"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="8_1cwca"]
+[ext_resource type="Resource" uid="uid://bnkyvf4jg2yvb" path="res://Dialogue/Forest_Exit.dialogue" id="9_eqpuv"]
+[ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="10_ecng6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_stcry"]
-texture = ExtResource("1_lifw2")
+texture = ExtResource("2_o0l0u")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -248,7 +248,7 @@ point_count = 16
 size = Vector2(21.9398, 10.092)
 
 [node name="Forest" type="Node2D"]
-script = ExtResource("1_lu80k")
+script = ExtResource("1_713mg")
 
 [node name="Background" type="TileMapLayer" parent="."]
 position = Vector2(0, 8)
@@ -264,133 +264,133 @@ y_sort_enabled = true
 [node name="D1" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(-91, -159)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D2" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(373, -28)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D3" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(-631, 58)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D4" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(-508, -265)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D5" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(-292, -112)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D6" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(-90, 172)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D7" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(137, -93)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D8" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(323, 202)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D9" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(231, -193)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D10" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(-24, -248)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D11" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(637, -282)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D12" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(632, -77)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D13" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(578, 129)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D14" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(661, 218)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D15" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(345, 122)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D16" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(-406, 209)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D17" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(-140, -42)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D18" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(-445, -17)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D19" type="Sprite2D" parent="y-sorting objects/weeds"]
 y_sort_enabled = true
 position = Vector2(-223, -277)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
@@ -403,7 +403,7 @@ shape = SubResource("RectangleShape2D_mvm06")
 
 [node name="B1" type="Sprite2D" parent="y-sorting objects/Logs"]
 position = Vector2(369, -149)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(0, 256, 128, 64)
 
@@ -413,7 +413,7 @@ shape = SubResource("RectangleShape2D_mvm06")
 
 [node name="B2" type="Sprite2D" parent="y-sorting objects/Logs"]
 position = Vector2(130, 15)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(0, 256, 128, 64)
@@ -424,7 +424,7 @@ shape = SubResource("RectangleShape2D_mvm06")
 
 [node name="B3" type="Sprite2D" parent="y-sorting objects/Logs"]
 position = Vector2(-318, -192)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(0, 256, 128, 64)
 
@@ -434,7 +434,7 @@ shape = SubResource("RectangleShape2D_mvm06")
 
 [node name="B4" type="Sprite2D" parent="y-sorting objects/Logs"]
 position = Vector2(-553, 175)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(0, 256, 128, 64)
 
@@ -444,7 +444,7 @@ shape = SubResource("RectangleShape2D_mvm06")
 
 [node name="B5" type="Sprite2D" parent="y-sorting objects/Logs"]
 position = Vector2(117, 228)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(0, 256, 128, 64)
@@ -455,7 +455,7 @@ shape = SubResource("RectangleShape2D_mvm06")
 
 [node name="B6" type="Sprite2D" parent="y-sorting objects/Logs"]
 position = Vector2(487, 105)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(0, 256, 128, 64)
@@ -466,7 +466,7 @@ shape = SubResource("RectangleShape2D_mvm06")
 
 [node name="B7" type="Sprite2D" parent="y-sorting objects/Logs"]
 position = Vector2(-628, -241)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(0, 256, 128, 64)
@@ -481,7 +481,7 @@ shape = SubResource("CircleShape2D_vmuxp")
 
 [node name="C1" type="Sprite2D" parent="y-sorting objects/Bush1"]
 position = Vector2(-368, -48)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(0, 480, 64, 64)
 
@@ -492,7 +492,7 @@ shape = SubResource("CircleShape2D_vmuxp")
 
 [node name="C2" type="Sprite2D" parent="y-sorting objects/Bush1"]
 position = Vector2(221, -275)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(0, 480, 64, 64)
 
@@ -503,7 +503,7 @@ shape = SubResource("CircleShape2D_vmuxp")
 
 [node name="C3" type="Sprite2D" parent="y-sorting objects/Bush1"]
 position = Vector2(-478, 107)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(0, 480, 64, 64)
 
@@ -514,7 +514,7 @@ shape = SubResource("CircleShape2D_vmuxp")
 
 [node name="C4" type="Sprite2D" parent="y-sorting objects/Bush1"]
 position = Vector2(5, 67)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(0, 480, 64, 64)
 
@@ -525,7 +525,7 @@ shape = SubResource("CircleShape2D_vmuxp")
 
 [node name="C5" type="Sprite2D" parent="y-sorting objects/Bush1"]
 position = Vector2(427, 183)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(0, 480, 64, 64)
 
@@ -536,7 +536,7 @@ shape = SubResource("CircleShape2D_vmuxp")
 
 [node name="C6" type="Sprite2D" parent="y-sorting objects/Bush1"]
 position = Vector2(-328, -275)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(0, 480, 64, 64)
 
@@ -547,7 +547,7 @@ shape = SubResource("CircleShape2D_vmuxp")
 
 [node name="C7" type="Sprite2D" parent="y-sorting objects/Bush1"]
 position = Vector2(568, -219)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(0, 480, 64, 64)
 
@@ -558,7 +558,7 @@ shape = SubResource("CircleShape2D_vmuxp")
 
 [node name="C8" type="Sprite2D" parent="y-sorting objects/Bush1"]
 position = Vector2(-577, -248)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(0, 480, 64, 64)
 
@@ -569,7 +569,7 @@ shape = SubResource("RectangleShape2D_ldum4")
 
 [node name="C9" type="Sprite2D" parent="y-sorting objects/Bush1"]
 position = Vector2(-605, 169)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(0, 480, 64, 64)
 
@@ -580,7 +580,7 @@ shape = SubResource("RectangleShape2D_t35nj")
 
 [node name="C10" type="Sprite2D" parent="y-sorting objects/Bush1"]
 position = Vector2(164, 220)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(0, 480, 64, 64)
 
@@ -591,7 +591,7 @@ shape = SubResource("CircleShape2D_vmuxp")
 
 [node name="C11" type="Sprite2D" parent="y-sorting objects/Bush1"]
 position = Vector2(-159, -165)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(0, 480, 64, 64)
 
@@ -605,7 +605,7 @@ shape = SubResource("CircleShape2D_8im6m")
 
 [node name="F1" type="Sprite2D" parent="y-sorting objects/Bush2"]
 position = Vector2(-251, -139)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(64, 544, 48, 64)
 
@@ -616,7 +616,7 @@ shape = SubResource("RectangleShape2D_lu80k")
 
 [node name="F2" type="Sprite2D" parent="y-sorting objects/Bush2"]
 position = Vector2(-188, 126)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(64, 544, 48, 64)
 
@@ -627,7 +627,7 @@ shape = SubResource("CircleShape2D_8im6m")
 
 [node name="F3" type="Sprite2D" parent="y-sorting objects/Bush2"]
 position = Vector2(496, -112)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(64, 544, 48, 64)
 
@@ -638,7 +638,7 @@ shape = SubResource("CircleShape2D_8im6m")
 
 [node name="F4" type="Sprite2D" parent="y-sorting objects/Bush2"]
 position = Vector2(616, 185)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(64, 544, 48, 64)
 
@@ -649,7 +649,7 @@ shape = SubResource("CircleShape2D_8im6m")
 
 [node name="F5" type="Sprite2D" parent="y-sorting objects/Bush2"]
 position = Vector2(-696, 5)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(64, 544, 48, 64)
 
@@ -663,7 +663,7 @@ shape = SubResource("CircleShape2D_dvh0n")
 
 [node name="E1" type="Sprite2D" parent="y-sorting objects/Rocks"]
 position = Vector2(-12, -180)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(240, 480, 48, 48)
 
@@ -674,7 +674,7 @@ shape = SubResource("CircleShape2D_dvh0n")
 
 [node name="E2" type="Sprite2D" parent="y-sorting objects/Rocks"]
 position = Vector2(355, 160)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(240, 480, 48, 48)
 
@@ -685,7 +685,7 @@ shape = SubResource("RectangleShape2D_tdx4f")
 
 [node name="E3" type="Sprite2D" parent="y-sorting objects/Rocks"]
 position = Vector2(-502, 174)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(240, 480, 48, 48)
 
@@ -696,7 +696,7 @@ shape = SubResource("CircleShape2D_dvh0n")
 
 [node name="E4" type="Sprite2D" parent="y-sorting objects/Rocks"]
 position = Vector2(-546, -180)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(240, 480, 48, 48)
 
@@ -707,7 +707,7 @@ shape = SubResource("CircleShape2D_dvh0n")
 
 [node name="E5" type="Sprite2D" parent="y-sorting objects/Rocks"]
 position = Vector2(-567, 79)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(240, 480, 48, 48)
 
@@ -718,7 +718,7 @@ shape = SubResource("CircleShape2D_dvh0n")
 
 [node name="E6" type="Sprite2D" parent="y-sorting objects/Rocks"]
 position = Vector2(-131, -261)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(240, 480, 48, 48)
 
@@ -729,7 +729,7 @@ shape = SubResource("CircleShape2D_dvh0n")
 
 [node name="E7" type="Sprite2D" parent="y-sorting objects/Rocks"]
 position = Vector2(533, -276)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(240, 480, 48, 48)
 
@@ -740,7 +740,7 @@ shape = SubResource("CircleShape2D_dvh0n")
 
 [node name="E8" type="Sprite2D" parent="y-sorting objects/Rocks"]
 position = Vector2(267, -88)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(240, 480, 48, 48)
 
@@ -757,7 +757,7 @@ shape = SubResource("CircleShape2D_uq144")
 [node name="A1" type="Sprite2D" parent="y-sorting objects/Tree1"]
 position = Vector2(149.163, -166.566)
 scale = Vector2(0.458964, 0.527106)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(160, 32, 192, 208)
 
@@ -769,7 +769,7 @@ shape = SubResource("CircleShape2D_uq144")
 [node name="A2" type="Sprite2D" parent="y-sorting objects/Tree1"]
 position = Vector2(-230.4, -109.111)
 scale = Vector2(0.458964, 0.527106)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(160, 32, 192, 208)
 
@@ -781,7 +781,7 @@ shape = SubResource("RectangleShape2D_veqqf")
 [node name="A3" type="Sprite2D" parent="y-sorting objects/Tree1"]
 position = Vector2(73.8932, 63.2527)
 scale = Vector2(0.458964, 0.527106)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(160, 32, 192, 208)
 
@@ -793,11 +793,11 @@ shape = SubResource("RectangleShape2D_1fgce")
 [node name="A4" type="Sprite2D" parent="y-sorting objects/Tree1"]
 position = Vector2(-136.312, 32.1535)
 scale = Vector2(0.458964, 0.527106)
-texture = ExtResource("2_stcry")
+texture = ExtResource("3_7inj0")
 region_enabled = true
 region_rect = Rect2(160, 32, 192, 208)
 
-[node name="Desdemona2D2" parent="y-sorting objects" instance=ExtResource("3_ldum4")]
+[node name="Desdemona2D2" parent="y-sorting objects" instance=ExtResource("4_8d680")]
 position = Vector2(542, -12)
 
 [node name="Camera (on player)" type="Camera2D" parent="y-sorting objects/Desdemona2D2"]
@@ -809,19 +809,19 @@ limit_top = -410
 limit_right = 700
 limit_bottom = 410
 
-[node name="MOB" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
+[node name="MOB" parent="y-sorting objects" instance=ExtResource("5_l7tmc")]
 position = Vector2(187, -182)
 
-[node name="MOB2" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
+[node name="MOB2" parent="y-sorting objects" instance=ExtResource("5_l7tmc")]
 position = Vector2(50, 142)
 
-[node name="MOB3" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
-position = Vector2(579, -276)
+[node name="MOB3" parent="y-sorting objects" instance=ExtResource("5_l7tmc")]
+position = Vector2(-77, -262)
 
-[node name="MOB4" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
+[node name="MOB4" parent="y-sorting objects" instance=ExtResource("5_l7tmc")]
 position = Vector2(-435, 230)
 
-[node name="MOB5" parent="y-sorting objects" instance=ExtResource("6_t35nj")]
+[node name="MOB5" parent="y-sorting objects" instance=ExtResource("5_l7tmc")]
 position = Vector2(-198, -257)
 
 [node name="World Boundary" type="StaticBody2D" parent="."]
@@ -862,12 +862,12 @@ script = SubResource("GDScript_mvm06")
 
 [node name="Forest BGM" type="AudioStreamPlayer2D" parent="Audio"]
 position = Vector2(86, -287)
-stream = ExtResource("3_mvm06")
+stream = ExtResource("6_aminy")
 autoplay = true
 
 [node name="Fight Forest BGM" type="AudioStreamPlayer2D" parent="Audio"]
 position = Vector2(-3, 5)
-stream = ExtResource("4_vmuxp")
+stream = ExtResource("7_0x35c")
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(23, -63)
@@ -882,10 +882,10 @@ rotation = 1.55068
 position = Vector2(-396, -236)
 scale = Vector2(2, 2)
 
-[node name="Actionable" parent="Exit" instance=ExtResource("8_1fgce")]
+[node name="Actionable" parent="Exit" instance=ExtResource("8_1cwca")]
 position = Vector2(16, 32)
 scale = Vector2(0.837964, 0.520561)
-dialogue_resource = ExtResource("9_1fgce")
+dialogue_resource = ExtResource("9_eqpuv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit/Actionable"]
 position = Vector2(-224.353, 72.9982)
@@ -896,7 +896,7 @@ shape = SubResource("RectangleShape2D_g158i")
 modulate = Color(1, 1, 1, 0.541176)
 position = Vector2(-171.781, 66.0782)
 scale = Vector2(0.10833, 0.297075)
-texture = ExtResource("10_xkdr2")
+texture = ExtResource("10_ecng6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
 position = Vector2(-204.781, 70.0782)
