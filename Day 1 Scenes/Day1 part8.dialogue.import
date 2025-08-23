@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bspf8t14tkv2a"
+path="res://.godot/imported/Day1 part8.dialogue-962df85154d2eb8c52118a46338cb1fa.tres"
+
+[deps]
+
+source_file="res://Day 1 Scenes/Day1 part8.dialogue"
+dest_files=["res://.godot/imported/Day1 part8.dialogue-962df85154d2eb8c52118a46338cb1fa.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://cedthxbbbbv8k"]
+
+[ext_resource type="Texture2D" uid="uid://xrjum8b4pmya" path="res://Assets/characters/dr helena (2).png" id="1_l71fy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hoou7"]
+atlas = ExtResource("1_l71fy")
+region = Rect2(0, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx2mg"]
+atlas = ExtResource("1_l71fy")
+region = Rect2(540, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubsfw"]
+atlas = ExtResource("1_l71fy")
+region = Rect2(1080, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_st1e4"]
+atlas = ExtResource("1_l71fy")
+region = Rect2(1620, 0, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jhkc2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hoou7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx2mg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubsfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_st1e4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bowv2"]
+size = Vector2(37.75, 60.25)
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(288.5, 397.5)
+scale = Vector2(0.0611111, 0.0677778)
+sprite_frames = SubResource("SpriteFrames_jhkc2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(287.125, 396.875)
+shape = SubResource("RectangleShape2D_bowv2")
