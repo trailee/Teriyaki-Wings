@@ -12953,7 +12953,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="deck day 4" type="Node2D"]
+[node name="deck day 2" type="Node2D"]
 position = Vector2(960, 340)
 
 [node name="water" type="TileMapLayer" parent="."]
