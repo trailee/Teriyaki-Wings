@@ -863,11 +863,11 @@ script = SubResource("GDScript_mvm06")
 [node name="Forest BGM" type="AudioStreamPlayer2D" parent="Audio"]
 position = Vector2(86, -287)
 stream = ExtResource("6_aminy")
-autoplay = true
 
 [node name="Fight Forest BGM" type="AudioStreamPlayer2D" parent="Audio"]
 position = Vector2(-3, 5)
 stream = ExtResource("7_0x35c")
+autoplay = true
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(23, -63)
