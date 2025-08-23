@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cqdfm14nvo1w" path="res://Backgrounds/Ruin Tilesets/TX Plant.png" id="4_eexrm"]
 [ext_resource type="Texture2D" uid="uid://caq41jd8860u6" path="res://Backgrounds/Ruin Tilesets/TX Props.png" id="5_mlecl"]
 [ext_resource type="AudioStream" uid="uid://durot3wiktxle" path="res://Music_Teriyaki-Wings/Ruins_BGM copy.wav" id="6_81nij"]
-[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="6_be64e"]
+[ext_resource type="PackedScene" path="res://Characters tscn/Desdemona_Normal.tscn" id="6_be64e"]
 [ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters tscn/Cassandra.tscn" id="7_pseft"]
 [ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters tscn/yue.tscn" id="8_nbquo"]
 [ext_resource type="PackedScene" uid="uid://cxsu3b7eyj45l" path="res://Characters tscn/Zade.tscn" id="9_evh76"]

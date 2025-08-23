@@ -1,9 +1,9 @@
-[gd_scene load_steps=31 format=4 uid="uid://7wclvg7a5abm"]
+[gd_scene load_steps=31 format=4 uid="uid://bnljw0tnfql3l"]
 
 [ext_resource type="Texture2D" uid="uid://bwff5o35rx8pe" path="res://Backgrounds/Forest_tiles.png" id="1_lifw2"]
-[ext_resource type="Script" uid="uid://bnq0c7d7dedor" path="res://SCENES/forest.gd" id="1_lu80k"]
+[ext_resource type="Script" path="res://SCENES/forest.gd" id="1_lu80k"]
 [ext_resource type="Texture2D" uid="uid://dlu11ba07x610" path="res://Assets/Forest_assets.png" id="2_stcry"]
-[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="3_ldum4"]
+[ext_resource type="PackedScene" path="res://Characters tscn/Desdemona.tscn" id="3_ldum4"]
 [ext_resource type="AudioStream" uid="uid://cjhqvfcufe8xm" path="res://Music_Teriyaki-Wings/Forest_BGM copy.wav" id="3_mvm06"]
 [ext_resource type="AudioStream" uid="uid://daaypih34uft2" path="res://Music_Teriyaki-Wings/Forest_Fight_BGM copy.wav" id="4_vmuxp"]
 [ext_resource type="PackedScene" uid="uid://cpfcy7gqpdb7a" path="res://Zorans/MOB.tscn" id="6_t35nj"]
@@ -797,12 +797,12 @@ texture = ExtResource("2_stcry")
 region_enabled = true
 region_rect = Rect2(160, 32, 192, 208)
 
-[node name="Desdemona2D" parent="y-sorting objects" instance=ExtResource("3_ldum4")]
-position = Vector2(529, -7)
+[node name="Desdemona2D2" parent="y-sorting objects" instance=ExtResource("3_ldum4")]
+position = Vector2(542, -12)
 
-[node name="Camera (on player)" type="Camera2D" parent="y-sorting objects/Desdemona2D"]
-position = Vector2(236.363, 200)
-scale = Vector2(1151.97, 741.989)
+[node name="Camera (on player)" type="Camera2D" parent="y-sorting objects/Desdemona2D2"]
+position = Vector2(-36.3635, 54.5452)
+scale = Vector2(20944.9, 13490.7)
 zoom = Vector2(2.5, 2.5)
 limit_left = -735
 limit_top = -410

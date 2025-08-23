@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var health = 5
 
-@onready var player: Player = $"../Desdemona2D"
+@onready var player: Player = $"../Desdemona2D2"
 
 func _physics_process(_delta: float) -> void:
 	var direction = global_position.direction_to(player.global_position)
