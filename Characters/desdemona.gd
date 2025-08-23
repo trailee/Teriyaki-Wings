@@ -6,6 +6,15 @@ class_name Player extends CharacterBody2D
 
 var SPEED = 75.0
 
+func _ready():
+	SceneManager.connect("spawn_player", self._on_spawn_player)
+
+func _on_spawn_player(direction: String):
+	match direction:
+		"up":
+			$AnimatedSprite2D.play("Des_Idle")
+
+
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_released("ui_accept"):
 		var actionables = actionable_finder.get_overlapping_areas()
