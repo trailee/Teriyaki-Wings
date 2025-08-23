@@ -3,6 +3,7 @@
 if State.first_aid_pressed == true
 	Des: Nothing else here to take. 
 	Des: This table could use a clean though.
+	=> END!
 else
 	Des: I’d never forgive myself if I forgot to bring this. 
 	set State.first_aid_pressed = true

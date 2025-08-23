@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bqof2u1lv3cwx" path="res://Backgrounds/Cute_Fantasy_Free/Tiles/Water_Tile.png" id="1_pwsj6"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="2_kq4e5"]
-[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="3_t1wuy"]
+[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Des_TREEHOUSE.tscn" id="3_t1wuy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f0yuw"]
 texture = ExtResource("1_pwsj6")
