@@ -3,10 +3,10 @@
 if State.shelves_pressed == true:
 	Des: A shelf stacked with of canned food that would probably kill me on the spot. 
 	Des: [speed=.5]Maybe when I’m desperate enough I’ll... [wait=1][speed=0.25]fetch a bite.
+	=> END
 else
-	set State.shelves_pressed = true
 	Des: [speed=0.5]Let’s see… Anything useful here? [wait=1]
+	set State.shelves_pressed = true
 	Des: Oh hey, a bottle of water! ...[wait=1] Now I don't have to shower in my own piss.
 	[wave]Obtained CLEAN BOTTLE OF WATER.
-	
-=> END
+	=> END
