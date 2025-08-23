@@ -5,8 +5,8 @@ var spawn_door: String = ""
 signal spawn_player(position: Vector2, direction: String)
 
 var scenes = {
-	"hallway_scene": preload("res://SCENES/hallway_scene.tscn"),
-	"deck": preload("res://scenes/deck.tscn"),
+	"cabin_day_1": preload("res://Characters/cabin_day_1_scene.tscn"),
+	"deck": preload("res://SCENES/deck.tscn"),
 	
 	# Add your other scenes here
 }
