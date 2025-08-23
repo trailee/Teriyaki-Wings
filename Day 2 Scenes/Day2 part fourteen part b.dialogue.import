@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dmnm6c7obn810"
+path="res://.godot/imported/Day2 part fourteen part b.dialogue-320a0a2cf8c228da399515a0b28b23dc.tres"
+
+[deps]
+
+source_file="res://Day 2 Scenes/Day2 part fourteen part b.dialogue"
+dest_files=["res://.godot/imported/Day2 part fourteen part b.dialogue-320a0a2cf8c228da399515a0b28b23dc.tres"]
+
+[params]
+
+defaults=true
