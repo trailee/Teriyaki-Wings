@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://lmb7piihinbi"
+path="res://.godot/imported/Day 2 part eight.dialogue-60a206cb43d3819339b203100d6c4111.tres"
+
+[deps]
+
+source_file="res://Day 2 Scenes/Day 2 part eight.dialogue"
+dest_files=["res://.godot/imported/Day 2 part eight.dialogue-60a206cb43d3819339b203100d6c4111.tres"]
+
+[params]
+
+defaults=true

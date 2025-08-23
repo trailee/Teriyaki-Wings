@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dskci7jfdkiqp"
+path="res://.godot/imported/Day2 part three.dialogue-55c7dd79549b498fc3dc25381e8254cb.tres"
+
+[deps]
+
+source_file="res://Day 2 Scenes/Day2 part three.dialogue"
+dest_files=["res://.godot/imported/Day2 part three.dialogue-55c7dd79549b498fc3dc25381e8254cb.tres"]
+
+[params]
+
+defaults=true

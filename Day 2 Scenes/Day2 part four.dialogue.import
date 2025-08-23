@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dr7r2awapah67"
+path="res://.godot/imported/Day2 part four.dialogue-ab279dc7b9c97238f1e412868c9a059c.tres"
+
+[deps]
+
+source_file="res://Day 2 Scenes/Day2 part four.dialogue"
+dest_files=["res://.godot/imported/Day2 part four.dialogue-ab279dc7b9c97238f1e412868c9a059c.tres"]
+
+[params]
+
+defaults=true
