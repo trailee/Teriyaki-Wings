@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bgbx8p26eyvoy"
+path="res://.godot/imported/Day 2 part thirteen.dialogue-52d3e61056406694e1defdb889478ada.tres"
+
+[deps]
+
+source_file="res://Day 2 part thirteen.dialogue"
+dest_files=["res://.godot/imported/Day 2 part thirteen.dialogue-52d3e61056406694e1defdb889478ada.tres"]
+
+[params]
+
+defaults=true

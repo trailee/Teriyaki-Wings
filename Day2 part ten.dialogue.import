@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://csv7amisuqvbt"
+path="res://.godot/imported/Day2 part ten.dialogue-22ec1d41d577afc9f5bef989121ee5e2.tres"
+
+[deps]
+
+source_file="res://Day2 part ten.dialogue"
+dest_files=["res://.godot/imported/Day2 part ten.dialogue-22ec1d41d577afc9f5bef989121ee5e2.tres"]
+
+[params]
+
+defaults=true
