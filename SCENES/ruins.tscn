@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://b6houqocenltn"]
+[gd_scene load_steps=40 format=4 uid="uid://b6houqocenltn"]
 
 [ext_resource type="Texture2D" uid="uid://2no8aarhmwhm" path="res://Backgrounds/Ruin Tilesets/TX Tileset Grass.png" id="1_no63g"]
 [ext_resource type="Texture2D" uid="uid://c2yo2ay6u8pvp" path="res://Backgrounds/Ruin Tilesets/TX Tileset Wall.png" id="2_wi7vb"]
@@ -2301,22 +2301,13 @@ sources/0 = SubResource("TileSetAtlasSource_vtkpe")
 size = Vector2(660.5, 168)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81nij"]
-size = Vector2(36, 68)
+size = Vector2(29, 59)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lapbk"]
-size = Vector2(43, 84)
+size = Vector2(32, 73)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aacsh"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_vtkpe"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_chs52"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_be64e"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_pseft"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_nbquo"]
+size = Vector2(15.7801, 19.9931)
 
 [sub_resource type="Animation" id="Animation_gldua"]
 length = 0.001
@@ -2424,19 +2415,26 @@ position = Vector2(-151, 1)
 tile_map_data = PackedByteArray("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")
 tile_set = SubResource("TileSet_chs52")
 
-[node name="Desdemona2D" parent="." instance=ExtResource("6_vwbwo")]
-position = Vector2(-28, 8)
+[node name="y-sorting" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="Cassandra2D" parent="." instance=ExtResource("7_x5ip6")]
-position = Vector2(-52, -10)
+[node name="Cassandra2D" parent="y-sorting" instance=ExtResource("7_x5ip6")]
+y_sort_enabled = true
+position = Vector2(-63, -16)
 
-[node name="Yue_2D" parent="." instance=ExtResource("8_3w2gd")]
+[node name="Yue_2D" parent="y-sorting" instance=ExtResource("8_3w2gd")]
+y_sort_enabled = true
 position = Vector2(50, 20)
 
-[node name="Zane_2D" parent="." instance=ExtResource("9_7kuf4")]
+[node name="Zane_2D" parent="y-sorting" instance=ExtResource("9_7kuf4")]
+y_sort_enabled = true
 
-[node name="Ophelia2D" parent="." instance=ExtResource("10_chgke")]
+[node name="Ophelia2D" parent="y-sorting" instance=ExtResource("10_chgke")]
+y_sort_enabled = true
 position = Vector2(11, 24)
+
+[node name="Desdemona2D" parent="y-sorting" instance=ExtResource("6_vwbwo")]
+position = Vector2(-40, 8)
 
 [node name="Camera2D (not on player)" type="Camera2D" parent="."]
 position = Vector2(-6, -31)
@@ -2473,11 +2471,11 @@ position = Vector2(-0.25, -166)
 shape = SubResource("RectangleShape2D_mlecl")
 
 [node name="Props" type="CollisionShape2D" parent="Solid Structures"]
-position = Vector2(184, 82)
+position = Vector2(187.5, 77.5)
 shape = SubResource("RectangleShape2D_81nij")
 
 [node name="Props2" type="CollisionShape2D" parent="Solid Structures"]
-position = Vector2(-166, -89)
+position = Vector2(-165, -94.5)
 shape = SubResource("RectangleShape2D_lapbk")
 
 [node name="Props3" type="CollisionShape2D" parent="Solid Structures"]
@@ -2485,62 +2483,60 @@ position = Vector2(170, -92)
 shape = SubResource("RectangleShape2D_lapbk")
 
 [node name="Props4" type="CollisionShape2D" parent="Solid Structures"]
-position = Vector2(-71, -75)
+position = Vector2(-70, -75)
 shape = SubResource("RectangleShape2D_lapbk")
 
 [node name="Props5" type="CollisionShape2D" parent="Solid Structures"]
-position = Vector2(-230, 73)
+position = Vector2(-229, 68.0022)
 scale = Vector2(1.55706, 1.90087)
 shape = SubResource("RectangleShape2D_aacsh")
 
-[node name="Rocks" type="CollisionShape2D" parent="Solid Structures"]
-position = Vector2(88, 79)
-scale = Vector2(1.55706, 1.90087)
-shape = SubResource("CircleShape2D_vtkpe")
+[node name="Rock" type="CollisionPolygon2D" parent="Solid Structures"]
+polygon = PackedVector2Array(91, 62, 82, 65, 78, 76, 77, 83, 83, 89, 92, 91, 96, 91, 103, 88, 105, 81, 107, 77, 105, 72, 102, 65, 95, 62)
 
-[node name="Rocks2" type="CollisionShape2D" parent="Solid Structures"]
-position = Vector2(200, -65)
-scale = Vector2(1.55706, 1.90087)
-shape = SubResource("CircleShape2D_chs52")
+[node name="Rock2" type="CollisionPolygon2D" parent="Solid Structures"]
+position = Vector2(110, -147)
+polygon = PackedVector2Array(91, 62, 82, 65, 78, 76, 77, 83, 83, 89, 92, 91, 96, 91, 103, 88, 105, 81, 107, 77, 105, 72, 102, 65, 95, 62)
 
-[node name="Rocks3" type="CollisionShape2D" parent="Solid Structures"]
-position = Vector2(-248, -62)
-shape = SubResource("CircleShape2D_be64e")
+[node name="Rock3" type="CollisionPolygon2D" parent="Solid Structures"]
+position = Vector2(-274, -29)
+scale = Vector2(1.88354, 1.59711)
+polygon = PackedVector2Array(91, 62, 82, 65, 78, 76, 77, 83, 83, 89, 92, 91, 96, 91, 103, 88, 105, 81, 107, 77, 105, 72, 102, 65, 95, 62)
 
-[node name="Rocks4" type="CollisionShape2D" parent="Solid Structures"]
-position = Vector2(-105, 100)
-scale = Vector2(3.08339, 2.73684)
-shape = SubResource("CircleShape2D_pseft")
+[node name="Bush" type="CollisionPolygon2D" parent="Solid Structures"]
+position = Vector2(100, -47)
+scale = Vector2(1.38276, 1.30822)
+polygon = PackedVector2Array(91, 62, 82, 65, 78, 76, 77, 83, 83, 89, 92, 91, 96, 91, 103, 88, 105, 81, 107, 77, 105, 72, 102, 65, 95, 62)
 
-[node name="Bushes" type="CollisionShape2D" parent="Solid Structures"]
-position = Vector2(32, 76)
-scale = Vector2(2.42993, 2.25505)
-shape = SubResource("CircleShape2D_nbquo")
+[node name="Bush2" type="CollisionPolygon2D" parent="Solid Structures"]
+position = Vector2(-398, -47)
+scale = Vector2(1.38276, 1.30822)
+polygon = PackedVector2Array(91, 62, 82, 65, 78, 76, 77, 83, 83, 89, 92, 91, 96, 91, 103, 88, 105, 81, 107, 77, 105, 72, 102, 65, 95, 62)
 
-[node name="Bushes2" type="CollisionShape2D" parent="Solid Structures"]
-position = Vector2(272, 109)
-scale = Vector2(2.42993, 2.25505)
-shape = SubResource("CircleShape2D_nbquo")
+[node name="Bush3" type="CollisionPolygon2D" parent="Solid Structures"]
+position = Vector2(-314, 2)
+scale = Vector2(1.70781, 1.52474)
+polygon = PackedVector2Array(91, 62, 82, 65, 78, 76, 77, 83, 83, 89, 92, 91, 96, 91, 103, 88, 105, 81, 107, 77, 105, 72, 102, 65, 95, 62)
 
-[node name="Bushes3" type="CollisionShape2D" parent="Solid Structures"]
-position = Vector2(224, 60)
-scale = Vector2(2.42993, 2.25505)
-shape = SubResource("CircleShape2D_nbquo")
+[node name="Bush4" type="CollisionPolygon2D" parent="Solid Structures"]
+position = Vector2(-121, -48)
+scale = Vector2(1.70781, 1.52474)
+polygon = PackedVector2Array(91, 62, 82, 65, 78, 76, 77, 83, 83, 89, 92, 91, 96, 91, 103, 88, 105, 81, 107, 77, 105, 72, 102, 65, 95, 62)
 
-[node name="Bushes4" type="CollisionShape2D" parent="Solid Structures"]
-position = Vector2(-161, 126)
-scale = Vector2(2.42993, 2.25505)
-shape = SubResource("CircleShape2D_nbquo")
+[node name="Bush5" type="CollisionPolygon2D" parent="Solid Structures"]
+position = Vector2(-380, -209)
+scale = Vector2(1.70781, 1.52474)
+polygon = PackedVector2Array(91, 62, 82, 65, 78, 76, 77, 83, 83, 89, 92, 91, 96, 91, 103, 88, 105, 81, 107, 77, 105, 72, 102, 65, 95, 62)
 
-[node name="Bushes5" type="CollisionShape2D" parent="Solid Structures"]
-position = Vector2(-272, 63)
-scale = Vector2(2.42993, 2.25505)
-shape = SubResource("CircleShape2D_nbquo")
+[node name="Bush6" type="CollisionPolygon2D" parent="Solid Structures"]
+position = Vector2(-43, -218)
+scale = Vector2(1.70781, 1.52474)
+polygon = PackedVector2Array(91, 62, 82, 65, 78, 76, 77, 83, 83, 89, 92, 91, 96, 91, 103, 88, 105, 81, 107, 77, 105, 72, 102, 65, 95, 62)
 
-[node name="Bushes6" type="CollisionShape2D" parent="Solid Structures"]
-position = Vector2(-225, -82)
-scale = Vector2(2.42993, 2.25505)
-shape = SubResource("CircleShape2D_nbquo")
+[node name="Bush7" type="CollisionPolygon2D" parent="Solid Structures"]
+position = Vector2(119, -21)
+scale = Vector2(1.70781, 1.52474)
+polygon = PackedVector2Array(91, 62, 82, 65, 78, 76, 77, 83, 83, 89, 92, 91, 96, 91, 103, 88, 105, 81, 107, 77, 105, 72, 102, 65, 95, 62)
 
 [node name="Ruins BGM" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(48, -6)
