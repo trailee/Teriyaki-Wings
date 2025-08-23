@@ -738,10 +738,13 @@ position = Vector2(-17847, 12770)
 position = Vector2(5.5, -6.5)
 shape = SubResource("RectangleShape2D_r2l4f")
 
-[node name="Deck" parent="." instance=ExtResource("5_0cbbs")]
+[node name="Deck_D" parent="." instance=ExtResource("5_0cbbs")]
 position = Vector2(-17949, 12802)
+connected_scene = "deck"
+connected_exit = "E"
+spawn_direction = "up"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Deck"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deck_D"]
 position = Vector2(-1, 4)
 shape = SubResource("CircleShape2D_rntdp")
 
@@ -768,3 +771,5 @@ position = Vector2(-222.535, 26)
 rotation = 1.5708
 scale = Vector2(3.01408, 1)
 shape = SubResource("WorldBoundaryShape2D_r2l4f")
+
+[editable path="Deck_D"]

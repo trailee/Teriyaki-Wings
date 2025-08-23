@@ -1,5 +1,6 @@
-[gd_scene load_steps=35 format=4 uid="uid://c4yps8tj1qqqx"]
+[gd_scene load_steps=36 format=4 uid="uid://c4yps8tj1qqqx"]
 
+[ext_resource type="Script" uid="uid://bs65si5oiybom" path="res://SCENES/deck.gd" id="1_2hxdk"]
 [ext_resource type="Texture2D" uid="uid://k1pbkg3j3pc3" path="res://images/4.png" id="1_kq4e5"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="2_kq4e5"]
 [ext_resource type="Texture2D" uid="uid://bbvrqkbsr0uru" path="res://Assets/characters/yeu.png" id="3_58wki"]
@@ -11843,6 +11844,7 @@ animations = [{
 
 [node name="deck" type="Node2D"]
 position = Vector2(960, 340)
+script = ExtResource("1_2hxdk")
 
 [node name="water" type="TileMapLayer" parent="."]
 position = Vector2(-165, -20)
@@ -11990,33 +11992,39 @@ sprite_frames = SubResource("SpriteFrames_d5vb0")
 autoplay = "default"
 frame_progress = 0.625059
 
-[node name="nscenetrigger" parent="." instance=ExtResource("3_kq4e5")]
-position = Vector2(800, 525)
+[node name="Exit_E" parent="." instance=ExtResource("3_kq4e5")]
+position = Vector2(914, 522)
 collision_layer = 0
 collision_mask = 128
+connected_scene = "hallway_scene"
+connected_exit = "D"
+spawn_direction = "up"
 
-[node name="Sprite2D" type="Sprite2D" parent="nscenetrigger"]
+[node name="Marker2D" parent="Exit_E" index="0"]
+position = Vector2(-79, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Exit_E"]
 modulate = Color(1, 1, 1, 0.411765)
 position = Vector2(129, 38)
 scale = Vector2(1, 1.93926)
 texture = ExtResource("2_kq4e5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="nscenetrigger"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit_E"]
 position = Vector2(261, -22)
 shape = SubResource("RectangleShape2D_rqxj1")
 
-[node name="ophelia" type="CharacterBody2D" parent="nscenetrigger"]
+[node name="ophelia" type="CharacterBody2D" parent="Exit_E"]
 position = Vector2(-800, -525)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="nscenetrigger/ophelia"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Exit_E/ophelia"]
 position = Vector2(2533, 619)
 scale = Vector2(0.338889, 0.291111)
 sprite_frames = SubResource("SpriteFrames_q7pg7")
 
-[node name="zon" type="CharacterBody2D" parent="nscenetrigger"]
+[node name="zon" type="CharacterBody2D" parent="Exit_E"]
 position = Vector2(-800, -525)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="nscenetrigger/zon"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Exit_E/zon"]
 position = Vector2(2306, 614)
 scale = Vector2(0.325926, 0.27)
 sprite_frames = SubResource("SpriteFrames_thcf6")
@@ -12027,3 +12035,5 @@ sprite_frames = SubResource("SpriteFrames_thcf6")
 position = Vector2(2231, 1021)
 scale = Vector2(0.34537, 0.275)
 sprite_frames = SubResource("SpriteFrames_k5ngq")
+
+[editable path="Exit_E"]
