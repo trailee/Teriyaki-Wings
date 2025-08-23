@@ -77,12 +77,11 @@ scale = Vector2(0.055, 0.055)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(46.8182, -34.0909)
-scale = Vector2(1.1734, 0.924243)
 sprite_frames = SubResource("SpriteFrames_7i17q")
-animation = &"Yue_WalkLeft"
+animation = &"Yue_Idle"
 autoplay = "Yue_Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(12.5, -169.318)
+position = Vector2(72.7273, -54.5454)
 scale = Vector2(29.3028, 47.5692)
 shape = SubResource("RectangleShape2D_xoc2s")
