@@ -1,19 +1,19 @@
 [gd_scene load_steps=32 format=4 uid="uid://bmlndj3v5e38j"]
 
-[ext_resource type="Texture2D" uid="uid://bmh2ujcp37hr2" path="res://Backgrounds/TopDownHouse_FurnitureState1.png" id="2_03ltp"]
-[ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="2_f1naw"]
-[ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="3_03ltp"]
-[ext_resource type="Texture2D" uid="uid://isx4afigpbvu" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Chicken.png" id="3_6tg0a"]
-[ext_resource type="Texture2D" uid="uid://d2avd6wb4gm5v" path="res://images/FreePixelSurvivalItemsPack.png" id="3_en6fd"]
-[ext_resource type="Texture2D" uid="uid://d35iynot1wsmv" path="res://Backgrounds/Cute_Fantasy_Free/Animals/PigIdle.png" id="4_cbk4g"]
-[ext_resource type="Texture2D" uid="uid://de6n3ussjqrv6" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Cow/Cow.png" id="6_cbk4g"]
-[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="7_ih4sl"]
-[ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters tscn/yue.tscn" id="8_f5rvq"]
-[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters tscn/Cassandra.tscn" id="8_wwftm"]
-[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters tscn/Ophelia.tscn" id="10_h2wx8"]
+[ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="1_l1ktc"]
+[ext_resource type="Texture2D" uid="uid://bmh2ujcp37hr2" path="res://Backgrounds/TopDownHouse_FurnitureState1.png" id="2_1keju"]
+[ext_resource type="Texture2D" uid="uid://isx4afigpbvu" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Chicken.png" id="3_g706r"]
+[ext_resource type="Texture2D" uid="uid://d35iynot1wsmv" path="res://Backgrounds/Cute_Fantasy_Free/Animals/PigIdle.png" id="4_xt7fs"]
+[ext_resource type="Texture2D" uid="uid://d2avd6wb4gm5v" path="res://images/FreePixelSurvivalItemsPack.png" id="5_073bj"]
+[ext_resource type="Texture2D" uid="uid://de6n3ussjqrv6" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Cow/Cow.png" id="6_njmhr"]
+[ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters/yue.tscn" id="7_krudh"]
+[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="8_ipagn"]
+[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="9_qqn4l"]
+[ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="10_rksxp"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Desdemona_TREEHOUSE_.tscn" id="11_cnvwq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1naw"]
-texture = ExtResource("2_f1naw")
+texture = ExtResource("1_l1ktc")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -183,7 +183,7 @@ texture = ExtResource("2_f1naw")
 sources/0 = SubResource("TileSetAtlasSource_f1naw")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_en6fd"]
-texture = ExtResource("2_03ltp")
+texture = ExtResource("2_1keju")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -422,7 +422,7 @@ texture = ExtResource("2_03ltp")
 sources/0 = SubResource("TileSetAtlasSource_en6fd")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_03ltp"]
-texture = ExtResource("2_f1naw")
+texture = ExtResource("1_l1ktc")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -592,7 +592,7 @@ texture = ExtResource("2_f1naw")
 sources/0 = SubResource("TileSetAtlasSource_03ltp")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6tg0a"]
-texture = ExtResource("2_f1naw")
+texture = ExtResource("1_l1ktc")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -762,7 +762,7 @@ texture = ExtResource("2_f1naw")
 sources/0 = SubResource("TileSetAtlasSource_6tg0a")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1lpvh"]
-texture = ExtResource("3_6tg0a")
+texture = ExtResource("3_g706r")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -778,7 +778,7 @@ texture = ExtResource("3_6tg0a")
 sources/0 = SubResource("TileSetAtlasSource_1lpvh")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwftm"]
-texture = ExtResource("4_cbk4g")
+texture = ExtResource("4_xt7fs")
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
@@ -812,7 +812,7 @@ texture = ExtResource("4_cbk4g")
 sources/0 = SubResource("TileSetAtlasSource_wwftm")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u55xe"]
-texture = ExtResource("3_en6fd")
+texture = ExtResource("5_073bj")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1217,7 +1217,7 @@ texture = ExtResource("3_en6fd")
 sources/0 = SubResource("TileSetAtlasSource_u55xe")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ih4sl"]
-texture = ExtResource("6_cbk4g")
+texture = ExtResource("6_njmhr")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1312,13 +1312,13 @@ rotation = -1.5708
 scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_f1naw")
 
-[node name="Desdemona2D" parent="." instance=ExtResource("7_ih4sl")]
-position = Vector2(506, 329)
+[node name="Desdemona2D" parent="." instance=ExtResource("11_cnvwq")]
+position = Vector2(660, 322)
 
-[node name="Yue_2D" parent="." instance=ExtResource("8_f5rvq")]
+[node name="Yue_2D" parent="." instance=ExtResource("7_krudh")]
 position = Vector2(610, 331)
 
-[node name="Cassandra2D" parent="." instance=ExtResource("8_wwftm")]
+[node name="Cassandra2D" parent="." instance=ExtResource("8_ipagn")]
 position = Vector2(542, 322)
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -1336,12 +1336,12 @@ shape = SubResource("RectangleShape2D_1lpvh")
 position = Vector2(328, 177)
 shape = SubResource("CircleShape2D_cbk4g")
 
-[node name="Ophelia2D" parent="." instance=ExtResource("10_h2wx8")]
+[node name="Ophelia2D" parent="." instance=ExtResource("9_qqn4l")]
 position = Vector2(571, 333)
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-13, 2)
-stream = ExtResource("3_03ltp")
+stream = ExtResource("10_rksxp")
 autoplay = true
 bus = &"BGM"
 
