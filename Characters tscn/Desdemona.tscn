@@ -1,8 +1,7 @@
-[gd_scene load_steps=32 format=3 uid="uid://dn6qfnhxw17xl"]
+[gd_scene load_steps=30 format=3 uid="uid://dn6qfnhxw17xl"]
 
 [ext_resource type="Script" uid="uid://cfnhuo5cduxfw" path="res://Characters tscn/desdemona.gd" id="1_7sixq"]
 [ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="1_ebfod"]
-[ext_resource type="PackedScene" uid="uid://dwq5citd6dl3b" path="res://SCENES/gun.tscn" id="3_mnrkx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pwyyf"]
 atlas = ExtResource("1_ebfod")
@@ -307,9 +306,6 @@ _data = {
 &"Right": SubResource("Animation_ofmf5")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_mnrkx"]
-radius = 7.56606
-
 [node name="Desdemona2D" type="CharacterBody2D"]
 y_sort_enabled = true
 position = Vector2(0, -25)
@@ -341,17 +337,3 @@ shape = SubResource("CircleShape2D_7sixq")
 libraries = {
 &"": SubResource("AnimationLibrary_0nnt2")
 }
-
-[node name="Gun" parent="." instance=ExtResource("3_mnrkx")]
-position = Vector2(0, 200)
-
-[node name="HurtBox" type="Area2D" parent="."]
-unique_name_in_owner = true
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(0, 18.1819)
-scale = Vector2(-21.6843, -45.741)
-shape = SubResource("CircleShape2D_mnrkx")
-debug_color = Color(0.933333, 0.00784314, 0, 0.584314)

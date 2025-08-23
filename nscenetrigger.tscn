@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbn2k74qpd31p"]
-
-[ext_resource type="Script" uid="uid://ba3hxfkl5vq0x" path="res://nscenetrigger.gd" id="1_q44eb"]
-
-[node name="Area2D" type="Area2D"]
-script = ExtResource("1_q44eb")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
