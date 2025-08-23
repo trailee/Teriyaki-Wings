@@ -1,0 +1,10 @@
+~ start
+
+if ZorenDeadCount.z_deadcount == 5
+	Des: Phew, that was a close one... 
+	Des: Good thing I still know how to use this thing.
+
+else
+	Des: There are still mobs around... Better if I kill them now.
+ 
+=> END
