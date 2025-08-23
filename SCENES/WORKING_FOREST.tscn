@@ -1,10 +1,10 @@
-[gd_scene load_steps=31 format=4 uid="uid://qbtsrh55ywhh"]
+[gd_scene load_steps=31 format=4 uid="uid://b43gn6fgstxl"]
 
-[ext_resource type="Script" path="res://SCENES/forest.gd" id="1_713mg"]
+[ext_resource type="Script" uid="uid://bnq0c7d7dedor" path="res://SCENES/forest.gd" id="1_713mg"]
 [ext_resource type="Texture2D" uid="uid://bwff5o35rx8pe" path="res://Backgrounds/Forest_tiles.png" id="2_o0l0u"]
 [ext_resource type="Texture2D" uid="uid://dlu11ba07x610" path="res://Assets/Forest_assets.png" id="3_7inj0"]
 [ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="4_8d680"]
-[ext_resource type="PackedScene" path="res://Zorans/MOB.tscn" id="5_l7tmc"]
+[ext_resource type="PackedScene" uid="uid://cpfcy7gqpdb7a" path="res://Zorans/MOB.tscn" id="5_l7tmc"]
 [ext_resource type="AudioStream" uid="uid://cjhqvfcufe8xm" path="res://Music_Teriyaki-Wings/Forest_BGM copy.wav" id="6_aminy"]
 [ext_resource type="AudioStream" uid="uid://daaypih34uft2" path="res://Music_Teriyaki-Wings/Forest_Fight_BGM copy.wav" id="7_0x35c"]
 [ext_resource type="PackedScene" path="res://SCENES/firstactionable.tscn" id="8_1cwca"]
@@ -816,7 +816,7 @@ position = Vector2(187, -182)
 position = Vector2(50, 142)
 
 [node name="MOB3" parent="y-sorting objects" instance=ExtResource("5_l7tmc")]
-position = Vector2(579, -276)
+position = Vector2(-77, -262)
 
 [node name="MOB4" parent="y-sorting objects" instance=ExtResource("5_l7tmc")]
 position = Vector2(-435, 230)
