@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://cjhqvfcufe8xm" path="res://Music_Teriyaki-Wings/Forest_BGM copy.wav" id="6_aminy"]
 [ext_resource type="AudioStream" uid="uid://daaypih34uft2" path="res://Music_Teriyaki-Wings/Forest_Fight_BGM copy.wav" id="7_0x35c"]
 [ext_resource type="PackedScene" path="res://SCENES/firstactionable.tscn" id="8_1cwca"]
-[ext_resource type="Resource" uid="uid://byysu2pa1cn2j" path="res://Dialogue/Forest_Exit.dialogue" id="9_eqpuv"]
+[ext_resource type="Resource" uid="uid://dkmyc4775ca4" path="res://Dialogue/Forest_Exit.dialogue" id="9_eqpuv"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="10_ecng6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_stcry"]
