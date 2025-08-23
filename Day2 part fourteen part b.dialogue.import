@@ -4,12 +4,12 @@ importer="dialogue_manager"
 importer_version=15
 type="Resource"
 uid="uid://dmnm6c7obn810"
-path="res://.godot/imported/Day2 part fourteen part b.dialogue-320a0a2cf8c228da399515a0b28b23dc.tres"
+path="res://.godot/imported/Day2 part fourteen part b.dialogue-8696e8d05278df120bb5100a0fba80d8.tres"
 
 [deps]
 
-source_file="res://Day 2 Scenes/Day2 part fourteen part b.dialogue"
-dest_files=["res://.godot/imported/Day2 part fourteen part b.dialogue-320a0a2cf8c228da399515a0b28b23dc.tres"]
+source_file="res://Day2 part fourteen part b.dialogue"
+dest_files=["res://.godot/imported/Day2 part fourteen part b.dialogue-8696e8d05278df120bb5100a0fba80d8.tres"]
 
 [params]
 
