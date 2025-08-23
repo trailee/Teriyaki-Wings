@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=4 uid="uid://cqjjgwk1av2e6"]
+[gd_scene load_steps=69 format=4 uid="uid://cqjjgwk1av2e6"]
 
 [ext_resource type="AudioStream" uid="uid://c6wgf1ow5hejy" path="res://Music_Teriyaki-Wings/Remade_MainMenuBGM.wav" id="1_tyxao"]
 [ext_resource type="Texture2D" uid="uid://d24s1jahnpule" path="res://Assets/walls_floor.png" id="2_3inw3"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="18_6j3pt"]
 [ext_resource type="Texture2D" uid="uid://bxqiov7u5w8t7" path="res://Assets/objects/post-it-pink.png" id="19_qild7"]
 [ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="20_wyn7d"]
+[ext_resource type="Texture2D" uid="uid://b70x70oab0hys" path="res://Assets/characters/lucy devil.png" id="21_jtutw"]
 [ext_resource type="Texture2D" uid="uid://dh6um2nnp3ndk" path="res://Assets/characters/yeu,cass,oph, lucy died.png" id="21_u3dmo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xlefg"]
@@ -1944,6 +1945,21 @@ texture = ExtResource("19_qild7")
 [sub_resource type="TileSet" id="TileSet_ar78g"]
 sources/0 = SubResource("TileSetAtlasSource_mxasd")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntfhq"]
+atlas = ExtResource("21_jtutw")
+region = Rect2(0, 0, 600, 450)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7hro1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntfhq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ewy0y"]
 atlas = ExtResource("21_u3dmo")
 region = Rect2(0, 0, 27, 45)
@@ -2143,10 +2159,13 @@ position = Vector2(-81, -57)
 [node name="Devil Lucy" type="CharacterBody2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Devil Lucy"]
+position = Vector2(-164, 105)
+scale = Vector2(0.0958333, 0.0883333)
+sprite_frames = SubResource("SpriteFrames_7hro1")
 
 [node name="Cassandra" type="CharacterBody2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cassandra"]
-position = Vector2(-199.844, 95.0313)
+position = Vector2(-202, 99)
 scale = Vector2(1.09954, 1.42083)
 sprite_frames = SubResource("SpriteFrames_kt2xv")
