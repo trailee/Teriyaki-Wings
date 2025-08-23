@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=17 format=4 uid="uid://bnljw0tnfql3l"]
+=======
+[gd_scene load_steps=30 format=4 uid="uid://bnljw0tnfql3l"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://bwff5o35rx8pe" path="res://Backgrounds/Forest_tiles.png" id="1_lifw2"]
 [ext_resource type="Texture2D" uid="uid://dlu11ba07x610" path="res://Assets/Forest_assets.png" id="2_stcry"]
@@ -774,8 +778,18 @@ texture = ExtResource("2_stcry")
 region_enabled = true
 region_rect = Rect2(160, 32, 192, 208)
 
-[node name="Desdemona2D" parent="y-sorting objects" instance=ExtResource("3_ldum4")]
+[node name="Desdemona2D" parent="y-sorting objects"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 position = Vector2(529, -7)
+script = null
 
 [node name="Camera (on player)" type="Camera2D" parent="y-sorting objects/Desdemona2D"]
 position = Vector2(236.363, 200)
