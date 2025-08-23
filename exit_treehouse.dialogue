@@ -1,0 +1,10 @@
+~ start
+
+if State.box_pressed and State.chest_pressed and State.first_aid_pressed and State.middle_pressed and State.shelves_pressed == true:
+	set State.treehouse_exit = true
+	Des: I should be ready to go now... [wait=0.5]
+	Des: Wish me luck!
+	=> END!
+else
+	Des: I shouldn't rush to get out, I don't have everything I need yet.
+=> END

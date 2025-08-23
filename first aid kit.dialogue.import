@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bxrnmsv47j0o8"
+path="res://.godot/imported/first aid kit.dialogue-37db484825c8baab0644cea1b13b93c6.tres"
+
+[deps]
+
+source_file="res://Dialogue/first aid kit.dialogue"
+dest_files=["res://.godot/imported/first aid kit.dialogue-37db484825c8baab0644cea1b13b93c6.tres"]
+
+[params]
+
+defaults=true
