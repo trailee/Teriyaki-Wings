@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://y1u1uedtog3x"
+path="res://.godot/imported/des interacts with people.dialogue-c5d2ae3b479235601ebe8e6dbd46b81b.tres"
+
+[deps]
+
+source_file="res://Dialogue/des interacts with people.dialogue"
+dest_files=["res://.godot/imported/des interacts with people.dialogue-c5d2ae3b479235601ebe8e6dbd46b81b.tres"]
+
+[params]
+
+defaults=true
