@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cdo2wjw1itbca" path="res://Assets/objects/blade.png" id="17_lbh74"]
 [ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="18_6j3pt"]
 [ext_resource type="Texture2D" uid="uid://bxqiov7u5w8t7" path="res://Assets/objects/post-it-pink.png" id="19_qild7"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="20_ntfhq"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="20_ntfhq"]
 [ext_resource type="Texture2D" uid="uid://b70x70oab0hys" path="res://Assets/characters/lucy devil.png" id="21_jtutw"]
 [ext_resource type="Texture2D" uid="uid://dh6um2nnp3ndk" path="res://Assets/characters/yeu,cass,oph, lucy died.png" id="21_u3dmo"]
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="23_7hro1"]

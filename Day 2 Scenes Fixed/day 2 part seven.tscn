@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="8_74hr6"]
 [ext_resource type="Texture2D" uid="uid://c885glp4hb14u" path="res://Assets/characters/lucy.png" id="9_sn7hb"]
 [ext_resource type="PackedScene" uid="uid://glih7hfhavxh" path="res://Characters/Dr.Davis.tscn" id="10_xvnmu"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="11_vgipu"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="11_vgipu"]
 [ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="11_we8rh"]
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="12_gqw1f"]
 [ext_resource type="Resource" uid="uid://bypvo5b2g0iwo" path="res://Day 2 Scenes Fixed/Day2 part seven.dialogue" id="13_fi0yg"]

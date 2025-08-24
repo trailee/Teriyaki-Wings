@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bbvrqkbsr0uru" path="res://Assets/characters/yeu.png" id="7_j0dpf"]
 [ext_resource type="Resource" uid="uid://c1h4m4nhtfmqh" path="res://Day 1 Scenes fixed/Day1 part nine.dialogue" id="8_2eut0"]
 [ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="8_seand"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="9_bg86u"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="9_bg86u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h83gw"]
 texture = ExtResource("1_xgial")

@@ -13,3 +13,6 @@ var ruin_exit: bool = false
 var harbour_exit: bool = false
 
 var des_int_people: bool = true
+
+var circus_yes: bool = false
+var circus_no: bool = false

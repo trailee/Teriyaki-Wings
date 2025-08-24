@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dal7xti32qt2o" path="res://Assets/objects/file-closed.png" id="4_qdvbi"]
 [ext_resource type="Texture2D" uid="uid://83pn2tydedu7" path="res://Assets/objects/file-opened-empty.png" id="5_2i63m"]
 [ext_resource type="Texture2D" uid="uid://c885glp4hb14u" path="res://Assets/characters/lucy.png" id="6_624c3"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="7_c6c3i"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="7_c6c3i"]
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="8_qdvbi"]
 [ext_resource type="Resource" uid="uid://cndg824f8dgmv" path="res://Day 2 Scenes Fixed/Day2 part twelve.dialogue" id="9_2i63m"]
 [ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="9_famiw"]
