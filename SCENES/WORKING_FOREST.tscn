@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cpfcy7gqpdb7a" path="res://Zorans/MOB.tscn" id="5_l7tmc"]
 [ext_resource type="AudioStream" uid="uid://cjhqvfcufe8xm" path="res://Music_Teriyaki-Wings/Forest_BGM copy.wav" id="6_aminy"]
 [ext_resource type="AudioStream" uid="uid://daaypih34uft2" path="res://Music_Teriyaki-Wings/Forest_Fight_BGM copy.wav" id="7_0x35c"]
-[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="8_1cwca"]
+[ext_resource type="PackedScene" uid="uid://l1d3w1s7m83y" path="res://SCENES/firstactionable.tscn" id="8_1cwca"]
 [ext_resource type="Resource" uid="uid://bnkyvf4jg2yvb" path="res://Dialogue/Forest_Exit.dialogue" id="9_eqpuv"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="10_ecng6"]
 

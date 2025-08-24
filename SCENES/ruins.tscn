@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cxsu3b7eyj45l" path="res://Characters/Zade.tscn" id="9_7kuf4"]
 [ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="10_chgke"]
 [ext_resource type="AudioStream" uid="uid://durot3wiktxle" path="res://Music_Teriyaki-Wings/Ruins_BGM copy.wav" id="11_flv6l"]
-[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="12_evh76"]
+[ext_resource type="PackedScene" uid="uid://l1d3w1s7m83y" path="res://SCENES/firstactionable.tscn" id="12_evh76"]
 [ext_resource type="Resource" uid="uid://bmyqqmwd6s1qm" path="res://Dialogue/Ruins_Exit.dialogue" id="14_2td7q"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="14_5ldcl"]
 
@@ -2435,18 +2435,22 @@ dialogue_resource = ExtResource("7_2td7q")
 polygon = PackedVector2Array(72, -6, 61, -30, 44, -37, 13, -42, -10, -44, -23, -42, -39, -29, -56, -21, -53, 0, -57, 13, -57, 28, -42, 33, -31, 29, -23, 23, -12, 20, 7, 19, 18, 20, 35, 21, 42, 27, 46, 30, 51, 32, 66, 29, 68, 24)
 
 [node name="Cassandra2D" parent="y-sorting" instance=ExtResource("7_x5ip6")]
+modulate = Color(0.404511, 0.404511, 0.404511, 1)
 y_sort_enabled = true
 position = Vector2(-57, -16)
 
 [node name="Yue_2D" parent="y-sorting" instance=ExtResource("8_3w2gd")]
+modulate = Color(0.404511, 0.404511, 0.404511, 1)
 y_sort_enabled = true
 position = Vector2(27, 5)
 
 [node name="Zane_2D" parent="y-sorting" instance=ExtResource("9_7kuf4")]
+modulate = Color(0.404511, 0.404511, 0.404511, 1)
 y_sort_enabled = true
 position = Vector2(-1, -7)
 
 [node name="Ophelia2D" parent="y-sorting" instance=ExtResource("10_chgke")]
+modulate = Color(0.404511, 0.404511, 0.404511, 1)
 y_sort_enabled = true
 position = Vector2(-39, -10)
 
