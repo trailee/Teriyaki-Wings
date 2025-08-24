@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://df0mhfja7vq3l"]
+[gd_scene load_steps=31 format=4 uid="uid://dkg2hgd4pw3o3"]
 
 [ext_resource type="Script" uid="uid://bnq0c7d7dedor" path="res://SCENES/forest.gd" id="1_713mg"]
 [ext_resource type="Texture2D" uid="uid://bwff5o35rx8pe" path="res://Backgrounds/Forest_tiles.png" id="2_o0l0u"]
