@@ -1,7 +1,7 @@
-[gd_scene load_steps=39 format=4 uid="uid://bj2ddk5x87b3e"]
+[gd_scene load_steps=39 format=4 uid="uid://21g4ysdimkgi"]
 
 [ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="1_kojl2"]
-[ext_resource type="Script" path="res://Assets/day_1_part_5.gd" id="1_ygywa"]
+[ext_resource type="Script" uid="uid://cd1n53w1wovb0" path="res://Assets/day_1_part_5.gd" id="1_ygywa"]
 [ext_resource type="Texture2D" uid="uid://bmh2ujcp37hr2" path="res://Backgrounds/TopDownHouse_FurnitureState1.png" id="2_tqr38"]
 [ext_resource type="Texture2D" uid="uid://isx4afigpbvu" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Chicken.png" id="3_euhj6"]
 [ext_resource type="Texture2D" uid="uid://d35iynot1wsmv" path="res://Backgrounds/Cute_Fantasy_Free/Animals/PigIdle.png" id="4_ys3br"]
