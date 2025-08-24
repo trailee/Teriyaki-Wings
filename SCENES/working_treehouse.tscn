@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://brfpsns5bw1yg"]
+[gd_scene load_steps=48 format=4 uid="uid://brfpsns5bw1yg"]
 
 [ext_resource type="Script" uid="uid://djcnbha04v5pf" path="res://SCENES/treehouse_scene.gd" id="1_0803f"]
 [ext_resource type="Texture2D" uid="uid://coo88oucmhxt1" path="res://Backgrounds/Cottage_Tileset.png" id="2_2fb3w"]
@@ -6,10 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="4_65wd0"]
 [ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="5_qa7w0"]
 [ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="6_0803f"]
-[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="7_gvvhe"]
+[ext_resource type="PackedScene" uid="uid://l1d3w1s7m83y" path="res://SCENES/firstactionable.tscn" id="7_gvvhe"]
 [ext_resource type="Resource" uid="uid://ut1y87k3fl50" path="res://Dialogue/box on table.dialogue" id="8_tr8gb"]
 [ext_resource type="Resource" uid="uid://bxrnmsv47j0o8" path="res://Dialogue/first aid kit.dialogue" id="9_bhe5d"]
 [ext_resource type="Resource" uid="uid://c7j3pk4v4bqq0" path="res://Dialogue/chest.dialogue" id="10_hctnd"]
+[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="11_2fb3w"]
 [ext_resource type="Resource" uid="uid://darbgpi0ei8ll" path="res://Dialogue/shelves.dialogue" id="11_5kqpr"]
 [ext_resource type="Resource" uid="uid://biod8ci54djgd" path="res://Dialogue/bed.dialogue" id="12_c7wem"]
 [ext_resource type="Resource" uid="uid://cmhgooyrdtsxr" path="res://Dialogue/middle items.dialogue" id="13_2xvvg"]
@@ -2580,6 +2581,9 @@ dialogue_resource = ExtResource("10_hctnd")
 position = Vector2(161.105, -63.3931)
 scale = Vector2(2.22442, 1.79441)
 shape = SubResource("RectangleShape2D_0wvm6")
+
+[node name="Cassandra2D" parent="Chest" instance=ExtResource("11_2fb3w")]
+position = Vector2(51, 77)
 
 [node name="Chairs" type="StaticBody2D" parent="."]
 position = Vector2(17, 5)

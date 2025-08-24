@@ -2437,7 +2437,7 @@ polygon = PackedVector2Array(72, -6, 61, -30, 44, -37, 13, -42, -10, -44, -23, -
 [node name="Cassandra2D" parent="y-sorting" instance=ExtResource("7_x5ip6")]
 modulate = Color(0.404511, 0.404511, 0.404511, 1)
 y_sort_enabled = true
-position = Vector2(-57, -16)
+position = Vector2(-204, -47)
 
 [node name="Yue_2D" parent="y-sorting" instance=ExtResource("8_3w2gd")]
 modulate = Color(0.404511, 0.404511, 0.404511, 1)
