@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://b5e5fwk6fy4ie"]
+[gd_scene load_steps=31 format=4 uid="uid://b5e5fwk6fy4ie"]
 
 [ext_resource type="Texture2D" uid="uid://k1pbkg3j3pc3" path="res://images/4.png" id="1_384ov"]
 [ext_resource type="Script" uid="uid://ceg2tj6laav5m" path="res://Day 2 Scenes Fixed/day_2_part_four_scene.gd" id="1_lqchc"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="7_fq1q6"]
 [ext_resource type="Texture2D" uid="uid://c0xltjspdx5nq" path="res://Assets/characters/cassandra.png" id="7_u6isd"]
 [ext_resource type="Resource" uid="uid://ccggae8m0yro" path="res://Day 2 Scenes Fixed/Day2 part four.dialogue" id="8_fq1q6"]
+[ext_resource type="AudioStream" uid="uid://durot3wiktxle" path="res://Music_Teriyaki-Wings/Ruins_BGM copy.wav" id="10_kmwqk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t1wuy"]
 texture = ExtResource("1_384ov")
@@ -13135,3 +13136,11 @@ dialogue_resource = ExtResource("8_fq1q6")
 position = Vector2(-405, 449)
 scale = Vector2(43.2338, 33.9999)
 shape = SubResource("RectangleShape2D_lqchc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(60, 372)
+zoom = Vector2(4.5, 4.5)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_kmwqk")
+autoplay = true
