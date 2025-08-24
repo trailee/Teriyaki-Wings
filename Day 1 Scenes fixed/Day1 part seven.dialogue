@@ -1,36 +1,42 @@
 ~ start
-Des: Stick close to me Cas
+Des: Stick close to me Cassandra
 
-Cas: Don’t worry I’m right behind you.
+Cassandra: Don’t worry I’m right behind you.
 
 Des: Alright this is the place where they had found the first body.
 
-Cas: Des? I’m a bit nervous and worried.
+Cassandra: Des? I’m a bit nervous and worried.
 
 Des: Everything will be fine. I will protect you
 
-Cas: I’m not worried for me, I’m worried for you. The body was found to have its organs torn out before they were turned into a zoren. So whoever we are dealing with is incredibly strong, and I don’t want you to worry about me when we should be worrying about survival.
+Cassandra: I’m not worried for me, I’m worried for you. The body was found to have its organs torn out before they were turned into a zoren. So whoever we are dealing with is incredibly strong, and I don’t want you to worry about me when we should be worrying about survival.
 
 Des: I will be fine, and I will always protect you no matter what. But let’s search for clues or objects that can help us find out who the fake is. 
-*Player interacts with the smashed stone parts on the floor
 
 Des (thinking): There seems to be an excessive amount of stone. Does the zoren have some powers regarding stones or some sort?
 
-Cas: Des, look what I’ve found.
+Cassandra: Des, look what I’ve found.
 
-*Medusa Note/Clue
+Clue: There once was a young maiden who served the goddess Athena. 
+Clue: She was so beautiful that she even attracted the eyes of the gods. But as a maiden for Athena, she must remain a virgin and pure. 
+Clue: However, one day the god Poseidon came and told her he had an interest in her and would like to take her to bed. 
+Clue: The god wanted revenge against Athena so he targeted the young maiden. The maiden obviously refused and this enrages Poseidon. 
+Clue: He became persistent and amidst panic she ran to the temple of Athena and pleaded to the goddess to save her. 
+Clue: But sadly at the end the god got his wishes and left the naked maiden by the statue of her goddess. 
+Clue: When the goddess finally came down, she saw the young maiden as the one at fault and in turn, she turned the maiden into a monstrous snake-like creature. 
+Clue: And those who looked straight into her eyes will turn to stone. This fear Creature was-
 
-Cas: Her name was what?
+Cassandra: ... [wait=1]Her name was what?
 
 Des: I don’t know, but she should’ve been stronger.
 
-Cas: Des! She was against a god! It isn’t her fault for being beautiful. She shouldn't have turned into a monster.
+Cassandra: Des! She was against a god! It isn’t her fault for being beautiful. She shouldn't have turned into a monster.
 
 Des: Well, I hope she dies since she probably will kill a lot of people. 
 
-Des: And remember Cas once we make it to the Circus and Attractions we will be free and don’t have to worry about monsters like her.
+Des: And remember Cassandra once we make it to the Circus and Attractions we will be free and don’t have to worry about monsters like her.
 
-Cas: But-
+Cassandra: But-
 
 Des: We have to find more clues or notes like that one, so let’s hurry. Oh, Dr. M what are you doing here? 
 
@@ -40,7 +46,7 @@ Des: But they have already taken away the body
 
 Dr.M: oh. What a shame. I have been working hard on my research on Zorens, having that body would've really helped. 
 
-Cas: Is going to be fine Dr.M, you are such an intelligent being you will do well even without the body. 
+Cassandra: Is going to be fine Dr.M, you are such an intelligent being you will do well even without the body. 
 
 Des: Yeah and you are mesmerizing as well. 
 
@@ -62,7 +68,7 @@ Des: What? You look like a beautiful maiden and even if someone isn't the best l
 
 Dr.M: Things were like that back in my days. 
 
-Cas: That’s such nonsense. 
+Cassandra: That’s such nonsense. 
 
 Dr.M: Anyways let’s look at the stones together.
 
@@ -75,22 +81,23 @@ Dr.M: Hmm, Yeah it seems so. But we can never assume anything and since I don’
 
 Des: Ok.
 
-Cassandra: Let’s continue to look around.
+Cassandra: ...[wait=1] Look what I found on this statue.
 
-*Des touches another statue and sees a note in the back
+Clue: Medusa. She was then defeated by a hero named Perseus as he uses his shield to see her reflection and slain her. 
+Clue: However myths never truly dies, although she had died by Perseus a group brought her back. 
+Clue: And now she goes by another identity, most sees her as the beautiful maiden as she always has been, but her victims see her as medusa. 
+Clue: This person is named Dr.M or Dr.Medusa so to anyone who sees this be aware. 
 
-*Final Note/Clue
+Des: Cassandra. 
 
-Des: Cas. 
-
-Cas: Yeah?
+Cassandra: Yeah?
 
 Des: The fake is Dr.M.
 
-Cas: What-
+Cassandra: What-
 
 Announcement: Everyone must come to the deck. We’ve gotten 3 suspects that we believe might be a fake. They have been detained.
 
-Cas: Alright explain to me later, let’s go but so far I will believe your word.
+Cassandra: Alright explain to me later, let’s go but so far I will believe your word.
 
 => END

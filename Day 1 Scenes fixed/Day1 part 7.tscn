@@ -1,15 +1,18 @@
-[gd_scene load_steps=65 format=4 uid="uid://csunr72k8rwuw"]
+[gd_scene load_steps=69 format=4 uid="uid://csunr72k8rwuw"]
 
 [ext_resource type="AudioStream" uid="uid://c6wgf1ow5hejy" path="res://Music_Teriyaki-Wings/Remade_MainMenuBGM.wav" id="1_3rwaf"]
+[ext_resource type="Script" uid="uid://e68l2dqh4byg" path="res://Day 1 Scenes fixed/day_1_part_7.gd" id="1_7j8sj"]
 [ext_resource type="Texture2D" uid="uid://d24s1jahnpule" path="res://Assets/walls_floor.png" id="2_ish60"]
 [ext_resource type="Texture2D" uid="uid://ysh8c2r2eok5" path="res://Assets/interiors_demo.png" id="3_i7lr8"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="4_7j8sj"]
 [ext_resource type="Texture2D" uid="uid://cf85yqermep80" path="res://Backgrounds/Cute_Fantasy_Free/Outdoor decoration/Outdoor_Decor_Free.png" id="5_w7dnx"]
-[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="6_2xr1b"]
-[ext_resource type="PackedScene" uid="uid://cbvs3y1678mk2" path="res://Characters tscn/Dr.M.tscn" id="7_321lt"]
-[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters tscn/Cassandra.tscn" id="8_k2jyf"]
+[ext_resource type="PackedScene" uid="uid://cbvs3y1678mk2" path="res://Characters/Dr.M.tscn" id="7_321lt"]
+[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="8_k2jyf"]
 [ext_resource type="Texture2D" uid="uid://buygknrde8t6s" path="res://Assets/sprite1.png" id="9_bvr2c"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="9_ish60"]
 [ext_resource type="Texture2D" uid="uid://bq0j1vwqxnhmn" path="res://Assets/objects/15.png" id="10_6x1ul"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="10_i7lr8"]
+[ext_resource type="Resource" uid="uid://dtepd28yruleo" path="res://Day 1 Scenes fixed/Day1 part seven.dialogue" id="11_i7lr8"]
 [ext_resource type="Texture2D" uid="uid://dllkivbn65vox" path="res://Assets/objects/19.png" id="11_vsuus"]
 [ext_resource type="Texture2D" uid="uid://md6vw3oii0j3" path="res://Assets/objects/26.png" id="12_6s21j"]
 [ext_resource type="Texture2D" uid="uid://drq7x40hmgfi6" path="res://Assets/objects/1.png" id="13_xyhdh"]
@@ -1740,6 +1743,8 @@ use_texture_padding = false
 [sub_resource type="TileSet" id="TileSet_j6mmb"]
 sources/0 = SubResource("TileSetAtlasSource_i6ctp")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7j8sj"]
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ar78g"]
 texture = ExtResource("10_6x1ul")
 margins = Vector2i(0, 1)
@@ -1946,6 +1951,7 @@ texture = ExtResource("22_bu4q1")
 sources/0 = SubResource("TileSetAtlasSource_mxasd")
 
 [node name="Engine Room" type="Node2D"]
+script = ExtResource("1_7j8sj")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(3, 94)
@@ -1972,37 +1978,48 @@ tile_set = SubResource("TileSet_ga37s")
 tile_map_data = PackedByteArray("AAD9/xIAAAAAAAMAAAD8/xIAAAAAAAMAAAD6/xEAAAAAAAMAAAD5/xEAAAAAAAMAAAD5/xIAAAAAAAMAAAD4/xIAAAAAAAMAAAD6/xIAAAAAAAMAAAD7/xIAAAAAAAMAAAD9/xMAAAAAAAMAAAD+/xMAAAAAAAMAAAD//xMAAAAAAAMAAAD//xIAAAAAAAMAAAAAABIAAAAAAAMAAAAAABEAAAAAAAMAAAD//xEAAAAAAAMAAAD7/xEAAAAAAAMAAAD8/xEAAAAAAAMAAAD9/xEAAAAAAAMAAAD+/xEAAAAAAAMAAAABABIAAAAAAAMAAADb/xIAAAABAAMAAADc/xIAAAABAAMAAADd/xIAAAABAAMAAADe/xIAAAABAAMAAADf/xIAAAABAAMAAADb/xMAAAABAAMAAADa/xMAAAABAAMAAADd/xMAAAABAAMAAADc/xMAAAABAAMAAADa/xIAAAABAAMAAADe/xMAAAABAAMAAADg/xMAAAABAAMAAAAVABIAAAABAAMAAAAVABEAAAABAAMAAAAUABIAAAABAAMAAAATABIAAAABAAMAAAAWABIAAAABAAMAAAASABIAAAABAAMAAAARABIAAAABAAMAAAAQABIAAAABAAMAAAAPABIAAAABAAMAAAANABIAAAABAAMAAAAOABIAAAABAAMAAAAJABIAAAABAAMAAAAKABIAAAABAAMAAAALABIAAAABAAMAAAAMABIAAAABAAMAAAARABMAAAABAAMAAAASABMAAAABAAMAAAATABMAAAABAAMAAAAZABMAAAABAAMAAAAaABMAAAABAAMAAAAbABMAAAABAAMAAAAcABMAAAABAAMAAAAcABIAAAABAAMAAAAbABIAAAABAAMAAAAaABIAAAABAAMAAAAZABIAAAABAAMAAAAXABMAAAABAAMAAAAWABMAAAABAAMAAAAYABMAAAABAAMAAADk/xIAAAABAAMAAADj/xIAAAABAAMAAADj/xMAAAABAAMAAADi/xIAAAABAAMAAADh/xIAAAABAAMAAADg/xIAAAABAAMAAADf/xMAAAABAAMAAADh/xMAAAABAAMAAAA=")
 tile_set = SubResource("TileSet_eh056")
 
-[node name="Desdemona2D" parent="." instance=ExtResource("6_2xr1b")]
+[node name="y sort" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("7_321lt")]
-position = Vector2(46, -16)
-scale = Vector2(0.055, 0.055)
+[node name="Dr M" parent="y sort" instance=ExtResource("7_321lt")]
+position = Vector2(-252, -33)
 
-[node name="Cassandra2D" parent="." instance=ExtResource("8_k2jyf")]
-position = Vector2(-49, -60)
-
-[node name="Statues" type="TileMap" parent="."]
+[node name="Statues" type="TileMap" parent="y sort"]
 texture_filter = 1
 tile_set = SubResource("TileSet_j6mmb")
 format = 2
 
-[node name="statue 1" type="TileMapLayer" parent="Statues"]
+[node name="statue 1" type="TileMapLayer" parent="y sort/Statues"]
 texture_filter = 1
 use_parent_material = true
 tile_map_data = PackedByteArray("AAAFAAsAAAADAAAAAAAFAAwAAAADAAEAAAAFAA0AAAADAAIAAAAFAA4AAAADAAMAAAAFAA8AAAADAAQAAAAFABAAAAADAAUAAAAFABEAAAADAAYAAAAFABIAAAADAAcAAAAGAAsAAAAEAAAAAAAGAAwAAAAEAAEAAAAGAA0AAAAEAAIAAAAGAA4AAAAEAAMAAAAGAA8AAAAEAAQAAAAGABAAAAAEAAUAAAAGABEAAAAEAAYAAAAGABIAAAAEAAcAAAAEAA0AAAACAAIAAAAHAA0AAAAFAAIAAAAHAA4AAAAFAAMAAAA=")
 tile_set = SubResource("TileSet_j6mmb")
 
-[node name="statue 4" type="TileMapLayer" parent="Statues"]
+[node name="statue 4" type="TileMapLayer" parent="y sort/Statues"]
 texture_filter = 1
 use_parent_material = true
 tile_map_data = PackedByteArray("AAD+/w0AAAADAAEAAAD+/w4AAAADAAIAAAD+/w8AAAADAAMAAAD+/xAAAAADAAQAAAD+/xEAAAADAAUAAAD+/xIAAAADAAYAAAD//w0AAAAEAAEAAAD//w4AAAAEAAIAAAD//w8AAAAEAAMAAAD//xAAAAAEAAQAAAD//xEAAAAEAAUAAAD//xIAAAAEAAYAAAD9/w8AAAACAAMAAAAAAA4AAAAFAAIAAAAAABIAAAAFAAYAAAA=")
 tile_set = SubResource("TileSet_j6mmb")
 
-[node name="statue 3" type="TileMapLayer" parent="Statues"]
+[node name="statue 3" type="TileMapLayer" parent="y sort/Statues"]
 texture_filter = 1
 use_parent_material = true
 tile_map_data = PackedByteArray("AAARAAsAAAADAAAAAAARAAwAAAADAAEAAAARAA0AAAADAAIAAAARAA4AAAADAAMAAAARAA8AAAADAAQAAAARABAAAAADAAUAAAARABEAAAADAAYAAAARABIAAAADAAcAAAASAAsAAAAEAAAAAAASAAwAAAAEAAEAAAASAA0AAAAEAAIAAAASAA4AAAAEAAMAAAASAA8AAAAEAAQAAAASABAAAAAEAAUAAAASABEAAAAEAAYAAAASABIAAAAEAAcAAAATAAwAAAAFAAEAAAATAA0AAAAFAAIAAAATABEAAAAFAAYAAAATABIAAAAFAAcAAAAQAA0AAAACAAIAAAAQAA4AAAACAAMAAAAQAA8AAAACAAQAAAAQABAAAAACAAUAAAAQABEAAAACAAYAAAAQABIAAAACAAcAAAA=")
 tile_set = SubResource("TileSet_j6mmb")
+
+[node name="Cassandra2D" parent="y sort" instance=ExtResource("8_k2jyf")]
+position = Vector2(-275, -54)
+
+[node name="Desdemona2D" parent="y sort" instance=ExtResource("9_ish60")]
+position = Vector2(-39, -122)
+
+[node name="Actionable" parent="y sort" instance=ExtResource("10_i7lr8")]
+dialogue_resource = ExtResource("11_i7lr8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="y sort/Actionable"]
+position = Vector2(-269, -31)
+scale = Vector2(3.96243, -2.432)
+shape = SubResource("RectangleShape2D_7j8sj")
 
 [node name="bluebox on the back" type="TileMapLayer" parent="."]
 use_parent_material = true
@@ -2098,10 +2115,6 @@ rotation = -1.5708
 scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_1fgu5")
 
-[node name="objects" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_rmaog")
-format = 2
-
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
@@ -2123,7 +2136,7 @@ shape = SubResource("RectangleShape2D_xlefg")
 [node name="Area2D2" parent="." instance=ExtResource("21_ycucd")]
 position = Vector2(-15, -127)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(24, -26)
 shape = SubResource("RectangleShape2D_qrp36")
 
