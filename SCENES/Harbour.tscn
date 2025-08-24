@@ -283,38 +283,20 @@ y_sort_enabled = true
 [node name="Weeds" type="Node2D" parent="y-sorting"]
 y_sort_enabled = true
 
-[node name="D1" type="Sprite2D" parent="y-sorting/Weeds"]
-position = Vector2(141, 121)
-texture = ExtResource("2_unqw3")
-region_enabled = true
-region_rect = Rect2(416, 400, 48, 32)
-
 [node name="D2" type="Sprite2D" parent="y-sorting/Weeds"]
-position = Vector2(380, 1)
-texture = ExtResource("2_unqw3")
-region_enabled = true
-region_rect = Rect2(416, 400, 48, 32)
-
-[node name="D3" type="Sprite2D" parent="y-sorting/Weeds"]
-position = Vector2(568, 183)
+position = Vector2(435, -36)
 texture = ExtResource("2_unqw3")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D4" type="Sprite2D" parent="y-sorting/Weeds"]
-position = Vector2(183, -164)
-texture = ExtResource("2_unqw3")
-region_enabled = true
-region_rect = Rect2(416, 400, 48, 32)
-
-[node name="D5" type="Sprite2D" parent="y-sorting/Weeds"]
-position = Vector2(-149, -175)
+position = Vector2(339, -157)
 texture = ExtResource("2_unqw3")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D6" type="Sprite2D" parent="y-sorting/Weeds"]
-position = Vector2(44, -111)
+position = Vector2(663, -134)
 texture = ExtResource("2_unqw3")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
@@ -503,7 +485,7 @@ position = Vector2(729, -29)
 position = Vector2(-4490.91, -836.364)
 scale = Vector2(18.1818, 18.1818)
 zoom = Vector2(2.5, 2.5)
-limit_left = -395
+limit_left = -250
 limit_top = -375
 limit_right = 755
 limit_bottom = 375
