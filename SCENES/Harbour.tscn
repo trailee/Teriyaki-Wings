@@ -1,5 +1,6 @@
-[gd_scene load_steps=27 format=4 uid="uid://ccc7rppo28dry"]
+[gd_scene load_steps=30 format=4 uid="uid://ccc7rppo28dry"]
 
+[ext_resource type="Script" uid="uid://da5m3d0j2uhxe" path="res://SCENES/harbour.gd" id="1_aspo1"]
 [ext_resource type="Texture2D" uid="uid://bwff5o35rx8pe" path="res://Backgrounds/Forest_tiles.png" id="1_wkhga"]
 [ext_resource type="Texture2D" uid="uid://icdgcyw4dadi" path="res://Backgrounds/Cute_Fantasy_Free/Outdoor decoration/Bridge_Wood.png" id="2_smcbj"]
 [ext_resource type="Texture2D" uid="uid://dlu11ba07x610" path="res://Assets/Forest_assets.png" id="2_unqw3"]
@@ -8,8 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="6_bkxnc"]
 [ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="7_rfvu1"]
 [ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters/yue.tscn" id="8_7867p"]
-[ext_resource type="PackedScene" uid="uid://l1d3w1s7m83y" path="res://SCENES/firstactionable.tscn" id="8_rfvu1"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="8_rfvu1"]
 [ext_resource type="Resource" uid="uid://d3c7rnx734ol6" path="res://Dialogue/harbour_group.dialogue" id="9_7867p"]
+[ext_resource type="Resource" uid="uid://c6ffw6fb76prk" path="res://Dialogue/harbour_exit.dialogue" id="12_k2ccr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_smcbj"]
 texture = ExtResource("1_wkhga")
@@ -206,6 +208,9 @@ size = Vector2(101, 40)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_on1pv"]
 size = Vector2(33.7091, 28.7828)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aspo1"]
+size = Vector2(20, 11.8044)
+
 [sub_resource type="Animation" id="Animation_gldua"]
 length = 0.001
 tracks/0/type = "value"
@@ -261,6 +266,7 @@ func _process(delta: float) -> void:
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gf2am"]
 
 [node name="Harbour" type="Node2D"]
+script = ExtResource("1_aspo1")
 
 [node name="Background" type="TileMapLayer" parent="."]
 position = Vector2(248, -37)
@@ -512,7 +518,7 @@ limit_bottom = 375
 position = Vector2(-1, 5)
 
 [node name="Exit" type="Area2D" parent="."]
-position = Vector2(-442, -189)
+position = Vector2(-23, -141)
 
 [node name="Shadow" type="Sprite2D" parent="Exit"]
 modulate = Color(1, 1, 1, 0.541176)
@@ -523,6 +529,14 @@ texture = ExtResource("4_smcbj")
 position = Vector2(-31, 2)
 scale = Vector2(6.30666, -9.71067)
 shape = SubResource("RectangleShape2D_on1pv")
+
+[node name="Actionable" parent="Exit" instance=ExtResource("8_rfvu1")]
+dialogue_resource = ExtResource("12_k2ccr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit/Actionable"]
+position = Vector2(37, -4.87895)
+scale = Vector2(3.80816, 9.97579)
+shape = SubResource("RectangleShape2D_aspo1")
 
 [node name="transition" type="AnimationPlayer" parent="."]
 libraries = {
