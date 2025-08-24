@@ -5,13 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="3_gqltd"]
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="4_upr4e"]
 [ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="5_urs64"]
-[ext_resource type="PackedScene" uid="uid://cxsu3b7eyj45l" path="res://Characters tscn/Zade.tscn" id="6_gvxhl"]
-[ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters tscn/yue.tscn" id="7_i4jox"]
-[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="8_nl8ar"]
-[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters tscn/Ophelia.tscn" id="9_u4sv7"]
-[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters tscn/Cassandra.tscn" id="10_3gcc3"]
+[ext_resource type="PackedScene" uid="uid://cxsu3b7eyj45l" path="res://Characters/Zade.tscn" id="6_gvxhl"]
+[ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters/yue.tscn" id="7_i4jox"]
+[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="9_u4sv7"]
+[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="10_3gcc3"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="11_k765r"]
 [ext_resource type="AudioStream" uid="uid://ca3tlw532xys5" path="res://Music_Teriyaki-Wings/Treehouse_BGM copy.wav" id="12_d2ba3"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="12_v8q0v"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tb5ku"]
 
@@ -2532,8 +2532,18 @@ region_rect = Rect2(288, 224, 64, 32)
 [node name="Yue_2D" parent="." instance=ExtResource("7_i4jox")]
 position = Vector2(35, 51)
 
-[node name="Desdemona2D" parent="." instance=ExtResource("8_nl8ar")]
+[node name="Desdemona2D" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 position = Vector2(-1, 38)
+script = null
 
 [node name="Ophelia2D" parent="." instance=ExtResource("9_u4sv7")]
 position = Vector2(34, 10)
@@ -2650,6 +2660,8 @@ libraries = {
 }
 autoplay = "new_animation"
 script = SubResource("GDScript_tb5ku")
+
+[node name="Desdemona2D2" parent="." instance=ExtResource("12_v8q0v")]
 
 [connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]
 [connection signal="body_exited" from="Exit" to="." method="_on_exit_body_exited"]
