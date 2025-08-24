@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d2avd6wb4gm5v" path="res://images/FreePixelSurvivalItemsPack.png" id="5_bs0m8"]
 [ext_resource type="Texture2D" uid="uid://de6n3ussjqrv6" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Cow/Cow.png" id="6_4jhq8"]
 [ext_resource type="PackedScene" uid="uid://glih7hfhavxh" path="res://Characters/Dr.Davis.tscn" id="8_5q3ah"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="8_vbfpb"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="8_vbfpb"]
 [ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="9_blf1b"]
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="9_rm7l5"]
 [ext_resource type="Resource" uid="uid://c2mql4vetupef" path="res://Day 2 Scenes Fixed/Day 2 part thirteen.dialogue" id="10_bs0m8"]

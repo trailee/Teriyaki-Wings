@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dal7xti32qt2o" path="res://Assets/objects/file-closed.png" id="4_mut3v"]
 [ext_resource type="Texture2D" uid="uid://83pn2tydedu7" path="res://Assets/objects/file-opened-empty.png" id="5_cd3kx"]
 [ext_resource type="PackedScene" uid="uid://glih7hfhavxh" path="res://Characters/Dr.Davis.tscn" id="6_1k3wx"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="6_xkhya"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="6_xkhya"]
 [ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="7_meydd"]
 [ext_resource type="Texture2D" uid="uid://cmnu7ofwf2f3k" path="res://Assets/characters/zon.png" id="8_ffgvn"]
 [ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="11_75se5"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b2ceb33c1cndv" path="res://Day 2 Scenes Fixed/day_2_part_10.gd" id="1_3suix"]
 [ext_resource type="AudioStream" uid="uid://durot3wiktxle" path="res://Music_Teriyaki-Wings/Ruins_BGM copy.wav" id="1_rqnw7"]
 [ext_resource type="Texture2D" uid="uid://ysh8c2r2eok5" path="res://Assets/interiors_demo.png" id="2_j6ww6"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="3_3li75"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="3_3li75"]
 [ext_resource type="Texture2D" uid="uid://cilikghbqh660" path="res://Assets/objects/safe-box-closed.png" id="3_ymkvt"]
 [ext_resource type="Texture2D" uid="uid://dal7xti32qt2o" path="res://Assets/objects/file-closed.png" id="4_3suix"]
 [ext_resource type="Texture2D" uid="uid://xrjum8b4pmya" path="res://Assets/characters/dr helena (2).png" id="4_ymkvt"]

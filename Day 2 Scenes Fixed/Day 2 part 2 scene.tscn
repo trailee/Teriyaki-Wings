@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="6_oeths"]
 [ext_resource type="Texture2D" uid="uid://c0xltjspdx5nq" path="res://Assets/characters/cassandra.png" id="7_1m8cy"]
 [ext_resource type="Resource" uid="uid://bmpogv70ib8rw" path="res://Day 2 Scenes Fixed/Day 2 part two.dialogue" id="7_8absx"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="8_s8kxv"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="8_s8kxv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t1wuy"]
 texture = ExtResource("1_82epi")

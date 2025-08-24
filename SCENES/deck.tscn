@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bs65si5oiybom" path="res://SCENES/deck.gd" id="1_2hxdk"]
 [ext_resource type="Texture2D" uid="uid://k1pbkg3j3pc3" path="res://images/4.png" id="1_kq4e5"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="3_2hxdk"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="3_2hxdk"]
 [ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="3_kq4e5"]
 [ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="8_2yyno"]
 [ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters/yue.tscn" id="9_07gmr"]

@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d35iynot1wsmv" path="res://Backgrounds/Cute_Fantasy_Free/Animals/PigIdle.png" id="5_3tdj7"]
 [ext_resource type="Texture2D" uid="uid://d2avd6wb4gm5v" path="res://images/FreePixelSurvivalItemsPack.png" id="6_d74qa"]
 [ext_resource type="Texture2D" uid="uid://de6n3ussjqrv6" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Cow/Cow.png" id="7_22db1"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="8_gmmba"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="8_gmmba"]
 [ext_resource type="Texture2D" uid="uid://dh6um2nnp3ndk" path="res://Assets/characters/yeu,cass,oph, lucy died.png" id="9_568wo"]
 [ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="10_mo306"]
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="12_0c31a"]

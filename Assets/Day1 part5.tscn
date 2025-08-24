@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="8_lv1jb"]
 [ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="9_eca17"]
 [ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="10_c61d6"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="11_8ecvk"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="11_8ecvk"]
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="11_euhj6"]
 [ext_resource type="Resource" uid="uid://ct24r8noiwlbi" path="res://Day 1 Scenes fixed/Day1 Partfive.dialogue" id="12_ys3br"]
 

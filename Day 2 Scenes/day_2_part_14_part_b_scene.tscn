@@ -1,5 +1,6 @@
-[gd_scene load_steps=68 format=4 uid="uid://cymygy8hcqrc4"]
+[gd_scene load_steps=71 format=4 uid="uid://ctewti87opqt8"]
 
+[ext_resource type="Script" uid="uid://do0bklihxeebw" path="res://Day 2 Scenes/day_2_part_14_part_b_scene.gd" id="1_0uqhw"]
 [ext_resource type="AudioStream" uid="uid://c6wgf1ow5hejy" path="res://Music_Teriyaki-Wings/Remade_MainMenuBGM.wav" id="1_pktso"]
 [ext_resource type="Texture2D" uid="uid://d24s1jahnpule" path="res://Assets/walls_floor.png" id="2_hlase"]
 [ext_resource type="Texture2D" uid="uid://ysh8c2r2eok5" path="res://Assets/interiors_demo.png" id="3_c6xg3"]
@@ -19,8 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://cdo2wjw1itbca" path="res://Assets/objects/blade.png" id="17_5gpya"]
 [ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="18_4l8c2"]
 [ext_resource type="Texture2D" uid="uid://bxqiov7u5w8t7" path="res://Assets/objects/post-it-pink.png" id="19_7nm8y"]
-[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="20_jotiw"]
 [ext_resource type="Texture2D" uid="uid://dh6um2nnp3ndk" path="res://Assets/characters/yeu,cass,oph, lucy died.png" id="21_swrql"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="21_ws66f"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="22_0uqhw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xlefg"]
 texture = ExtResource("2_hlase")
@@ -1974,7 +1976,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wk42a"]
+
 [node name="Day 2 part 14 part b scene" type="Node2D"]
+script = ExtResource("1_0uqhw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(3, 94)
@@ -2143,7 +2148,7 @@ shape = SubResource("RectangleShape2D_xlefg")
 [node name="Area2D2" parent="." instance=ExtResource("18_4l8c2")]
 position = Vector2(-15, -127)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(24, -26)
 shape = SubResource("RectangleShape2D_qrp36")
 
@@ -2152,19 +2157,29 @@ use_parent_material = true
 tile_map_data = PackedByteArray("AADc/xIAAAAAAAAAAADc/xMAAAAAAAEAAADd/xIAAAABAAAAAADd/xMAAAABAAEAAAARAAwAAAAAAAAAAAARAA0AAAAAAAEAAAASAAwAAAABAAAAAAASAA0AAAABAAEAAAA=")
 tile_set = SubResource("TileSet_ar78g")
 
-[node name="Desdemona2D" parent="." instance=ExtResource("20_jotiw")]
-position = Vector2(-129, 111)
+[node name="Node2D" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="Devil Lucy" type="CharacterBody2D" parent="."]
+[node name="Devil Lucy" type="CharacterBody2D" parent="Node2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Devil Lucy"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Devil Lucy"]
 position = Vector2(-182, 112)
 sprite_frames = SubResource("SpriteFrames_n8hx1")
 
-[node name="Cassandra" type="CharacterBody2D" parent="."]
+[node name="Cassandra" type="CharacterBody2D" parent="Node2D"]
 position = Vector2(-2, 11)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cassandra"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Cassandra"]
 position = Vector2(-199.844, 95.0313)
 scale = Vector2(1.09954, 1.42083)
 sprite_frames = SubResource("SpriteFrames_kt2xv")
+
+[node name="Desdemona2D" parent="Node2D" instance=ExtResource("21_ws66f")]
+position = Vector2(-224, -17)
+
+[node name="Actionable" parent="Node2D" instance=ExtResource("22_0uqhw")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Actionable"]
+position = Vector2(-193, 115)
+scale = Vector2(4.00984, 4.92023)
+shape = SubResource("RectangleShape2D_wk42a")

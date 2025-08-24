@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d35iynot1wsmv" path="res://Backgrounds/Cute_Fantasy_Free/Animals/PigIdle.png" id="4_p5ojv"]
 [ext_resource type="Texture2D" uid="uid://d2avd6wb4gm5v" path="res://images/FreePixelSurvivalItemsPack.png" id="5_6q7t3"]
 [ext_resource type="Texture2D" uid="uid://de6n3ussjqrv6" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Cow/Cow.png" id="6_dpmtc"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="7_gkxy1"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="7_gkxy1"]
 [ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters/yue.tscn" id="8_k05kc"]
 [ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="9_1si0r"]
 [ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="10_lbiw0"]

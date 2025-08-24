@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b7tul5ipepy8m" path="res://Assets/characters/dr davis.png" id="7_idbwv"]
 [ext_resource type="Texture2D" uid="uid://cmnu7ofwf2f3k" path="res://Assets/characters/zon.png" id="8_l1177"]
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="8_n3bpa"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="9_55k2l"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="9_55k2l"]
 [ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="9_dfs6g"]
 [ext_resource type="Resource" uid="uid://y1u1uedtog3x" path="res://Dialogue/des interacts with people.dialogue" id="9_n3bpa"]
 

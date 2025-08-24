@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cbvs3y1678mk2" path="res://Characters/Dr.M.tscn" id="7_321lt"]
 [ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="8_k2jyf"]
 [ext_resource type="Texture2D" uid="uid://buygknrde8t6s" path="res://Assets/sprite1.png" id="9_bvr2c"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="9_ish60"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="9_ish60"]
 [ext_resource type="Texture2D" uid="uid://bq0j1vwqxnhmn" path="res://Assets/objects/15.png" id="10_6x1ul"]
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="10_i7lr8"]
 [ext_resource type="Resource" uid="uid://dtepd28yruleo" path="res://Day 1 Scenes fixed/Day1 part seven.dialogue" id="11_i7lr8"]

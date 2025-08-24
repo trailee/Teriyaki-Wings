@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bsgpuoc27q3k0" path="res://images/5.png" id="1_2in6h"]
 [ext_resource type="Script" uid="uid://c7gjeucxx8xgy" path="res://Day 2 Scenes Fixed/day_2_part_11.gd" id="1_70du3"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="3_cjh0d"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="6_cjh0d"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="6_cjh0d"]
 [ext_resource type="Texture2D" uid="uid://c885glp4hb14u" path="res://Assets/characters/lucy.png" id="6_rg8nl"]
 [ext_resource type="Texture2D" uid="uid://b7tul5ipepy8m" path="res://Assets/characters/dr davis.png" id="7_eruwa"]
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="7_wsylk"]

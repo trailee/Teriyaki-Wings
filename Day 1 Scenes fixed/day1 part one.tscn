@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ocvm3if2mmcv" path="res://Assets/post apoc hatches and doors set updated.png" id="3_wskeb"]
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="4_ibuc5"]
 [ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="5_cvepy"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="7_f6s3o"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="7_f6s3o"]
 [ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="7_stgob"]
 [ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="8_bkbfu"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="9_xxtqv"]

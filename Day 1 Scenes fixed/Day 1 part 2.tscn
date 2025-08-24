@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="10_3gcc3"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="11_k765r"]
 [ext_resource type="AudioStream" uid="uid://ca3tlw532xys5" path="res://Music_Teriyaki-Wings/Treehouse_BGM copy.wav" id="12_d2ba3"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="12_v8q0v"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Assets/character_portraits/Des/Des.tscn" id="12_v8q0v"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tb5ku"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://c13n28ilsqtyb"]
+[gd_scene load_steps=29 format=4 uid="uid://bqj2htlyr00i3"]
 
 [ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="1_jbrsq"]
 [ext_resource type="Texture2D" uid="uid://bmh2ujcp37hr2" path="res://Backgrounds/TopDownHouse_FurnitureState1.png" id="2_t28se"]
@@ -6,8 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d35iynot1wsmv" path="res://Backgrounds/Cute_Fantasy_Free/Animals/PigIdle.png" id="4_fu3or"]
 [ext_resource type="Texture2D" uid="uid://d2avd6wb4gm5v" path="res://images/FreePixelSurvivalItemsPack.png" id="5_yc5ux"]
 [ext_resource type="Texture2D" uid="uid://de6n3ussjqrv6" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Cow/Cow.png" id="6_sqmq0"]
-[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="7_0nss5"]
-[ext_resource type="PackedScene" uid="uid://glih7hfhavxh" path="res://Characters tscn/Dr.Davis.tscn" id="8_bolia"]
+[ext_resource type="PackedScene" uid="uid://glih7hfhavxh" path="res://Characters/Dr.Davis.tscn" id="8_bolia"]
 [ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="9_8pch8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1naw"]
@@ -1310,11 +1309,10 @@ rotation = -1.5708
 scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_f1naw")
 
-[node name="Desdemona2D" parent="." instance=ExtResource("7_0nss5")]
-position = Vector2(553, 590)
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(523, 380)
 
-[node name="Dr_Davis" parent="." instance=ExtResource("8_bolia")]
-position = Vector2(465, 821)
+[node name="Dr_Davis" parent="Node2D" instance=ExtResource("8_bolia")]
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-9, 3)
