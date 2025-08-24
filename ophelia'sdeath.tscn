@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://dg1605kyy5twy"]
+[gd_scene load_steps=29 format=4 uid="uid://dg1605kyy5twy"]
 
 [ext_resource type="Texture2D" uid="uid://k1pbkg3j3pc3" path="res://images/4.png" id="1_b8sw3"]
 [ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters/Des..tscn" id="2_jra14"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dh6um2nnp3ndk" path="res://Assets/characters/yeu,cass,oph, lucy died.png" id="5_fh564"]
 [ext_resource type="Texture2D" uid="uid://c885glp4hb14u" path="res://Assets/characters/lucy.png" id="6_d0noj"]
 [ext_resource type="Texture2D" uid="uid://c0xltjspdx5nq" path="res://Assets/characters/cassandra.png" id="7_erluq"]
+[ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="8_moj71"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t1wuy"]
 texture = ExtResource("1_b8sw3")
@@ -13138,3 +13139,7 @@ sprite_frames = SubResource("SpriteFrames_gg84o")
 position = Vector2(624.75, 458.75)
 scale = Vector2(0.34537, 0.275)
 sprite_frames = SubResource("SpriteFrames_k5ngq")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_moj71")
+autoplay = true

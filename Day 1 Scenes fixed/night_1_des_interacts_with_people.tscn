@@ -1,16 +1,17 @@
-[gd_scene load_steps=41 format=4 uid="uid://bohhbeknt361n"]
+[gd_scene load_steps=42 format=4 uid="uid://dvsa5r6fi1syq"]
 
-[ext_resource type="Texture2D" uid="uid://bsgpuoc27q3k0" path="res://images/5.png" id="1_1cwr2"]
-[ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="2_55k2l"]
-[ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="3_n3bpa"]
-[ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="4_8ivcr"]
-[ext_resource type="Texture2D" uid="uid://c885glp4hb14u" path="res://Assets/characters/lucy.png" id="5_7f8uy"]
-[ext_resource type="Texture2D" uid="uid://j0sbauhr3p80" path="res://Assets/characters/dr m.png" id="6_hrmw4"]
-[ext_resource type="Texture2D" uid="uid://b7tul5ipepy8m" path="res://Assets/characters/dr davis.png" id="7_dftuf"]
-[ext_resource type="Texture2D" uid="uid://cmnu7ofwf2f3k" path="res://Assets/characters/zon.png" id="8_wrfrj"]
+[ext_resource type="Texture2D" uid="uid://bsgpuoc27q3k0" path="res://images/5.png" id="1_0ugfl"]
+[ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="3_yxxn1"]
+[ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="4_h83gw"]
+[ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="4_vtni8"]
+[ext_resource type="Texture2D" uid="uid://c885glp4hb14u" path="res://Assets/characters/lucy.png" id="5_a727r"]
+[ext_resource type="Texture2D" uid="uid://j0sbauhr3p80" path="res://Assets/characters/dr m.png" id="6_6fqhv"]
+[ext_resource type="Texture2D" uid="uid://b7tul5ipepy8m" path="res://Assets/characters/dr davis.png" id="7_idbwv"]
+[ext_resource type="Texture2D" uid="uid://cmnu7ofwf2f3k" path="res://Assets/characters/zon.png" id="8_l1177"]
+[ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="9_dfs6g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h83gw"]
-texture = ExtResource("1_1cwr2")
+texture = ExtResource("1_0ugfl")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -11684,7 +11685,7 @@ bg_color = Color(1, 0.962122, 0.955517, 1)
 corner_radius_top_left = 2000
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a727r"]
-texture = ExtResource("2_55k2l")
+texture = ExtResource("4_vtni8")
 34:1/0 = 0
 35:1/0 = 0
 36:1/0 = 0
@@ -12861,19 +12862,19 @@ distance = -389.004
 size = Vector2(572, 1423.75)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8siuv"]
-atlas = ExtResource("4_8ivcr")
+atlas = ExtResource("4_h83gw")
 region = Rect2(0, 900, 540, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ijkoe"]
-atlas = ExtResource("4_8ivcr")
+atlas = ExtResource("4_h83gw")
 region = Rect2(540, 900, 540, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4wg2u"]
-atlas = ExtResource("4_8ivcr")
+atlas = ExtResource("4_h83gw")
 region = Rect2(1080, 900, 540, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b6w0q"]
-atlas = ExtResource("4_8ivcr")
+atlas = ExtResource("4_h83gw")
 region = Rect2(1620, 900, 540, 900)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bjw7q"]
@@ -12897,19 +12898,19 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h83gw"]
-atlas = ExtResource("5_7f8uy")
+atlas = ExtResource("5_a727r")
 region = Rect2(0, 0, 540, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a727r"]
-atlas = ExtResource("5_7f8uy")
+atlas = ExtResource("5_a727r")
 region = Rect2(540, 0, 540, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6fqhv"]
-atlas = ExtResource("5_7f8uy")
+atlas = ExtResource("5_a727r")
 region = Rect2(1080, 0, 540, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_idbwv"]
-atlas = ExtResource("5_7f8uy")
+atlas = ExtResource("5_a727r")
 region = Rect2(1620, 0, 540, 900)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u05xq"]
@@ -12933,19 +12934,19 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y3770"]
-atlas = ExtResource("6_hrmw4")
+atlas = ExtResource("6_6fqhv")
 region = Rect2(0, 0, 540, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x0dh7"]
-atlas = ExtResource("6_hrmw4")
+atlas = ExtResource("6_6fqhv")
 region = Rect2(540, 0, 540, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_digwo"]
-atlas = ExtResource("6_hrmw4")
+atlas = ExtResource("6_6fqhv")
 region = Rect2(1080, 0, 540, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_df1kp"]
-atlas = ExtResource("6_hrmw4")
+atlas = ExtResource("6_6fqhv")
 region = Rect2(1620, 0, 540, 900)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w4121"]
@@ -12969,19 +12970,19 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mf8n1"]
-atlas = ExtResource("7_dftuf")
+atlas = ExtResource("7_idbwv")
 region = Rect2(0, 0, 540, 1800)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o4nof"]
-atlas = ExtResource("7_dftuf")
+atlas = ExtResource("7_idbwv")
 region = Rect2(540, 0, 540, 1800)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o3qn5"]
-atlas = ExtResource("7_dftuf")
+atlas = ExtResource("7_idbwv")
 region = Rect2(1080, 0, 540, 1800)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n4vew"]
-atlas = ExtResource("7_dftuf")
+atlas = ExtResource("7_idbwv")
 region = Rect2(1620, 0, 540, 1800)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vfmn3"]
@@ -13005,19 +13006,19 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e2bu3"]
-atlas = ExtResource("8_wrfrj")
+atlas = ExtResource("8_l1177")
 region = Rect2(0, 0, 540, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5r7io"]
-atlas = ExtResource("8_wrfrj")
+atlas = ExtResource("8_l1177")
 region = Rect2(540, 0, 540, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fj0ws"]
-atlas = ExtResource("8_wrfrj")
+atlas = ExtResource("8_l1177")
 region = Rect2(1080, 0, 540, 900)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ch5hr"]
-atlas = ExtResource("8_wrfrj")
+atlas = ExtResource("8_l1177")
 region = Rect2(1620, 0, 540, 900)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xk6r7"]
@@ -13179,7 +13180,7 @@ position = Vector2(65.845, -101)
 rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_mbalj")
 
-[node name="nscenetrigger" parent="." instance=ExtResource("3_n3bpa")]
+[node name="nscenetrigger" parent="." instance=ExtResource("3_yxxn1")]
 position = Vector2(800, 525)
 collision_layer = 0
 collision_mask = 128
@@ -13189,7 +13190,7 @@ connected_scene = "hallway_scene"
 modulate = Color(1, 1, 1, 0.411765)
 position = Vector2(129, 38)
 scale = Vector2(1, 1.93926)
-texture = ExtResource("2_55k2l")
+texture = ExtResource("4_vtni8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="nscenetrigger"]
 position = Vector2(261, -22)
@@ -13234,3 +13235,7 @@ position = Vector2(-745, 402)
 scale = Vector2(0.344444, 0.375)
 sprite_frames = SubResource("SpriteFrames_xk6r7")
 autoplay = "default"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_dfs6g")
+autoplay = true
