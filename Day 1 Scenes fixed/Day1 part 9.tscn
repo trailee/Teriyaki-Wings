@@ -13109,46 +13109,47 @@ position = Vector2(65.845, -101)
 rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_mbalj")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="y sorting" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="Huge ophelia" type="CharacterBody2D" parent="Node2D"]
+[node name="Huge ophelia" type="CharacterBody2D" parent="y sorting"]
 position = Vector2(-656, -72)
 scale = Vector2(1.08548, 1.32315)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Huge ophelia"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="y sorting/Huge ophelia"]
 position = Vector2(269.875, 366.125)
 scale = Vector2(0.363426, 0.273611)
 sprite_frames = SubResource("SpriteFrames_fuye1")
 autoplay = "default"
 
-[node name="Huge cassandra" type="CharacterBody2D" parent="Node2D"]
+[node name="Huge cassandra" type="CharacterBody2D" parent="y sorting"]
 position = Vector2(-308, -148)
 scale = Vector2(1.09308, 1.1942)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Huge cassandra"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="y sorting/Huge cassandra"]
 position = Vector2(126, 468)
 scale = Vector2(0.335648, 0.289167)
 sprite_frames = SubResource("SpriteFrames_wfuo7")
 autoplay = "default"
 
-[node name="huge yue" type="CharacterBody2D" parent="Node2D"]
+[node name="huge yue" type="CharacterBody2D" parent="y sorting"]
 position = Vector2(-312, -336)
 scale = Vector2(1.11823, 1.3633)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/huge yue"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="y sorting/huge yue"]
 position = Vector2(338.062, 541)
 scale = Vector2(0.370139, 0.26)
 sprite_frames = SubResource("SpriteFrames_gs4b7")
 autoplay = "default"
 
-[node name="Desdemona2D" parent="Node2D" instance=ExtResource("9_bg86u")]
+[node name="Desdemona2D" parent="y sorting" instance=ExtResource("9_bg86u")]
 position = Vector2(489, 407)
 scale = Vector2(0.4, 0.4)
 
-[node name="Actionable" parent="Node2D" instance=ExtResource("7_bg86u")]
+[node name="Actionable" parent="y sorting" instance=ExtResource("7_bg86u")]
 dialogue_resource = ExtResource("8_2eut0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Actionable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="y sorting/Actionable"]
 position = Vector2(-132, 416)
 scale = Vector2(38.4134, 21.1886)
 shape = SubResource("RectangleShape2D_e5gpu")

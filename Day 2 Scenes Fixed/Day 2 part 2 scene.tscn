@@ -1,12 +1,13 @@
-[gd_scene load_steps=29 format=4 uid="uid://v5o2ptlm3mc3"]
+[gd_scene load_steps=30 format=4 uid="uid://v5o2ptlm3mc3"]
 
 [ext_resource type="Texture2D" uid="uid://k1pbkg3j3pc3" path="res://images/4.png" id="1_82epi"]
-[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="2_ik38k"]
-[ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="3_oeths"]
-[ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="4_8absx"]
+[ext_resource type="Script" uid="uid://h7rfwvotsfca" path="res://Day 2 Scenes Fixed/day_2_part_2_scene.gd" id="1_ik38k"]
 [ext_resource type="Texture2D" uid="uid://du6exsp28uj6s" path="res://Assets/characters/ophelia.png" id="5_s8kxv"]
 [ext_resource type="Texture2D" uid="uid://b1y4dcytxo4wl" path="res://Assets/characters/New Piskel (5).png" id="6_6fx6w"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="6_oeths"]
 [ext_resource type="Texture2D" uid="uid://c0xltjspdx5nq" path="res://Assets/characters/cassandra.png" id="7_1m8cy"]
+[ext_resource type="Resource" uid="uid://bmpogv70ib8rw" path="res://Day 2 Scenes Fixed/Day 2 part two.dialogue" id="7_8absx"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="8_s8kxv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t1wuy"]
 texture = ExtResource("1_82epi")
@@ -11682,13 +11683,6 @@ sources/0 = SubResource("TileSetAtlasSource_t1wuy")
 bg_color = Color(1, 0.962122, 0.955517, 1)
 corner_radius_top_left = 2000
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mbalj"]
-normal = Vector2(0.00116981, 0.999999)
-distance = -389.004
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqxj1"]
-size = Vector2(572, 1423.75)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_c2yii"]
 atlas = ExtResource("5_s8kxv")
 region = Rect2(0, 0, 540, 900)
@@ -11804,8 +11798,15 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ik38k"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mbalj"]
+normal = Vector2(0.00116981, 0.999999)
+distance = -389.004
+
 [node name="deck day 2" type="Node2D"]
-position = Vector2(960, 340)
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_ik38k")
 
 [node name="water" type="TileMapLayer" parent="."]
 position = Vector2(-165, -20)
@@ -11921,6 +11922,53 @@ offset_right = 1133.0
 offset_bottom = 1072.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_mbalj")
 
+[node name="y sort" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Desdemona2D" parent="y sort" instance=ExtResource("8_s8kxv")]
+position = Vector2(265, 575)
+scale = Vector2(0.4, 0.4)
+
+[node name="ophelia" type="CharacterBody2D" parent="y sort"]
+position = Vector2(-151, -173)
+scale = Vector2(1, 1.13208)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="y sort/ophelia"]
+texture_filter = 1
+position = Vector2(-88.125, 563.75)
+scale = Vector2(0.433797, 0.317222)
+sprite_frames = SubResource("SpriteFrames_q7pg7")
+
+[node name="zon" type="CharacterBody2D" parent="y sort"]
+position = Vector2(16, -154)
+scale = Vector2(1.25, 1.25)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="y sort/zon"]
+position = Vector2(-298, 552)
+scale = Vector2(0.325926, 0.27)
+sprite_frames = SubResource("SpriteFrames_thcf6")
+
+[node name="Cassandra" type="CharacterBody2D" parent="y sort"]
+position = Vector2(-1133, 53)
+scale = Vector2(1.12444, 1.19599)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="y sort/Cassandra"]
+position = Vector2(624.75, 458.75)
+scale = Vector2(0.34537, 0.275)
+sprite_frames = SubResource("SpriteFrames_k5ngq")
+
+[node name="Actionable" parent="y sort" instance=ExtResource("6_oeths")]
+dialogue_resource = ExtResource("7_8absx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="y sort/Actionable"]
+position = Vector2(-300, 540)
+scale = Vector2(25.0857, -24.5888)
+shape = SubResource("RectangleShape2D_ik38k")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(20, 360)
+zoom = Vector2(4.5, 4.5)
+
 [node name="World Boundary" type="StaticBody2D" parent="."]
 position = Vector2(37, 28)
 scale = Vector2(2.84, 1)
@@ -11935,51 +11983,12 @@ rotation = 3.12936
 shape = SubResource("WorldBoundaryShape2D_mbalj")
 
 [node name="Right Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(65.845, -101)
+position = Vector2(85.5635, 524)
 rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_mbalj")
 
-[node name="Desdemona2D" parent="." instance=ExtResource("2_ik38k")]
-position = Vector2(433, 435)
-scale = Vector2(0.3, 0.3)
-collision_layer = 129
-
-[node name="nscenetrigger" parent="." instance=ExtResource("3_oeths")]
-position = Vector2(800, 525)
-collision_layer = 0
-collision_mask = 128
-connected_scene = "hallway_scene"
-
-[node name="Sprite2D" type="Sprite2D" parent="nscenetrigger"]
-modulate = Color(1, 1, 1, 0.411765)
-position = Vector2(129, 38)
-scale = Vector2(1, 1.93926)
-texture = ExtResource("4_8absx")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="nscenetrigger"]
-position = Vector2(261, -22)
-shape = SubResource("RectangleShape2D_rqxj1")
-
-[node name="ophelia" type="CharacterBody2D" parent="nscenetrigger"]
-position = Vector2(-800, -525)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="nscenetrigger/ophelia"]
-texture_filter = 1
-position = Vector2(-88.125, 563.75)
-scale = Vector2(0.433797, 0.317222)
-sprite_frames = SubResource("SpriteFrames_q7pg7")
-
-[node name="zon" type="CharacterBody2D" parent="nscenetrigger"]
-position = Vector2(-800, -525)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="nscenetrigger/zon"]
-position = Vector2(-298, 552)
-scale = Vector2(0.325926, 0.27)
-sprite_frames = SubResource("SpriteFrames_thcf6")
-
-[node name="Cassandra" type="CharacterBody2D" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cassandra"]
-position = Vector2(624.75, 458.75)
-scale = Vector2(0.34537, 0.275)
-sprite_frames = SubResource("SpriteFrames_k5ngq")
+[node name="Right Boundary2" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(-94.7183, 416)
+rotation = 1.56872
+scale = Vector2(1.15381, 0.996148)
+shape = SubResource("WorldBoundaryShape2D_mbalj")
