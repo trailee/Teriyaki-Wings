@@ -460,6 +460,7 @@ region_enabled = true
 region_rect = Rect2(64, 544, 48, 64)
 
 [node name="Characters" type="Node2D" parent="y-sorting"]
+y_sort_enabled = true
 
 [node name="Ophelia2D" parent="y-sorting/Characters" instance=ExtResource("6_bkxnc")]
 position = Vector2(62, -241)
@@ -479,7 +480,7 @@ scale = Vector2(4.61797, -1.72773)
 shape = SubResource("RectangleShape2D_7867p")
 
 [node name="Desdemona2D" parent="y-sorting" instance=ExtResource("5_hmwj4")]
-position = Vector2(729, -29)
+position = Vector2(727, -25)
 
 [node name="Camera2D (on player)" type="Camera2D" parent="y-sorting/Desdemona2D"]
 position = Vector2(-4490.91, -836.364)
