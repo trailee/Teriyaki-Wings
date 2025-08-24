@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://benyy8frqbiiu"
+path="res://.godot/imported/Day1 part six.dialogue-d23330700cd185f1f2ea5b1ad7d7b34f.tres"
+
+[deps]
+
+source_file="res://Day 1 Scenes fixed/Day1 part six.dialogue"
+dest_files=["res://.godot/imported/Day1 part six.dialogue-d23330700cd185f1f2ea5b1ad7d7b34f.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dtepd28yruleo"
+path="res://.godot/imported/Day1 part seven.dialogue-4f879218bc0bf9834ec7bf6a299dbb5c.tres"
+
+[deps]
+
+source_file="res://Day 1 Scenes fixed/Day1 part seven.dialogue"
+dest_files=["res://.godot/imported/Day1 part seven.dialogue-4f879218bc0bf9834ec7bf6a299dbb5c.tres"]
+
+[params]
+
+defaults=true
