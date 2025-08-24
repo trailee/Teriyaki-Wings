@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="6_bkxnc"]
 [ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="7_rfvu1"]
 [ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters/yue.tscn" id="8_7867p"]
-[ext_resource type="PackedScene" uid="uid://l1d3w1s7m83y" path="res://SCENES/firstactionable.tscn" id="8_rfvu1"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="8_rfvu1"]
 [ext_resource type="Resource" uid="uid://d3c7rnx734ol6" path="res://Dialogue/harbour_group.dialogue" id="9_7867p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_smcbj"]
@@ -283,38 +283,20 @@ y_sort_enabled = true
 [node name="Weeds" type="Node2D" parent="y-sorting"]
 y_sort_enabled = true
 
-[node name="D1" type="Sprite2D" parent="y-sorting/Weeds"]
-position = Vector2(141, 121)
-texture = ExtResource("2_unqw3")
-region_enabled = true
-region_rect = Rect2(416, 400, 48, 32)
-
 [node name="D2" type="Sprite2D" parent="y-sorting/Weeds"]
-position = Vector2(380, 1)
-texture = ExtResource("2_unqw3")
-region_enabled = true
-region_rect = Rect2(416, 400, 48, 32)
-
-[node name="D3" type="Sprite2D" parent="y-sorting/Weeds"]
-position = Vector2(568, 183)
+position = Vector2(435, -36)
 texture = ExtResource("2_unqw3")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D4" type="Sprite2D" parent="y-sorting/Weeds"]
-position = Vector2(183, -164)
-texture = ExtResource("2_unqw3")
-region_enabled = true
-region_rect = Rect2(416, 400, 48, 32)
-
-[node name="D5" type="Sprite2D" parent="y-sorting/Weeds"]
-position = Vector2(-149, -175)
+position = Vector2(339, -157)
 texture = ExtResource("2_unqw3")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
 
 [node name="D6" type="Sprite2D" parent="y-sorting/Weeds"]
-position = Vector2(44, -111)
+position = Vector2(663, -134)
 texture = ExtResource("2_unqw3")
 region_enabled = true
 region_rect = Rect2(416, 400, 48, 32)
@@ -478,6 +460,7 @@ region_enabled = true
 region_rect = Rect2(64, 544, 48, 64)
 
 [node name="Characters" type="Node2D" parent="y-sorting"]
+y_sort_enabled = true
 
 [node name="Ophelia2D" parent="y-sorting/Characters" instance=ExtResource("6_bkxnc")]
 position = Vector2(62, -241)
@@ -497,13 +480,13 @@ scale = Vector2(4.61797, -1.72773)
 shape = SubResource("RectangleShape2D_7867p")
 
 [node name="Desdemona2D" parent="y-sorting" instance=ExtResource("5_hmwj4")]
-position = Vector2(729, -29)
+position = Vector2(727, -25)
 
 [node name="Camera2D (on player)" type="Camera2D" parent="y-sorting/Desdemona2D"]
 position = Vector2(-4490.91, -836.364)
 scale = Vector2(18.1818, 18.1818)
 zoom = Vector2(2.5, 2.5)
-limit_left = -395
+limit_left = 0
 limit_top = -375
 limit_right = 755
 limit_bottom = 375
