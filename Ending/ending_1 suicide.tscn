@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://dksojgy01ik7r"]
+[gd_scene load_steps=8 format=4 uid="uid://dksojgy01ik7r"]
 
 [ext_resource type="Texture2D" uid="uid://ckjb7fdld8ihs" path="res://images/circus.jpg" id="1_1bopk"]
 [ext_resource type="PackedScene" uid="uid://bc81wf34wdty8" path="res://Characters tscn/dr_paris.tscn" id="2_51ly4"]
 [ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="3_1bopk"]
+[ext_resource type="AudioStream" uid="uid://dodb2qrgun7g" path="res://Music_Teriyaki-Wings/VIP.MainMenu_BGM.wav" id="4_aasif"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7lit"]
 texture = ExtResource("1_1bopk")
@@ -5198,3 +5199,10 @@ position = Vector2(167.606, -119)
 rotation = -1.5708
 scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_q7lit")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_aasif")
+autoplay = true

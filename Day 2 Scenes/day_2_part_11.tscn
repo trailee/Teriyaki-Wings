@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://ch5hmyohtqvpu"]
+[gd_scene load_steps=33 format=4 uid="uid://ch5hmyohtqvpu"]
 
 [ext_resource type="Texture2D" uid="uid://bsgpuoc27q3k0" path="res://images/5.png" id="1_dssuy"]
 [ext_resource type="Texture2D" uid="uid://xka0ib8lxd2v" path="res://Assets/objects/Atlas.png" id="2_7upny"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="5_5pgwm"]
 [ext_resource type="Texture2D" uid="uid://c885glp4hb14u" path="res://Assets/characters/lucy.png" id="6_23olp"]
 [ext_resource type="Texture2D" uid="uid://b7tul5ipepy8m" path="res://Assets/characters/dr davis.png" id="7_t4ndx"]
+[ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="8_tldo1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h83gw"]
 texture = ExtResource("1_dssuy")
@@ -14381,3 +14382,7 @@ position = Vector2(-23, 558)
 scale = Vector2(0.45463, 0.362222)
 sprite_frames = SubResource("SpriteFrames_vfmn3")
 autoplay = "default"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_tldo1")
+autoplay = true

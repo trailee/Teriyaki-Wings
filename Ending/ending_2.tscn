@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://dhreestacuaf3"]
+[gd_scene load_steps=10 format=4 uid="uid://dhreestacuaf3"]
 
 [ext_resource type="Texture2D" uid="uid://ckjb7fdld8ihs" path="res://images/circus.jpg" id="1_rhfoy"]
 [ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="2_yw5jv"]
 [ext_resource type="PackedScene" uid="uid://cedthxbbbbv8k" path="res://Characters tscn/CaptainHelena.tscn" id="3_tlwxk"]
 [ext_resource type="PackedScene" uid="uid://bc81wf34wdty8" path="res://Characters tscn/dr_paris.tscn" id="4_e8vpi"]
 [ext_resource type="PackedScene" uid="uid://cgviu4kwm1yd1" path="res://Characters tscn/cerise.tscn" id="5_i7yi6"]
+[ext_resource type="AudioStream" uid="uid://dodb2qrgun7g" path="res://Music_Teriyaki-Wings/VIP.MainMenu_BGM.wav" id="6_scn81"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7lit"]
 texture = ExtResource("1_rhfoy")
@@ -5207,3 +5208,10 @@ position = Vector2(167.606, -119)
 rotation = -1.5708
 scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_q7lit")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_scn81")
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
