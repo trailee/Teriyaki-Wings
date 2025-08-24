@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dwefiq0ln7jqd"
+path="res://.godot/imported/cabin day 2 morning.dialogue-513a3608aa6c126a0ac8af678ca250b7.tres"
+
+[deps]
+
+source_file="res://Day 2 Scenes/cabin day 2 morning.dialogue"
+dest_files=["res://.godot/imported/cabin day 2 morning.dialogue-513a3608aa6c126a0ac8af678ca250b7.tres"]
+
+[params]
+
+defaults=true

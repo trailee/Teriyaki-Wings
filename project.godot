@@ -21,6 +21,7 @@ State="*res://Dialogue/state.gd"
 ZorenDeadCount="*res://zoren_dead_count.gd"
 SceneManager="*res://scenemanager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+player="*res://Characters tscn/Desdemona.tscn"
 
 [dialogue_manager]
 
