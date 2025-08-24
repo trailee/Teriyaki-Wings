@@ -1,18 +1,21 @@
-[gd_scene load_steps=31 format=4 uid="uid://21g4ysdimkgi"]
+[gd_scene load_steps=35 format=4 uid="uid://21g4ysdimkgi"]
 
-[ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="1_clw8b"]
-[ext_resource type="Texture2D" uid="uid://bmh2ujcp37hr2" path="res://Backgrounds/TopDownHouse_FurnitureState1.png" id="2_yxjqr"]
-[ext_resource type="Texture2D" uid="uid://isx4afigpbvu" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Chicken.png" id="3_1n8f6"]
-[ext_resource type="Texture2D" uid="uid://d35iynot1wsmv" path="res://Backgrounds/Cute_Fantasy_Free/Animals/PigIdle.png" id="4_34xuh"]
-[ext_resource type="Texture2D" uid="uid://d2avd6wb4gm5v" path="res://images/FreePixelSurvivalItemsPack.png" id="5_w5emb"]
-[ext_resource type="Texture2D" uid="uid://de6n3ussjqrv6" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Cow/Cow.png" id="6_ree8j"]
-[ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters/yue.tscn" id="8_4cinj"]
-[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="9_lt5ib"]
-[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="10_wyx5e"]
-[ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="11_ebbwv"]
+[ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="1_kojl2"]
+[ext_resource type="Texture2D" uid="uid://bmh2ujcp37hr2" path="res://Backgrounds/TopDownHouse_FurnitureState1.png" id="2_tqr38"]
+[ext_resource type="Texture2D" uid="uid://isx4afigpbvu" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Chicken.png" id="3_euhj6"]
+[ext_resource type="Texture2D" uid="uid://d35iynot1wsmv" path="res://Backgrounds/Cute_Fantasy_Free/Animals/PigIdle.png" id="4_ys3br"]
+[ext_resource type="Texture2D" uid="uid://d2avd6wb4gm5v" path="res://images/FreePixelSurvivalItemsPack.png" id="5_rytv5"]
+[ext_resource type="Texture2D" uid="uid://de6n3ussjqrv6" path="res://Backgrounds/Cute_Fantasy_Free/Animals/Cow/Cow.png" id="6_ygywa"]
+[ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters/yue.tscn" id="7_4yes6"]
+[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="8_lv1jb"]
+[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="9_eca17"]
+[ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="10_c61d6"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="11_8ecvk"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="11_euhj6"]
+[ext_resource type="Resource" uid="uid://ct24r8noiwlbi" path="res://Day 1 Scenes fixed/Day1 Partfive.dialogue" id="12_ys3br"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1naw"]
-texture = ExtResource("1_clw8b")
+texture = ExtResource("1_kojl2")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -182,7 +185,7 @@ texture = ExtResource("1_clw8b")
 sources/0 = SubResource("TileSetAtlasSource_f1naw")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_en6fd"]
-texture = ExtResource("2_yxjqr")
+texture = ExtResource("2_tqr38")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -421,7 +424,7 @@ texture = ExtResource("2_yxjqr")
 sources/0 = SubResource("TileSetAtlasSource_en6fd")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_03ltp"]
-texture = ExtResource("1_clw8b")
+texture = ExtResource("1_kojl2")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -591,7 +594,7 @@ texture = ExtResource("1_clw8b")
 sources/0 = SubResource("TileSetAtlasSource_03ltp")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6tg0a"]
-texture = ExtResource("1_clw8b")
+texture = ExtResource("1_kojl2")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -761,7 +764,7 @@ texture = ExtResource("1_clw8b")
 sources/0 = SubResource("TileSetAtlasSource_6tg0a")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1lpvh"]
-texture = ExtResource("3_1n8f6")
+texture = ExtResource("3_euhj6")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -777,7 +780,7 @@ texture = ExtResource("3_1n8f6")
 sources/0 = SubResource("TileSetAtlasSource_1lpvh")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwftm"]
-texture = ExtResource("4_34xuh")
+texture = ExtResource("4_ys3br")
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
@@ -811,7 +814,7 @@ texture = ExtResource("4_34xuh")
 sources/0 = SubResource("TileSetAtlasSource_wwftm")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u55xe"]
-texture = ExtResource("5_w5emb")
+texture = ExtResource("5_rytv5")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1216,7 +1219,7 @@ texture = ExtResource("5_w5emb")
 sources/0 = SubResource("TileSetAtlasSource_u55xe")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ih4sl"]
-texture = ExtResource("6_ree8j")
+texture = ExtResource("6_ygywa")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1240,6 +1243,8 @@ sources/0 = SubResource("TileSetAtlasSource_ih4sl")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f1naw"]
 normal = Vector2(0.00439887, -0.99999)
 distance = 92.0048
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rytv5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbk4g"]
 size = Vector2(36, 42)
@@ -1311,11 +1316,28 @@ rotation = -1.5708
 scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_f1naw")
 
-[node name="Yue_2D" parent="." instance=ExtResource("8_4cinj")]
+[node name="y sorting" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Ophelia2D" parent="y sorting" instance=ExtResource("9_eca17")]
+position = Vector2(571, 333)
+
+[node name="Yue_2D" parent="y sorting" instance=ExtResource("7_4yes6")]
 position = Vector2(610, 331)
 
-[node name="Cassandra2D" parent="." instance=ExtResource("9_lt5ib")]
+[node name="Cassandra2D" parent="y sorting" instance=ExtResource("8_lv1jb")]
 position = Vector2(542, 322)
+
+[node name="Desdemona2D" parent="y sorting" instance=ExtResource("11_8ecvk")]
+position = Vector2(654, 332)
+
+[node name="Actionable" parent="y sorting" instance=ExtResource("11_euhj6")]
+dialogue_resource = ExtResource("12_ys3br")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="y sorting/Actionable"]
+position = Vector2(573, 337)
+scale = Vector2(6.18782, 3.49179)
+shape = SubResource("RectangleShape2D_rytv5")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-9, 3)
@@ -1332,12 +1354,9 @@ shape = SubResource("RectangleShape2D_1lpvh")
 position = Vector2(328, 177)
 shape = SubResource("CircleShape2D_cbk4g")
 
-[node name="Ophelia2D" parent="." instance=ExtResource("10_wyx5e")]
-position = Vector2(571, 333)
-
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-13, 2)
-stream = ExtResource("11_ebbwv")
+stream = ExtResource("10_c61d6")
 autoplay = true
 bus = &"BGM"
 
