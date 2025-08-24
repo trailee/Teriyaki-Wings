@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dgwgev63q6rhe" path="res://Assets/shelter furniture.png" id="4_65wd0"]
 [ext_resource type="Texture2D" uid="uid://m7atrj0mnr4m" path="res://Assets/InteriorTilesLITE.png" id="5_qa7w0"]
 [ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="6_0803f"]
-[ext_resource type="PackedScene" uid="uid://l1d3w1s7m83y" path="res://SCENES/firstactionable.tscn" id="7_gvvhe"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="7_gvvhe"]
 [ext_resource type="Resource" uid="uid://ut1y87k3fl50" path="res://Dialogue/box on table.dialogue" id="8_tr8gb"]
 [ext_resource type="Resource" uid="uid://bxrnmsv47j0o8" path="res://Dialogue/first aid kit.dialogue" id="9_bhe5d"]
 [ext_resource type="Resource" uid="uid://c7j3pk4v4bqq0" path="res://Dialogue/chest.dialogue" id="10_hctnd"]
@@ -2583,7 +2583,7 @@ scale = Vector2(2.22442, 1.79441)
 shape = SubResource("RectangleShape2D_0wvm6")
 
 [node name="Cassandra2D" parent="Chest" instance=ExtResource("11_2fb3w")]
-position = Vector2(51, 77)
+position = Vector2(15, 83)
 
 [node name="Chairs" type="StaticBody2D" parent="."]
 position = Vector2(17, 5)

@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="6_bkxnc"]
 [ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="7_rfvu1"]
 [ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters/yue.tscn" id="8_7867p"]
-[ext_resource type="PackedScene" uid="uid://l1d3w1s7m83y" path="res://SCENES/firstactionable.tscn" id="8_rfvu1"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="8_rfvu1"]
 [ext_resource type="Resource" uid="uid://d3c7rnx734ol6" path="res://Dialogue/harbour_group.dialogue" id="9_7867p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_smcbj"]
