@@ -1,10 +1,13 @@
-[gd_scene load_steps=30 format=4 uid="uid://0k07xdnkt8wf"]
+[gd_scene load_steps=28 format=4 uid="uid://0k07xdnkt8wf"]
 
 [ext_resource type="Texture2D" uid="uid://bsgpuoc27q3k0" path="res://images/5.png" id="1_xgial"]
-[ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="4_crxc5"]
+[ext_resource type="Script" uid="uid://cylss4vsxnpue" path="res://Assets/night_1_des_talking_with_her_friends_deck.gd" id="1_y2bmq"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="2_f6vgx"]
 [ext_resource type="Texture2D" uid="uid://du6exsp28uj6s" path="res://Assets/characters/ophelia.png" id="5_wlbg7"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="6_davxb"]
 [ext_resource type="Texture2D" uid="uid://c0xltjspdx5nq" path="res://Assets/characters/cassandra.png" id="6_q0ito"]
 [ext_resource type="Texture2D" uid="uid://bbvrqkbsr0uru" path="res://Assets/characters/yeu.png" id="7_j0dpf"]
+[ext_resource type="Resource" uid="uid://dgyt5cep4n8h3" path="res://talking with her friend night one deck.dialogue" id="7_y2bmq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h83gw"]
 texture = ExtResource("1_xgial")
@@ -11684,42 +11687,6 @@ corner_radius_top_left = 2000
 normal = Vector2(0.00116981, 0.999999)
 distance = -389.004
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8siuv"]
-atlas = ExtResource("4_crxc5")
-region = Rect2(0, 900, 540, 900)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ijkoe"]
-atlas = ExtResource("4_crxc5")
-region = Rect2(540, 900, 540, 900)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4wg2u"]
-atlas = ExtResource("4_crxc5")
-region = Rect2(1080, 900, 540, 900)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b6w0q"]
-atlas = ExtResource("4_crxc5")
-region = Rect2(1620, 900, 540, 900)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_bjw7q"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8siuv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ijkoe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4wg2u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b6w0q")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_k84m3"]
 atlas = ExtResource("5_wlbg7")
 region = Rect2(0, 0, 540, 900)
@@ -11829,7 +11796,8 @@ animations = [{
 }]
 
 [node name="Night 1 Des interacts with people" type="Node2D"]
-position = Vector2(960, 340)
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_y2bmq")
 
 [node name="water" type="TileMapLayer" parent="."]
 position = Vector2(-165, -20)
@@ -11963,34 +11931,46 @@ position = Vector2(65.845, -101)
 rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_mbalj")
 
-[node name="Huge Des for Deck Night one" type="CharacterBody2D" parent="."]
+[node name="y sort" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Huge Des for Deck Night one"]
-position = Vector2(595, 415)
-scale = Vector2(0.422222, 0.329444)
-sprite_frames = SubResource("SpriteFrames_bjw7q")
-autoplay = "default"
+[node name="Desdemona2D" parent="y sort" instance=ExtResource("2_f6vgx")]
+position = Vector2(521, 480)
+scale = Vector2(0.4, 0.4)
 
-[node name="Huge ophelia" type="CharacterBody2D" parent="."]
+[node name="Huge ophelia" type="CharacterBody2D" parent="y sort"]
+position = Vector2(-1147, 62)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Huge ophelia"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="y sort/Huge ophelia"]
 position = Vector2(269.875, 366.125)
 scale = Vector2(0.363426, 0.273611)
 sprite_frames = SubResource("SpriteFrames_fuye1")
 autoplay = "default"
 
-[node name="Huge cassandra" type="CharacterBody2D" parent="."]
+[node name="Huge cassandra" type="CharacterBody2D" parent="y sort"]
+position = Vector2(-887, -135)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Huge cassandra"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="y sort/Huge cassandra"]
 position = Vector2(126, 468)
 scale = Vector2(0.335648, 0.289167)
 sprite_frames = SubResource("SpriteFrames_wfuo7")
 autoplay = "default"
 
-[node name="huge yue" type="CharacterBody2D" parent="."]
+[node name="huge yue" type="CharacterBody2D" parent="y sort"]
+position = Vector2(-975, -298)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="huge yue"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="y sort/huge yue"]
 position = Vector2(311, 549)
 scale = Vector2(0.45463, 0.362222)
 sprite_frames = SubResource("SpriteFrames_gs4b7")
 autoplay = "default"
+
+[node name="Actionable" parent="y sort" instance=ExtResource("6_davxb")]
+dialogue_resource = ExtResource("7_y2bmq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="y sort/Actionable"]
+polygon = PackedVector2Array(-505, 361, -616, 422, -700, 528, -738, 580, -948, 646, -1059, 585, -1054, 318, -847, -33, -606, -85, -486, 158, -500, 335)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-12, 228)
+zoom = Vector2(4, 4)
