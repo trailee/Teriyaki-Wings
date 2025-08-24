@@ -1,8 +1,6 @@
-[gd_scene load_steps=39 format=4 uid="uid://3vg3js6ct2xi"]
+[gd_scene load_steps=36 format=4 uid="uid://3vg3js6ct2xi"]
 
 [ext_resource type="Texture2D" uid="uid://bsgpuoc27q3k0" path="res://images/5.png" id="1_x1dr6"]
-[ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="2_klygp"]
-[ext_resource type="Texture2D" uid="uid://xka0ib8lxd2v" path="res://Assets/objects/Atlas.png" id="2_x1dr6"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="3_pw5wq"]
 [ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="4_wa6tf"]
 [ext_resource type="Texture2D" uid="uid://c885glp4hb14u" path="res://Assets/characters/lucy.png" id="5_dn1rn"]
@@ -11685,7 +11683,6 @@ bg_color = Color(1, 0.962122, 0.955517, 1)
 corner_radius_top_left = 2000
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_klygp"]
-texture = ExtResource("2_x1dr6")
 4:1/0 = 0
 5:1/0 = 0
 12:1/0 = 0
@@ -14090,9 +14087,6 @@ sources/0 = SubResource("TileSetAtlasSource_dn1rn")
 normal = Vector2(0.00116981, 0.999999)
 distance = -389.004
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqxj1"]
-size = Vector2(572, 1423.75)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_8siuv"]
 atlas = ExtResource("4_wa6tf")
 region = Rect2(0, 900, 540, 900)
@@ -14238,7 +14232,6 @@ animations = [{
 }]
 
 [node name="Night 2 Investigation after cabin" type="Node2D"]
-position = Vector2(960, 340)
 
 [node name="water" type="TileMapLayer" parent="."]
 position = Vector2(-165, -20)
@@ -14379,22 +14372,6 @@ shape = SubResource("WorldBoundaryShape2D_mbalj")
 position = Vector2(65.845, -101)
 rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_mbalj")
-
-[node name="nscenetrigger" parent="." instance=ExtResource("2_klygp")]
-position = Vector2(800, 525)
-collision_layer = 0
-collision_mask = 128
-connected_scene = "hallway_scene"
-
-[node name="Sprite2D" type="Sprite2D" parent="nscenetrigger"]
-modulate = Color(1, 1, 1, 0.411765)
-position = Vector2(129, 38)
-scale = Vector2(1, 1.93926)
-texture = ExtResource("3_pw5wq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="nscenetrigger"]
-position = Vector2(261, -22)
-shape = SubResource("RectangleShape2D_rqxj1")
 
 [node name="Huge Des" type="CharacterBody2D" parent="."]
 
