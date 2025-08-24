@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cndg824f8dgmv"
+path="res://.godot/imported/Day2 part twelve.dialogue-d8882b76720f7120870a13a7918f45b2.tres"
+
+[deps]
+
+source_file="res://Day 2 Scenes Fixed/Day2 part twelve.dialogue"
+dest_files=["res://.godot/imported/Day2 part twelve.dialogue-d8882b76720f7120870a13a7918f45b2.tres"]
+
+[params]
+
+defaults=true

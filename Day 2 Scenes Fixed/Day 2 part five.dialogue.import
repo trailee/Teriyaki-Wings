@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b4uqhd7m8vmfu"
+path="res://.godot/imported/Day 2 part five.dialogue-3e4b17b388a72e3f22f3e7631e4e4b5c.tres"
+
+[deps]
+
+source_file="res://Day 2 Scenes Fixed/Day 2 part five.dialogue"
+dest_files=["res://.godot/imported/Day 2 part five.dialogue-3e4b17b388a72e3f22f3e7631e4e4b5c.tres"]
+
+[params]
+
+defaults=true
