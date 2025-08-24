@@ -5,5 +5,5 @@ func _ready():
 
 func _on_dialogue_ended(_resource: DialogueResource) -> void:
 	if State.des_int_people == true:
-		get_tree().change_scene_to_file("res://Day 1 Scenes fixed/night_1_des_interacts_with_people.tscn")
+		get_tree().change_scene_to_file("res://Day 2 Scenes Fixed/Day2 part five scene.tscn")
 		print("not wokring")

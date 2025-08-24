@@ -1,6 +1,7 @@
-[gd_scene load_steps=29 format=4 uid="uid://b5e5fwk6fy4ie"]
+[gd_scene load_steps=30 format=4 uid="uid://b5e5fwk6fy4ie"]
 
 [ext_resource type="Texture2D" uid="uid://k1pbkg3j3pc3" path="res://images/4.png" id="1_384ov"]
+[ext_resource type="Script" uid="uid://ceg2tj6laav5m" path="res://Day 2 Scenes Fixed/day_2_part_four_scene.gd" id="1_lqchc"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="2_fq1q6"]
 [ext_resource type="Texture2D" uid="uid://dh6um2nnp3ndk" path="res://Assets/characters/yeu,cass,oph, lucy died.png" id="5_wi3jf"]
 [ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="6_384ov"]
@@ -12955,6 +12956,7 @@ animations = [{
 
 [node name="deck day 4" type="Node2D"]
 scale = Vector2(0.25, 0.25)
+script = ExtResource("1_lqchc")
 
 [node name="water" type="TileMapLayer" parent="."]
 position = Vector2(-165, -20)
