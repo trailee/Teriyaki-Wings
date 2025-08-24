@@ -21,10 +21,13 @@ State="*res://Dialogue/state.gd"
 ZorenDeadCount="*res://zoren_dead_count.gd"
 SceneManager="*res://scenemanager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 player="*res://Characters tscn/Desdemona.tscn"
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 02c8f21 (des talkign to friends)
 
 [dialogue_manager]
 
