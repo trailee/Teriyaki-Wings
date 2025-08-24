@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cxsu3b7eyj45l" path="res://Characters/Zade.tscn" id="9_7kuf4"]
 [ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="10_chgke"]
 [ext_resource type="AudioStream" uid="uid://durot3wiktxle" path="res://Music_Teriyaki-Wings/Ruins_BGM copy.wav" id="11_flv6l"]
-[ext_resource type="PackedScene" uid="uid://l1d3w1s7m83y" path="res://SCENES/firstactionable.tscn" id="12_evh76"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="12_evh76"]
 [ext_resource type="Resource" uid="uid://bmyqqmwd6s1qm" path="res://Dialogue/Ruins_Exit.dialogue" id="14_2td7q"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="14_5ldcl"]
 
