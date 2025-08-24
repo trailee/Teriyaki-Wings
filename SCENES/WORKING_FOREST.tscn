@@ -822,7 +822,7 @@ position = Vector2(-77, -262)
 position = Vector2(-435, 230)
 
 [node name="MOB5" parent="y-sorting objects" instance=ExtResource("5_l7tmc")]
-position = Vector2(-198, -257)
+position = Vector2(306, 124)
 
 [node name="World Boundary" type="StaticBody2D" parent="."]
 position = Vector2(1, 97)

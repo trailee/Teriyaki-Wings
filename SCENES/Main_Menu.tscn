@@ -717,16 +717,19 @@ frame_progress = 0.0781179
 [node name="Credit" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Tracy Chiem"]
 layout_mode = 0
 offset_left = -4.00604
-offset_top = 73.8467
+offset_top = 46.9028
 offset_right = 251.994
-offset_bottom = 288.847
+offset_bottom = 340.903
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
 text = "Project Manager
 Game Programmer
 UI/UX Designer
 Game/Level Designer
-Music Composer"
+Music Composer
+Co-Bug Exterminator
+Quality Controller
+"
 horizontal_alignment = 1
 
 [node name="Joanna Li" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text"]
@@ -750,14 +753,16 @@ autoplay = "Cat"
 [node name="Credit" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Joanna Li"]
 layout_mode = 0
 offset_left = -4.00605
-offset_top = 73.8467
+offset_top = 46.9028
 offset_right = 251.994
-offset_bottom = 288.847
+offset_bottom = 261.903
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
-text = "Storyline Writer
+text = "Lead Storyline Writer
+Lead Script Writer 
+Game Programmer
 Scene Designer
-Scene Coder"
+"
 horizontal_alignment = 1
 
 [node name="Name3" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text"]
@@ -781,16 +786,18 @@ frame_progress = 0.311784
 [node name="Credit" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Name3"]
 layout_mode = 0
 offset_left = -4.00604
-offset_top = 73.8467
+offset_top = 46.9028
 offset_right = 251.994
-offset_bottom = 288.847
+offset_bottom = 264.903
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
-text = "Bard of Hope
+text = "Lead Backend Developer
+Bard of Hope
 Lead Ideator
 Main Editor
 Co-programmer
-Co-writer "
+Co-writer 
+Bug Exterminator"
 horizontal_alignment = 1
 
 [node name="Name4" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text"]
@@ -848,6 +855,7 @@ text = "Next"
 icon_alignment = 1
 
 [node name="Pg2" type="Control" parent="Credits UI/Credits UI"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
