@@ -12,4 +12,4 @@ var ruin_exit: bool = false
 
 var harbour_exit: bool = false
 
-var d1p5_exit: bool = true
+var des_int_people: bool = true

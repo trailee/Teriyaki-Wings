@@ -1,6 +1,7 @@
-[gd_scene load_steps=32 format=4 uid="uid://dvsa5r6fi1syq"]
+[gd_scene load_steps=33 format=4 uid="uid://dvsa5r6fi1syq"]
 
 [ext_resource type="Texture2D" uid="uid://bsgpuoc27q3k0" path="res://images/5.png" id="1_0ugfl"]
+[ext_resource type="Script" uid="uid://cnxtdfxklg5xn" path="res://Day 1 Scenes fixed/night_1_des_interacts_with_people.gd" id="1_8ivcr"]
 [ext_resource type="PackedScene" uid="uid://cbvs3y1678mk2" path="res://Characters/Dr.M.tscn" id="4_55k2l"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="4_vtni8"]
 [ext_resource type="Texture2D" uid="uid://c885glp4hb14u" path="res://Assets/characters/lucy.png" id="5_a727r"]
@@ -12969,6 +12970,7 @@ animations = [{
 
 [node name="Night 1 Des interacts with people" type="Node2D"]
 scale = Vector2(0.25, 0.25)
+script = ExtResource("1_8ivcr")
 
 [node name="water" type="TileMapLayer" parent="."]
 position = Vector2(-165, -20)
