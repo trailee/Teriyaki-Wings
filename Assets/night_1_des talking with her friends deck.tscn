@@ -1,12 +1,10 @@
-[gd_scene load_steps=12 format=4 uid="uid://cxgjysbkgqd7k"]
+[gd_scene load_steps=30 format=4 uid="uid://0k07xdnkt8wf"]
 
 [ext_resource type="Texture2D" uid="uid://bsgpuoc27q3k0" path="res://images/5.png" id="1_xgial"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="2_f6vgx"]
-[ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="3_ui15s"]
-[ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters/yue.tscn" id="4_davxb"]
-[ext_resource type="PackedScene" uid="uid://6j6c5uewe0e1" path="res://Characters/Cassandra.tscn" id="5_y2bmq"]
-[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="6_davxb"]
-[ext_resource type="Resource" uid="uid://dgyt5cep4n8h3" path="res://talking with her friend night one deck.dialogue" id="7_y2bmq"]
+[ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="4_crxc5"]
+[ext_resource type="Texture2D" uid="uid://du6exsp28uj6s" path="res://Assets/characters/ophelia.png" id="5_wlbg7"]
+[ext_resource type="Texture2D" uid="uid://c0xltjspdx5nq" path="res://Assets/characters/cassandra.png" id="6_q0ito"]
+[ext_resource type="Texture2D" uid="uid://bbvrqkbsr0uru" path="res://Assets/characters/yeu.png" id="7_j0dpf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h83gw"]
 texture = ExtResource("1_xgial")
@@ -11686,8 +11684,152 @@ corner_radius_top_left = 2000
 normal = Vector2(0.00116981, 0.999999)
 distance = -389.004
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8siuv"]
+atlas = ExtResource("4_crxc5")
+region = Rect2(0, 900, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijkoe"]
+atlas = ExtResource("4_crxc5")
+region = Rect2(540, 900, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wg2u"]
+atlas = ExtResource("4_crxc5")
+region = Rect2(1080, 900, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6w0q"]
+atlas = ExtResource("4_crxc5")
+region = Rect2(1620, 900, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bjw7q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8siuv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijkoe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wg2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6w0q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k84m3"]
+atlas = ExtResource("5_wlbg7")
+region = Rect2(0, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfpfg"]
+atlas = ExtResource("5_wlbg7")
+region = Rect2(540, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_br83w"]
+atlas = ExtResource("5_wlbg7")
+region = Rect2(1080, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8qmy"]
+atlas = ExtResource("5_wlbg7")
+region = Rect2(1620, 0, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fuye1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k84m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfpfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_br83w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8qmy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqsvj"]
+atlas = ExtResource("6_q0ito")
+region = Rect2(0, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnlk7"]
+atlas = ExtResource("6_q0ito")
+region = Rect2(540, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5w8ci"]
+atlas = ExtResource("6_q0ito")
+region = Rect2(1080, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvvn2"]
+atlas = ExtResource("6_q0ito")
+region = Rect2(1620, 0, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wfuo7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqsvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnlk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5w8ci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvvn2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywuag"]
+atlas = ExtResource("7_j0dpf")
+region = Rect2(0, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtyxe"]
+atlas = ExtResource("7_j0dpf")
+region = Rect2(540, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tgp0"]
+atlas = ExtResource("7_j0dpf")
+region = Rect2(1080, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sg2a5"]
+atlas = ExtResource("7_j0dpf")
+region = Rect2(1620, 0, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gs4b7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywuag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtyxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tgp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sg2a5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Night 1 Des interacts with people" type="Node2D"]
-scale = Vector2(0.25, 0.25)
+position = Vector2(960, 340)
 
 [node name="water" type="TileMapLayer" parent="."]
 position = Vector2(-165, -20)
@@ -11821,31 +11963,34 @@ position = Vector2(65.845, -101)
 rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_mbalj")
 
-[node name="y sorting" type="Node2D" parent="."]
-y_sort_enabled = true
+[node name="Huge Des for Deck Night one" type="CharacterBody2D" parent="."]
 
-[node name="Desdemona2D" parent="y sorting" instance=ExtResource("2_f6vgx")]
-position = Vector2(544, 458)
-scale = Vector2(0.4, 0.4)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Huge Des for Deck Night one"]
+position = Vector2(595, 415)
+scale = Vector2(0.422222, 0.329444)
+sprite_frames = SubResource("SpriteFrames_bjw7q")
+autoplay = "default"
 
-[node name="Ophelia2D" parent="y sorting" instance=ExtResource("3_ui15s")]
-position = Vector2(-861, 352)
-scale = Vector2(0.4, 0.4)
+[node name="Huge ophelia" type="CharacterBody2D" parent="."]
 
-[node name="Yue_2D" parent="y sorting" instance=ExtResource("4_davxb")]
-position = Vector2(-753, 284)
-scale = Vector2(0.4, 0.4)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Huge ophelia"]
+position = Vector2(269.875, 366.125)
+scale = Vector2(0.363426, 0.273611)
+sprite_frames = SubResource("SpriteFrames_fuye1")
+autoplay = "default"
 
-[node name="Cassandra2D" parent="y sorting" instance=ExtResource("5_y2bmq")]
-position = Vector2(-530, 71)
-scale = Vector2(0.4, 0.4)
+[node name="Huge cassandra" type="CharacterBody2D" parent="."]
 
-[node name="Actionable" parent="y sorting" instance=ExtResource("6_davxb")]
-dialogue_resource = ExtResource("7_y2bmq")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Huge cassandra"]
+position = Vector2(126, 468)
+scale = Vector2(0.335648, 0.289167)
+sprite_frames = SubResource("SpriteFrames_wfuo7")
+autoplay = "default"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="y sorting/Actionable"]
-polygon = PackedVector2Array(-424, 347, -544, 407, -646, 560, -867, 594, -897, 641, -1000, 572, -1071, 478, -1103, 292, -940, 116, -726, 79, -531, 56, -451, 69, -404, 283, -417, 326)
+[node name="huge yue" type="CharacterBody2D" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-24, 276)
-zoom = Vector2(4, 4)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="huge yue"]
+position = Vector2(311, 549)
+scale = Vector2(0.45463, 0.362222)
+sprite_frames = SubResource("SpriteFrames_gs4b7")
+autoplay = "default"
