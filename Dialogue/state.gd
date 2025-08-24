@@ -9,3 +9,5 @@ var treehouse_exit: bool = false
 
 var ruin_talked: bool = false
 var ruin_exit: bool = false
+
+var harbour_exit: bool = false

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dc7a6h13kqu10"
+path="res://.godot/imported/harbour_exit.dialogue-1b24fccd16b21c5f3f385df80c184d17.tres"
+
+[deps]
+
+source_file="res://Dialogue/harbour_exit.dialogue"
+dest_files=["res://.godot/imported/harbour_exit.dialogue-1b24fccd16b21c5f3f385df80c184d17.tres"]
+
+[params]
+
+defaults=true

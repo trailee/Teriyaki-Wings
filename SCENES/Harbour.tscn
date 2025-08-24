@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cg05whbmfgvdm" path="res://Characters/yue.tscn" id="8_7867p"]
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="8_rfvu1"]
 [ext_resource type="Resource" uid="uid://d3c7rnx734ol6" path="res://Dialogue/harbour_group.dialogue" id="9_7867p"]
-[ext_resource type="Resource" uid="uid://b06250hs54stx" path="res://Dialogue/exit_treehouse.dialogue" id="11_aspo1"]
+[ext_resource type="Resource" uid="uid://dc7a6h13kqu10" path="res://Dialogue/harbour_exit.dialogue" id="12_k2ccr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_smcbj"]
 texture = ExtResource("1_wkhga")
@@ -558,7 +558,7 @@ position = Vector2(186, -230)
 [node name="Actionable" parent="Exit2" instance=ExtResource("8_rfvu1")]
 position = Vector2(16, 32)
 scale = Vector2(0.837964, 0.520561)
-dialogue_resource = ExtResource("11_aspo1")
+dialogue_resource = ExtResource("12_k2ccr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit2/Actionable"]
 position = Vector2(-224.353, 72.9982)

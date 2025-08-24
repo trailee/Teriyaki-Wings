@@ -1,0 +1,6 @@
+~ start
+
+Des: The cruise has arrived. Let's go!
+set State.harbour_exit = true
+
+=> END
