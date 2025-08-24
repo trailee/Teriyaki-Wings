@@ -12,4 +12,4 @@ func _on_exit_body_entered(_body: PhysicsBody2D) -> void:
 
 func _on_dialogue_ended(_resource: DialogueResource) -> void:
 	if State.harbour_exit == true:
-		get_tree().change_scene_to_file("res://Day 1 Scenes fixed/Day1 part5.tscn")
+		get_tree().change_scene_to_file("res://Characters/cabin_day_1_scene.tscn")

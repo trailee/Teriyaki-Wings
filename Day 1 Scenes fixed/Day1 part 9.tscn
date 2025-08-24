@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://0k07xdnkt8wf"]
+[gd_scene load_steps=37 format=4 uid="uid://0k07xdnkt8wf"]
 
 [ext_resource type="Texture2D" uid="uid://bsgpuoc27q3k0" path="res://images/5.png" id="1_xgial"]
 [ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="2_cuwke"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c0xltjspdx5nq" path="res://Assets/characters/cassandra.png" id="6_q0ito"]
 [ext_resource type="Texture2D" uid="uid://bbvrqkbsr0uru" path="res://Assets/characters/yeu.png" id="7_j0dpf"]
 [ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="8_seand"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="9_bg86u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h83gw"]
 texture = ExtResource("1_xgial")
@@ -13155,7 +13156,7 @@ position = Vector2(129, 38)
 scale = Vector2(1, 1.93926)
 texture = ExtResource("3_qw8x0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="nscenetrigger"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="nscenetrigger"]
 position = Vector2(261, -22)
 shape = SubResource("RectangleShape2D_rqxj1")
 
@@ -13194,3 +13195,5 @@ autoplay = "default"
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_seand")
 autoplay = true
+
+[node name="Desdemona2D" parent="." instance=ExtResource("9_bg86u")]
