@@ -6,10 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="4_smcbj"]
 [ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="5_hmwj4"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mvhoc"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gf2am"]
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_smcbj"]
 texture = ExtResource("1_wkhga")
 texture_region_size = Vector2i(32, 32)
@@ -253,39 +249,11 @@ func _process(delta: float) -> void:
 	pass
 "
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mvhoc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gf2am"]
+
 [node name="Harbour" type="Node2D"]
-
-[node name="World Boundary" type="StaticBody2D" parent="."]
-position = Vector2(274, 147)
-scale = Vector2(3.12, 1.12)
-
-[node name="Bottom Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(13.3803, 155)
-scale = Vector2(5.40845, 1)
-shape = SubResource("WorldBoundaryShape2D_mvhoc")
-
-[node name="Top Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-5.28169, -411)
-rotation = 3.12936
-scale = Vector2(7.23949, 1)
-shape = SubResource("WorldBoundaryShape2D_mvhoc")
-
-[node name="Left Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-258.451, -141)
-rotation = 1.5708
-scale = Vector2(3.01408, 1)
-shape = SubResource("WorldBoundaryShape2D_mvhoc")
-
-[node name="Right Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(239.084, -77)
-rotation = -1.5708
-scale = Vector2(4.2676, 1)
-shape = SubResource("WorldBoundaryShape2D_mvhoc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-184.936, 58.9286)
-scale = Vector2(6.96119, 26.5044)
-shape = SubResource("RectangleShape2D_gf2am")
 
 [node name="Background" type="TileMapLayer" parent="."]
 scale = Vector2(0.75, 0.75)
@@ -555,3 +523,35 @@ libraries = {
 }
 autoplay = "new_animation"
 script = SubResource("GDScript_unqw3")
+
+[node name="World Boundary" type="StaticBody2D" parent="."]
+position = Vector2(274, 147)
+scale = Vector2(3.12, 1.12)
+
+[node name="Bottom Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(16.3462, 58.0357)
+scale = Vector2(5.40845, 1)
+shape = SubResource("WorldBoundaryShape2D_mvhoc")
+
+[node name="Top Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(-8.97436, -333.929)
+rotation = 3.12936
+scale = Vector2(7.23949, 1)
+shape = SubResource("WorldBoundaryShape2D_mvhoc")
+
+[node name="Left Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(-203.205, -99.1071)
+rotation = 1.5708
+scale = Vector2(3.01408, 1)
+shape = SubResource("WorldBoundaryShape2D_mvhoc")
+
+[node name="Right Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(152.885, -65.1786)
+rotation = -1.5708
+scale = Vector2(4.2676, 1)
+shape = SubResource("WorldBoundaryShape2D_mvhoc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(-179.167, 75.8929)
+scale = Vector2(6.96119, 26.5044)
+shape = SubResource("RectangleShape2D_gf2am")
