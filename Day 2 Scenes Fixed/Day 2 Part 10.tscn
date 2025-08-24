@@ -1,12 +1,14 @@
-[gd_scene load_steps=24 format=4 uid="uid://cclr1epa33r1u"]
+[gd_scene load_steps=32 format=4 uid="uid://cclr1epa33r1u"]
 
 [ext_resource type="AudioStream" uid="uid://durot3wiktxle" path="res://Music_Teriyaki-Wings/Ruins_BGM copy.wav" id="1_rqnw7"]
 [ext_resource type="Texture2D" uid="uid://ysh8c2r2eok5" path="res://Assets/interiors_demo.png" id="2_j6ww6"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="3_3li75"]
 [ext_resource type="Texture2D" uid="uid://cilikghbqh660" path="res://Assets/objects/safe-box-closed.png" id="3_ymkvt"]
 [ext_resource type="Texture2D" uid="uid://dal7xti32qt2o" path="res://Assets/objects/file-closed.png" id="4_3suix"]
+[ext_resource type="Texture2D" uid="uid://xrjum8b4pmya" path="res://Assets/characters/dr helena (2).png" id="4_ymkvt"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="5_3suix"]
 [ext_resource type="Texture2D" uid="uid://83pn2tydedu7" path="res://Assets/objects/file-opened-empty.png" id="5_6qbl4"]
-[ext_resource type="PackedScene" uid="uid://cedthxbbbbv8k" path="res://Characters tscn/CaptainHelena.tscn" id="6_ni7xb"]
-[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="7_v3rbd"]
+[ext_resource type="Resource" uid="uid://dr2rgh4rrmwyk" path="res://Day 2 Scenes Fixed/Day2 part ten.dialogue" id="6_6qbl4"]
 [ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="8_ifdv3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2jo61"]
@@ -353,6 +355,44 @@ sources/0 = SubResource("TileSetAtlasSource_7mpxe")
 normal = Vector2(0.0226491, 0.999743)
 distance = -280.649
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_o04kv"]
+atlas = ExtResource("4_ymkvt")
+region = Rect2(0, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66jls"]
+atlas = ExtResource("4_ymkvt")
+region = Rect2(540, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfuty"]
+atlas = ExtResource("4_ymkvt")
+region = Rect2(1080, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20y24"]
+atlas = ExtResource("4_ymkvt")
+region = Rect2(1620, 0, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ni7xb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o04kv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66jls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfuty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20y24")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v3rbd"]
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5jgn"]
 texture = ExtResource("3_ymkvt")
 0:0/0 = 0
@@ -603,6 +643,30 @@ rotation = -1.5708
 scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_gn1p6")
 
+[node name="Node2D" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Desdemona2D" parent="Node2D" instance=ExtResource("3_3li75")]
+position = Vector2(492, 138)
+
+[node name="Helena" type="CharacterBody2D" parent="Node2D"]
+position = Vector2(589, 102)
+scale = Vector2(0.15, 0.15)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Helena"]
+position = Vector2(-156.5, 270.25)
+scale = Vector2(0.331482, 0.365)
+sprite_frames = SubResource("SpriteFrames_ni7xb")
+autoplay = "default"
+
+[node name="Actionable" parent="Node2D" instance=ExtResource("5_3suix")]
+dialogue_resource = ExtResource("6_6qbl4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Actionable"]
+position = Vector2(565, 141)
+scale = Vector2(3.70155, 4.14664)
+shape = SubResource("RectangleShape2D_v3rbd")
+
 [node name="safe" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAaAAIAAAAAAAAAAAAaAAMAAAAAAAEAAAAbAAIAAAABAAAAAAAbAAMAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_7mpxe")
@@ -621,12 +685,6 @@ tile_set = SubResource("TileSet_k2yf6")
 texture_filter = 1
 tile_map_data = PackedByteArray("AAAgAAIAAAAAAAAAAAAgAAMAAAAAAAEAAAAhAAIAAAABAAAAAAAhAAMAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_7mvp4")
-
-[node name="Node2D" parent="." instance=ExtResource("6_ni7xb")]
-position = Vector2(128, -282)
-
-[node name="Desdemona2D" parent="." instance=ExtResource("7_v3rbd")]
-position = Vector2(527, 128)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(432, 41.5)
