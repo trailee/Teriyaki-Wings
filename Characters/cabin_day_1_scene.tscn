@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://bmlndj3v5e38j"]
+[gd_scene load_steps=33 format=4 uid="uid://bmlndj3v5e38j"]
 
 [ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="1_l1ktc"]
 [ext_resource type="Texture2D" uid="uid://bmh2ujcp37hr2" path="res://Backgrounds/TopDownHouse_FurnitureState1.png" id="2_1keju"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="9_qqn4l"]
 [ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="10_rksxp"]
 [ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="11_cnvwq"]
+[ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="12_1keju"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1naw"]
 texture = ExtResource("1_l1ktc")
@@ -1348,3 +1349,14 @@ bus = &"BGM"
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(601, 404)
 zoom = Vector2(1.95, 1.95)
+
+[node name="Deck_D" parent="." instance=ExtResource("12_1keju")]
+position = Vector2(1083, 572)
+connected_scene = "deck"
+connected_exit = "E"
+spawn_direction = "up"
+
+[node name="Spawn" parent="Deck_D" index="0"]
+position = Vector2(-125, 36)
+
+[editable path="Deck_D"]
