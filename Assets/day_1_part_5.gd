@@ -12,5 +12,5 @@ func _on_exit_body_entered(_body: PhysicsBody2D) -> void:
 func _on_dialogue_ended(_resource: DialogueResource) -> void:
 	print("scene change")
 	if State.d1p5_exit == true:
-		get_tree().change_scene_to_file("res://Assets/night_1_des talking with her friends deck.tscn")
+		get_tree().change_scene_to_file("res://Day 1 Scenes fixed/night_1_des_interacts_with_people.tscn")
 		print("not wokring")

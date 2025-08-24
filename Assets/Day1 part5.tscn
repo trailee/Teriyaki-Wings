@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="11_8ecvk"]
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="11_euhj6"]
 [ext_resource type="Resource" uid="uid://ct24r8noiwlbi" path="res://Day 1 Scenes fixed/Day1 Partfive.dialogue" id="12_ys3br"]
-[ext_resource type="Resource" uid="uid://dc7a6h13kqu10" path="res://Dialogue/harbour_exit.dialogue" id="14_rytv5"]
+[ext_resource type="Resource" uid="uid://cf7j5kukhtv8f" path="res://Dialogue/Day1_Part5_Exit.dialogue" id="15_4yes6"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="15_ygywa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1naw"]
@@ -1377,7 +1377,7 @@ position = Vector2(785, 600)
 [node name="Actionable" parent="Exit" instance=ExtResource("11_euhj6")]
 position = Vector2(581, 33)
 scale = Vector2(3.40979, 0.56074)
-dialogue_resource = ExtResource("14_rytv5")
+dialogue_resource = ExtResource("15_4yes6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit/Actionable"]
 position = Vector2(-224.353, 72.9982)
