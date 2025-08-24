@@ -1,5 +1,10 @@
 ~ start
 
-Des: I should talk to the others before leaving.
+if State.ruin_exit == true:
+	Des: It had to be done...
+	Des: I hope this is all worth it.
+
+else
+	Des: I should talk to the others before leaving.
 
 => END
