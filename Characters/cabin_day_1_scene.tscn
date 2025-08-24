@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://bmlndj3v5e38j"]
+[gd_scene load_steps=36 format=4 uid="uid://bmlndj3v5e38j"]
 
 [ext_resource type="Script" uid="uid://8rhbbbyvs6w8" path="res://Characters/cabin_day_1_scene.gd" id="1_g706r"]
 [ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="1_l1ktc"]
@@ -12,7 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="9_qqn4l"]
 [ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="10_rksxp"]
 [ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="11_cnvwq"]
-[ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="12_1keju"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="14_073bj"]
+[ext_resource type="Resource" uid="uid://dh61qg58ub6ll" path="res://Cabin day one part one dialogue.dialogue" id="15_073bj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1naw"]
 texture = ExtResource("1_l1ktc")
@@ -1253,6 +1254,8 @@ size = Vector2(168, 55)
 [sub_resource type="CircleShape2D" id="CircleShape2D_cbk4g"]
 radius = 23.7065
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njmhr"]
+
 [node name="Cabin Day 1 Scene" type="Node2D"]
 script = ExtResource("1_g706r")
 
@@ -1315,15 +1318,6 @@ rotation = -1.5708
 scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_f1naw")
 
-[node name="Desdemona2D" parent="." instance=ExtResource("11_cnvwq")]
-position = Vector2(660, 322)
-
-[node name="Yue_2D" parent="." instance=ExtResource("7_krudh")]
-position = Vector2(610, 331)
-
-[node name="Cassandra2D" parent="." instance=ExtResource("8_ipagn")]
-position = Vector2(542, 322)
-
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-9, 3)
 
@@ -1352,13 +1346,22 @@ bus = &"BGM"
 position = Vector2(601, 404)
 zoom = Vector2(1.95, 1.95)
 
-[node name="Deck_D" parent="." instance=ExtResource("12_1keju")]
-position = Vector2(1083, 572)
-connected_scene = "deck"
-connected_exit = "E"
-spawn_direction = "up"
+[node name="Node2D" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="Spawn" parent="Deck_D" index="0"]
-position = Vector2(-125, 36)
+[node name="Desdemona2D" parent="Node2D" instance=ExtResource("11_cnvwq")]
+position = Vector2(660, 322)
 
-[editable path="Deck_D"]
+[node name="Yue_2D" parent="Node2D" instance=ExtResource("7_krudh")]
+position = Vector2(610, 331)
+
+[node name="Cassandra2D" parent="Node2D" instance=ExtResource("8_ipagn")]
+position = Vector2(542, 322)
+
+[node name="Actionable" parent="Node2D" instance=ExtResource("14_073bj")]
+dialogue_resource = ExtResource("15_073bj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Actionable"]
+position = Vector2(554, 329)
+scale = Vector2(8.33244, 5.13979)
+shape = SubResource("RectangleShape2D_njmhr")

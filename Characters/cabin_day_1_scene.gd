@@ -1,15 +1,9 @@
 extends Node2D
 
 func _ready():
-	if SceneManager.spawn_door != "":
-		_spawn_player_at_door(SceneManager.spawn_door)
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
-func _spawn_player_at_door(door_name: String):
-	var door_path = "Doors/nscenetrigger_" + door_name
-	if has_node(door_path):
-		var door = get_node(door_path)
-		var spawn_position = door.spawn_marker.global_position
-		var direction = door.spawn_direction
-		SceneManager.emit_spawn(spawn_position, direction)
-	else:
-		print("Door not found: ", door_path)
+func _on_dialogue_ended(_resource: DialogueResource) -> void:
+	if State.des_int_people == true:
+		get_tree().change_scene_to_file("res://Day 1 Scenes fixed/night_1_des_interacts_with_people.tscn")
+		print("not wokring")
