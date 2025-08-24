@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfs4c37ebd5cq"
-path="res://.godot/imported/portrait.png-7d2af2bea8dc8a48899955525c97dea0.ctex"
+uid="uid://c7wdgh6gmgv5"
+path="res://.godot/imported/portrait.png-4f602210bff2bfdc133b5c880daba34b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/character_portraits/Dr M/portrait.png"
-dest_files=["res://.godot/imported/portrait.png-7d2af2bea8dc8a48899955525c97dea0.ctex"]
+source_file="res://Assets/character_portraits/Dr. Davis/portrait.png"
+dest_files=["res://.godot/imported/portrait.png-4f602210bff2bfdc133b5c880daba34b.ctex"]
 
 [params]
 

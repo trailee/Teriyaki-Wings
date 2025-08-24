@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7wdgh6gmgv5"
-path="res://.godot/imported/portrait.png-d747c0c0b5437a992fe582e1d95c6c62.ctex"
+uid="uid://dcf0ma4aawoqq"
+path="res://.godot/imported/portrait.png-a8e86275fb3af730c96080613dd35764.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/character_portraits/Dr Davis/portrait.png"
-dest_files=["res://.godot/imported/portrait.png-d747c0c0b5437a992fe582e1d95c6c62.ctex"]
+source_file="res://Assets/character_portraits/Captain Helena/portrait.png"
+dest_files=["res://.godot/imported/portrait.png-a8e86275fb3af730c96080613dd35764.ctex"]
 
 [params]
 

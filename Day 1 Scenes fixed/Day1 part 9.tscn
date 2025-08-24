@@ -1,9 +1,7 @@
-[gd_scene load_steps=37 format=4 uid="uid://0k07xdnkt8wf"]
+[gd_scene load_steps=29 format=4 uid="uid://0k07xdnkt8wf"]
 
 [ext_resource type="Texture2D" uid="uid://bsgpuoc27q3k0" path="res://images/5.png" id="1_xgial"]
-[ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="2_cuwke"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="3_qw8x0"]
-[ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="4_crxc5"]
 [ext_resource type="Texture2D" uid="uid://du6exsp28uj6s" path="res://Assets/characters/ophelia.png" id="5_wlbg7"]
 [ext_resource type="Texture2D" uid="uid://c0xltjspdx5nq" path="res://Assets/characters/cassandra.png" id="6_q0ito"]
 [ext_resource type="Texture2D" uid="uid://bbvrqkbsr0uru" path="res://Assets/characters/yeu.png" id="7_j0dpf"]
@@ -12858,45 +12856,6 @@ sources/0 = SubResource("TileSetAtlasSource_xgial")
 normal = Vector2(0.00116981, 0.999999)
 distance = -389.004
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqxj1"]
-size = Vector2(572, 1423.75)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8siuv"]
-atlas = ExtResource("4_crxc5")
-region = Rect2(0, 900, 540, 900)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ijkoe"]
-atlas = ExtResource("4_crxc5")
-region = Rect2(540, 900, 540, 900)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4wg2u"]
-atlas = ExtResource("4_crxc5")
-region = Rect2(1080, 900, 540, 900)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b6w0q"]
-atlas = ExtResource("4_crxc5")
-region = Rect2(1620, 900, 540, 900)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_bjw7q"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8siuv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ijkoe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4wg2u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b6w0q")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_k84m3"]
 atlas = ExtResource("5_wlbg7")
 region = Rect2(0, 0, 540, 900)
@@ -13144,29 +13103,7 @@ position = Vector2(65.845, -101)
 rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_mbalj")
 
-[node name="nscenetrigger" parent="." instance=ExtResource("2_cuwke")]
-position = Vector2(800, 525)
-collision_layer = 0
-collision_mask = 128
-connected_scene = "hallway_scene"
-
-[node name="Sprite2D" type="Sprite2D" parent="nscenetrigger"]
-modulate = Color(1, 1, 1, 0.411765)
-position = Vector2(129, 38)
-scale = Vector2(1, 1.93926)
-texture = ExtResource("3_qw8x0")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="nscenetrigger"]
-position = Vector2(261, -22)
-shape = SubResource("RectangleShape2D_rqxj1")
-
-[node name="Huge Des for Deck Night one" type="CharacterBody2D" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Huge Des for Deck Night one"]
-position = Vector2(595, 415)
-scale = Vector2(0.422222, 0.329444)
-sprite_frames = SubResource("SpriteFrames_bjw7q")
-autoplay = "default"
+[node name="Node2D" type="Node2D" parent="."]
 
 [node name="Huge ophelia" type="CharacterBody2D" parent="."]
 
