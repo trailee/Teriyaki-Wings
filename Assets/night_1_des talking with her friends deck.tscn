@@ -1,8 +1,6 @@
-[gd_scene load_steps=33 format=4 uid="uid://0k07xdnkt8wf"]
+[gd_scene load_steps=30 format=4 uid="uid://0k07xdnkt8wf"]
 
 [ext_resource type="Texture2D" uid="uid://bsgpuoc27q3k0" path="res://images/5.png" id="1_xgial"]
-[ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="2_cuwke"]
-[ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="3_qw8x0"]
 [ext_resource type="Texture2D" uid="uid://cyaqa45es566e" path="res://Assets/characters/Des idle (6).png" id="4_crxc5"]
 [ext_resource type="Texture2D" uid="uid://du6exsp28uj6s" path="res://Assets/characters/ophelia.png" id="5_wlbg7"]
 [ext_resource type="Texture2D" uid="uid://c0xltjspdx5nq" path="res://Assets/characters/cassandra.png" id="6_q0ito"]
@@ -11686,9 +11684,6 @@ corner_radius_top_left = 2000
 normal = Vector2(0.00116981, 0.999999)
 distance = -389.004
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqxj1"]
-size = Vector2(572, 1423.75)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_8siuv"]
 atlas = ExtResource("4_crxc5")
 region = Rect2(0, 900, 540, 900)
@@ -11967,22 +11962,6 @@ shape = SubResource("WorldBoundaryShape2D_mbalj")
 position = Vector2(65.845, -101)
 rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_mbalj")
-
-[node name="nscenetrigger" parent="." instance=ExtResource("2_cuwke")]
-position = Vector2(800, 525)
-collision_layer = 0
-collision_mask = 128
-connected_scene = "hallway_scene"
-
-[node name="Sprite2D" type="Sprite2D" parent="nscenetrigger"]
-modulate = Color(1, 1, 1, 0.411765)
-position = Vector2(129, 38)
-scale = Vector2(1, 1.93926)
-texture = ExtResource("3_qw8x0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="nscenetrigger"]
-position = Vector2(261, -22)
-shape = SubResource("RectangleShape2D_rqxj1")
 
 [node name="Huge Des for Deck Night one" type="CharacterBody2D" parent="."]
 

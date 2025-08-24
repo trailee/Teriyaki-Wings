@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cf7j5kukhtv8f"
+path="res://.godot/imported/Day1_Part5_Exit.dialogue-5e72dcc13875c3224927c6a95e45c624.tres"
+
+[deps]
+
+source_file="res://Dialogue/Day1_Part5_Exit.dialogue"
+dest_files=["res://.godot/imported/Day1_Part5_Exit.dialogue-5e72dcc13875c3224927c6a95e45c624.tres"]
+
+[params]
+
+defaults=true

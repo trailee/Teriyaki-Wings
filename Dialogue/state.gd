@@ -11,3 +11,5 @@ var ruin_talked: bool = false
 var ruin_exit: bool = false
 
 var harbour_exit: bool = false
+
+var d1p5_exit: bool = true
