@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://icdgcyw4dadi" path="res://Backgrounds/Cute_Fantasy_Free/Outdoor decoration/Bridge_Wood.png" id="2_smcbj"]
 [ext_resource type="Texture2D" uid="uid://dlu11ba07x610" path="res://Assets/Forest_assets.png" id="2_unqw3"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="4_smcbj"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Desdemona_TREEHOUSE_.tscn" id="5_hmwj4"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="5_hmwj4"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mvhoc"]
 

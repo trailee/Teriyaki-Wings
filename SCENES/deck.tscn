@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bs65si5oiybom" path="res://SCENES/deck.gd" id="1_2hxdk"]
 [ext_resource type="Texture2D" uid="uid://k1pbkg3j3pc3" path="res://images/4.png" id="1_kq4e5"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="2_kq4e5"]
-[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Desdemona_TREEHOUSE_.tscn" id="3_2hxdk"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="3_2hxdk"]
 [ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="3_kq4e5"]
 [ext_resource type="PackedScene" uid="uid://c7ijfc7chh45k" path="res://Characters/Ophelia.tscn" id="6_2hxdk"]
 [ext_resource type="PackedScene" uid="uid://bysxnwl02p1bp" path="res://Characters/Zon.tscn" id="7_o8geg"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=4 uid="uid://b7sr6ddplnvg4"]
 
 [ext_resource type="Texture2D" uid="uid://k1pbkg3j3pc3" path="res://images/4.png" id="1_ecnd3"]
-[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="2_dytli"]
+[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters/Des..tscn" id="2_dytli"]
 [ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="4_nuvad"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="5_n4v35"]
 [ext_resource type="Texture2D" uid="uid://du6exsp28uj6s" path="res://Assets/characters/ophelia.png" id="6_w7by7"]

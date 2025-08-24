@@ -24,7 +24,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [dialogue_manager]
 
-runtime/balloon_path="res://Assets/balloon.tscn"
+runtime/balloon_path="res://Dialogue/balloon.tscn"
 
 [display]
 

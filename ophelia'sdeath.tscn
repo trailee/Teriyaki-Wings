@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=4 uid="uid://dg1605kyy5twy"]
 
 [ext_resource type="Texture2D" uid="uid://k1pbkg3j3pc3" path="res://images/4.png" id="1_b8sw3"]
-[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters tscn/Desdemona.tscn" id="2_jra14"]
+[ext_resource type="PackedScene" uid="uid://dn6qfnhxw17xl" path="res://Characters/Des..tscn" id="2_jra14"]
 [ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="3_173iw"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="4_te25m"]
 [ext_resource type="Texture2D" uid="uid://dh6um2nnp3ndk" path="res://Assets/characters/yeu,cass,oph, lucy died.png" id="5_fh564"]
