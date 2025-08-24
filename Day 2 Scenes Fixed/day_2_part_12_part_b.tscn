@@ -1,14 +1,16 @@
-[gd_scene load_steps=25 format=4 uid="uid://cuhbyxuj0cg35"]
+[gd_scene load_steps=33 format=4 uid="uid://cuhbyxuj0cg35"]
 
 [ext_resource type="AudioStream" uid="uid://durot3wiktxle" path="res://Music_Teriyaki-Wings/Ruins_BGM copy.wav" id="1_2cykw"]
+[ext_resource type="Script" uid="uid://beqhyvcnheic8" path="res://Day 2 Scenes Fixed/day_2_part_12_part_b.gd" id="1_4bd7m"]
 [ext_resource type="Texture2D" uid="uid://ysh8c2r2eok5" path="res://Assets/interiors_demo.png" id="2_q4gn3"]
 [ext_resource type="Texture2D" uid="uid://cilikghbqh660" path="res://Assets/objects/safe-box-closed.png" id="3_4bd7m"]
 [ext_resource type="Texture2D" uid="uid://dal7xti32qt2o" path="res://Assets/objects/file-closed.png" id="4_g6u2k"]
 [ext_resource type="Texture2D" uid="uid://83pn2tydedu7" path="res://Assets/objects/file-opened-empty.png" id="5_i1ij7"]
-[ext_resource type="PackedScene" uid="uid://cedthxbbbbv8k" path="res://Characters tscn/CaptainHelena.tscn" id="6_83chv"]
-[ext_resource type="PackedScene" uid="uid://cihkhytbgog8q" path="res://Characters tscn/lucy.tscn" id="7_02037"]
-[ext_resource type="PackedScene" uid="uid://dxbbx6qd21xwh" path="res://Characters tscn/Desdemona_Normal.tscn" id="8_ii0uw"]
+[ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="7_q4gn3"]
+[ext_resource type="Texture2D" uid="uid://xrjum8b4pmya" path="res://Assets/characters/dr helena (2).png" id="8_4bd7m"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="9_g6u2k"]
 [ext_resource type="PackedScene" uid="uid://dbn2k74qpd31p" path="res://nscenetrigger.tscn" id="9_qwhip"]
+[ext_resource type="Resource" uid="uid://cq4kvj6voqlcd" path="res://Day 2 Scenes Fixed/Day 2 part 12 part b.dialogue" id="10_i1ij7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2jo61"]
 texture = ExtResource("2_q4gn3")
@@ -560,7 +562,46 @@ size = Vector2(128, 45)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2jo61"]
 size = Vector2(243, 61)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_o04kv"]
+atlas = ExtResource("8_4bd7m")
+region = Rect2(0, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66jls"]
+atlas = ExtResource("8_4bd7m")
+region = Rect2(540, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfuty"]
+atlas = ExtResource("8_4bd7m")
+region = Rect2(1080, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20y24"]
+atlas = ExtResource("8_4bd7m")
+region = Rect2(1620, 0, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_83chv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o04kv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66jls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfuty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20y24")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02037"]
+
 [node name="Day 2 part 12 part b" type="Node2D"]
+script = ExtResource("1_4bd7m")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-6, 6)
@@ -623,15 +664,6 @@ texture_filter = 1
 tile_map_data = PackedByteArray("AAAgAAIAAAAAAAAAAAAgAAMAAAAAAAEAAAAhAAIAAAABAAAAAAAhAAMAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_7mvp4")
 
-[node name="Node2D" parent="." instance=ExtResource("6_83chv")]
-position = Vector2(128, -282)
-
-[node name="Lucy" parent="." instance=ExtResource("7_02037")]
-position = Vector2(806, 463)
-
-[node name="Desdemona2D" parent="." instance=ExtResource("8_ii0uw")]
-position = Vector2(527, 128)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(432, 41.5)
 shape = SubResource("RectangleShape2D_gn1p6")
@@ -646,3 +678,27 @@ shape = SubResource("RectangleShape2D_2jo61")
 
 [node name="Area2D" parent="." instance=ExtResource("9_qwhip")]
 position = Vector2(497, 250)
+
+[node name="Node2D" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Desdemona2D" parent="Node2D" instance=ExtResource("7_q4gn3")]
+position = Vector2(566, 134)
+
+[node name="Helena" type="CharacterBody2D" parent="Node2D"]
+position = Vector2(505, 106)
+scale = Vector2(0.15, 0.15)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Helena"]
+position = Vector2(-156.5, 270.25)
+scale = Vector2(0.331482, 0.365)
+sprite_frames = SubResource("SpriteFrames_83chv")
+autoplay = "default"
+
+[node name="Actionable" parent="Node2D" instance=ExtResource("9_g6u2k")]
+dialogue_resource = ExtResource("10_i1ij7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Actionable"]
+position = Vector2(488, 144)
+scale = Vector2(3.0459, 4.52248)
+shape = SubResource("RectangleShape2D_02037")
