@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d3c7rnx734ol6"
+path="res://.godot/imported/harbour_group.dialogue-04a75f3555750993428dd8f3b4c5e9ef.tres"
+
+[deps]
+
+source_file="res://Dialogue/harbour_group.dialogue"
+dest_files=["res://.godot/imported/harbour_group.dialogue-04a75f3555750993428dd8f3b4c5e9ef.tres"]
+
+[params]
+
+defaults=true
