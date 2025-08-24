@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://ccc7rppo28dry"]
+[gd_scene load_steps=31 format=4 uid="uid://ccc7rppo28dry"]
 
 [ext_resource type="Script" uid="uid://b2l7ou4k56cj8" path="res://SCENES/harbour.gd" id="1_k2ccr"]
 [ext_resource type="Texture2D" uid="uid://bwff5o35rx8pe" path="res://Backgrounds/Forest_tiles.png" id="1_wkhga"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="8_rfvu1"]
 [ext_resource type="Resource" uid="uid://d3c7rnx734ol6" path="res://Dialogue/harbour_group.dialogue" id="9_7867p"]
 [ext_resource type="Resource" uid="uid://dc7a6h13kqu10" path="res://Dialogue/harbour_exit.dialogue" id="12_k2ccr"]
+[ext_resource type="AudioStream" uid="uid://6eooe2l37jdr" path="res://Music_Teriyaki-Wings/Harbour_BGM copy.wav" id="12_sqj3e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_smcbj"]
 texture = ExtResource("1_wkhga")
@@ -499,6 +500,8 @@ limit_bottom = 375
 
 [node name="Harbour_BGM" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-1, 5)
+stream = ExtResource("12_sqj3e")
+autoplay = true
 
 [node name="Exit" type="Area2D" parent="."]
 position = Vector2(-442, -189)
@@ -525,7 +528,7 @@ position = Vector2(274, 147)
 scale = Vector2(3.12, 1.12)
 
 [node name="Bottom Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(16.3462, 58.0357)
+position = Vector2(16.9872, 16.9643)
 scale = Vector2(5.40845, 1)
 shape = SubResource("WorldBoundaryShape2D_mvhoc")
 
@@ -548,7 +551,7 @@ scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_mvhoc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-179.167, 75.8929)
+position = Vector2(-89.7436, 40.1786)
 scale = Vector2(6.96119, 26.5044)
 shape = SubResource("RectangleShape2D_gf2am")
 

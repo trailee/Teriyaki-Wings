@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://b5e5fwk6fy4ie"]
+[gd_scene load_steps=38 format=4 uid="uid://b5e5fwk6fy4ie"]
 
 [ext_resource type="Texture2D" uid="uid://k1pbkg3j3pc3" path="res://images/4.png" id="1_384ov"]
 [ext_resource type="Script" uid="uid://ceg2tj6laav5m" path="res://Day 2 Scenes Fixed/day_2_part_four_scene.gd" id="1_lqchc"]
@@ -11685,10 +11685,6 @@ sources/0 = SubResource("TileSetAtlasSource_t1wuy")
 bg_color = Color(1, 0.962122, 0.955517, 1)
 corner_radius_top_left = 2000
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mbalj"]
-normal = Vector2(0.00116981, 0.999999)
-distance = -389.004
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b8sw3"]
 texture = ExtResource("2_fq1q6")
 34:1/0 = 0
@@ -12955,6 +12951,67 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqchc"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmwqk"]
+size = Vector2(20, 14.6834)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wi3jf"]
+
+[sub_resource type="Animation" id="Animation_gldua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tb5ku"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hsxm7"]
+_data = {
+&"RESET": SubResource("Animation_gldua"),
+&"new_animation": SubResource("Animation_tb5ku")
+}
+
+[sub_resource type="GDScript" id="GDScript_kmwqk"]
+script/source = "extends AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kmwqk"]
+normal = Vector2(0.00116981, 0.999999)
+distance = -389.004
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wi3jf"]
+
 [node name="deck day 4" type="Node2D"]
 scale = Vector2(0.25, 0.25)
 script = ExtResource("1_lqchc")
@@ -13073,24 +13130,6 @@ offset_right = 1133.0
 offset_bottom = 1072.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_mbalj")
 
-[node name="World Boundary" type="StaticBody2D" parent="."]
-position = Vector2(37, 28)
-scale = Vector2(2.84, 1)
-
-[node name="Bottom Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-16.9014, 707)
-shape = SubResource("WorldBoundaryShape2D_mbalj")
-
-[node name="Top Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-19.0141, 322)
-rotation = 3.12936
-shape = SubResource("WorldBoundaryShape2D_mbalj")
-
-[node name="Right Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(65.845, -101)
-rotation = 4.71239
-shape = SubResource("WorldBoundaryShape2D_mbalj")
-
 [node name="shadow" type="TileMapLayer" parent="."]
 position = Vector2(-487, 619)
 scale = Vector2(0.325926, 0.27)
@@ -13101,6 +13140,7 @@ tile_set = SubResource("TileSet_jra14")
 y_sort_enabled = true
 
 [node name="ophelia" type="CharacterBody2D" parent="y sort"]
+y_sort_enabled = true
 position = Vector2(-14, -6)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="y sort/ophelia"]
@@ -13109,24 +13149,29 @@ position = Vector2(-580.644, 572.363)
 scale = Vector2(8.49213, 6.91722)
 sprite_frames = SubResource("SpriteFrames_rnv6f")
 
-[node name="zon" type="CharacterBody2D" parent="y sort"]
+[node name="Lucy" type="CharacterBody2D" parent="y sort"]
+y_sort_enabled = true
 position = Vector2(107, -52)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="y sort/zon"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="y sort/Lucy"]
 position = Vector2(-487, 619)
 scale = Vector2(0.325926, 0.27)
 sprite_frames = SubResource("SpriteFrames_gg84o")
+autoplay = "default"
 
 [node name="Cassandra" type="CharacterBody2D" parent="y sort"]
-position = Vector2(-842, -45)
+y_sort_enabled = true
+position = Vector2(-900, -264)
+scale = Vector2(1.10441, 1.3552)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="y sort/Cassandra"]
 position = Vector2(624.75, 458.75)
 scale = Vector2(0.34537, 0.275)
 sprite_frames = SubResource("SpriteFrames_k5ngq")
+autoplay = "default"
 
 [node name="Desdemona2D" parent="y sort" instance=ExtResource("6_384ov")]
-position = Vector2(766, 457)
+position = Vector2(604, 432)
 scale = Vector2(0.4, 0.4)
 
 [node name="Actionable" parent="y sort" instance=ExtResource("7_fq1q6")]
@@ -13137,6 +13182,23 @@ position = Vector2(-405, 449)
 scale = Vector2(43.2338, 33.9999)
 shape = SubResource("RectangleShape2D_lqchc")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="y sort"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="y sort/StaticBody2D"]
+position = Vector2(-580, 588)
+scale = Vector2(8.76198, 15.2839)
+shape = SubResource("RectangleShape2D_kmwqk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="y sort/StaticBody2D"]
+position = Vector2(-216, 484)
+scale = Vector2(6.71121, -6.07434)
+shape = SubResource("RectangleShape2D_kmwqk")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="y sort/StaticBody2D"]
+position = Vector2(-376, 644)
+scale = Vector2(4.68557, 3.32588)
+shape = SubResource("RectangleShape2D_wi3jf")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(60, 372)
 zoom = Vector2(4.5, 4.5)
@@ -13144,3 +13206,36 @@ zoom = Vector2(4.5, 4.5)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_kmwqk")
 autoplay = true
+
+[node name="transition" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hsxm7")
+}
+autoplay = "new_animation"
+script = SubResource("GDScript_kmwqk")
+
+[node name="World Boundary" type="StaticBody2D" parent="."]
+position = Vector2(60, 48)
+scale = Vector2(2.84, 1)
+
+[node name="Bottom Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(-10.2113, 680)
+shape = SubResource("WorldBoundaryShape2D_kmwqk")
+
+[node name="Top Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(-5.6338, 388)
+rotation = 3.12936
+shape = SubResource("WorldBoundaryShape2D_kmwqk")
+
+[node name="Right Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(86.9718, 524)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_kmwqk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(295.423, 444)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_wi3jf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World Boundary"]
+polygon = PackedVector2Array(-296.127, 400, -301.761, 436, -310.211, 352, -291.901, 292, -251.056, 284, -173.592, 244, -141.197, 248, -131.338, 268, -158.099, 292, -229.93, 312, -279.225, 372)

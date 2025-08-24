@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://bm76qx5gddtf"]
+[gd_scene load_steps=34 format=4 uid="uid://bm76qx5gddtf"]
 
 [ext_resource type="Texture2D" uid="uid://bsgpuoc27q3k0" path="res://images/5.png" id="1_2in6h"]
 [ext_resource type="Script" uid="uid://c7gjeucxx8xgy" path="res://Day 2 Scenes Fixed/day_2_part_11.gd" id="1_70du3"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b7tul5ipepy8m" path="res://Assets/characters/dr davis.png" id="7_eruwa"]
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="7_wsylk"]
 [ext_resource type="Resource" uid="uid://ccmu3u7gtifnb" path="res://Day 2 Scenes Fixed/Day 2 part eleven.dialogue" id="8_pfo5y"]
+[ext_resource type="AudioStream" uid="uid://durot3wiktxle" path="res://Music_Teriyaki-Wings/Ruins_BGM copy.wav" id="9_cjh0d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h83gw"]
 texture = ExtResource("1_2in6h")
@@ -14088,6 +14089,8 @@ sources/0 = SubResource("TileSetAtlasSource_dn1rn")
 normal = Vector2(0.00116981, 0.999999)
 distance = -389.004
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cjh0d"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_klygp"]
 atlas = ExtResource("6_rg8nl")
 region = Rect2(0, 0, 540, 900)
@@ -14161,6 +14164,56 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rg8nl"]
+
+[sub_resource type="Animation" id="Animation_gldua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tb5ku"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hsxm7"]
+_data = {
+&"RESET": SubResource("Animation_gldua"),
+&"new_animation": SubResource("Animation_tb5ku")
+}
+
+[sub_resource type="GDScript" id="GDScript_wsylk"]
+script/source = "extends AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="Day 2 part 11" type="Node2D"]
 scale = Vector2(0.25, 0.25)
@@ -14293,7 +14346,7 @@ position = Vector2(37, 28)
 scale = Vector2(2.84, 1)
 
 [node name="Bottom Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-16.9014, 707)
+position = Vector2(-10.2113, 680)
 shape = SubResource("WorldBoundaryShape2D_mbalj")
 
 [node name="Top Boundary" type="CollisionShape2D" parent="World Boundary"]
@@ -14302,14 +14355,23 @@ rotation = 3.12936
 shape = SubResource("WorldBoundaryShape2D_mbalj")
 
 [node name="Right Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(65.845, -101)
+position = Vector2(86.9718, 524)
 rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_mbalj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(295.423, 444)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_cjh0d")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World Boundary"]
+polygon = PackedVector2Array(-296.127, 400, -301.761, 436, -310.211, 352, -291.901, 292, -251.056, 284, -173.592, 244, -141.197, 248, -131.338, 268, -158.099, 292, -229.93, 312, -279.225, 372)
 
 [node name="Node2D" type="Node2D" parent="."]
 y_sort_enabled = true
 
 [node name="Huge Lucy2" type="CharacterBody2D" parent="Node2D"]
+y_sort_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Huge Lucy2"]
 position = Vector2(215.188, 426.937)
@@ -14318,6 +14380,9 @@ sprite_frames = SubResource("SpriteFrames_w4121")
 autoplay = "default"
 
 [node name="Dr_Davis" type="CharacterBody2D" parent="Node2D"]
+y_sort_enabled = true
+position = Vector2(-16, -28)
+scale = Vector2(0.916369, 1.0619)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Dr_Davis"]
 position = Vector2(-23, 558)
@@ -14326,7 +14391,7 @@ sprite_frames = SubResource("SpriteFrames_vfmn3")
 autoplay = "default"
 
 [node name="Desdemona2D" parent="Node2D" instance=ExtResource("6_cjh0d")]
-position = Vector2(448, 409)
+position = Vector2(460, 380)
 scale = Vector2(0.4, 0.4)
 
 [node name="Actionable" parent="Node2D" instance=ExtResource("7_wsylk")]
@@ -14337,6 +14402,22 @@ position = Vector2(60, 392)
 scale = Vector2(22.5662, 22.963)
 shape = SubResource("RectangleShape2D_rg8nl")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/StaticBody2D"]
+polygon = PackedVector2Array(-100, 568, 12, 576, 88, 576, 192, 576, 244, 572, 300, 484, 280, 396, 256, 308, 232, 300, 128, 344, 104, 364, 56, 348, 72, 256, 12, 208, -48, 204, -100, 216, -120, 268, -120, 364, -116, 472, -116, 500, -112, 556, -112, 576)
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(32, 268)
 zoom = Vector2(4.5, 4.5)
+
+[node name="transition" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hsxm7")
+}
+autoplay = "new_animation"
+script = SubResource("GDScript_wsylk")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_cjh0d")
+autoplay = true

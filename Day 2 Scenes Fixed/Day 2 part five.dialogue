@@ -1,6 +1,9 @@
 ~ start
-Announcement: Beware all passengers, a person was found dead in cabin 3. Please do not panic and stay in your rooms. Things are under control for now. We have investigated the body and found spores. We are sorry to inform you, but there are monsters among us disguised as humans. We advise you to stay on your guard, as we will be voting people out in the morning.
-
+Announcement: Beware all passengers, a person was found dead in cabin 3. 
+Announcement: Please do not panic and stay in your rooms. Things are under control for now. 
+Announcement: We have investigated the body and found spores. 
+Announcement: We are sorry to inform you, but there are monsters among us disguised as humans. 
+Announcement: We advise you to stay on your guard, as we will be voting people out in the morning.
 
 Zon: … Can I see the body?
 
@@ -34,6 +37,6 @@ Cassandra: He’s just in grief.
 
 Dr. Davis: We all experienced that pain once, two years ago.
 
-Des: Yes, we have. But once we made it to“the Circus and Attractions” we won’t have to experience that pain ever again.
+Des: Yes, we have. But once we make it to “the Circus and Attractions” we won’t have to experience that pain ever again.
 
 => END

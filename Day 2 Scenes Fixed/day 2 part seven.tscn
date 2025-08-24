@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://blep7qtb2ed4s"]
+[gd_scene load_steps=46 format=4 uid="uid://blep7qtb2ed4s"]
 
 [ext_resource type="Script" uid="uid://dkos7soqf14eh" path="res://Day 2 Scenes Fixed/day_2_part_seven.gd" id="1_0ppjb"]
 [ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="1_1k35p"]
@@ -1295,6 +1295,56 @@ size = Vector2(168, 55)
 [sub_resource type="CircleShape2D" id="CircleShape2D_cbk4g"]
 radius = 23.7065
 
+[sub_resource type="Animation" id="Animation_gldua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tb5ku"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hsxm7"]
+_data = {
+&"RESET": SubResource("Animation_gldua"),
+&"new_animation": SubResource("Animation_tb5ku")
+}
+
+[sub_resource type="GDScript" id="GDScript_0ppjb"]
+script/source = "extends AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [node name="Cabin with Dr_Davis & Lucyafter Deck Night 2" type="Node2D"]
 script = ExtResource("1_0ppjb")
 
@@ -1340,7 +1390,7 @@ scale = Vector2(5.40845, 1)
 shape = SubResource("WorldBoundaryShape2D_f1naw")
 
 [node name="Top Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-8.4507, -468)
+position = Vector2(-10.5634, -422)
 rotation = 3.12936
 scale = Vector2(7.23949, 1)
 shape = SubResource("WorldBoundaryShape2D_f1naw")
@@ -1364,12 +1414,14 @@ y_sort_enabled = true
 position = Vector2(542, 322)
 
 [node name="Lucy" type="CharacterBody2D" parent="yt"]
+y_sort_enabled = true
 position = Vector2(-74, -36)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="yt/Lucy"]
 position = Vector2(606, 437)
 scale = Vector2(0.0407408, 0.0338889)
 sprite_frames = SubResource("SpriteFrames_3jklk")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="yt/Lucy"]
 position = Vector2(606, 437)
@@ -1379,7 +1431,7 @@ shape = SubResource("RectangleShape2D_pb8od")
 position = Vector2(576, 359)
 
 [node name="Desdemona2D" parent="yt" instance=ExtResource("11_vgipu")]
-position = Vector2(656, 360)
+position = Vector2(670, 346)
 
 [node name="Actionable" parent="yt" instance=ExtResource("12_gqw1f")]
 dialogue_resource = ExtResource("13_fi0yg")
@@ -1413,3 +1465,10 @@ bus = &"BGM"
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(601, 404)
 zoom = Vector2(1.95, 1.95)
+
+[node name="transition" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hsxm7")
+}
+autoplay = "new_animation"
+script = SubResource("GDScript_0ppjb")

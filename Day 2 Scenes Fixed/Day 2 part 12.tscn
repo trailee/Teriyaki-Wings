@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://8o0dw284bmsb"]
+[gd_scene load_steps=44 format=4 uid="uid://8o0dw284bmsb"]
 
 [ext_resource type="AudioStream" uid="uid://durot3wiktxle" path="res://Music_Teriyaki-Wings/Ruins_BGM copy.wav" id="1_bcr1h"]
 [ext_resource type="Script" uid="uid://c6xepof2pc1ww" path="res://Day 2 Scenes Fixed/day_2_part_12.gd" id="1_c6c3i"]
@@ -631,11 +631,64 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdvbi"]
+size = Vector2(20, 24)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gn1p6"]
 size = Vector2(128, 45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2jo61"]
 size = Vector2(243, 61)
+
+[sub_resource type="Animation" id="Animation_gldua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tb5ku"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hsxm7"]
+_data = {
+&"RESET": SubResource("Animation_gldua"),
+&"new_animation": SubResource("Animation_tb5ku")
+}
+
+[sub_resource type="GDScript" id="GDScript_qdvbi"]
+script/source = "extends AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="Day 2 part 12" type="Node2D"]
 script = ExtResource("1_c6c3i")
@@ -660,7 +713,7 @@ position = Vector2(582.153, 248.608)
 scale = Vector2(2.84, 1)
 
 [node name="Bottom Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(13.6787, 32.392)
+position = Vector2(14.3827, 95.392)
 scale = Vector2(5.40845, 1)
 shape = SubResource("WorldBoundaryShape2D_gn1p6")
 
@@ -705,6 +758,7 @@ tile_set = SubResource("TileSet_7mvp4")
 y_sort_enabled = true
 
 [node name="Huge Lucy2" type="CharacterBody2D" parent="Node2D"]
+y_sort_enabled = true
 position = Vector2(435, 51)
 scale = Vector2(0.2, 0.2)
 
@@ -715,7 +769,7 @@ sprite_frames = SubResource("SpriteFrames_ed0y8")
 autoplay = "default"
 
 [node name="Desdemona2D" parent="Node2D" instance=ExtResource("7_c6c3i")]
-position = Vector2(530, 134)
+position = Vector2(547, 131)
 
 [node name="Actionable" parent="Node2D" instance=ExtResource("8_qdvbi")]
 scale = Vector2(0.928239, 0.983856)
@@ -727,6 +781,7 @@ scale = Vector2(5.99163, 4.23335)
 shape = SubResource("RectangleShape2D_dqfuu")
 
 [node name="Helena" type="CharacterBody2D" parent="Node2D"]
+y_sort_enabled = true
 position = Vector2(461, 99)
 scale = Vector2(0.15, 0.15)
 
@@ -736,13 +791,19 @@ scale = Vector2(0.331482, 0.365)
 sprite_frames = SubResource("SpriteFrames_2i63m")
 autoplay = "default"
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2(436, 157)
+shape = SubResource("RectangleShape2D_qdvbi")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2(479, 151)
+shape = SubResource("RectangleShape2D_qdvbi")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(432, 41.5)
 shape = SubResource("RectangleShape2D_gn1p6")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(503, 135)
-zoom = Vector2(6.4, 4)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(586.5, 47.5)
@@ -750,3 +811,14 @@ shape = SubResource("RectangleShape2D_2jo61")
 
 [node name="Area2D" parent="." instance=ExtResource("9_famiw")]
 position = Vector2(497, 250)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(505, 151)
+zoom = Vector2(6.5, 6.5)
+
+[node name="transition" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hsxm7")
+}
+autoplay = "new_animation"
+script = SubResource("GDScript_qdvbi")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://v5o2ptlm3mc3"]
+[gd_scene load_steps=36 format=4 uid="uid://v5o2ptlm3mc3"]
 
 [ext_resource type="Texture2D" uid="uid://k1pbkg3j3pc3" path="res://images/4.png" id="1_82epi"]
 [ext_resource type="Script" uid="uid://h7rfwvotsfca" path="res://Day 2 Scenes Fixed/day_2_part_2_scene.gd" id="1_ik38k"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c0xltjspdx5nq" path="res://Assets/characters/cassandra.png" id="7_1m8cy"]
 [ext_resource type="Resource" uid="uid://bmpogv70ib8rw" path="res://Day 2 Scenes Fixed/Day 2 part two.dialogue" id="7_8absx"]
 [ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="8_s8kxv"]
+[ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="9_oeths"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t1wuy"]
 texture = ExtResource("1_82epi")
@@ -11800,9 +11801,61 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ik38k"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mbalj"]
+[sub_resource type="Animation" id="Animation_gldua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tb5ku"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hsxm7"]
+_data = {
+&"RESET": SubResource("Animation_gldua"),
+&"new_animation": SubResource("Animation_tb5ku")
+}
+
+[sub_resource type="GDScript" id="GDScript_8absx"]
+script/source = "extends AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_oeths"]
 normal = Vector2(0.00116981, 0.999999)
 distance = -389.004
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8absx"]
 
 [node name="deck day 2" type="Node2D"]
 scale = Vector2(0.25, 0.25)
@@ -11925,11 +11978,8 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_mbalj")
 [node name="y sort" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Desdemona2D" parent="y sort" instance=ExtResource("8_s8kxv")]
-position = Vector2(265, 575)
-scale = Vector2(0.4, 0.4)
-
 [node name="ophelia" type="CharacterBody2D" parent="y sort"]
+y_sort_enabled = true
 position = Vector2(-151, -173)
 scale = Vector2(1, 1.13208)
 
@@ -11940,6 +11990,7 @@ scale = Vector2(0.433797, 0.317222)
 sprite_frames = SubResource("SpriteFrames_q7pg7")
 
 [node name="zon" type="CharacterBody2D" parent="y sort"]
+y_sort_enabled = true
 position = Vector2(16, -154)
 scale = Vector2(1.25, 1.25)
 
@@ -11949,6 +12000,7 @@ scale = Vector2(0.325926, 0.27)
 sprite_frames = SubResource("SpriteFrames_thcf6")
 
 [node name="Cassandra" type="CharacterBody2D" parent="y sort"]
+y_sort_enabled = true
 position = Vector2(-1133, 53)
 scale = Vector2(1.12444, 1.19599)
 
@@ -11956,6 +12008,10 @@ scale = Vector2(1.12444, 1.19599)
 position = Vector2(624.75, 458.75)
 scale = Vector2(0.34537, 0.275)
 sprite_frames = SubResource("SpriteFrames_k5ngq")
+
+[node name="Desdemona2D" parent="y sort" instance=ExtResource("8_s8kxv")]
+position = Vector2(228, 464)
+scale = Vector2(0.4, 0.4)
 
 [node name="Actionable" parent="y sort" instance=ExtResource("6_oeths")]
 dialogue_resource = ExtResource("7_8absx")
@@ -11965,30 +12021,48 @@ position = Vector2(-300, 540)
 scale = Vector2(25.0857, -24.5888)
 shape = SubResource("RectangleShape2D_ik38k")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="y sort"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="y sort/StaticBody2D"]
+polygon = PackedVector2Array(-152, 596, -224, 656, -312, 712, -368, 764, -492, 768, -536, 736, -464, 672, -336, 604, -256, 516, -156, 500, -144, 556)
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(20, 360)
 zoom = Vector2(4.5, 4.5)
 
+[node name="transition" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hsxm7")
+}
+autoplay = "new_animation"
+script = SubResource("GDScript_8absx")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_oeths")
+autoplay = true
+
 [node name="World Boundary" type="StaticBody2D" parent="."]
-position = Vector2(37, 28)
+position = Vector2(24, 32)
 scale = Vector2(2.84, 1)
 
 [node name="Bottom Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-16.9014, 707)
-shape = SubResource("WorldBoundaryShape2D_mbalj")
+position = Vector2(-10.2113, 680)
+shape = SubResource("WorldBoundaryShape2D_oeths")
 
 [node name="Top Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-19.0141, 322)
+position = Vector2(-5.6338, 412)
 rotation = 3.12936
-shape = SubResource("WorldBoundaryShape2D_mbalj")
+shape = SubResource("WorldBoundaryShape2D_oeths")
 
 [node name="Right Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(85.5635, 524)
+position = Vector2(86.9718, 524)
 rotation = 4.71239
-shape = SubResource("WorldBoundaryShape2D_mbalj")
+shape = SubResource("WorldBoundaryShape2D_oeths")
 
-[node name="Right Boundary2" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-94.7183, 416)
-rotation = 1.56872
-scale = Vector2(1.15381, 0.996148)
-shape = SubResource("WorldBoundaryShape2D_mbalj")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(295.423, 444)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_8absx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World Boundary"]
+polygon = PackedVector2Array(-296.127, 400, -301.761, 436, -310.211, 352, -291.901, 292, -251.056, 284, -173.592, 244, -141.197, 248, -131.338, 268, -158.099, 292, -229.93, 312, -279.225, 372)

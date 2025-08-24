@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=4 uid="uid://ctewti87opqt8"]
+[gd_scene load_steps=76 format=4 uid="uid://ctewti87opqt8"]
 
 [ext_resource type="Script" uid="uid://do0bklihxeebw" path="res://Day 2 Scenes/day_2_part_14_part_b_scene.gd" id="1_0uqhw"]
 [ext_resource type="AudioStream" uid="uid://c6wgf1ow5hejy" path="res://Music_Teriyaki-Wings/Remade_MainMenuBGM.wav" id="1_pktso"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://dh6um2nnp3ndk" path="res://Assets/characters/yeu,cass,oph, lucy died.png" id="21_swrql"]
 [ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="21_ws66f"]
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="22_0uqhw"]
+[ext_resource type="Resource" uid="uid://dmnm6c7obn810" path="res://Day 2 Scenes/Day2 part fourteen part b.dialogue" id="24_wk42a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xlefg"]
 texture = ExtResource("2_hlase")
@@ -1978,13 +1979,58 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wk42a"]
 
+[sub_resource type="Animation" id="Animation_gldua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tb5ku"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hsxm7"]
+_data = {
+&"RESET": SubResource("Animation_gldua"),
+&"new_animation": SubResource("Animation_tb5ku")
+}
+
+[sub_resource type="GDScript" id="GDScript_wk42a"]
+script/source = "extends AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [node name="Day 2 part 14 part b scene" type="Node2D"]
 script = ExtResource("1_0uqhw")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(3, 94)
-scale = Vector2(0.472705, 0.891474)
-zoom = Vector2(1.5, 1.98)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_pktso")
@@ -2101,24 +2147,24 @@ position = Vector2(-7.84735, 129.608)
 scale = Vector2(2.84, 1)
 
 [node name="Bottom Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(10.5921, 1.45435e-05)
+position = Vector2(-9.20868, 13.392)
 scale = Vector2(5.40845, 1)
 shape = SubResource("WorldBoundaryShape2D_1fgu5")
 
 [node name="Top Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-27.171, -54.6646)
+position = Vector2(-34.2087, -122.608)
 rotation = 3.12936
 scale = Vector2(7.23949, 1)
 shape = SubResource("WorldBoundaryShape2D_1fgu5")
 
 [node name="Left Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-62.6315, -11.4619)
+position = Vector2(-157.8, -21.608)
 rotation = 1.5708
 scale = Vector2(3.01408, 1)
 shape = SubResource("WorldBoundaryShape2D_1fgu5")
 
 [node name="Right Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(57.5657, -32.6224)
+position = Vector2(136.918, -33.608)
 rotation = -1.5708
 scale = Vector2(4.2676, 1)
 shape = SubResource("WorldBoundaryShape2D_1fgu5")
@@ -2160,26 +2206,44 @@ tile_set = SubResource("TileSet_ar78g")
 [node name="Node2D" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Devil Lucy" type="CharacterBody2D" parent="Node2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Devil Lucy"]
+[node name="Devil Lucy" type="CharacterBody2D" parent="Node2D/StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/StaticBody2D/Devil Lucy"]
 position = Vector2(-182, 112)
 sprite_frames = SubResource("SpriteFrames_n8hx1")
 
-[node name="Cassandra" type="CharacterBody2D" parent="Node2D"]
+[node name="Cassandra" type="CharacterBody2D" parent="Node2D/StaticBody2D"]
 position = Vector2(-2, 11)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Cassandra"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/StaticBody2D/Cassandra"]
 position = Vector2(-199.844, 95.0313)
 scale = Vector2(1.09954, 1.42083)
 sprite_frames = SubResource("SpriteFrames_kt2xv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/StaticBody2D"]
+polygon = PackedVector2Array(-215, 74, -217, 81, -217, 120, -217, 131, -217, 139, -202, 147, -180, 149, -171, 143, -169, 129, -163, 117, -163, 97, -170, 89, -181, 86, -188, 87, -192, 70, -194, 74, -214, 75, -216, 75)
 
 [node name="Desdemona2D" parent="Node2D" instance=ExtResource("21_ws66f")]
 position = Vector2(-224, -17)
 
 [node name="Actionable" parent="Node2D" instance=ExtResource("22_0uqhw")]
+dialogue_resource = ExtResource("24_wk42a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Actionable"]
 position = Vector2(-193, 115)
 scale = Vector2(4.00984, 4.92023)
 shape = SubResource("RectangleShape2D_wk42a")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-38, 81)
+scale = Vector2(0.472705, 0.891474)
+zoom = Vector2(2.5, 2.5)
+
+[node name="transition" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hsxm7")
+}
+autoplay = "new_animation"
+script = SubResource("GDScript_wk42a")

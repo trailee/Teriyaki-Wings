@@ -723,11 +723,11 @@ offset_bottom = 340.903
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
 text = "Project Manager
+Frontend Developer
 Game Programmer
 UI/UX Designer
 Game/Level Designer
 Music Composer
-Co-Bug Exterminator
 Quality Controller
 "
 horizontal_alignment = 1
@@ -762,13 +762,13 @@ text = "Lead Storyline Writer
 Lead Script Writer 
 Game Programmer
 Scene Designer
-"
+Glue of the Team"
 horizontal_alignment = 1
 
-[node name="Name3" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text"]
-offset_left = 2556.03
+[node name="Zarin" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text"]
+offset_left = 2566.05
 offset_top = -367.238
-offset_right = 2806.03
+offset_right = 2816.05
 offset_bottom = -317.238
 theme_override_fonts/font = ExtResource("9_177c6")
 theme_override_font_sizes/font_size = 25
@@ -776,31 +776,31 @@ text = "Zarin Isba"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Fox Icon" type="AnimatedSprite2D" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Name3"]
-position = Vector2(128.202, -31.9337)
+[node name="Fox Icon" type="AnimatedSprite2D" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Zarin"]
+position = Vector2(122.188, -31.9346)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_tdulj")
 autoplay = "default"
 frame_progress = 0.311784
 
-[node name="Credit" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Name3"]
+[node name="Credit" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Zarin"]
 layout_mode = 0
-offset_left = -4.00604
-offset_top = 46.9028
-offset_right = 251.994
-offset_bottom = 264.903
+offset_left = -17.0315
+offset_top = 46.9014
+offset_right = 270.969
+offset_bottom = 302.901
 theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
-text = "Lead Backend Developer
-Bard of Hope
-Lead Ideator
-Main Editor
+text = "Lead Editor
+Backend Developer
 Co-programmer
 Co-writer 
-Bug Exterminator"
+Bard of Hope
+Lead Ideator
+Bug Exterminator (AKA GOAT)"
 horizontal_alignment = 1
 
-[node name="Name4" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text"]
+[node name="Ashila" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text"]
 offset_left = 2791.4
 offset_top = -353.267
 offset_right = 3041.4
@@ -812,14 +812,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Parrot Icon" type="AnimatedSprite2D" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Name4"]
+[node name="Parrot Icon" type="AnimatedSprite2D" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Ashila"]
 position = Vector2(128.196, -42.9141)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_d367a")
 animation = &"Parrot"
 autoplay = "Parrot"
 
-[node name="Credit" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Name4"]
+[node name="Credit" type="Label" parent="Credits UI/Credits UI/Pg1/Credits Info Text/Ashila"]
 layout_mode = 0
 offset_left = -4.00604
 offset_top = 65.8633
@@ -829,6 +829,7 @@ theme_override_constants/line_spacing = 10
 theme_override_font_sizes/font_size = 20
 text = "Lead Animator
 Character Designer
+SAT Clutcher
 "
 horizontal_alignment = 1
 

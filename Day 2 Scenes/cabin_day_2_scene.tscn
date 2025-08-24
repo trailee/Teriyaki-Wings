@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://wb0g6dhomfps"]
+[gd_scene load_steps=40 format=4 uid="uid://wb0g6dhomfps"]
 
 [ext_resource type="Texture2D" uid="uid://d3mq5dw38d3dr" path="res://Backgrounds/interiors_demo.png" id="1_4oyhn"]
 [ext_resource type="Script" uid="uid://b1ru8v6w622dj" path="res://Day 2 Scenes/cabin_day_2_scene.gd" id="1_ho81q"]
@@ -1256,6 +1256,56 @@ size = Vector2(168, 55)
 [sub_resource type="CircleShape2D" id="CircleShape2D_cbk4g"]
 radius = 23.7065
 
+[sub_resource type="Animation" id="Animation_gldua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tb5ku"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hsxm7"]
+_data = {
+&"RESET": SubResource("Animation_gldua"),
+&"new_animation": SubResource("Animation_tb5ku")
+}
+
+[sub_resource type="GDScript" id="GDScript_ho81q"]
+script/source = "extends AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [node name="Cabin Day 2 Scene" type="Node2D"]
 script = ExtResource("1_ho81q")
 
@@ -1301,7 +1351,7 @@ scale = Vector2(5.40845, 1)
 shape = SubResource("WorldBoundaryShape2D_f1naw")
 
 [node name="Top Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-8.4507, -468)
+position = Vector2(-10.2113, -422)
 rotation = 3.12936
 scale = Vector2(7.23949, 1)
 shape = SubResource("WorldBoundaryShape2D_f1naw")
@@ -1322,7 +1372,7 @@ shape = SubResource("WorldBoundaryShape2D_f1naw")
 y_sort_enabled = true
 
 [node name="Desdemona2D" parent="y sorting" instance=ExtResource("7_gkxy1")]
-position = Vector2(677, 312)
+position = Vector2(659, 314)
 
 [node name="Ophelia2D" parent="y sorting" instance=ExtResource("10_lbiw0")]
 position = Vector2(561, 310)
@@ -1365,3 +1415,10 @@ bus = &"BGM"
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(601, 404)
 zoom = Vector2(1.95, 1.95)
+
+[node name="transition" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hsxm7")
+}
+autoplay = "new_animation"
+script = SubResource("GDScript_ho81q")

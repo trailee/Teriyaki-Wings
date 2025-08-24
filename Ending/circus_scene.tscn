@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bracwp6jifx0p"]
+[gd_scene load_steps=20 format=3 uid="uid://bracwp6jifx0p"]
 
 [ext_resource type="Script" uid="uid://iubc8n5vb06y" path="res://Ending/circus_scene.gd" id="1_2nrt1"]
 [ext_resource type="Texture2D" uid="uid://hh11qctawiwo" path="res://Backgrounds/circus_bg.webp" id="1_vfgm2"]
@@ -7,10 +7,6 @@
 [ext_resource type="AudioStream" uid="uid://dodb2qrgun7g" path="res://Music_Teriyaki-Wings/VIP.MainMenu_BGM.wav" id="4_f7r51"]
 [ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="5_2nrt1"]
 [ext_resource type="Resource" uid="uid://d04dfyfxbi0ec" path="res://Dialogue/circus.dialogue" id="7_xw1uf"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_q7lit"]
-normal = Vector2(0.00439887, -0.99999)
-distance = 92.0048
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xw1uf"]
 atlas = ExtResource("3_58ef4")
@@ -48,7 +44,63 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xw1uf"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bdnqd"]
+
+[sub_resource type="Animation" id="Animation_gldua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tb5ku"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hsxm7"]
+_data = {
+&"RESET": SubResource("Animation_gldua"),
+&"new_animation": SubResource("Animation_tb5ku")
+}
+
+[sub_resource type="GDScript" id="GDScript_0kskh"]
+script/source = "extends AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xw1uf"]
+normal = Vector2(0.00439887, -0.99999)
+distance = 92.0048
 
 [node name="Circus Scene" type="Node2D"]
 script = ExtResource("1_2nrt1")
@@ -56,33 +108,6 @@ script = ExtResource("1_2nrt1")
 [node name="CircusBg" type="Sprite2D" parent="."]
 position = Vector2(7, -69)
 texture = ExtResource("1_vfgm2")
-
-[node name="World Boundary" type="StaticBody2D" parent="."]
-position = Vector2(44, 179)
-scale = Vector2(2.84, 1)
-
-[node name="Bottom Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-15.8451, 59)
-scale = Vector2(5.40845, 1)
-shape = SubResource("WorldBoundaryShape2D_q7lit")
-
-[node name="Top Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-8.4507, -468)
-rotation = 3.12936
-scale = Vector2(7.23949, 1)
-shape = SubResource("WorldBoundaryShape2D_q7lit")
-
-[node name="Left Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(-191.549, -118)
-rotation = 1.5708
-scale = Vector2(3.01408, 1)
-shape = SubResource("WorldBoundaryShape2D_q7lit")
-
-[node name="Right Boundary" type="CollisionShape2D" parent="World Boundary"]
-position = Vector2(167.606, -119)
-rotation = -1.5708
-scale = Vector2(4.2676, 1)
-shape = SubResource("WorldBoundaryShape2D_q7lit")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_f7r51")
@@ -94,11 +119,18 @@ zoom = Vector2(5, 5)
 [node name="Node2D" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Dr Paris" type="AnimatedSprite2D" parent="Node2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+
+[node name="Dr Paris" type="AnimatedSprite2D" parent="Node2D/StaticBody2D"]
 position = Vector2(-53, 4)
 scale = Vector2(0.06, 0.06)
 sprite_frames = SubResource("SpriteFrames_uwtdh")
 autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2(-54, 20)
+scale = Vector2(1.2926, 1.24801)
+shape = SubResource("RectangleShape2D_xw1uf")
 
 [node name="Desdemona2D" parent="Node2D" instance=ExtResource("3_f7r51")]
 
@@ -109,3 +141,37 @@ dialogue_resource = ExtResource("7_xw1uf")
 position = Vector2(-55, 9.53674e-07)
 scale = Vector2(2.9179, 4.09932)
 shape = SubResource("RectangleShape2D_bdnqd")
+
+[node name="transition" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hsxm7")
+}
+autoplay = "new_animation"
+script = SubResource("GDScript_0kskh")
+
+[node name="World Boundary" type="StaticBody2D" parent="."]
+position = Vector2(41, 158)
+scale = Vector2(2.84, 1)
+
+[node name="Bottom Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(-13.0282, 18)
+scale = Vector2(5.40845, 1)
+shape = SubResource("WorldBoundaryShape2D_xw1uf")
+
+[node name="Top Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(-7.74648, -269)
+rotation = 3.12936
+scale = Vector2(7.23949, 1)
+shape = SubResource("WorldBoundaryShape2D_xw1uf")
+
+[node name="Left Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(-148.944, -130)
+rotation = 1.5708
+scale = Vector2(3.01408, 1)
+shape = SubResource("WorldBoundaryShape2D_xw1uf")
+
+[node name="Right Boundary" type="CollisionShape2D" parent="World Boundary"]
+position = Vector2(131.69, -114)
+rotation = -1.5708
+scale = Vector2(4.2676, 1)
+shape = SubResource("WorldBoundaryShape2D_xw1uf")
