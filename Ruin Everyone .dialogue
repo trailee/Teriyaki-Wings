@@ -28,5 +28,6 @@ Des: No. Let’s move on, we’re running out of time.
 Cassandra: You really think there was no other way?
 Yue: Yeah.
 Des: There was no other way. Let’s go, we don’t have time
+set State.ruin_talked = true
 
 => END
