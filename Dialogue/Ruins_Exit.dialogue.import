@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bmyqqmwd6s1qm"
+path="res://.godot/imported/Ruins_Exit.dialogue-a34346cc16e57482410cf2fa1503245d.tres"
+
+[deps]
+
+source_file="res://Dialogue/Ruins_Exit.dialogue"
+dest_files=["res://.godot/imported/Ruins_Exit.dialogue-a34346cc16e57482410cf2fa1503245d.tres"]
+
+[params]
+
+defaults=true

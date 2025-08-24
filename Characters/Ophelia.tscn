@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=3 uid="uid://c7ijfc7chh45k"]
+
+[ext_resource type="Texture2D" uid="uid://du6exsp28uj6s" path="res://Assets/characters/ophelia.png" id="1_vkbei"]
+
+[sub_resource type="GDScript" id="GDScript_coig2"]
+script/source = "extends CharacterBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsuik"]
+atlas = ExtResource("1_vkbei")
+region = Rect2(540, 900, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wyio"]
+atlas = ExtResource("1_vkbei")
+region = Rect2(0, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ce8k"]
+atlas = ExtResource("1_vkbei")
+region = Rect2(540, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0vug"]
+atlas = ExtResource("1_vkbei")
+region = Rect2(1080, 900, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jre1w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsuik")
+}],
+"loop": true,
+"name": &"Ophelia_BackView",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wyio")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_0ce8k")
+}],
+"loop": true,
+"name": &"Ophelia_Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0vug")
+}],
+"loop": true,
+"name": &"Ophelia_SideView",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7lnpa"]
+size = Vector2(16.2917, 9.60985)
+
+[node name="Ophelia2D" type="CharacterBody2D"]
+scale = Vector2(0.055, 0.055)
+script = SubResource("GDScript_coig2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jre1w")
+animation = &"Ophelia_Idle"
+autoplay = "Ophelia_Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18.1818, 259.514)
+scale = Vector2(27.5977, 46.442)
+shape = SubResource("RectangleShape2D_7lnpa")

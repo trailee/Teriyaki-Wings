@@ -1,0 +1,11 @@
+~ start
+
+if State.ruin_talked == true:
+	set State.ruin_exit = true
+	Des: It had to be done...
+	Des: I hope this is all worth it.
+
+else
+	Des: I should talk to the others before leaving.
+
+=> END

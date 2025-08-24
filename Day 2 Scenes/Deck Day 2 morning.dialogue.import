@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d3y4pkhdig2p4"
+path="res://.godot/imported/Deck Day 2 morning.dialogue-3a2f9a13b100febfdeb65899d46860c8.tres"
+
+[deps]
+
+source_file="res://Day 2 Scenes/Deck Day 2 morning.dialogue"
+dest_files=["res://.godot/imported/Deck Day 2 morning.dialogue-3a2f9a13b100febfdeb65899d46860c8.tres"]
+
+[params]
+
+defaults=true

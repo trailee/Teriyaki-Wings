@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxsu3b7eyj45l"]
+
+[ext_resource type="Texture2D" uid="uid://kpjku3pxyfjn" path="res://Assets/characters/zade.png" id="1_rfdil"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1h7e"]
+atlas = ExtResource("1_rfdil")
+region = Rect2(0, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyids"]
+atlas = ExtResource("1_rfdil")
+region = Rect2(1080, 0, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1frd0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1h7e")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_wyids")
+}],
+"loop": true,
+"name": &"Zade_Idle",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x44v5"]
+size = Vector2(11.218, 10)
+
+[node name="Zane_2D" type="CharacterBody2D"]
+scale = Vector2(0.055, 0.055)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1frd0")
+animation = &"Zade_Idle"
+autoplay = "Zade_Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18.1818, 236.364)
+scale = Vector2(29.4671, 46.5796)
+shape = SubResource("RectangleShape2D_x44v5")

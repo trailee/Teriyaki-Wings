@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://6j6c5uewe0e1"]
+
+[ext_resource type="Texture2D" uid="uid://c0xltjspdx5nq" path="res://Assets/characters/cassandra.png" id="1_kni3d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_su21v"]
+atlas = ExtResource("1_kni3d")
+region = Rect2(1080, 900, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jxfq"]
+atlas = ExtResource("1_kni3d")
+region = Rect2(0, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwkhn"]
+atlas = ExtResource("1_kni3d")
+region = Rect2(1080, 0, 540, 900)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqdba"]
+atlas = ExtResource("1_kni3d")
+region = Rect2(540, 900, 540, 900)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ydiq0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_su21v")
+}],
+"loop": true,
+"name": &"Cas_BackView",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jxfq")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_nwkhn")
+}],
+"loop": true,
+"name": &"Cas_Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqdba")
+}],
+"loop": true,
+"name": &"Cas_SideView",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d81if"]
+size = Vector2(11.3267, 8.47584)
+
+[node name="Cassandra2D" type="CharacterBody2D"]
+scale = Vector2(0.055, 0.055)
+
+[node name="Animations" type="AnimatedSprite2D" parent="."]
+position = Vector2(-183, 357)
+sprite_frames = SubResource("SpriteFrames_ydiq0")
+animation = &"Cas_Idle"
+autoplay = "Cas_Idle"
+frame_progress = 0.631628
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-181.818, 636.364)
+scale = Vector2(29.8064, 44.9727)
+shape = SubResource("RectangleShape2D_d81if")
