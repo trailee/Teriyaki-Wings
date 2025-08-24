@@ -1,10 +1,13 @@
-[gd_scene load_steps=29 format=4 uid="uid://0k07xdnkt8wf"]
+[gd_scene load_steps=33 format=4 uid="uid://0k07xdnkt8wf"]
 
+[ext_resource type="Script" uid="uid://bc8wram2rtg5e" path="res://Day 1 Scenes fixed/day_1_part_9.gd" id="1_2eut0"]
 [ext_resource type="Texture2D" uid="uid://bsgpuoc27q3k0" path="res://images/5.png" id="1_xgial"]
 [ext_resource type="Texture2D" uid="uid://d0nrovwkmweok" path="res://Assets/shadow.png" id="3_qw8x0"]
 [ext_resource type="Texture2D" uid="uid://du6exsp28uj6s" path="res://Assets/characters/ophelia.png" id="5_wlbg7"]
 [ext_resource type="Texture2D" uid="uid://c0xltjspdx5nq" path="res://Assets/characters/cassandra.png" id="6_q0ito"]
+[ext_resource type="PackedScene" uid="uid://c2trgdkwgttjf" path="res://SCENES/firstactionable.tscn" id="7_bg86u"]
 [ext_resource type="Texture2D" uid="uid://bbvrqkbsr0uru" path="res://Assets/characters/yeu.png" id="7_j0dpf"]
+[ext_resource type="Resource" uid="uid://c1h4m4nhtfmqh" path="res://Day 1 Scenes fixed/Day1 part nine.dialogue" id="8_2eut0"]
 [ext_resource type="AudioStream" uid="uid://cte8c1uunmosr" path="res://Music_Teriyaki-Wings/Cruise_BGM.wav" id="8_seand"]
 [ext_resource type="PackedScene" uid="uid://da047cqibpkg6" path="res://Characters/Des.tscn" id="9_bg86u"]
 
@@ -12964,8 +12967,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5gpu"]
+
 [node name="Night 1 Des interacts with people" type="Node2D"]
-position = Vector2(960, 340)
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_2eut0")
 
 [node name="water" type="TileMapLayer" parent="."]
 position = Vector2(-165, -20)
@@ -13105,32 +13111,52 @@ shape = SubResource("WorldBoundaryShape2D_mbalj")
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="Huge ophelia" type="CharacterBody2D" parent="."]
+[node name="Huge ophelia" type="CharacterBody2D" parent="Node2D"]
+position = Vector2(-656, -72)
+scale = Vector2(1.08548, 1.32315)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Huge ophelia"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Huge ophelia"]
 position = Vector2(269.875, 366.125)
 scale = Vector2(0.363426, 0.273611)
 sprite_frames = SubResource("SpriteFrames_fuye1")
 autoplay = "default"
 
-[node name="Huge cassandra" type="CharacterBody2D" parent="."]
+[node name="Huge cassandra" type="CharacterBody2D" parent="Node2D"]
+position = Vector2(-308, -148)
+scale = Vector2(1.09308, 1.1942)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Huge cassandra"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Huge cassandra"]
 position = Vector2(126, 468)
 scale = Vector2(0.335648, 0.289167)
 sprite_frames = SubResource("SpriteFrames_wfuo7")
 autoplay = "default"
 
-[node name="huge yue" type="CharacterBody2D" parent="."]
+[node name="huge yue" type="CharacterBody2D" parent="Node2D"]
+position = Vector2(-312, -336)
+scale = Vector2(1.11823, 1.3633)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="huge yue"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/huge yue"]
 position = Vector2(338.062, 541)
 scale = Vector2(0.370139, 0.26)
 sprite_frames = SubResource("SpriteFrames_gs4b7")
 autoplay = "default"
 
+[node name="Desdemona2D" parent="Node2D" instance=ExtResource("9_bg86u")]
+position = Vector2(489, 407)
+scale = Vector2(0.4, 0.4)
+
+[node name="Actionable" parent="Node2D" instance=ExtResource("7_bg86u")]
+dialogue_resource = ExtResource("8_2eut0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Actionable"]
+position = Vector2(-132, 416)
+scale = Vector2(38.4134, 21.1886)
+shape = SubResource("RectangleShape2D_e5gpu")
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_seand")
 autoplay = true
 
-[node name="Desdemona2D" parent="." instance=ExtResource("9_bg86u")]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(84, 232)
+zoom = Vector2(4.54, 4.54)
