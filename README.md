@@ -1,3 +1,5 @@
+[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
+
 PROJECT NAME AND USE
 The game Mission: Survive is about a character name Desdemona and her friends journey to "The Circus & Attractions". 
 In this post apocalypse world, "The Circus & Attractions" is known to be the first safe place from zorens (hybrid of zombies and sirens). 
